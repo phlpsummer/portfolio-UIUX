@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Rajdhani&display=swap");
 * {
   margin: 0;
@@ -26,5 +27,298 @@ fieldset {
 
 table {
   border-collapse: collapse; }
+
+/* header ---------------------------------------------------------------------------------- */
+#header {
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+  z-index: 3;
+  /* header hover ========== */
+  /* 모바일 버전 헤더 ========== */ }
+  #header .inner {
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative; }
+    #header .inner .logo {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      z-index: 10; }
+      #header .inner .logo a {
+        font: normal 30px/1 'Bangers';
+        color: #fff;
+        letter-spacing: 1px; }
+    #header .inner #gnb {
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center; }
+      #header .inner #gnb li {
+        display: inline-block;
+        margin: 0 15px;
+        position: relative; }
+        #header .inner #gnb li a {
+          display: block;
+          padding: 5px 15px;
+          font: 900 15px/1 'Noto Sans KR';
+          color: #fff; }
+    #header .inner #util {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%); }
+      #header .inner #util li {
+        display: inline-block;
+        margin-left: 10px; }
+        #header .inner #util li a {
+          display: block;
+          font: 700 13px/1 'Noto Sans KR';
+          color: #fff; }
+        #header .inner #util li:nth-of-type(2) {
+          font-size: 13px;
+          color: #fff; }
+        #header .inner #util li:nth-of-type(1) a {
+          color: #bbb; }
+  #header:hover {
+    background: #111;
+    border-bottom: 1px solid #999; }
+    #header:hover .inner #gnb li:hover::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      background: #fff;
+      position: absolute;
+      bottom: -38px;
+      left: 0; }
+  #header .btn_menu_mo {
+    display: none;
+    opacity: 0;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 10; }
+    #header .btn_menu_mo span {
+      width: 70%;
+      height: 2px;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      margin-bottom: -1px;
+      text-indent: -9999px;
+      background: #fff;
+      opacity: 1;
+      transition: 0.5s; }
+    #header .btn_menu_mo::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #fff;
+      transition: 0.5s 0.3s;
+      transform-origin: left center; }
+    #header .btn_menu_mo::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #fff;
+      transition: 0.5s 0.3s;
+      transform-origin: left center; }
+    #header .btn_menu_mo.on span {
+      left: -100%;
+      opacity: 0; }
+    #header .btn_menu_mo.on::before {
+      transform: rotate(45deg); }
+    #header .btn_menu_mo.on::after {
+      transform: rotate(-45deg); }
+  #header #gnb_mo {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 100px 30px 0;
+    background: rgba(17, 17, 17, 0.95);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 5; }
+    #header #gnb_mo li {
+      width: 100%; }
+      #header #gnb_mo li a {
+        display: block;
+        width: 100%;
+        padding: 20px 0;
+        font: 900 40px/1 'Noto Sans KR';
+        color: #fff;
+        letter-spacing: 1px;
+        position: relative; }
+        #header #gnb_mo li a .plus {
+          width: 25px;
+          height: 25px;
+          display: inline-block;
+          position: absolute;
+          top: 50%;
+          right: 0;
+          transform: translateY(-50%);
+          text-indent: -9999px;
+          transition: 0.5s; }
+          #header #gnb_mo li a .plus::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -1px;
+            transform: rotate(90deg);
+            transition: 0.5s; }
+          #header #gnb_mo li a .plus::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #fff;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -1px; }
+          #header #gnb_mo li a .plus.on::before {
+            transform: rotate(0deg); }
+    #header #gnb_mo.on {
+      top: 0;
+      opacity: 1; }
+
+/* visual ---------------------------------------------------------------------------------- */
+#visual {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background: rebeccapurple; }
+  #visual .inner {
+    width: 1180px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative; }
+    #visual .inner .title {
+      width: 70%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%); }
+      #visual .inner .title h1 {
+        font: normal 5vw/1 'Rajdhani';
+        color: #fff;
+        letter-spacing: 1px;
+        margin-bottom: 10px; }
+      #visual .inner .title p {
+        font: 300 20px/1.2 'Noto Sans KR';
+        color: #ddd;
+        margin-bottom: 30px; }
+      #visual .inner .title a {
+        display: inline-block;
+        padding: 12px 32px;
+        border: 1px solid #ddd;
+        font: 400 18px/1 'Noto Sans KR';
+        color: #ddd; }
+
+/* content ---------------------------------------------------------------------------------- */
+#content {
+  width: 100%;
+  padding: 100px 0; }
+  #content .inner {
+    width: 1180px;
+    min-height: 500px;
+    margin: 0 auto;
+    position: relative; }
+
+/* footer ---------------------------------------------------------------------------------- */
+#footer {
+  width: 100%;
+  padding: 80px 0;
+  background: #252628; }
+  #footer .inner {
+    width: 1180px;
+    margin: 0 auto;
+    position: relative; }
+    #footer .inner #footer_menu::after {
+      content: '';
+      display: block;
+      clear: both; }
+    #footer .inner #footer_menu ul {
+      float: left;
+      margin-bottom: 25px; }
+      #footer .inner #footer_menu ul li {
+        display: inline-block;
+        margin-right: 20px; }
+        #footer .inner #footer_menu ul li a {
+          font: bold 24px/1 'Rajdhani';
+          color: #ccc;
+          letter-spacing: 1px; }
+    #footer .inner #footer_menu input[type="text"] {
+      float: right;
+      width: 25%;
+      height: 30px;
+      border-bottom: 1px solid #aaa;
+      background: none;
+      font: bold 20px/1 'Rajdhani';
+      color: #fff; }
+    #footer .inner #sns {
+      margin-bottom: 25px; }
+      #footer .inner #sns::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #footer .inner #sns li {
+        float: left;
+        margin-right: 20px; }
+        #footer .inner #sns li a {
+          font-size: 42px;
+          color: #555; }
+    #footer .inner .policy {
+      margin-bottom: 40px; }
+      #footer .inner .policy::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #footer .inner .policy li {
+        float: left;
+        margin-right: 20px; }
+        #footer .inner .policy li a {
+          font: 400 16px/1 'Noto Sans KR';
+          color: #777; }
+    #footer .inner > p {
+      font: 300 16px/1 'Noto Sans KR';
+      color: #777;
+      position: relative;
+      padding-top: 10px; }
+      #footer .inner > p::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #555;
+        position: absolute;
+        top: 0;
+        left: 0; }
 
 /*# sourceMappingURL=style.css.map */
