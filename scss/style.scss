@@ -50,7 +50,7 @@ $mobile:539px;
                 a {
                     display: block;
                     padding: 5px 15px;
-                    font: 900 15px/1 'Noto Sans KR'; color: #fff;
+                    font: 900 14px/1 'Noto Sans KR'; color: #fff;
                 }
             }
         }
@@ -270,7 +270,7 @@ $mobile:539px;
                 li {
                     display: inline-block;
                     margin-right: 20px;
-                    a { font: bold 24px/1 'Rajdhani'; color: #ccc; letter-spacing: 1px;}
+                    a { font: bold 20px/1 'Rajdhani'; color: #ccc; letter-spacing: 1px;}
                 }
             }
             
@@ -279,7 +279,7 @@ $mobile:539px;
                 width: 25%; height: 30px;
                 border-bottom: 1px solid #aaa;
                 background: none;
-                font: bold 20px/1 'Rajdhani'; color: #fff;
+                font: bold 18px/1 'Rajdhani'; color: #fff;
             }
         }
 
@@ -290,7 +290,7 @@ $mobile:539px;
             li {
                 float: left;
                 margin-right: 20px;
-                a { font-size: 42px; color: #555;}
+                a { font-size: 30px; color: #555;}
             }
         }
 
@@ -324,3 +324,6 @@ $mobile:539px;
         }
     }
 }
+
+
+@import 'sub_layout';
