@@ -213,33 +213,54 @@ table {
   width: 100%;
   height: 100vh;
   position: relative;
-  background: rebeccapurple; }
-  #visual .inner {
-    width: 1180px;
+  overflow: hidden; }
+  #visual .slide {
+    width: calc(100% * 2);
     height: 100%;
-    margin: 0 auto;
-    position: relative; }
-    #visual .inner .title {
-      width: 70%;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%); }
-      #visual .inner .title h1 {
-        font: normal 5vw/1 'Rajdhani';
-        color: #fff;
-        letter-spacing: 1px;
-        margin-bottom: 10px; }
-      #visual .inner .title p {
-        font: 300 18px/1.2 'Noto Sans KR';
-        color: #ddd;
-        margin-bottom: 40px; }
-      #visual .inner .title a {
-        display: inline-block;
-        padding: 12px 32px;
-        border: 1px solid #ddd;
-        font: 400 16px/1 'Noto Sans KR';
-        color: #ddd; }
+    margin-left: 0%; }
+    #visual .slide::after {
+      content: '';
+      display: block;
+      clear: both; }
+    #visual .slide li {
+      width: calc(100% / 2);
+      height: 100%;
+      float: left;
+      position: relative; }
+      #visual .slide li video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        filter: brightness(0.5); }
+      #visual .slide li .inner {
+        width: 1180px;
+        height: 100%;
+        margin: 0 auto;
+        position: relative; }
+        #visual .slide li .inner .title {
+          width: 70%;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%); }
+          #visual .slide li .inner .title h1 {
+            font: normal 5vw/1 'Rajdhani';
+            color: #fff;
+            letter-spacing: 1px;
+            margin-bottom: 18px; }
+          #visual .slide li .inner .title p {
+            font: 300 18px/1.7 'Noto Sans KR';
+            color: #ddd;
+            margin-bottom: 56px; }
+          #visual .slide li .inner .title a {
+            display: inline-block;
+            padding: 12px 32px;
+            border: 1px solid #ddd;
+            font: 400 16px/1 'Noto Sans KR';
+            color: #ddd; }
 
 /* content ---------------------------------------------------------------------------------- */
 #content {
