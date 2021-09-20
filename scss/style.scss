@@ -13,7 +13,7 @@ $mobile:539px;
 
 /* header ---------------------------------------------------------------------------------- */
 #header {
-    width: 100%; height: 100px;
+    width: 100%; height: 90px;
     position: absolute;
     top: 0; left: 0;
     transition: 0.5s;
@@ -30,7 +30,7 @@ $mobile:539px;
             transform: translateY(-50%);
             z-index: 10;
             a {
-                font: normal 30px/1 'Bangers'; color: #fff;
+                font: normal 28px/1 'Bangers'; color: #fff;
                 letter-spacing: 1px;
             }
         }
@@ -44,13 +44,13 @@ $mobile:539px;
 
             li {
                 display: inline-block;
-                margin: 0 15px;
+                margin: 0 5px;
                 position: relative;
 
                 a {
                     display: block;
                     padding: 5px 15px;
-                    font: 900 14px/1 'Noto Sans KR'; color: #fff;
+                    font: 700 14px/1 'Noto Sans KR'; color: #fff;
                 }
             }
         }
@@ -79,23 +79,23 @@ $mobile:539px;
     /* header hover ========== */
     &:hover {
         background: #111;
-        border-bottom: 1px solid #999;
+        border-bottom: 1px solid #888;
 
         .inner #gnb li:hover::after {
             content: ''; display: block;
             width: 100%; height: 2px;
             background: #fff;
             position: absolute;
-            bottom: -38px; left: 0;
+            bottom: -33px; left: 0;
         }
     }
 
     /* 모바일 버전 헤더 ========== */
     .btn_menu_mo {
         display: none; opacity: 0;
-        width: 40px; height: 30px;
+        width: 34px; height: 28px;
         position: absolute;
-        top: 50%; right: 0;
+        top: 50%; right: 30px;
         transform: translateY(-50%);
         z-index: 10;
 
@@ -198,7 +198,6 @@ $mobile:539px;
     }
 }
 
-
 /* visual ---------------------------------------------------------------------------------- */
 #visual {
     width: 100%; height: 100vh;
@@ -222,14 +221,14 @@ $mobile:539px;
                 margin-bottom: 10px;
             }
             p {
-                font: 300 20px/1.2 'Noto Sans KR'; color: #ddd;
-                margin-bottom: 30px;
+                font: 300 18px/1.2 'Noto Sans KR'; color: #ddd;
+                margin-bottom: 40px;
             }
             a {
                 display: inline-block;
                 padding: 12px 32px;
                 border: 1px solid #ddd;
-                font: 400 18px/1 'Noto Sans KR'; color: #ddd;
+                font: 400 16px/1 'Noto Sans KR'; color: #ddd;
             }
         }
     }
@@ -251,7 +250,7 @@ $mobile:539px;
 /* footer ---------------------------------------------------------------------------------- */
 #footer {
     width: 100%;
-    padding: 80px 0;
+    padding: 80px 0 0;
     background: rgb(37, 38, 40);
 
     .inner {
@@ -274,13 +273,27 @@ $mobile:539px;
                 }
             }
             
-            input[type="text"] {
+            .search{
                 float: right;
-                width: 25%; height: 30px;
-                border-bottom: 1px solid #aaa;
-                background: none;
-                font: bold 18px/1 'Rajdhani'; color: #fff;
+                width: 22%; height: 30px;
+                position: relative;
+
+                input[type="text"] {
+                    width: 100%; height: 100%;
+                    border: none;
+                    border-bottom: 1px solid #aaa;
+                    background: none;
+                    font: 500 16px/1 'Noto Sans KR'; color: #fff;
+                }
+
+                i {
+                    position: absolute;
+                    top: 50%; right: 1px;
+                    transform: translateY(-50%);
+                    font-size: 15px; color: #777;
+                }
             }
+
         }
 
         #sns {
@@ -301,14 +314,15 @@ $mobile:539px;
             li {
                 float: left;
                 margin-right: 20px;
-                a { font: 400 16px/1 'Noto Sans KR'; color: #777;}
+                a { font: 400 14px/1 'Noto Sans KR'; color: #777;}
             }
         }
 
         >p {
-            font: 300 16px/1 'Noto Sans KR'; color: #777;
+            font: 300 14px/1 'Noto Sans KR'; color: #777;
             position: relative;
             padding-top: 10px;
+            padding-bottom: 60px;
 
             &::before {
                 content: ''; display: block;
@@ -320,10 +334,182 @@ $mobile:539px;
         }
         
         .go_top {
+            width: 100%; height: 40px;
+            background: none;
+            position: absolute;
+            bottom: 0; left: 0;
 
+            .arrow {
+                width: 1px; height: 40px;
+                background: #777;
+                position: absolute;
+                bottom: 0; left: 50%;
+                transform: translateX(-50%);
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 13px; height: 1px;
+                    background: #777;
+                    position: absolute;
+                    top: 5px; left: -1px;
+                    transform: rotate(45deg);
+                }
+                &::after {
+                    content: '';
+                    display: block;
+                    width: 13px; height: 1px;
+                    background: #777;
+                    position: absolute;
+                    top: 5px; left: -11px;
+                    transform: rotate(-45deg);
+                }
+            }
         }
     }
 }
 
 
+@media screen and (max-width:$tablet) {
+    /* header ---------------------------------------------------------------------------------- */
+    #header {
+        padding: 0 30px;
+        background: #111;
+        border-bottom: 1px solid #888;
+
+        .inner {
+            width: 100%;
+    
+            #gnb { display: none;}
+            #util { display: none;}
+        }
+
+    
+        /* 모바일 버전 헤더 ========== */
+        .btn_menu_mo { display: block; opacity: 1;}
+    }
+
+    /* footer ---------------------------------------------------------------------------------- */
+    #footer {
+        padding: 80px 30px 0;
+
+        .inner {
+            width: 100%;
+
+            #footer_menu {
+
+                &::after { content: ''; display: block; clear: both;}
+
+                ul {
+                    float: left;
+                    margin-bottom: 25px;
+
+                    li {
+                        display: inline-block;
+                        margin-right: 20px;
+                        a { font: bold 20px/1 'Rajdhani'; color: #ccc; letter-spacing: 1px;}
+                    }
+                }
+                
+                .search{
+                    float: right;
+                    width: 22%; height: 30px;
+                    position: relative;
+
+                    input[type="text"] {
+                        width: 100%; height: 100%;
+                        border: none;
+                        border-bottom: 1px solid #aaa;
+                        background: none;
+                        font: 500 16px/1 'Noto Sans KR'; color: #fff;
+                    }
+
+                    i {
+                        position: absolute;
+                        top: 50%; right: 1px;
+                        transform: translateY(-50%);
+                        font-size: 15px; color: #777;
+                    }
+                }
+
+            }
+
+            #sns {
+                margin-bottom: 25px;
+                &::after { content: ''; display: block; clear: both;}
+
+                li {
+                    float: left;
+                    margin-right: 20px;
+                    a { font-size: 30px; color: #555;}
+                }
+            }
+
+            .policy {
+                margin-bottom: 40px;
+                &::after { content: ''; display: block; clear: both;}
+
+                li {
+                    float: left;
+                    margin-right: 20px;
+                    a { font: 400 14px/1 'Noto Sans KR'; color: #777;}
+                }
+            }
+
+            >p {
+                font: 300 14px/1 'Noto Sans KR'; color: #777;
+                position: relative;
+                padding-top: 10px;
+                padding-bottom: 60px;
+
+                &::before {
+                    content: ''; display: block;
+                    width: 100%; height: 1px;
+                    background: #555;
+                    position: absolute;
+                    top: 0; left: 0;
+                }
+            }
+            
+            .go_top {
+                width: 100%; height: 40px;
+                background: none;
+                position: absolute;
+                bottom: 0; left: 0;
+
+                .arrow {
+                    width: 1px; height: 40px;
+                    background: #777;
+                    position: absolute;
+                    bottom: 0; left: 50%;
+                    transform: translateX(-50%);
+
+                    &::before {
+                        content: '';
+                        display: block;
+                        width: 13px; height: 1px;
+                        background: #777;
+                        position: absolute;
+                        top: 5px; left: -1px;
+                        transform: rotate(45deg);
+                    }
+                    &::after {
+                        content: '';
+                        display: block;
+                        width: 13px; height: 1px;
+                        background: #777;
+                        position: absolute;
+                        top: 5px; left: -11px;
+                        transform: rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
 @import 'sub_layout';
+@import 'about';
+@import 'community';

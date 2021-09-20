@@ -31,7 +31,7 @@ table {
 /* header ---------------------------------------------------------------------------------- */
 #header {
   width: 100%;
-  height: 100px;
+  height: 90px;
   position: absolute;
   top: 0;
   left: 0;
@@ -51,7 +51,7 @@ table {
       transform: translateY(-50%);
       z-index: 10; }
       #header .inner .logo a {
-        font: normal 30px/1 'Bangers';
+        font: normal 28px/1 'Bangers';
         color: #fff;
         letter-spacing: 1px; }
     #header .inner #gnb {
@@ -63,12 +63,12 @@ table {
       text-align: center; }
       #header .inner #gnb li {
         display: inline-block;
-        margin: 0 15px;
+        margin: 0 5px;
         position: relative; }
         #header .inner #gnb li a {
           display: block;
           padding: 5px 15px;
-          font: 900 14px/1 'Noto Sans KR';
+          font: 700 14px/1 'Noto Sans KR';
           color: #fff; }
     #header .inner #util {
       position: absolute;
@@ -89,7 +89,7 @@ table {
           color: #bbb; }
   #header:hover {
     background: #111;
-    border-bottom: 1px solid #999; }
+    border-bottom: 1px solid #888; }
     #header:hover .inner #gnb li:hover::after {
       content: '';
       display: block;
@@ -97,16 +97,16 @@ table {
       height: 2px;
       background: #fff;
       position: absolute;
-      bottom: -38px;
+      bottom: -33px;
       left: 0; }
   #header .btn_menu_mo {
     display: none;
     opacity: 0;
-    width: 40px;
-    height: 30px;
+    width: 34px;
+    height: 28px;
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 30px;
     transform: translateY(-50%);
     z-index: 10; }
     #header .btn_menu_mo span {
@@ -231,14 +231,14 @@ table {
         letter-spacing: 1px;
         margin-bottom: 10px; }
       #visual .inner .title p {
-        font: 300 20px/1.2 'Noto Sans KR';
+        font: 300 18px/1.2 'Noto Sans KR';
         color: #ddd;
-        margin-bottom: 30px; }
+        margin-bottom: 40px; }
       #visual .inner .title a {
         display: inline-block;
         padding: 12px 32px;
         border: 1px solid #ddd;
-        font: 400 18px/1 'Noto Sans KR';
+        font: 400 16px/1 'Noto Sans KR';
         color: #ddd; }
 
 /* content ---------------------------------------------------------------------------------- */
@@ -254,7 +254,7 @@ table {
 /* footer ---------------------------------------------------------------------------------- */
 #footer {
   width: 100%;
-  padding: 80px 0;
+  padding: 80px 0 0;
   background: #252628; }
   #footer .inner {
     width: 1180px;
@@ -274,14 +274,26 @@ table {
           font: bold 20px/1 'Rajdhani';
           color: #ccc;
           letter-spacing: 1px; }
-    #footer .inner #footer_menu input[type="text"] {
+    #footer .inner #footer_menu .search {
       float: right;
-      width: 25%;
+      width: 22%;
       height: 30px;
-      border-bottom: 1px solid #aaa;
-      background: none;
-      font: bold 18px/1 'Rajdhani';
-      color: #fff; }
+      position: relative; }
+      #footer .inner #footer_menu .search input[type="text"] {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-bottom: 1px solid #aaa;
+        background: none;
+        font: 500 16px/1 'Noto Sans KR';
+        color: #fff; }
+      #footer .inner #footer_menu .search i {
+        position: absolute;
+        top: 50%;
+        right: 1px;
+        transform: translateY(-50%);
+        font-size: 15px;
+        color: #777; }
     #footer .inner #sns {
       margin-bottom: 25px; }
       #footer .inner #sns::after {
@@ -304,13 +316,14 @@ table {
         float: left;
         margin-right: 20px; }
         #footer .inner .policy li a {
-          font: 400 16px/1 'Noto Sans KR';
+          font: 400 14px/1 'Noto Sans KR';
           color: #777; }
     #footer .inner > p {
-      font: 300 16px/1 'Noto Sans KR';
+      font: 300 14px/1 'Noto Sans KR';
       color: #777;
       position: relative;
-      padding-top: 10px; }
+      padding-top: 10px;
+      padding-bottom: 60px; }
       #footer .inner > p::before {
         content: '';
         display: block;
@@ -320,11 +333,176 @@ table {
         position: absolute;
         top: 0;
         left: 0; }
+    #footer .inner .go_top {
+      width: 100%;
+      height: 40px;
+      background: none;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+      #footer .inner .go_top .arrow {
+        width: 1px;
+        height: 40px;
+        background: #777;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%); }
+        #footer .inner .go_top .arrow::before {
+          content: '';
+          display: block;
+          width: 13px;
+          height: 1px;
+          background: #777;
+          position: absolute;
+          top: 5px;
+          left: -1px;
+          transform: rotate(45deg); }
+        #footer .inner .go_top .arrow::after {
+          content: '';
+          display: block;
+          width: 13px;
+          height: 1px;
+          background: #777;
+          position: absolute;
+          top: 5px;
+          left: -11px;
+          transform: rotate(-45deg); }
 
+@media screen and (max-width: 1179px) {
+  /* header ---------------------------------------------------------------------------------- */
+  #header {
+    padding: 0 30px;
+    background: #111;
+    border-bottom: 1px solid #888;
+    /* 모바일 버전 헤더 ========== */ }
+    #header .inner {
+      width: 100%; }
+      #header .inner #gnb {
+        display: none; }
+      #header .inner #util {
+        display: none; }
+    #header .btn_menu_mo {
+      display: block;
+      opacity: 1; }
+
+  /* footer ---------------------------------------------------------------------------------- */
+  #footer {
+    padding: 80px 30px 0; }
+    #footer .inner {
+      width: 100%; }
+      #footer .inner #footer_menu::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #footer .inner #footer_menu ul {
+        float: left;
+        margin-bottom: 25px; }
+        #footer .inner #footer_menu ul li {
+          display: inline-block;
+          margin-right: 20px; }
+          #footer .inner #footer_menu ul li a {
+            font: bold 20px/1 'Rajdhani';
+            color: #ccc;
+            letter-spacing: 1px; }
+      #footer .inner #footer_menu .search {
+        float: right;
+        width: 22%;
+        height: 30px;
+        position: relative; }
+        #footer .inner #footer_menu .search input[type="text"] {
+          width: 100%;
+          height: 100%;
+          border: none;
+          border-bottom: 1px solid #aaa;
+          background: none;
+          font: 500 16px/1 'Noto Sans KR';
+          color: #fff; }
+        #footer .inner #footer_menu .search i {
+          position: absolute;
+          top: 50%;
+          right: 1px;
+          transform: translateY(-50%);
+          font-size: 15px;
+          color: #777; }
+      #footer .inner #sns {
+        margin-bottom: 25px; }
+        #footer .inner #sns::after {
+          content: '';
+          display: block;
+          clear: both; }
+        #footer .inner #sns li {
+          float: left;
+          margin-right: 20px; }
+          #footer .inner #sns li a {
+            font-size: 30px;
+            color: #555; }
+      #footer .inner .policy {
+        margin-bottom: 40px; }
+        #footer .inner .policy::after {
+          content: '';
+          display: block;
+          clear: both; }
+        #footer .inner .policy li {
+          float: left;
+          margin-right: 20px; }
+          #footer .inner .policy li a {
+            font: 400 14px/1 'Noto Sans KR';
+            color: #777; }
+      #footer .inner > p {
+        font: 300 14px/1 'Noto Sans KR';
+        color: #777;
+        position: relative;
+        padding-top: 10px;
+        padding-bottom: 60px; }
+        #footer .inner > p::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #555;
+          position: absolute;
+          top: 0;
+          left: 0; }
+      #footer .inner .go_top {
+        width: 100%;
+        height: 40px;
+        background: none;
+        position: absolute;
+        bottom: 0;
+        left: 0; }
+        #footer .inner .go_top .arrow {
+          width: 1px;
+          height: 40px;
+          background: #777;
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%); }
+          #footer .inner .go_top .arrow::before {
+            content: '';
+            display: block;
+            width: 13px;
+            height: 1px;
+            background: #777;
+            position: absolute;
+            top: 5px;
+            left: -1px;
+            transform: rotate(45deg); }
+          #footer .inner .go_top .arrow::after {
+            content: '';
+            display: block;
+            width: 13px;
+            height: 1px;
+            background: #777;
+            position: absolute;
+            top: 5px;
+            left: -11px;
+            transform: rotate(-45deg); } }
 /* header ---------------------------------------------------------------------------------- */
 #header_sub {
   width: 100%;
-  height: 100px;
+  height: 90px;
   position: absolute;
   top: 0;
   left: 0;
@@ -344,7 +522,7 @@ table {
       transform: translateY(-50%);
       z-index: 10; }
       #header_sub .inner .logo a {
-        font: normal 30px/1 'Bangers';
+        font: normal 28px/1 'Bangers';
         color: #fff;
         letter-spacing: 1px; }
     #header_sub .inner #gnb {
@@ -356,12 +534,12 @@ table {
       text-align: center; }
       #header_sub .inner #gnb li {
         display: inline-block;
-        margin: 0 15px;
+        margin: 0 5px;
         position: relative; }
         #header_sub .inner #gnb li a {
           display: block;
           padding: 5px 15px;
-          font: 900 14px/1 'Noto Sans KR';
+          font: 700 14px/1 'Noto Sans KR';
           color: #fff; }
     #header_sub .inner #util {
       position: absolute;
@@ -382,7 +560,7 @@ table {
           color: #bbb; }
   #header_sub:hover {
     background: #111;
-    border-bottom: 1px solid #999; }
+    border-bottom: 1px solid #888; }
     #header_sub:hover .inner #gnb li:hover::after {
       content: '';
       display: block;
@@ -390,16 +568,16 @@ table {
       height: 2px;
       background: #fff;
       position: absolute;
-      bottom: -38px;
+      bottom: -33px;
       left: 0; }
   #header_sub .btn_menu_mo {
     display: none;
     opacity: 0;
-    width: 40px;
-    height: 30px;
+    width: 34px;
+    height: 28px;
     position: absolute;
     top: 50%;
-    right: 0;
+    right: 30px;
     transform: translateY(-50%);
     z-index: 10; }
     #header_sub .btn_menu_mo span {
@@ -501,6 +679,22 @@ table {
       top: 0;
       opacity: 1; }
 
+@media screen and (max-width: 1179px) {
+  /* header ---------------------------------------------------------------------------------- */
+  #header_sub {
+    padding: 0 30px;
+    background: #111;
+    border-bottom: 1px solid #888;
+    /* 모바일 버전 헤더 ========== */ }
+    #header_sub .inner {
+      width: 100%; }
+      #header_sub .inner #gnb {
+        display: none; }
+      #header_sub .inner #util {
+        display: none; }
+    #header_sub .btn_menu_mo {
+      display: block;
+      opacity: 1; } }
 /* content ------------------------*/
 .content {
   width: 100%;
@@ -521,8 +715,9 @@ table {
       transform: translateX(-50%);
       z-index: 1; }
       .content .sub_visual .sub_title > h1 {
-        font: 700 60px/1 'Noto Sans KR';
+        font: 700 50px/1 'Noto Sans KR';
         color: #fff;
+        letter-spacing: 1px;
         position: absolute;
         top: calc( 50% + 50px );
         left: 0;
@@ -532,7 +727,8 @@ table {
       height: 100%;
       object-fit: cover;
       opacity: 0.7;
-      animation: sub_visual_ani 1.5s 0.2s forwards; }
+      animation: sub_visual_ani 2.5s 0.2s forwards;
+      filter: brightness(0.8); }
   .content .inner {
     width: 1180px;
     min-height: 500px;
@@ -542,7 +738,7 @@ table {
 /* footer ---------------------------------------------------------------------------------- */
 #footer_sub {
   width: 100%;
-  padding: 80px 0;
+  padding: 80px 0 0;
   background: #252628; }
   #footer_sub .inner {
     width: 1180px;
@@ -562,14 +758,26 @@ table {
           font: bold 20px/1 'Rajdhani';
           color: #ccc;
           letter-spacing: 1px; }
-    #footer_sub .inner #footer_menu input[type="text"] {
+    #footer_sub .inner #footer_menu .search {
       float: right;
-      width: 25%;
+      width: 22%;
       height: 30px;
-      border-bottom: 1px solid #aaa;
-      background: none;
-      font: bold 18px/1 'Rajdhani';
-      color: #fff; }
+      position: relative; }
+      #footer_sub .inner #footer_menu .search input[type="text"] {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-bottom: 1px solid #aaa;
+        background: none;
+        font: 500 16px/1 'Noto Sans KR';
+        color: #fff; }
+      #footer_sub .inner #footer_menu .search i {
+        position: absolute;
+        top: 50%;
+        right: 1px;
+        transform: translateY(-50%);
+        font-size: 15px;
+        color: #777; }
     #footer_sub .inner #sns {
       margin-bottom: 25px; }
       #footer_sub .inner #sns::after {
@@ -592,13 +800,14 @@ table {
         float: left;
         margin-right: 20px; }
         #footer_sub .inner .policy li a {
-          font: 400 16px/1 'Noto Sans KR';
+          font: 400 14px/1 'Noto Sans KR';
           color: #777; }
     #footer_sub .inner > p {
-      font: 300 16px/1 'Noto Sans KR';
+      font: 300 14px/1 'Noto Sans KR';
       color: #777;
       position: relative;
-      padding-top: 10px; }
+      padding-top: 10px;
+      padding-bottom: 60px; }
       #footer_sub .inner > p::before {
         content: '';
         display: block;
@@ -608,11 +817,46 @@ table {
         position: absolute;
         top: 0;
         left: 0; }
+    #footer_sub .inner .go_top {
+      width: 100%;
+      height: 40px;
+      background: none;
+      position: absolute;
+      bottom: 0;
+      left: 0; }
+      #footer_sub .inner .go_top .arrow {
+        width: 1px;
+        height: 40px;
+        background: #777;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%); }
+        #footer_sub .inner .go_top .arrow::before {
+          content: '';
+          display: block;
+          width: 13px;
+          height: 1px;
+          background: #777;
+          position: absolute;
+          top: 5px;
+          left: -1px;
+          transform: rotate(45deg); }
+        #footer_sub .inner .go_top .arrow::after {
+          content: '';
+          display: block;
+          width: 13px;
+          height: 1px;
+          background: #777;
+          position: absolute;
+          top: 5px;
+          left: -11px;
+          transform: rotate(-45deg); }
 
 @keyframes sub_visual_ani {
   0% {
     transform: scale(1); }
   100% {
-    transform: scale(1.15); } }
+    transform: scale(1.1); } }
 
 /*# sourceMappingURL=style.css.map */
