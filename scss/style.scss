@@ -254,7 +254,75 @@ $mobile:539px;
         }
     }
 
-    
+    .btn_slide_menu {
+        width: 300px;
+        position: absolute;
+        bottom: 30px; right: 30px;
+
+        li.btn_slide1 {
+            width: 50px;
+            float: left;
+            margin-right: 10px;
+            transition: 0.5s ease;
+            a {
+                width: 100%;
+                display: block;
+                
+                span {
+                    display: inline-block;
+                    font: bold 16px/1 'Rajdhani'; color: #fff;
+                    margin-right: 5px;
+                }
+                p {
+                    display: none;
+                    font: 400 14px/1 'Noto Sans KR'; color: #fff;
+                    margin-left: 5px;
+                }
+                .progress_line {
+                    width: 100%; height: 2px;
+                    background: #999;
+                    margin-top: 8px;
+                }
+            }
+
+            &.on {
+                width: 240px;
+                a p { display: inline-block;}
+            }
+        }
+
+        li.btn_slide2 {
+            // width: calc(100% - 80% - 10px);
+            width: 50px;
+            float: left;
+            transition: 0.5s ease;
+            a {
+                width: 100%;
+                display: block;
+                
+                span {
+                    display: inline-block;
+                    font: bold 16px/1 'Rajdhani'; color: #fff;
+                    margin-right: 5px;
+                }
+                p {
+                    display: none;
+                    font: 400 14px/1 'Noto Sans KR'; color: #fff;
+                    margin-left: 5px;
+                }
+                .progress_line {
+                    width: 100%; height: 2px;
+                    background: #999;
+                    margin-top: 8px;
+                }
+            }
+
+            &.on {
+                width: 240px;
+                a p { display: inline-block;}
+            }
+        }
+    }
 }
 
 /* content ---------------------------------------------------------------------------------- */
