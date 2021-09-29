@@ -264,8 +264,8 @@ table {
   #visual .btn_slide_menu {
     width: 300px;
     position: absolute;
-    bottom: 30px;
-    right: 30px; }
+    bottom: 50px;
+    right: 50px; }
     #visual .btn_slide_menu li.btn_slide1 {
       width: 50px;
       float: left;

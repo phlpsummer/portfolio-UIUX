@@ -4,43 +4,67 @@
 
 
 /* visual---------------------------------------------- */
+//@@ DOM 캐싱 @@
 const $slide = $(".slide");
-const $btnSlide = $(".btn_slide_menu li");
+const $btnSlide = $(".btn_slide_menu");
 let timer;
-// let enableClick = true;
+let slideRight = true;
+let isOn = true;
 
-//이벤트바인딩
+
+//@@ 이벤트 바인딩 @@
+//자동 슬라이드 타이머 설정
 timer = setInterval(function(){
-    goNext();
+    slideAction();
 },5000);
 
-//미완성
+//slide 버튼
 $(".btn_slide1").on("click",function(e){
     e.preventDefault();
 
-    $btnSlide.removeClass("on");
-    $(this).addClass("on");
+    let isOn = $(this).hasClass("on");
+    if(isOn) return;
 
-    $slide.animate({marginLeft:"0%"},1000);
+    slideRight = false;
+    slideAction();
 });
 
 $(".btn_slide2").on("click",function(e){
     e.preventDefault();
 
-    $btnSlide.removeClass("on");
-    $(this).addClass("on");
+    let isOn = $(this).hasClass("on");
+    if(isOn) return;
 
-    $slide.animate({marginLeft:"-100%"},1000,function(){
-        $slide.css({marginLeft:"0%"});
-        $(".slide li").first().appendTo($slide);
-    })
+    slideRight = true;
+    slideAction();
 });
 
 
-//함수설정
-function goNext(){
-    $slide.animate({marginLeft:"-100%"},1000,function(){
-        $slide.css({marginLeft:"0%"});
-        $(".slide li").first().appendTo($slide);
-    })
+//@@ 함수설정 @@
+function slideAction(){
+    
+    if(slideRight){
+        $slide.animate({marginLeft:"-100%"},1000,function(){
+            slideRight = false;
+        });
+        $btnSlide.children().removeClass("on");
+        $(".btn_slide2").addClass("on");
+    } else {
+        $slide.animate({marginLeft:"0%"},1000,function(){
+            slideRight = true;
+        });
+        $btnSlide.children().removeClass("on");
+        $(".btn_slide1").addClass("on");
+    }
 }
+
+/* footer---------------------------------------------- */
+const $btnTop = $(".go_top");
+
+$btnTop.on("click",function(e){
+    e.preventDefault();
+
+    $("html, body").animate({
+        scrollTop : 0
+    },500);
+});
