@@ -42,7 +42,8 @@ $.ajax({
                     $("<a>")
                         .append(
                             $("<img>").attr({src:"https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"}),
-                            $("<p>").text(txtTitle)
+                            $("<p>").text(txtTitle),
+                            $("<span>").text(data.owner)
                         )
                         .attr({href:"https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"})
                 )
@@ -57,12 +58,30 @@ $("body").on("click",".gallery .inner ul li",function(e){
     e.preventDefault();
 
     let imgSrc = $(this).children("a").attr("href");
+    let txtTitle = $(this).find("a p").text();
+    let buddyOwner = $(this).find("a span").text();
 
-    $("body").append(
+    $(".gallery").append(
         $("<div class='pop'>")
+            .fadeIn(500)
             .append(
-                $("<img>").attr({src: imgSrc}),
-                $("<span>").text("close")
+                $("<div class='inner'>")
+                    .append(
+                        $("<img>").attr({src: imgSrc}),
+                        $("<span>").text("close"),
+                        $("<div class='profile'>")
+                            .append(
+                                $("<div class='buddyImg'>")
+                                    .append(
+                                        $("<img>").attr({src:"https://www.flickr.com/buddyicons/"+buddyOwner+".jpg"})
+                                    ),
+                                $("<ul class='txt'>")
+                                    .append(
+                                        $("<li class='title'>").text(txtTitle),
+                                        $("<li class='owner'>").text(buddyOwner)
+                                    )
+                            )
+                    )
             )
     )
 });
