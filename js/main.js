@@ -3,7 +3,7 @@
 
 
 
-/* visual---------------------------------------------- */
+/* index-visual---------------------------------------------- */
 //@@ DOM 캐싱 @@
 const $slide = $(".slide");
 const $btnSlide = $(".btn_slide_menu");
@@ -57,6 +57,9 @@ function slideAction(){
         $(".btn_slide1").addClass("on");
     }
 }
+
+
+
 
 /* footer---------------------------------------------- */
 const $btnTop = $(".go_top");
