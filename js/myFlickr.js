@@ -54,6 +54,8 @@ $.ajax({
     console.error("데이터 호출 실패");
 })
 
+
+// 썸네일 클릭시, pop창 띄우기
 $("body").on("click",".gallery .inner ul li",function(e){
     e.preventDefault();
 
@@ -86,6 +88,7 @@ $("body").on("click",".gallery .inner ul li",function(e){
     )
 });
 
+// pop창 닫기 버튼
 $("body").on("click",".pop span",function(){
     $(".pop").fadeOut(500,function(){
         $(this).remove();
