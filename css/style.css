@@ -1118,4 +1118,47 @@ table {
           font: 300 14px/1.2 'Noto Sans KR';
           color: #777; }
 
+.youtube {
+  background: #efefef; }
+  .youtube .inner article {
+    width: 100%;
+    height: 300px;
+    background: #fff;
+    margin-bottom: 25px;
+    transition: 1s; }
+    .youtube .inner article a {
+      width: 100%;
+      height: 100%; }
+      .youtube .inner article a::after {
+        content: '';
+        display: block;
+        clear: both; }
+      .youtube .inner article a img {
+        width: 40%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        float: left; }
+      .youtube .inner article a .con {
+        width: 60%;
+        height: 100%;
+        padding: 40px 20px;
+        float: right;
+        position: relative; }
+        .youtube .inner article a .con h2 {
+          font: 700 22px/1.2 'Noto Sans KR';
+          color: #333;
+          margin-bottom: 20px; }
+        .youtube .inner article a .con p {
+          font: 300 16px/1.5 'Noto Sans KR';
+          color: #555; }
+        .youtube .inner article a .con span {
+          font: 400 14px/1 'Noto Sans KR';
+          color: steelblue;
+          position: absolute;
+          bottom: 25px;
+          left: 20px; }
+    .youtube .inner article:hover {
+      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.3); }
+
 /*# sourceMappingURL=style.css.map */
