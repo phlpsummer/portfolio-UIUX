@@ -7,6 +7,10 @@ AIzaSyAMoGKvrd6wFxpLb2M8fXI83hwwuZjv7is
 
 */
 
+const $border = $(".youtube .inner article a .borderWrap");
+let speed = 500;
+
+
 $.ajax({
     url: "https://www.googleapis.com/youtube/v3/playlistItems",
     dataType: "jsonp",
@@ -41,11 +45,16 @@ $.ajax({
         //날짜
         let ytDate = data.snippet.publishedAt;
         ytDate = ytDate.split("T")[0];
+        ytDate = ytDate.substr(2);
 
         $(".youtube .inner")
             .append(
                 $("<article>")
                     .append(
+                        $("<div class='borderWrap'>")
+                        .append(
+                            $("<div class='top'>"),$("<div class='right'>"),$("<div class='bottom'>"),$("<div class='left'>")
+                        ),
                         $("<a>").attr({href: data.snippet.resourceId.videoId})
                                 .append(
                                     $("<img>").attr({src: data.snippet.thumbnails.high.url}),
@@ -63,3 +72,41 @@ $.ajax({
 .error(function(err){
     console.error("데이터 호출 실패");
 })
+
+// hover시 테두리
+$("body").mouseenter(".youtube .inner article",function(){
+    $(this).find(".top").animate({width:"100%"},speed,function(){
+        $(".right").animate({height:"100%"},speed,function(){
+            $(".bottom").animate({width:"100%"},speed,function(){
+                $(".left").animate({height:"100%"},speed);
+            });
+        });
+    });
+});
+$("body").mouseleave(".youtube .inner article",function(){
+    $(this).find(".top").animate({width:"0%"},speed,function(){
+        $(".right").animate({height:"0%"},speed);
+    });
+    $(this).find(".bottom").animate({width:"0%"},speed,function(){
+        $(".left").animate({height:"0%"},speed);
+    });
+});
+
+// pop창
+$("body").on("click",".youtube .inner article a",function(e){
+    e.preventDefault();
+
+    $(".youtube")
+        .append(
+            $("<div class='pop'>")
+                .append(
+                    $("<iframe>").attr({
+                        src: "https://www.youtube.com/embed/"+vidId,
+                        height: 600,
+                        width: "100%",
+                        frameborder: 0
+                    }),
+                    $("<span>").text("close")
+                )
+        )
+});
