@@ -42,9 +42,23 @@
         margin: 0 auto;
         position: relative;
 
-        h1 { font: 900 20px/1 'Noto Sans KR'; color: #333; margin-bottom: 30px;}
+        h1 { font: 900 22px/1 'Noto Sans KR'; color: #333; margin-bottom: 30px;}
     }
 }
+
+@media screen and (max-width:$tablet) {
+    .content {
+        .sub_visual {
+
+        }
+
+        .inner {
+            width: 100%;
+            padding: 0 30px;
+        }
+    }
+}
+
 
 @import 'footer_sub';
 

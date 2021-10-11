@@ -16,10 +16,10 @@ $.ajax({
     dataType: "json",
     data: {
         api_key: "48fa09238ff7a579f7c89acef3c946b7",
-        per_page: 5,
+        per_page: 30,
         format: "json",
         nojsoncallback: 1,
-        privacy_filter: 5,
+        privacy_filter: 1,
         tags: "concert"
     }
 })
@@ -27,7 +27,7 @@ $.ajax({
     console.log(data);
     let items = data.photos.photo;
 
-    $(".gallery .inner").append("<ul>");
+    $(".gallery .inner").append("<main>");
 
     $(items).each(function(index,data){
 
@@ -36,14 +36,17 @@ $.ajax({
             txtTitle = "untitled";
         }
 
-        $(".gallery .inner ul").append(
-            $("<li>")
+        $(".gallery .inner main").append(
+            $("<article>")
                 .append(
                     $("<a>")
                         .append(
-                            $("<img>").attr({src:"https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"}),
-                            $("<p>").text(txtTitle),
-                            $("<span>").text(data.owner)
+                            $("<div>")
+                                .append(
+                                    $("<p>").text(txtTitle),
+                                    $("<span>").text(data.owner)
+                                ),
+                            $("<img>").attr({src:"https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"})
                         )
                         .attr({href:"https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"})
                 )
@@ -56,7 +59,7 @@ $.ajax({
 
 
 // 썸네일 클릭시, pop창 띄우기
-$("body").on("click",".gallery .inner ul li",function(e){
+$("body").on("click",".gallery .inner article",function(e){
     e.preventDefault();
 
     let imgSrc = $(this).children("a").attr("href");
@@ -67,7 +70,7 @@ $("body").on("click",".gallery .inner ul li",function(e){
         $("<div class='pop'>")
             .fadeIn(500)
             .append(
-                $("<div class='inner'>")
+                $("<div class='post'>")
                     .append(
                         $("<img>").attr({src: imgSrc}),
                         $("<span>").text("close"),

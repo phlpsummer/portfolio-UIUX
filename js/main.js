@@ -12,7 +12,7 @@ let isOn = true;
 //자동 슬라이드 타이머 설정
 timer = setInterval(function(){
     slideAction();
-},5000);
+},4000);
 
 //slide 버튼
 $(".btn_slide1").on("click",function(e){

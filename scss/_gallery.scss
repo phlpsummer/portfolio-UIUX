@@ -1,5 +1,50 @@
 .gallery {
+    background: #efefef;
+
     .inner {
+
+        main {
+            width: 100%;
+
+            &::after { content: ''; display: block; clear: both;}
+
+            article {
+                width: 25%;
+                float: left;
+                padding: 15px;
+    
+                a {
+                    display: block;
+                    width: 100%;
+                    background: #fff;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+                    padding: 15px;
+    
+                    >div {
+                        width: 100%; height: 240px;
+                        position: relative;
+                        margin-bottom: 50px;
+    
+                        p {
+                            position: absolute;
+                            top: 0px; right: 0;
+                            font: 400 14px/1.2 'Noto Sans KR'; color: #666;
+                            transform: rotate(90deg) translate(100%,50%);
+                            transform-origin: right center;
+                        }
+                        span {
+                            display: inline-block;
+                            position: absolute;
+                            bottom: 0; left: 0;
+                            font: 400 14px/1.2 'Noto Sans KR'; color: #666;
+                            transform: rotate(270deg) translateY(50%);
+                            transform-origin: left center;
+                        }
+                    }
+                    >img { width: 100%;}
+                }
+            }
+        }
 
     }
 
@@ -10,12 +55,13 @@
         top: 0; left: 0;
         z-index: 99;
 
-        .inner {
-            width: 480px; height: 650px;
+        .post {
+            width: 480px; height: 620px;
             background: #fff;
             position: absolute;
             top: 50%; left: 50%;
             transform: translate(-50%,-50%);
+            box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6);
 
             >img {
                 width: 100%; height: 500px;
@@ -28,7 +74,7 @@
                 width: 50px; height: 50px;
                 text-indent: -999px;
                 position: absolute;
-                top: -8px; right: -48px;
+                top: -8px; right: -49px;
                 cursor: pointer;
                 font-size: 0;
 
@@ -51,34 +97,62 @@
             }
 
             .profile {
-                width: 100%; height: 150px;
-
-                &::after {content: ''; display: block; clear: both;}
+                width: 100%; height: 120px;
+                position: relative;
+                padding: 20px 30px;
 
                 .buddyImg {
-                    width: 70px; height: 70px;
+                    width: 80px; height: 80px;
                     border-radius: 50%;
                     overflow: hidden;
-                    margin: 40px 30px 40px 60px;
-                    display: flex;
-                    align-items: center;
-                    float: left;
+                    position: absolute;
+                    top: 50%; left: 40px;
+                    margin-top: -40px;
 
                     img { width: 100%; object-fit: cover; object-position: center;}
                 }
 
                 ul.txt {
-                    float: left;
-                    padding: 30px 40px;
+                    margin-left: 140px;
 
                     li.title {
                         font: 700 16px/1.2 'Noto Sans KR'; color: #333;
-                        // margin-bottom: 5px;
+                        margin-bottom: 6px;
                     }
                     li.owner {
                         font: 300 14px/1.2 'Noto Sans KR'; color: #777;
                     }
                 }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$tablet) {
+    .gallery {
+        .inner {
+            article {
+                width: calc(100% / 3);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:899px) {
+    .gallery {
+        .inner {
+            article {
+                width: calc(100% / 2);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$mobile) {
+    .gallery {
+        .inner {
+            article {
+                width: 100%;
             }
         }
     }

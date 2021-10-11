@@ -902,10 +902,14 @@ table {
     margin: 0 auto;
     position: relative; }
     .content .inner h1 {
-      font: 900 20px/1 'Noto Sans KR';
+      font: 900 22px/1 'Noto Sans KR';
       color: #333;
       margin-bottom: 30px; }
 
+@media screen and (max-width: 1179px) {
+  .content .inner {
+    width: 100%;
+    padding: 0 30px; } }
 /* footer ---------------------------------------------------------------------------------- */
 #footer_sub {
   width: 100%;
@@ -1037,87 +1041,260 @@ table {
     transform: scale(1); }
   100% {
     transform: scale(1.1); } }
-.gallery .pop {
+.community .inner table {
   width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99; }
-  .gallery .pop .inner {
-    width: 480px;
-    height: 650px;
-    background: #fff;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    .gallery .pop .inner > img {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      object-position: center; }
-    .gallery .pop .inner > span {
-      display: block;
-      width: 50px;
-      height: 50px;
-      text-indent: -999px;
-      position: absolute;
-      top: -8px;
-      right: -48px;
-      cursor: pointer;
-      font-size: 0; }
-      .gallery .pop .inner > span::before {
-        content: '';
+  border-top: 2px solid #111;
+  margin-bottom: 50px; }
+  .community .inner table tr {
+    border-bottom: 1px solid #ddd;
+    transition: 0.3s; }
+    .community .inner table tr th {
+      padding: 10px 0;
+      font: 500 14px/1 'Noto Sans KR';
+      color: #555; }
+      .community .inner table tr th:nth-of-type(1) {
+        width: 3%; }
+      .community .inner table tr th:nth-of-type(2) {
+        width: 10%; }
+      .community .inner table tr th:nth-of-type(4) {
+        width: 6%; }
+      .community .inner table tr th:nth-of-type(5) {
+        width: 10%; }
+      .community .inner table tr th:nth-of-type(6) {
+        width: 6%; }
+    .community .inner table tr td {
+      padding: 15px 10px;
+      font: 500 16px/1 'Noto Sans KR';
+      color: #555;
+      text-align: center; }
+      .community .inner table tr td:nth-of-type(1) {
+        font-weight: 300; }
+      .community .inner table tr td:nth-of-type(2) {
         display: block;
-        width: 100%;
-        height: 1px;
-        background: #efefef;
-        position: absolute;
-        top: 25px;
-        left: 0;
-        transform: rotate(45deg); }
-      .gallery .pop .inner > span::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: #efefef;
-        position: absolute;
-        top: 25px;
-        left: 0;
-        transform: rotate(-45deg); }
-    .gallery .pop .inner .profile {
-      width: 100%;
-      height: 150px; }
-      .gallery .pop .inner .profile::after {
-        content: '';
-        display: block;
-        clear: both; }
-      .gallery .pop .inner .profile .buddyImg {
         width: 70px;
-        height: 70px;
-        border-radius: 50%;
-        overflow: hidden;
-        margin: 40px 30px 40px 60px;
-        display: flex;
-        align-items: center;
-        float: left; }
-        .gallery .pop .inner .profile .buddyImg img {
-          width: 100%;
-          object-fit: cover;
-          object-position: center; }
-      .gallery .pop .inner .profile ul.txt {
-        float: left;
-        padding: 30px 40px; }
-        .gallery .pop .inner .profile ul.txt li.title {
-          font: 700 16px/1.2 'Noto Sans KR';
-          color: #333; }
-        .gallery .pop .inner .profile ul.txt li.owner {
-          font: 300 14px/1.2 'Noto Sans KR';
-          color: #777; }
+        height: 28px;
+        border: 2px solid #333;
+        font: 700 14px/26px 'Noto Sans KR';
+        color: #333;
+        border-radius: 14px;
+        margin: 10px auto;
+        padding: 0; }
+      .community .inner table tr td:nth-of-type(3) {
+        text-align: left; }
+    .community .inner table tr:hover {
+      background: #b76ca45e; }
+      .community .inner table tr:hover td:nth-of-type(3) {
+        text-decoration: underline;
+        color: #5f4b8b; }
+  .community .inner table .notice {
+    background: #eee; }
+    .community .inner table .notice td:nth-of-type(2) {
+      background: #333;
+      color: #fff; }
+    .community .inner table .notice td:nth-of-type(3) {
+      font-weight: 700; }
+.community .inner .pagination {
+  width: 100%; }
+  .community .inner .pagination ul {
+    font-size: 0;
+    text-align: center; }
+    .community .inner .pagination ul li {
+      display: inline-block;
+      margin: 0 10px; }
+      .community .inner .pagination ul li a {
+        font: 500 16px/1 'Noto Sans KR';
+        color: #333; }
 
+/* 태블릿 --------------------------------------------------------------------------*/
+@media screen and (max-width: 1179px) {
+  .community .inner table tr th:nth-of-type(1) {
+    width: 8%; }
+  .community .inner table tr th:nth-of-type(2) {
+    width: 0%;
+    display: none; }
+  .community .inner table tr th:nth-of-type(4) {
+    width: 15%; }
+  .community .inner table tr th:nth-of-type(5) {
+    width: 24%; }
+  .community .inner table tr th:nth-of-type(6) {
+    width: 0%;
+    display: none; }
+  .community .inner table tr td:nth-of-type(2) {
+    display: none; }
+  .community .inner table tr td:nth-of-type(6) {
+    display: none; }
+  .community .inner .pagination ul li:nth-of-type(7) {
+    display: none; }
+  .community .inner .pagination ul li:nth-of-type(8) {
+    display: none; }
+  .community .inner .pagination ul li:nth-of-type(9) {
+    display: none; }
+  .community .inner .pagination ul li:nth-of-type(10) {
+    display: none; }
+  .community .inner .pagination ul li:nth-of-type(11) {
+    display: none; } }
+/* 모바일 --------------------------------------------------------------------------*/
+@media screen and (max-width: 539px) {
+  .community .inner table tr th:nth-of-type(1) {
+    width: 0%;
+    display: none; }
+  .community .inner table tr th:nth-of-type(4) {
+    width: 24%; }
+  .community .inner table tr th:nth-of-type(5) {
+    width: 0%;
+    display: none; }
+  .community .inner table tr td:nth-of-type(1) {
+    display: none; }
+  .community .inner table tr td:nth-of-type(5) {
+    display: none; }
+  .community .inner .pagination ul li {
+    border: 1px solid #777;
+    margin: 0 5px; }
+    .community .inner .pagination ul li:nth-of-type(2) {
+      display: none; }
+    .community .inner .pagination ul li:nth-of-type(3) {
+      display: none; }
+    .community .inner .pagination ul li:nth-of-type(4) {
+      display: none; }
+    .community .inner .pagination ul li:nth-of-type(5) {
+      display: none; }
+    .community .inner .pagination ul li:nth-of-type(6) {
+      display: none; }
+    .community .inner .pagination ul li a {
+      display: inline-block;
+      font-size: 24px;
+      padding: 10px 15px; } }
+.gallery {
+  background: #efefef; }
+  .gallery .inner main {
+    width: 100%; }
+    .gallery .inner main::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .gallery .inner main article {
+      width: 25%;
+      float: left;
+      padding: 15px; }
+      .gallery .inner main article a {
+        display: block;
+        width: 100%;
+        background: #fff;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        padding: 15px; }
+        .gallery .inner main article a > div {
+          width: 100%;
+          height: 240px;
+          position: relative;
+          margin-bottom: 50px; }
+          .gallery .inner main article a > div p {
+            position: absolute;
+            top: 0px;
+            right: 0;
+            font: 400 14px/1.2 'Noto Sans KR';
+            color: #666;
+            transform: rotate(90deg) translate(100%, 50%);
+            transform-origin: right center; }
+          .gallery .inner main article a > div span {
+            display: inline-block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            font: 400 14px/1.2 'Noto Sans KR';
+            color: #666;
+            transform: rotate(270deg) translateY(50%);
+            transform-origin: left center; }
+        .gallery .inner main article a > img {
+          width: 100%; }
+  .gallery .pop {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99; }
+    .gallery .pop .post {
+      width: 480px;
+      height: 620px;
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.6); }
+      .gallery .pop .post > img {
+        width: 100%;
+        height: 500px;
+        object-fit: cover;
+        object-position: center; }
+      .gallery .pop .post > span {
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-indent: -999px;
+        position: absolute;
+        top: -8px;
+        right: -49px;
+        cursor: pointer;
+        font-size: 0; }
+        .gallery .pop .post > span::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #efefef;
+          position: absolute;
+          top: 25px;
+          left: 0;
+          transform: rotate(45deg); }
+        .gallery .pop .post > span::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #efefef;
+          position: absolute;
+          top: 25px;
+          left: 0;
+          transform: rotate(-45deg); }
+      .gallery .pop .post .profile {
+        width: 100%;
+        height: 120px;
+        position: relative;
+        padding: 20px 30px; }
+        .gallery .pop .post .profile .buddyImg {
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          overflow: hidden;
+          position: absolute;
+          top: 50%;
+          left: 40px;
+          margin-top: -40px; }
+          .gallery .pop .post .profile .buddyImg img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center; }
+        .gallery .pop .post .profile ul.txt {
+          margin-left: 140px; }
+          .gallery .pop .post .profile ul.txt li.title {
+            font: 700 16px/1.2 'Noto Sans KR';
+            color: #333;
+            margin-bottom: 6px; }
+          .gallery .pop .post .profile ul.txt li.owner {
+            font: 300 14px/1.2 'Noto Sans KR';
+            color: #777; }
+
+@media screen and (max-width: 1179px) {
+  .gallery .inner article {
+    width: calc(100% / 3); } }
+@media screen and (max-width: 899px) {
+  .gallery .inner article {
+    width: calc(100% / 2); } }
+@media screen and (max-width: 539px) {
+  .gallery .inner article {
+    width: 100%; } }
 .youtube {
   background: #efefef; }
   .youtube .inner article {
@@ -1188,7 +1365,7 @@ table {
           font: 300 16px/1.5 'Noto Sans KR';
           color: #555; }
         .youtube .inner article a .con span {
-          font: 400 14px/1 'Noto Sans KR';
+          font: 300 16px/1 'Noto Sans KR';
           color: steelblue;
           position: absolute;
           bottom: 25px;
@@ -1201,7 +1378,8 @@ table {
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0, 0, 0, 0.8); }
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99; }
     .youtube .pop iframe {
       width: 800px;
       height: 450px;
@@ -1242,5 +1420,288 @@ table {
         top: 25px;
         left: 0;
         transform: rotate(-45deg); }
+
+.join .sub_visual img {
+  object-position: bottom; }
+.join .inner h2 {
+  font: 500 28px/1 'Noto Sans KR';
+  color: #111;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc; }
+.join .inner input[type="checkbox"] {
+  margin-right: 10px;
+  margin-bottom: 20px; }
+.join .inner .agree_box .agreement {
+  width: 100%; }
+  .join .inner .agree_box .agreement::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .join .inner .agree_box .agreement label {
+    float: left; }
+  .join .inner .agree_box .agreement .overview {
+    float: right;
+    font: 300 16px/1 'Noto Sans KR';
+    color: #777; }
+    .join .inner .agree_box .agreement .overview .btn_overview {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      margin-left: 8px;
+      position: relative; }
+      .join .inner .agree_box .agreement .overview .btn_overview::before {
+        content: '';
+        display: block;
+        width: 70%;
+        height: 1px;
+        background: #999;
+        position: absolute;
+        left: -4px;
+        top: 13px;
+        transform: rotate(-45deg); }
+      .join .inner .agree_box .agreement .overview .btn_overview::after {
+        content: '';
+        display: block;
+        width: 70%;
+        height: 1px;
+        background: #999;
+        position: absolute;
+        right: 0px;
+        top: 13px;
+        transform: rotate(45deg); }
+    .join .inner .agree_box .agreement .overview:hover .btn_overview::before {
+      transform: rotate(45deg); }
+    .join .inner .agree_box .agreement .overview:hover .btn_overview::after {
+      transform: rotate(-45deg); }
+.join .inner .agree_box textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  padding: 20px;
+  background: #eee;
+  border: none;
+  border-top: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 30px; }
+.join .inner .agree_box p {
+  font: 700 14px/1.6 'Noto Sans KR';
+  color: #999;
+  margin-bottom: 100px; }
+.join .inner h2.title_essential::after {
+  content: '* 은 필수입력 사항입니다.';
+  display: inline-block;
+  font: 300 18px/1 'Noto Sans KR';
+  color: #b76ca4;
+  margin-left: 30px; }
+.join .inner .wrap {
+  width: 100%; }
+  .join .inner .wrap .left_intro {
+    width: 25%;
+    height: 570px;
+    background: #efefef;
+    padding: 60px 40px;
+    float: left; }
+    .join .inner .wrap .left_intro h1 {
+      font: normal 24px/1 'Bangers';
+      color: #777;
+      letter-spacing: 1px;
+      margin-bottom: 20px; }
+    .join .inner .wrap .left_intro p {
+      font: 300 16px/2.4 'Noto Sans KR';
+      color: #777;
+      letter-spacing: 0.5px; }
+      .join .inner .wrap .left_intro p > span {
+        position: relative; }
+        .join .inner .wrap .left_intro p > span::after {
+          content: '';
+          display: block;
+          background: #aaa;
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          bottom: 0;
+          left: 0; }
+  .join .inner .wrap .right_essential {
+    width: 75%;
+    float: left;
+    padding: 50px 60px; }
+    .join .inner .wrap .right_essential table {
+      width: 100%; }
+      .join .inner .wrap .right_essential table tr th {
+        width: 20%;
+        text-align: left;
+        padding: 20px 0px;
+        font: 500 16px/1 'Noto Sans KR';
+        color: #555; }
+        .join .inner .wrap .right_essential table tr th::before {
+          content: '*';
+          display: inline-block;
+          margin-right: 3px;
+          color: #b76ca4; }
+      .join .inner .wrap .right_essential table tr td {
+        width: 80%;
+        padding: 20px 40px; }
+        .join .inner .wrap .right_essential table tr td p {
+          font: 300 14px/1 'Noto Sans KR';
+          color: #333;
+          margin-top: 10px; }
+        .join .inner .wrap .right_essential table tr td input[type="text"], .join .inner .wrap .right_essential table tr td input[type="password"] {
+          width: 100%;
+          height: 40px;
+          border: 1px solid #aaa;
+          padding-left: 15px;
+          border-radius: 5px; }
+        .join .inner .wrap .right_essential table tr td select {
+          width: calc( 100% - 160px );
+          height: 40px;
+          border: 1px solid #aaa;
+          padding-left: 15px;
+          border-radius: 5px; }
+      .join .inner .wrap .right_essential table tr .btn_send {
+        display: inline-block;
+        width: 140px;
+        height: 40px;
+        font: 500 14px/40px 'Noto Sans KR';
+        color: #fff;
+        background: #555;
+        border-radius: 5px;
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 5px; }
+      .join .inner .wrap .right_essential table tr .btn_confirm {
+        display: inline-block;
+        width: 140px;
+        height: 40px;
+        font: 500 14px/40px 'Noto Sans KR';
+        color: #fff;
+        background: #555;
+        border-radius: 5px;
+        text-align: center;
+        margin-left: 5px; }
+      .join .inner .wrap .right_essential table tr #confirm {
+        width: calc( 100% - 160px ); }
+  .join .inner .wrap .btn_submit {
+    float: left;
+    width: 100%;
+    text-align: center; }
+    .join .inner .wrap .btn_submit input[type="reset"] {
+      width: 150px;
+      height: 40px;
+      font: 500 16px/40px 'Noto Sans KR';
+      color: #555;
+      border: 1px solid #555;
+      border-radius: 5px;
+      background: #fff;
+      margin-right: 10px; }
+    .join .inner .wrap .btn_submit input[type="submit"] {
+      width: 150px;
+      height: 40px;
+      font: 500 16px/40px 'Noto Sans KR';
+      color: #fff;
+      border-radius: 5px;
+      background: #5f4b8b;
+      border: none; }
+
+/* 태블릿 --------------------------------------------------------------------------*/
+@media screen and (max-width: 1179px) {
+  .join .inner .agree_box .agreement label {
+    float: left; }
+  .join .inner .agree_box .agreement .overview {
+    float: right; }
+  .join .inner .agree_box p {
+    font: 700 14px/1.6 'Noto Sans KR';
+    margin-bottom: 100px; }
+  .join .inner .wrap .left_intro {
+    width: 0%;
+    float: none;
+    display: none; }
+  .join .inner .wrap .right_essential {
+    width: 100%;
+    float: none;
+    padding: 0 0 60px; }
+    .join .inner .wrap .right_essential table tr th {
+      width: 30%;
+      font: 500 16px/1 'Noto Sans KR'; }
+    .join .inner .wrap .right_essential table tr td {
+      width: 70%;
+      padding: 20px 0px 20px 20px; }
+      .join .inner .wrap .right_essential table tr td p {
+        font: 300 14px/1 'Noto Sans KR'; }
+      .join .inner .wrap .right_essential table tr td select {
+        width: calc( 100% - 160px ); }
+    .join .inner .wrap .right_essential table tr .btn_send {
+      width: 140px;
+      height: 40px;
+      font: 500 14px/40px 'Noto Sans KR';
+      margin-top: 10px;
+      margin-bottom: 10px; }
+    .join .inner .wrap .right_essential table tr .btn_confirm {
+      width: 140px;
+      height: 40px;
+      font: 500 14px/40px 'Noto Sans KR'; }
+    .join .inner .wrap .right_essential table tr #confirm {
+      width: calc( 100% - 160px ); }
+  .join .inner .wrap .btn_submit {
+    float: none; }
+    .join .inner .wrap .btn_submit input[type="reset"] {
+      width: 150px;
+      height: 40px;
+      font: 500 16px/40px 'Noto Sans KR'; }
+    .join .inner .wrap .btn_submit input[type="submit"] {
+      width: 150px;
+      height: 40px;
+      font: 500 16px/40px 'Noto Sans KR'; } }
+/* 모바일 --------------------------------------------------------------------------*/
+@media screen and (max-width: 539px) {
+  .join .inner h2 {
+    font: 500 22px/1 'Noto Sans KR';
+    margin-bottom: 40px; }
+  .join .inner h2.title_essential::after {
+    display: block;
+    font: 300 14px/1 'Noto Sans KR';
+    margin: 10px 0 0; }
+  .join .inner .agree_box .agreement label {
+    float: left; }
+  .join .inner .agree_box .agreement .overview {
+    float: right;
+    margin-bottom: 20px; }
+  .join .inner .agree_box p {
+    font: 700 11px/1.4 'Noto Sans KR';
+    margin-bottom: 80px; }
+  .join .inner .wrap .right_essential {
+    padding: 0 0 30px; }
+    .join .inner .wrap .right_essential table tr th {
+      width: 34%;
+      font: 500 14px/1 'Noto Sans KR'; }
+    .join .inner .wrap .right_essential table tr td {
+      width: 66%;
+      padding: 20px 0px 20px 10px; }
+      .join .inner .wrap .right_essential table tr td p {
+        font: 300 12px/1 'Noto Sans KR'; }
+      .join .inner .wrap .right_essential table tr td select {
+        width: 100%;
+        margin-top: 5px; }
+    .join .inner .wrap .right_essential table tr .btn_send {
+      width: 100%;
+      font: 500 14px/40px 'Noto Sans KR';
+      margin: 5px 0px 15px; }
+    .join .inner .wrap .right_essential table tr .btn_confirm {
+      width: 100%;
+      font: 500 14px/40px 'Noto Sans KR';
+      margin: 5px 0px 0px; }
+    .join .inner .wrap .right_essential table tr #confirm {
+      width: 100%; }
+  .join .inner .wrap .btn_submit {
+    float: none; }
+    .join .inner .wrap .btn_submit input[type="reset"] {
+      width: 100%;
+      font: 500 16px/40px 'Noto Sans KR';
+      margin: 0 0 5px; }
+    .join .inner .wrap .btn_submit input[type="submit"] {
+      width: 100%;
+      font: 500 16px/40px 'Noto Sans KR';
+      margin: 0; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -64,7 +64,7 @@
                         font: 300 16px/1.5 'Noto Sans KR'; color: #555;
                     }
                     span {
-                        font: 400 14px/1 'Noto Sans KR'; color: steelblue;
+                        font: 300 16px/1 'Noto Sans KR'; color: steelblue;
                         position: absolute;
                         bottom: 25px; left: 20px;
                     }
@@ -80,6 +80,7 @@
         position: fixed;
         top: 0; left: 0;
         background: rgba(0, 0, 0, 0.8);
+        z-index: 99;
 
         iframe {
             width: 800px; height: 450px;
