@@ -74,7 +74,7 @@ $.ajax({
 })
 
 // hover시 테두리
-$("body").mouseenter(".youtube .inner article",function(){
+$("body").on("mouseenter",".youtube .inner article",function(){
     $(this).find(".top").animate({width:"100%"},speed,function(){
         $(".right").animate({height:"100%"},speed,function(){
             $(".bottom").animate({width:"100%"},speed,function(){
@@ -83,18 +83,18 @@ $("body").mouseenter(".youtube .inner article",function(){
         });
     });
 });
-$("body").mouseleave(".youtube .inner article",function(){
-    $(this).find(".top").animate({width:"0%"},speed,function(){
-        $(".right").animate({height:"0%"},speed);
-    });
-    $(this).find(".bottom").animate({width:"0%"},speed,function(){
-        $(".left").animate({height:"0%"},speed);
-    });
+$("body").on("mouseleave",".youtube .inner article",function(){
+    $(this).find(".top").animate({width:"0%"},speed);
+    $(this).find(".right").animate({height:"0%"},speed);
+    $(this).find(".bottom").animate({width:"0%"},speed);
+    $(this).find(".left").animate({height:"0%"},speed);
 });
 
 // pop창
 $("body").on("click",".youtube .inner article a",function(e){
     e.preventDefault();
+
+    let vidId = $(this).attr("href");
 
     $(".youtube")
         .append(
@@ -102,11 +102,15 @@ $("body").on("click",".youtube .inner article a",function(e){
                 .append(
                     $("<iframe>").attr({
                         src: "https://www.youtube.com/embed/"+vidId,
-                        height: 600,
-                        width: "100%",
+                        // height: 600,
+                        // width: 900,
                         frameborder: 0
                     }),
                     $("<span>").text("close")
                 )
         )
+});
+
+$("body").on("click",".youtube .pop span",function(){
+    $(".youtube .pop").remove();
 });
