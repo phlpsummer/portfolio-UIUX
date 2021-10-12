@@ -1,5 +1,5 @@
 
-/* index-visual---------------------------------------------- */
+/* index페이지-visual---------------------------------------------- */
 //@@ DOM 캐싱 @@
 const $slide = $(".slide");
 const $btnSlide = $(".btn_slide_menu");
@@ -54,7 +54,21 @@ function slideAction(){
     }
 }
 
-/* index-galleryBanner---------------------------------------------- */
+/* index페이지-galleryBanner---------------------------------------------- */
+
+
+/* about페이지---------------------------------------------- */
+$(window).on("scroll",function(){
+    let scroll = $(this).scrollTop();
+
+    if(scroll > 100){
+        $(".circle1").addClass("on");
+    }
+
+    $(".circle2").css({
+        left: scroll - 300
+    });
+});
 
 
 /* footer---------------------------------------------- */
