@@ -1519,7 +1519,7 @@ table {
     height: 30vw; }
   .location .inner .btnTraffic {
     float: right;
-    margin-top: 20px; }
+    margin-top: 10px; }
     .location .inner .btnTraffic li {
       float: left;
       margin-left: 10px; }
@@ -1535,6 +1535,128 @@ table {
         border: none;
         background: #333;
         color: #fff; }
+  .location .inner .info {
+    width: 100%;
+    margin-top: 100px;
+    position: relative;
+    padding: 0 0 60px 60px;
+    padding-left: 60px;
+    border-bottom: 1px solid #bbb; }
+    .location .inner .info i {
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 50px;
+      color: #333; }
+    .location .inner .info .add {
+      font: 700 20px/1 'Noto Sans KR';
+      color: #444;
+      letter-spacing: 1px;
+      margin-bottom: 16px; }
+    .location .inner .info .tel {
+      font: 300 16px/1 'Noto Sans KR';
+      letter-spacing: 1px; }
+      .location .inner .info .tel > span {
+        font-weight: 500;
+        margin-right: 7px;
+        letter-spacing: 0; }
+  .location .inner .subway {
+    width: 100%;
+    padding: 50px 0;
+    border-bottom: 1px solid #bbb; }
+    .location .inner .subway::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .location .inner .subway > .left {
+      width: 30%;
+      float: left;
+      padding-left: 30px;
+      font: 700 18px/1 'Noto Sans KR';
+      color: #333; }
+    .location .inner .subway > .right {
+      width: 70%;
+      float: left;
+      padding-right: 30px;
+      font: 400 16px/1 'Noto Sans KR';
+      color: #333; }
+      .location .inner .subway > .right span {
+        display: inline-block;
+        color: #fff;
+        padding: 3px 8px;
+        margin-bottom: 12px; }
+        .location .inner .subway > .right span:nth-of-type(1) {
+          background-color: green;
+          margin-right: 5px; }
+        .location .inner .subway > .right span:nth-of-type(2) {
+          background-color: #2d94d8;
+          margin-right: 5px; }
+        .location .inner .subway > .right span:nth-of-type(3) {
+          background-color: purple; }
+      .location .inner .subway > .right p {
+        color: #333; }
+  .location .inner .bus {
+    width: 100%;
+    padding: 50px 0;
+    border-bottom: 1px solid #bbb; }
+    .location .inner .bus::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .location .inner .bus > .left {
+      width: 30%;
+      float: left;
+      padding-left: 30px;
+      font: 700 18px/1 'Noto Sans KR';
+      color: #333; }
+    .location .inner .bus > .right {
+      width: 70%;
+      float: left;
+      padding-right: 30px;
+      font: 400 15px/1 'Noto Sans KR';
+      color: #222; }
+      .location .inner .bus > .right ul li {
+        margin-bottom: 6px; }
+        .location .inner .bus > .right ul li span {
+          display: inline-block;
+          font: 400 16px/1 'Noto Sans KR';
+          color: #fff;
+          padding: 3px 8px;
+          background: blue;
+          margin-right: 8px; }
+        .location .inner .bus > .right ul li:nth-of-type(2) span {
+          background: green; }
+        .location .inner .bus > .right ul li:nth-of-type(3) span {
+          background: yellow;
+          color: #333; }
+  .location .inner .car {
+    width: 100%;
+    padding: 50px 0;
+    border-bottom: 1px solid #bbb; }
+    .location .inner .car::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .location .inner .car > .left {
+      width: 30%;
+      float: left;
+      padding-left: 30px;
+      font: 700 18px/1 'Noto Sans KR';
+      color: #333; }
+    .location .inner .car > .right {
+      width: 70%;
+      float: left;
+      padding-right: 30px;
+      font: 400 15px/1.4 'Noto Sans KR';
+      color: #222; }
+      .location .inner .car > .right ul li {
+        margin-bottom: 50px; }
+        .location .inner .car > .right ul li span {
+          display: block;
+          font: 700 16px/1 'Noto Sans KR';
+          margin-bottom: 15px; }
+        .location .inner .car > .right ul li:last-of-type {
+          margin-bottom: 0; }
 
 .join .sub_visual img {
   object-position: bottom; }
