@@ -1,5 +1,34 @@
 .location {
     .inner {
-        
+        padding: 0 0 100px;
+
+        #map {
+            width: 100%; height: 30vw;
+        }
+        .btnTraffic {
+            float: right;
+            margin-top: 20px;
+
+            li {
+                float: left;
+                margin-left: 10px;
+
+                a {
+                    display: block;
+                    width: 200px; height: 40px;
+                    border: 2px solid #333;
+                    font: 500 14px/38px 'Noto Sans KR'; color: #333;
+                    text-align: center;
+                }
+
+                &.on {
+                    a {
+                        border: none;
+                        background: #333;
+                        color: #fff;
+                    }
+                }
+            }
+        }
     }
 }

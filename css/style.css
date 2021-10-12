@@ -1057,8 +1057,9 @@ table {
     width: 50%;
     float: left; }
     .about .inner .intro .left h2 {
-      font: bold 42px/1.3 'arial';
+      font: bold 46px/1.3 'arial';
       color: #111;
+      letter-spacing: -1px;
       margin-bottom: 20px; }
     .about .inner .intro .left p {
       font: 400 16px/1.5 'Noto Sans KR';
@@ -1105,6 +1106,7 @@ table {
       border-radius: 50%;
       background: #5f4b8b;
       position: absolute;
+      z-index: 0;
       top: 0;
       left: 0; }
     .about .inner .intro .spotlight .circleFront {
@@ -1113,15 +1115,15 @@ table {
       border-radius: 50%;
       background: #b76ca4;
       opacity: 0.5;
-      z-index: 1;
+      z-index: 2;
       position: absolute;
       top: 0;
       left: 0; }
     .about .inner .intro .spotlight .spotTxt {
       display: block;
-      font: bold 4.5vw/1 'arial';
+      font: bold 4vw/1 'arial';
       color: #efefef;
-      letter-spacing: 1px;
+      z-index: 1;
       opacity: 0.5; }
 .about .inner .values {
   width: 100%;
@@ -1509,6 +1511,30 @@ table {
         top: 25px;
         left: 0;
         transform: rotate(-45deg); }
+
+.location .inner {
+  padding: 0 0 100px; }
+  .location .inner #map {
+    width: 100%;
+    height: 30vw; }
+  .location .inner .btnTraffic {
+    float: right;
+    margin-top: 20px; }
+    .location .inner .btnTraffic li {
+      float: left;
+      margin-left: 10px; }
+      .location .inner .btnTraffic li a {
+        display: block;
+        width: 200px;
+        height: 40px;
+        border: 2px solid #333;
+        font: 500 14px/38px 'Noto Sans KR';
+        color: #333;
+        text-align: center; }
+      .location .inner .btnTraffic li.on a {
+        border: none;
+        background: #333;
+        color: #fff; }
 
 .join .sub_visual img {
   object-position: bottom; }

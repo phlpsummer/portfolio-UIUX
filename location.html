@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/38274d1a6b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="js/main.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=141fce3dd3f7188ebf57c39040b11c5e"></script>
+    <script defer src="js/myMap.js"></script>
 </head>
 <body>
     <header id="header_sub">
@@ -46,6 +48,11 @@
         <div class="inner">
             <h1>위치</h1>
             <!--콘텐츠 시작-->
+            <div id="map"></div>
+            <ul class="btnTraffic">
+                <li class="on"><a href="#">교통정보 끄기</a></li>
+                <li><a href="#">교통정보 확인</a></li>
+            </ul>
         </div>
     </section>
 
