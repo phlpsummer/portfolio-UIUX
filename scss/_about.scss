@@ -14,7 +14,7 @@
                 float: left;
 
                 h2 {
-                    font: bold 46px/1.3 'arial'; color: #111;
+                    font: bold 42px/1.3 'arial'; color: #111;
                     letter-spacing: -1px;
                     margin-bottom: 20px;
                 }
@@ -46,7 +46,7 @@
                 background: #efefef;
                 position: absolute;
                 top: 0; right: 0;
-                transform: translateY(50px);
+                transform: translateY(100px);
                 opacity: 0;
                 transition: 1s;
 
