@@ -536,6 +536,43 @@ table {
           left: -11px;
           transform: rotate(-45deg); }
 
+#popup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(17, 17, 17, 0.6); }
+  #popup .inner {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #efefef;
+    padding: 50px 30px 20px; }
+    #popup .inner .content {
+      width: 100%;
+      min-height: 150px;
+      font: 700 20px/1 'Noto Sans KR';
+      color: #333; }
+    #popup .inner::after {
+      content: '';
+      display: block;
+      clear: both; }
+    #popup .inner .wrap {
+      float: left; }
+      #popup .inner .wrap label {
+        font: 400 14px/1 'Noto Sans KR';
+        color: #333;
+        margin-left: 4px; }
+    #popup .inner > .close {
+      float: right;
+      font: bold 14px/1 'Rajdhani';
+      color: #333;
+      margin-top: 4px;
+      cursor: pointer; }
+
 @media screen and (max-width: 1179px) {
   /* header ---------------------------------------------------------------------------------- */
   #header {
