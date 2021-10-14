@@ -97,6 +97,124 @@
         }
         .department {
             width: 100%; min-height: 500px;
+
+            .divi_tree {
+                width: 100%;
+                position: relative;
+
+                li {
+                    .ceo {
+                        text-align: center;
+                        position: relative;
+                        top: 0; left: 50%; transform: translateX(-50%);
+
+                        >p {
+                            font: 500 16px/1 'Noto Sans KR'; color: #555;
+                            margin-bottom: 4px;
+                        }
+                        >span {
+                            font: 700 26px/1 'Noto Sans KR'; color: #333; letter-spacing: 1px;
+                        }
+
+                        &::after {
+                            content: ''; display: block;
+                            width: 2px; height: 40px;
+                            position: absolute;
+                            top: 70px; left: 50%; margin-left: -1px;
+                            background: #777;
+                        }
+                    }
+                    ul {
+                        width: 100%;
+                        margin-top: 90px;
+
+                        &::after { content: ''; display: block; clear: both;}
+
+                        li {
+                            width: calc((100% - 40px) / 3);
+                            margin: 0px 20px 20px 0px;
+                            float: left;
+
+                            .member {
+                                width: 100%;
+                                border: 1px solid #ddd;
+                                padding: 25px 20px;
+
+                                .wrap {
+                                    width: 100%;
+                                    padding-bottom: 15px;
+                                    border-bottom: 1px solid #ddd;
+                                    margin-bottom: 15px;
+
+                                    &::after { content: ''; display: block; clear: both;}
+
+                                    .name {
+                                        display: block; float: left;
+                                        font: 700 18px/1 'Noto Sans KR'; color: #333;
+                                    }
+                                    .depart {
+                                        display: block; float: right;
+                                        font: 400 15px/1 'Noto Sans KR'; color: #555;
+                                    }
+                                }
+                                .num {
+                                    display: inline-block;
+                                    font: 400 15px/1 'Noto Sans KR'; color: #555;
+                                    margin-bottom: 10px;
+                                }
+                                >p {
+                                    font: 400 15px/1.5 'Noto Sans KR'; color: #555;
+                                }
+                            }
+
+                            &:nth-of-type(3n){ margin: 0px 0px 20px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$tablet) {
+    .about {
+        .inner {
+
+            .department {
+                .divi_tree {
+                    li {
+                        ul {
+                            li {
+                                width: calc((100% - 20px) / 2);
+    
+                                &:nth-of-type(3n){ margin: 0px 20px 20px 0px;}
+                                &:nth-of-type(2n){ margin: 0px 0px 20px;}
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$mobile) {
+    .about {
+        .inner {
+
+            .department {
+                .divi_tree {
+                    li {
+                        ul {
+                            li {
+                                width: 100%;
+
+                                margin: 0px 0px 20px;
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

@@ -1131,7 +1131,89 @@ table {
 .about .inner .department {
   width: 100%;
   min-height: 500px; }
+  .about .inner .department .divi_tree {
+    width: 100%;
+    position: relative; }
+    .about .inner .department .divi_tree li .ceo {
+      text-align: center;
+      position: relative;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%); }
+      .about .inner .department .divi_tree li .ceo > p {
+        font: 500 16px/1 'Noto Sans KR';
+        color: #555;
+        margin-bottom: 4px; }
+      .about .inner .department .divi_tree li .ceo > span {
+        font: 700 26px/1 'Noto Sans KR';
+        color: #333;
+        letter-spacing: 1px; }
+      .about .inner .department .divi_tree li .ceo::after {
+        content: '';
+        display: block;
+        width: 2px;
+        height: 40px;
+        position: absolute;
+        top: 70px;
+        left: 50%;
+        margin-left: -1px;
+        background: #777; }
+    .about .inner .department .divi_tree li ul {
+      width: 100%;
+      margin-top: 90px; }
+      .about .inner .department .divi_tree li ul::after {
+        content: '';
+        display: block;
+        clear: both; }
+      .about .inner .department .divi_tree li ul li {
+        width: calc((100% - 40px) / 3);
+        margin: 0px 20px 20px 0px;
+        float: left; }
+        .about .inner .department .divi_tree li ul li .member {
+          width: 100%;
+          border: 1px solid #ddd;
+          padding: 25px 20px; }
+          .about .inner .department .divi_tree li ul li .member .wrap {
+            width: 100%;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 15px; }
+            .about .inner .department .divi_tree li ul li .member .wrap::after {
+              content: '';
+              display: block;
+              clear: both; }
+            .about .inner .department .divi_tree li ul li .member .wrap .name {
+              display: block;
+              float: left;
+              font: 700 18px/1 'Noto Sans KR';
+              color: #333; }
+            .about .inner .department .divi_tree li ul li .member .wrap .depart {
+              display: block;
+              float: right;
+              font: 400 15px/1 'Noto Sans KR';
+              color: #555; }
+          .about .inner .department .divi_tree li ul li .member .num {
+            display: inline-block;
+            font: 400 15px/1 'Noto Sans KR';
+            color: #555;
+            margin-bottom: 10px; }
+          .about .inner .department .divi_tree li ul li .member > p {
+            font: 400 15px/1.5 'Noto Sans KR';
+            color: #555; }
+        .about .inner .department .divi_tree li ul li:nth-of-type(3n) {
+          margin: 0px 0px 20px; }
 
+@media screen and (max-width: 1179px) {
+  .about .inner .department .divi_tree li ul li {
+    width: calc((100% - 20px) / 2); }
+    .about .inner .department .divi_tree li ul li:nth-of-type(3n) {
+      margin: 0px 20px 20px 0px; }
+    .about .inner .department .divi_tree li ul li:nth-of-type(2n) {
+      margin: 0px 0px 20px; } }
+@media screen and (max-width: 539px) {
+  .about .inner .department .divi_tree li ul li {
+    width: 100%;
+    margin: 0px 0px 20px; } }
 .community .inner table {
   width: 100%;
   margin-bottom: 50px; }
