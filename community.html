@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/main.js"></script>
+    <script defer src="js/myPopup.js"></script>
 </head>
 <body>
     <header id="header_sub">
@@ -48,7 +49,7 @@
             <h1>공지사항</h1>
             <!--콘텐츠 시작-->
             <table summary="게시판 번호, 구분, 제목, 작성자, 날짜, 조회수를 포함한 테이블">
-                <caption class="hidden">자유 게시판</caption>
+                <caption class="hidden">공지사항</caption>
                 <thead>
                     <tr>
 						<th scope="col">번호</th>
@@ -161,6 +162,17 @@
             </div>
         </div>
     </section>
+
+    <aside id="popup">
+        <div class="inner">
+            <div class="content">예약 확인 안내</div>
+            <div class="wrap">
+                <input type="checkbox" name="popck" id="popck">
+                <label for="popck">오늘 하루 그만보기</label>
+            </div>
+            <span class="close">CLOSE</span>
+        </div>
+    </aside>
 
     <footer id="footer_sub">
         <div class="inner">

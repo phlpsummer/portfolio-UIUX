@@ -403,7 +403,7 @@ table {
           padding-left: 10px;
           text-align: center;
           font: bold 16px/1.2 'Noto Sans KR';
-          color: #666; }
+          color: #bbb; }
           #comment .inner ul li a .wrap .cmt_date strong {
             display: block;
             font-size: 50px; }
@@ -535,43 +535,6 @@ table {
           top: 5px;
           left: -11px;
           transform: rotate(-45deg); }
-
-#popup {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(17, 17, 17, 0.6); }
-  #popup .inner {
-    width: 400px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #efefef;
-    padding: 50px 30px 20px; }
-    #popup .inner .content {
-      width: 100%;
-      min-height: 150px;
-      font: 700 20px/1 'Noto Sans KR';
-      color: #333; }
-    #popup .inner::after {
-      content: '';
-      display: block;
-      clear: both; }
-    #popup .inner .wrap {
-      float: left; }
-      #popup .inner .wrap label {
-        font: 400 14px/1 'Noto Sans KR';
-        color: #333;
-        margin-left: 4px; }
-    #popup .inner > .close {
-      float: right;
-      font: bold 14px/1 'Rajdhani';
-      color: #333;
-      margin-top: 4px;
-      cursor: pointer; }
 
 @media screen and (max-width: 1179px) {
   /* header ---------------------------------------------------------------------------------- */
@@ -1171,15 +1134,16 @@ table {
 
 .community .inner table {
   width: 100%;
-  border-top: 2px solid #111;
   margin-bottom: 50px; }
   .community .inner table tr {
-    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
     transition: 0.3s; }
     .community .inner table tr th {
-      padding: 10px 0;
-      font: 500 14px/1 'Noto Sans KR';
-      color: #555; }
+      padding: 10px 0 20px;
+      font: 700 14px/1 'Noto Sans KR';
+      color: #555;
+      border-bottom: 2px solid #666; }
       .community .inner table tr th:nth-of-type(1) {
         width: 3%; }
       .community .inner table tr th:nth-of-type(2) {
@@ -1191,29 +1155,28 @@ table {
       .community .inner table tr th:nth-of-type(6) {
         width: 6%; }
     .community .inner table tr td {
-      padding: 15px 10px;
-      font: 500 16px/1 'Noto Sans KR';
+      padding: 20px 10px;
+      font: 400 14px/1 'Noto Sans KR';
       color: #555;
       text-align: center; }
       .community .inner table tr td:nth-of-type(1) {
-        font-weight: 300; }
+        font-weight: 300;
+        font-size: 12px; }
       .community .inner table tr td:nth-of-type(2) {
         display: block;
         width: 70px;
         height: 28px;
         border: 2px solid #333;
-        font: 700 14px/26px 'Noto Sans KR';
+        font: 700 14px/24px 'Noto Sans KR';
         color: #333;
         border-radius: 14px;
-        margin: 10px auto;
+        margin: 13px auto;
         padding: 0; }
       .community .inner table tr td:nth-of-type(3) {
         text-align: left; }
-    .community .inner table tr:hover {
-      background: #b76ca45e; }
-      .community .inner table tr:hover td:nth-of-type(3) {
-        text-decoration: underline;
-        color: #5f4b8b; }
+    .community .inner table tr:hover td:nth-of-type(3) {
+      text-decoration: underline;
+      color: #5f4b8b; }
   .community .inner table .notice {
     background: #eee; }
     .community .inner table .notice td:nth-of-type(2) {
@@ -1232,6 +1195,43 @@ table {
       .community .inner .pagination ul li a {
         font: 500 16px/1 'Noto Sans KR';
         color: #333; }
+
+#popup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(17, 17, 17, 0.6); }
+  #popup > .inner {
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #efefef;
+    padding: 50px 30px 20px; }
+    #popup > .inner .content {
+      width: 100%;
+      min-height: 150px;
+      font: 700 20px/1 'Noto Sans KR';
+      color: #333; }
+    #popup > .inner::after {
+      content: '';
+      display: block;
+      clear: both; }
+    #popup > .inner .wrap {
+      float: left; }
+      #popup > .inner .wrap label {
+        font: 400 14px/1 'Noto Sans KR';
+        color: #333;
+        margin-left: 4px; }
+    #popup > .inner > .close {
+      float: right;
+      font: bold 14px/1 'Rajdhani';
+      color: #333;
+      margin-top: 4px;
+      cursor: pointer; }
 
 /* 태블릿 --------------------------------------------------------------------------*/
 @media screen and (max-width: 1179px) {
@@ -1432,40 +1432,6 @@ table {
     background: #fff;
     margin-bottom: 25px;
     transition: 1s; }
-    .youtube .inner article .borderWrap {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0; }
-      .youtube .inner article .borderWrap .top {
-        width: 0%;
-        height: 8px;
-        background: #b76ca4;
-        position: absolute;
-        top: 0;
-        left: 0; }
-      .youtube .inner article .borderWrap .right {
-        width: 8px;
-        height: 0%;
-        background: #b76ca4;
-        position: absolute;
-        top: 0;
-        right: 0; }
-      .youtube .inner article .borderWrap .bottom {
-        width: 0%;
-        height: 8px;
-        background: #b76ca4;
-        position: absolute;
-        bottom: 0;
-        right: 0; }
-      .youtube .inner article .borderWrap .left {
-        width: 8px;
-        height: 0%;
-        background: #b76ca4;
-        position: absolute;
-        bottom: 0;
-        left: 0; }
     .youtube .inner article a {
       width: 100%;
       height: 100%; }
@@ -1473,12 +1439,18 @@ table {
         content: '';
         display: block;
         clear: both; }
-      .youtube .inner article a img {
+      .youtube .inner article a .thumnails {
         width: 40%;
         height: 100%;
-        object-fit: cover;
-        object-position: center;
-        float: left; }
+        float: left;
+        overflow: hidden; }
+        .youtube .inner article a .thumnails img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center;
+          float: left;
+          transform: scale(1.15); }
       .youtube .inner article a .con {
         width: 60%;
         height: 100%;
@@ -1499,7 +1471,7 @@ table {
           bottom: 25px;
           left: 20px; }
     .youtube .inner article:hover {
-      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.3); }
+      box-shadow: 0px 0px 40px #5f4b8b4d; }
   .youtube .pop {
     width: 100%;
     height: 100vh;
@@ -1549,6 +1521,8 @@ table {
         left: 0;
         transform: rotate(-45deg); }
 
+.location .sub_visual img {
+  filter: saturate(1.5) contrast(1.3) grayscale(0.5) brightness(0.7); }
 .location .inner {
   padding: 0 0 100px; }
   .location .inner #map {
@@ -1570,8 +1544,7 @@ table {
         text-align: center; }
       .location .inner .btnTraffic li.on a {
         border: none;
-        background: #333;
-        color: #fff; }
+        background: #999; }
   .location .inner .info {
     width: 100%;
     margin-top: 100px;
@@ -1588,7 +1561,6 @@ table {
     .location .inner .info .add {
       font: 700 20px/1 'Noto Sans KR';
       color: #444;
-      letter-spacing: 1px;
       margin-bottom: 16px; }
     .location .inner .info .tel {
       font: 300 16px/1 'Noto Sans KR';
@@ -1771,11 +1743,11 @@ table {
     padding: 60px 30px;
     float: left; }
     .join .inner .wrap .left_intro h3 {
-      font: 400 20px/1 'Noto Sans KR';
+      font: 500 18px/1 'Noto Sans KR';
       color: #333;
       margin-bottom: 20px; }
     .join .inner .wrap .left_intro p {
-      font: 300 16px/2 'Noto Sans KR';
+      font: 300 15px/2 'Noto Sans KR';
       color: #777; }
       .join .inner .wrap .left_intro p > span {
         position: relative; }

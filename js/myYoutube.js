@@ -57,7 +57,9 @@ $.ajax({
                         ),
                         $("<a>").attr({href: data.snippet.resourceId.videoId})
                                 .append(
-                                    $("<img>").attr({src: data.snippet.thumbnails.high.url}),
+                                    $("<div class='thumnails'>").append(
+                                        $("<img>").attr({src: data.snippet.thumbnails.high.url})
+                                    ),
                                     $("<div class='con'>")
                                         .append(
                                             $("<h2>").text(ytTitle),
@@ -72,23 +74,6 @@ $.ajax({
 .error(function(err){
     console.error("데이터 호출 실패");
 })
-
-// hover시 테두리
-$("body").on("mouseenter",".youtube .inner article",function(){
-    $(this).find(".top").animate({width:"100%"},speed,function(){
-        $(".right").animate({height:"100%"},speed,function(){
-            $(".bottom").animate({width:"100%"},speed,function(){
-                $(".left").animate({height:"100%"},speed);
-            });
-        });
-    });
-});
-$("body").on("mouseleave",".youtube .inner article",function(){
-    $(this).find(".top").animate({width:"0%"},speed);
-    $(this).find(".right").animate({height:"0%"},speed);
-    $(this).find(".bottom").animate({width:"0%"},speed);
-    $(this).find(".left").animate({height:"0%"},speed);
-});
 
 // pop창
 $("body").on("click",".youtube .inner article a",function(e){

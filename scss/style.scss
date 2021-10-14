@@ -417,7 +417,7 @@ $mobile:539px;
                         width: 10%; height: 100%;
                         padding-left: 10px;
                         text-align: center;
-                        font: bold 16px/1.2 'Noto Sans KR'; color: #666;
+                        font: bold 16px/1.2 'Noto Sans KR'; color: #bbb;
                         strong {
                             display: block;
                             font-size: 50px;
@@ -562,42 +562,6 @@ $mobile:539px;
                     transform: rotate(-45deg);
                 }
             }
-        }
-    }
-}
-
-#popup {
-    width: 100%; height: 100vh;
-    position: fixed;
-    top: 0; left: 0;
-    background: rgba($color: #111, $alpha: 0.6);
-
-    .inner {
-        width: 400px;
-        position: absolute;
-        top: 50%; left: 50%; transform: translate(-50%,-50%);
-        background: #efefef;
-        padding: 50px 30px 20px;
-
-        .content {
-            width: 100%; min-height: 150px;
-            font: 700 20px/1 'Noto Sans KR'; color: #333;
-        }
-
-        &::after {content: ''; display: block; clear: both;}
-
-        .wrap {
-            float: left;
-            label {
-                font: 400 14px/1 'Noto Sans KR'; color: #333;
-                margin-left: 4px;
-            }
-        }
-        >.close {
-            float: right;
-            font: bold 14px/1 'Rajdhani'; color: #333;
-            margin-top: 4px;
-            cursor: pointer;
         }
     }
 }

@@ -23,6 +23,14 @@ map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
 setZoomable(false);
 
 
+
+// 반응형-창 크기 변경해도 중심
+window.onresize = function(){
+    var moveLatLon = new kakao.maps.LatLng(37.5667055,127.0095195);
+    map.setCenter(moveLatLon);
+}
+
+
 // 마커가 표시될 위치입니다 
 let markerPosition  = new kakao.maps.LatLng(37.5667055,127.0095195); 
 
@@ -55,9 +63,7 @@ trafficOn.addEventListener("click",function(e){
 });
 
 
-// 아래 코드는 위에서 추가한 교통정보 지도타입을 제거합니다
-// map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);    
-
+//@@ 함수설정 ----------------------------------------------------------
 
 // 버튼 클릭에 따라 지도 확대, 축소 기능을 막거나 풀고 싶은 경우에는 map.setZoomable 함수를 사용합니다
 function setZoomable(zoomable) {
