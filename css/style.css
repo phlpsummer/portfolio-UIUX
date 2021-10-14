@@ -1623,7 +1623,7 @@ table {
           color: #fff;
           padding: 3px 8px;
           background: blue;
-          margin-right: 8px; }
+          margin-right: 10px; }
         .location .inner .bus > .right ul li:nth-of-type(2) span {
           background: green; }
         .location .inner .bus > .right ul li:nth-of-type(3) span {
@@ -1661,7 +1661,7 @@ table {
 .join .sub_visual img {
   object-position: bottom; }
 .join .inner h2 {
-  font: 500 28px/1 'Noto Sans KR';
+  font: 500 22px/1 'Noto Sans KR';
   color: #111;
   margin-bottom: 40px;
   padding-bottom: 30px;
@@ -1716,7 +1716,7 @@ table {
   height: 150px;
   resize: none;
   padding: 20px;
-  background: #eee;
+  background: rgba(0, 0, 0, 0.02);
   border: none;
   border-top: 1px solid #aaa;
   border-bottom: 1px solid #aaa;
@@ -1725,29 +1725,21 @@ table {
   font: 700 14px/1.6 'Noto Sans KR';
   color: #999;
   margin-bottom: 100px; }
-.join .inner h2.title_essential::after {
-  content: '* 은 필수입력 사항입니다.';
-  display: inline-block;
-  font: 300 18px/1 'Noto Sans KR';
-  color: #b76ca4;
-  margin-left: 30px; }
 .join .inner .wrap {
   width: 100%; }
   .join .inner .wrap .left_intro {
     width: 25%;
     height: 570px;
-    background: #efefef;
-    padding: 60px 40px;
+    background: rgba(0, 0, 0, 0.02);
+    padding: 60px 30px;
     float: left; }
-    .join .inner .wrap .left_intro h1 {
-      font: normal 24px/1 'Bangers';
-      color: #777;
-      letter-spacing: 1px;
+    .join .inner .wrap .left_intro h3 {
+      font: 400 20px/1 'Noto Sans KR';
+      color: #333;
       margin-bottom: 20px; }
     .join .inner .wrap .left_intro p {
-      font: 300 16px/2.4 'Noto Sans KR';
-      color: #777;
-      letter-spacing: 0.5px; }
+      font: 300 16px/2 'Noto Sans KR';
+      color: #777; }
       .join .inner .wrap .left_intro p > span {
         position: relative; }
         .join .inner .wrap .left_intro p > span::after {
@@ -1762,63 +1754,75 @@ table {
   .join .inner .wrap .right_essential {
     width: 75%;
     float: left;
-    padding: 50px 60px; }
+    padding: 0px 50px; }
     .join .inner .wrap .right_essential table {
       width: 100%; }
       .join .inner .wrap .right_essential table tr th {
-        width: 20%;
+        width: 18%;
         text-align: left;
-        padding: 20px 0px;
-        font: 500 16px/1 'Noto Sans KR';
-        color: #555; }
-        .join .inner .wrap .right_essential table tr th::before {
+        padding: 0px 0px 50px;
+        font: bold 15px/1 'arial';
+        color: #666; }
+        .join .inner .wrap .right_essential table tr th::after {
           content: '*';
           display: inline-block;
-          margin-right: 3px;
-          color: #b76ca4; }
+          margin-left: 5px;
+          transform: translateY(3px);
+          font-weight: bold;
+          color: inherit; }
       .join .inner .wrap .right_essential table tr td {
-        width: 80%;
-        padding: 20px 40px; }
-        .join .inner .wrap .right_essential table tr td p {
+        width: 82%;
+        padding: 0px 20px 50px; }
+        .join .inner .wrap .right_essential table tr td ul li {
           font: 300 14px/1 'Noto Sans KR';
-          color: #333;
+          color: #999;
           margin-top: 10px; }
         .join .inner .wrap .right_essential table tr td input[type="text"], .join .inner .wrap .right_essential table tr td input[type="password"] {
           width: 100%;
           height: 40px;
-          border: 1px solid #aaa;
-          padding-left: 15px;
-          border-radius: 5px; }
+          border: none;
+          border-bottom: 1px solid #ccc;
+          transition: 0.5s; }
+          .join .inner .wrap .right_essential table tr td input[type="text"]::placeholder, .join .inner .wrap .right_essential table tr td input[type="password"]::placeholder {
+            font: 400 16px/1 'Noto Sans KR';
+            color: #ccc; }
+          .join .inner .wrap .right_essential table tr td input[type="text"]:focus, .join .inner .wrap .right_essential table tr td input[type="password"]:focus {
+            border-bottom: 2px solid #888;
+            background: rgba(0, 0, 0, 0.02); }
         .join .inner .wrap .right_essential table tr td select {
           width: calc( 100% - 160px );
           height: 40px;
-          border: 1px solid #aaa;
-          padding-left: 15px;
-          border-radius: 5px; }
-      .join .inner .wrap .right_essential table tr .btn_send {
+          border: none;
+          border-bottom: 1px solid #777;
+          margin-top: 10px;
+          font: 400 16px/1 'Noto Sans KR';
+          color: #777;
+          transition: 0.5s; }
+          .join .inner .wrap .right_essential table tr td select::placeholder {
+            font: 400 16px/1 'Noto Sans KR';
+            color: #ccc; }
+          .join .inner .wrap .right_essential table tr td select:focus {
+            border-bottom: 2px solid #888;
+            background: rgba(0, 0, 0, 0.02); }
+        .join .inner .wrap .right_essential table tr td p {
+          font: 12px/1 "맑은고딕";
+          color: #ff7913;
+          margin: 5px 0; }
+      .join .inner .wrap .right_essential table tr .btnEmailConfirm {
         display: inline-block;
         width: 140px;
         height: 40px;
-        font: 500 14px/40px 'Noto Sans KR';
-        color: #fff;
-        background: #555;
-        border-radius: 5px;
+        font: 400 15px/38px 'Noto Sans KR';
+        color: #333;
+        border: 1px solid #555;
         text-align: center;
         margin-top: 10px;
         margin-bottom: 10px;
         margin-left: 5px; }
-      .join .inner .wrap .right_essential table tr .btn_confirm {
-        display: inline-block;
-        width: 140px;
-        height: 40px;
-        font: 500 14px/40px 'Noto Sans KR';
-        color: #fff;
-        background: #555;
-        border-radius: 5px;
-        text-align: center;
-        margin-left: 5px; }
       .join .inner .wrap .right_essential table tr #confirm {
         width: calc( 100% - 160px ); }
+      .join .inner .wrap .right_essential table tr:nth-of-type(3) th, .join .inner .wrap .right_essential table tr:nth-of-type(3) td {
+        padding-bottom: 20px; }
   .join .inner .wrap .btn_submit {
     float: left;
     width: 100%;
@@ -1826,20 +1830,20 @@ table {
     .join .inner .wrap .btn_submit input[type="reset"] {
       width: 150px;
       height: 40px;
-      font: 500 16px/40px 'Noto Sans KR';
-      color: #555;
+      font: 400 15px/38px 'Noto Sans KR';
+      color: #333;
       border: 1px solid #555;
-      border-radius: 5px;
       background: #fff;
-      margin-right: 10px; }
+      margin-right: 10px;
+      cursor: pointer; }
     .join .inner .wrap .btn_submit input[type="submit"] {
       width: 150px;
       height: 40px;
-      font: 500 16px/40px 'Noto Sans KR';
+      font: 300 15px/38px 'Noto Sans KR';
       color: #fff;
-      border-radius: 5px;
-      background: #5f4b8b;
-      border: none; }
+      background: #333;
+      border: none;
+      cursor: pointer; }
 
 /* 태블릿 --------------------------------------------------------------------------*/
 @media screen and (max-width: 1179px) {

@@ -3,7 +3,7 @@
 
     .inner {
         h2 {
-            font: 500 22px/1 'Noto Sans KR'; color: #111;
+            font: 500 28px/1 'Noto Sans KR'; color: #111;
             margin-bottom: 40px;
             padding-bottom: 30px; border-bottom: 1px solid #ccc;
         }
@@ -59,7 +59,7 @@
                 width: 100%; height: 150px;
                 resize: none;
                 padding: 20px;
-                background: rgba(0, 0, 0, 0.02);
+                background: #eee;
                 border: none; border-top: 1px solid #aaa; border-bottom: 1px solid #aaa;
                 margin-bottom: 30px;
             }
@@ -67,20 +67,30 @@
             p { font: 700 14px/1.6 'Noto Sans KR'; color: #999; margin-bottom: 100px;}
         }
 
+        h2.title_essential {
+            &::after {
+                content: '* 은 필수입력 사항입니다.'; display: inline-block;
+                font: 300 18px/1 'Noto Sans KR'; color: #b76ca4;
+                margin-left: 30px;
+            }
+        }
+
         .wrap {
             width: 100%;
 
             .left_intro {
                 width: 25%; height: 570px;
-                background: rgba(0, 0, 0, 0.02);
-                padding: 60px 30px;
+                background: #efefef;
+                padding: 60px 40px;
                 float: left;
 
-                h3 {
-                    font: 400 20px/1 'Noto Sans KR'; color: #333;
+                h1 {
+                    
+                    font: normal 24px/1 'Bangers'; color: #777;
+                    letter-spacing: 1px;
                     margin-bottom: 20px;}
                 p {
-                    font: 300 16px/2 'Noto Sans KR'; color: #777;
+                    font: 300 16px/2.4 'Noto Sans KR'; color: #777; letter-spacing: 0.5px;
                     >span {
                         position: relative;
                         &::after {
@@ -95,79 +105,71 @@
             .right_essential {
                 width: 75%;
                 float: left;
-                padding: 0px 50px;
+                padding: 50px 60px;
 
                 table {
                     width: 100%;
                     tr {
                         th {
-                            width: 18%;
+                            width: 20%;
                             text-align: left;
-                            padding: 0px 0px 50px;
-                            font: bold 15px/1 'arial'; color: #666;
+                            padding: 20px 0px;
+                            font: 500 16px/1 'Noto Sans KR'; color: #555;
 
-                            &::after {
+                            &::before {
                                 content: '*'; display: inline-block;
-                                margin-left: 5px;
-                                transform: translateY(3px);
-                                font-weight: bold;
-                                color: inherit;
+                                margin-right: 3px;
+                                color: #b76ca4;
                             }
 
                         }
                         td {
-                            width: 82%;
-                            padding: 0px 20px 50px;
+                            width: 80%;
+                            padding: 20px 40px;
 
-                            ul li {
-                                font: 300 14px/1 'Noto Sans KR'; color: #999;
+                            p {
+                                font: 300 14px/1 'Noto Sans KR'; color: #333;
                                 margin-top: 10px;
                             }
                             
                             input[type="text"], input[type="password"] {
                                 width: 100%; height: 40px;
-                                border: none;
-                                border-bottom: 1px solid #ccc;
-                                transition: 0.5s;
-
-                                &::placeholder { font: 400 16px/1 'Noto Sans KR'; color: #ccc;}
-                                &:focus { border-bottom: 2px solid #888; background: rgba(0, 0, 0, 0.02);}
+                                border: 1px solid #aaa;
+                                padding-left: 15px;
+                                border-radius: 5px;
                             }
 
                             select {
                                 width: calc( 100% - 160px ); height: 40px;
-                                border: none;
-                                border-bottom: 1px solid #777;
-                                margin-top: 10px;
-                                font: 400 16px/1 'Noto Sans KR'; color: #777;
-                                transition: 0.5s;
-
-                                &::placeholder { font: 400 16px/1 'Noto Sans KR'; color: #ccc;}
-                                &:focus { border-bottom: 2px solid #888; background: rgba(0, 0, 0, 0.02);}
-                            }
-
-                            //에러 메시지 스타일
-                            p {
-                                font: 12px/1 "맑은고딕"; color: #ff7913;
-                                margin: 5px 0;
+                                border: 1px solid #aaa;
+                                padding-left: 15px;
+                                border-radius: 5px;
                             }
                         }
 
-                        .btnEmailConfirm {
+                        .btn_send {
                             display: inline-block;
                             width: 140px; height: 40px;
-                            font: 400 15px/38px 'Noto Sans KR'; color: #333;
-                            border: 1px solid #555;
+                            font: 500 14px/40px 'Noto Sans KR'; color: #fff;
+                            background: #555;
+                            border-radius: 5px;
                             text-align: center;
                             margin-top: 10px; margin-bottom: 10px;
+                            margin-left: 5px;
+                        }
+                        .btn_confirm {
+                            display: inline-block;
+                            width: 140px; height: 40px;
+                            font: 500 14px/40px 'Noto Sans KR'; color: #fff;
+                            background: #555;
+                            border-radius: 5px;
+                            text-align: center;
                             margin-left: 5px;
                         }
 
                         #confirm {
                             width: calc( 100% - 160px );
                         }
-
-                        &:nth-of-type(3) th, &:nth-of-type(3) td { padding-bottom: 20px;}
                     }
                 }
             }
@@ -179,18 +181,18 @@
 
                 input[type="reset"] {
                     width: 150px; height: 40px;
-                    font: 400 15px/38px 'Noto Sans KR'; color: #333;
+                    font: 500 16px/40px 'Noto Sans KR'; color: #555;
                     border: 1px solid #555;
+                    border-radius: 5px;
                     background: #fff;
                     margin-right: 10px;
-                    cursor: pointer;
                 }
                 input[type="submit"] {
                     width: 150px; height: 40px;
-                    font: 300 15px/38px 'Noto Sans KR'; color: #fff;
-                    background: #333;
+                    font: 500 16px/40px 'Noto Sans KR'; color: #fff;
+                    border-radius: 5px;
+                    background: #5f4b8b;
                     border: none;
-                    cursor: pointer;
                 }
             }
 
