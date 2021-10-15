@@ -252,6 +252,9 @@ $mobile:539px;
                         padding: 12px 32px;
                         border: 1px solid #ddd;
                         font: 400 16px/1 'Noto Sans KR'; color: #ddd;
+                        transition: 0.5s;
+
+                        &:hover { background: rgba(255, 255, 255, 0.2);}
                     }
                 }
             }
