@@ -910,6 +910,17 @@ table {
       margin-bottom: 30px; }
 
 @media screen and (max-width: 1179px) {
+  .content .sub_visual {
+    height: 600px;
+    margin-bottom: 80px; }
+    .content .sub_visual .sub_title {
+      width: 100%;
+      top: 0;
+      left: 30px;
+      transform: translateX(0%); }
+      .content .sub_visual .sub_title > h1 {
+        font: 700 50px/1 'Noto Sans KR';
+        top: calc( 50% + 50px ); }
   .content .inner {
     width: 100%;
     padding: 0 30px; } }
@@ -1130,7 +1141,7 @@ table {
       opacity: 0.5; }
 .about .inner .values {
   width: 100%;
-  margin-bottom: 60px; }
+  margin-bottom: 50px; }
   .about .inner .values .wrap {
     width: 100%;
     height: 600px;
@@ -1154,7 +1165,7 @@ table {
           color: #ccc; }
         .about .inner .values .wrap article .txt h3 {
           padding-top: 30px;
-          font: 2.5vw/1.1 'Bangers';
+          font: normal 2vw/1.1 'Bangers';
           color: #222;
           letter-spacing: 1px;
           margin-bottom: 20px;
@@ -1377,7 +1388,8 @@ table {
   position: fixed;
   top: 0;
   left: 0;
-  background: rgba(17, 17, 17, 0.6); }
+  background: rgba(17, 17, 17, 0.6);
+  z-index: 99; }
   #popup > .inner {
     width: 400px;
     position: absolute;
@@ -1598,135 +1610,181 @@ table {
 @media screen and (max-width: 539px) {
   .gallery .inner article {
     width: 100%; } }
-.youtube {
-  background: #efefef; }
+.youtube .inner::after {
+  content: '';
+  display: block;
+  clear: both; }
+.youtube .inner article {
+  width: calc((100% - 20px) / 2);
+  height: calc(18vw + 120px);
+  position: relative;
+  float: left;
+  margin: 60px 20px 0px 0px; }
+  .youtube .inner article a {
+    width: 100%; }
+    .youtube .inner article a:hover .thumnails {
+      margin-top: -30px; }
+    .youtube .inner article a .thumnails {
+      width: 18vw;
+      height: 18vw;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      margin-left: -9vw;
+      transition: 1s;
+      background-position: 200%;
+      background-repeat: no-repeat; }
+      .youtube .inner article a .thumnails .dot {
+        width: 3.5vw;
+        height: 3.5vw;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -1.75vw;
+        margin-left: -1.75vw;
+        background: #f7fbff;
+        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1; }
+      .youtube .inner article a .thumnails::before, .youtube .inner article a .thumnails::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-image: inherit;
+        background-position: center;
+        background-repeat: inherit;
+        background-size: 180%;
+        transform-origin: center center; }
+      .youtube .inner article a .thumnails::before {
+        transform: translateY(10%);
+        filter: blur(10px) brightness(1.6);
+        opacity: 0.7; }
+    .youtube .inner article a .con {
+      width: 16vw;
+      height: 120px;
+      padding: 15px;
+      position: absolute;
+      top: 16vw;
+      left: 50%;
+      margin-left: -8vw;
+      background: #333;
+      text-align: center;
+      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+      display: flex;
+      flex-wrap: wrap;
+      align-content: space-between;
+      justify-content: center; }
+      .youtube .inner article a .con p {
+        font: 400 16px/1.2 'Noto Sans KR';
+        color: #fff; }
+      .youtube .inner article a .con span {
+        font: 300 13px/1 'Noto Sans KR';
+        color: #bbb; }
+  .youtube .inner article:nth-of-type(2n) {
+    margin: 60px 0px 0px 0px; }
+.youtube .pop {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99; }
+  .youtube .pop iframe {
+    width: 800px;
+    height: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -225px;
+    margin-left: -400px; }
+  .youtube .pop > span {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -999px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: 398px;
+    margin-top: -231px;
+    cursor: pointer;
+    font-size: 0; }
+    .youtube .pop > span::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #efefef;
+      position: absolute;
+      top: 25px;
+      left: 0;
+      transform: rotate(45deg); }
+    .youtube .pop > span::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 1px;
+      background: #efefef;
+      position: absolute;
+      top: 25px;
+      left: 0;
+      transform: rotate(-45deg); }
+
+@media screen and (max-width: 1179px) {
+  .youtube .inner article {
+    height: calc(18vw + 130px); }
+    .youtube .inner article a .thumnails {
+      width: 22vw;
+      height: 22vw;
+      margin-left: -11vw; }
+    .youtube .inner article a .con {
+      width: 18vw;
+      height: 130px;
+      margin-left: -9vw;
+      top: 19vw; }
+      .youtube .inner article a .con p {
+        font: 400 14px/1.2 'Noto Sans KR'; }
+      .youtube .inner article a .con span {
+        font: 300 11px/1 'Noto Sans KR'; } }
+@media screen and (max-width: 539px) {
   .youtube .inner article {
     width: 100%;
-    height: 300px;
-    position: relative;
-    background: #fff;
-    margin-bottom: 25px;
-    transition: 1s; }
-    .youtube .inner article a {
-      width: 100%;
-      height: 100%; }
-      .youtube .inner article a::after {
-        content: '';
-        display: block;
-        clear: both; }
-      .youtube .inner article a .thumnails {
-        width: 40%;
-        height: 100%;
-        float: left;
-        overflow: hidden; }
-        .youtube .inner article a .thumnails img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center;
-          float: left;
-          transform: scale(1.15); }
-      .youtube .inner article a .con {
-        width: 60%;
-        height: 100%;
-        padding: 40px 20px;
-        float: right;
-        position: relative; }
-        .youtube .inner article a .con h2 {
-          font: 700 22px/1.2 'Noto Sans KR';
-          color: #333;
-          margin-bottom: 20px; }
-        .youtube .inner article a .con p {
-          font: 300 16px/1.5 'Noto Sans KR';
-          color: #555; }
-        .youtube .inner article a .con span {
-          font: 300 16px/1 'Noto Sans KR';
-          color: steelblue;
-          position: absolute;
-          bottom: 25px;
-          left: 20px; }
-    .youtube .inner article:hover {
-      box-shadow: 0px 0px 40px #5f4b8b4d; }
-  .youtube .pop {
-    width: 100%;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.8);
-    z-index: 99; }
-    .youtube .pop iframe {
-      width: 800px;
-      height: 450px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-top: -225px;
-      margin-left: -400px; }
-    .youtube .pop > span {
-      display: block;
-      width: 50px;
-      height: 50px;
-      text-indent: -999px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-left: 398px;
-      margin-top: -231px;
-      cursor: pointer;
-      font-size: 0; }
-      .youtube .pop > span::before {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: #efefef;
-        position: absolute;
-        top: 25px;
-        left: 0;
-        transform: rotate(45deg); }
-      .youtube .pop > span::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 1px;
-        background: #efefef;
-        position: absolute;
-        top: 25px;
-        left: 0;
-        transform: rotate(-45deg); }
-
+    height: calc(50vw + 130px);
+    margin: 80px 0px 0px; }
+    .youtube .inner article a .thumnails {
+      width: 50vw;
+      height: 50vw;
+      margin-left: -25vw; }
+      .youtube .inner article a .thumnails .dot {
+        width: 8vw;
+        height: 8vw;
+        margin-top: -4vw;
+        margin-left: -4vw; }
+    .youtube .inner article a .con {
+      width: 46vw;
+      height: 130px;
+      margin-left: -23vw;
+      top: 46vw; }
+      .youtube .inner article a .con p {
+        font: 400 16px/1.2 'Noto Sans KR'; }
+      .youtube .inner article a .con span {
+        font: 300 14px/1 'Noto Sans KR'; } }
 .location .sub_visual img {
   filter: saturate(1.5) contrast(1.3) grayscale(0.5) brightness(0.7); }
 .location .inner {
-  padding: 0 0 100px; }
-  .location .inner #map {
-    width: 100%;
-    height: 30vw; }
-  .location .inner .btnTraffic {
-    float: right;
-    margin-top: 10px; }
-    .location .inner .btnTraffic li {
-      float: left;
-      margin-left: 10px; }
-      .location .inner .btnTraffic li a {
-        display: block;
-        width: 200px;
-        height: 40px;
-        border: 2px solid #333;
-        font: 500 14px/38px 'Noto Sans KR';
-        color: #333;
-        text-align: center; }
-      .location .inner .btnTraffic li.on a {
-        border: none;
-        background: #999; }
+  min-height: 0; }
   .location .inner .info {
     width: 100%;
-    margin-top: 100px;
+    margin: 60px 0 40px;
     position: relative;
-    padding: 0 0 60px 60px;
-    padding-left: 60px;
-    border-bottom: 1px solid #bbb; }
+    padding-left: 60px; }
     .location .inner .info i {
       position: absolute;
       top: 0;
@@ -1736,7 +1794,7 @@ table {
     .location .inner .info .add {
       font: 700 20px/1 'Noto Sans KR';
       color: #444;
-      margin-bottom: 16px; }
+      margin-bottom: 12px; }
     .location .inner .info .tel {
       font: 300 16px/1 'Noto Sans KR';
       letter-spacing: 1px; }
@@ -1744,103 +1802,145 @@ table {
         font-weight: 500;
         margin-right: 7px;
         letter-spacing: 0; }
-  .location .inner .subway {
+.location .mapWrap {
+  width: 100%;
+  position: relative; }
+  .location .mapWrap #map {
     width: 100%;
-    padding: 50px 0;
-    border-bottom: 1px solid #bbb; }
-    .location .inner .subway::after {
-      content: '';
-      display: block;
-      clear: both; }
-    .location .inner .subway > .left {
-      width: 30%;
+    height: 25vw; }
+  .location .mapWrap .btnTraffic {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 1; }
+    .location .mapWrap .btnTraffic li {
       float: left;
-      padding-left: 30px;
-      font: 700 18px/1 'Noto Sans KR';
+      margin-left: 8px; }
+      .location .mapWrap .btnTraffic li a {
+        display: block;
+        width: 80px;
+        height: 40px;
+        background: rgba(255, 255, 255, 0.9);
+        text-align: center;
+        transition: 0.5s;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.15); }
+        .location .mapWrap .btnTraffic li a i {
+          font-size: 20px;
+          line-height: 40px;
+          color: #333;
+          position: relative; }
+      .location .mapWrap .btnTraffic li.on a {
+        border: none;
+        background: #b1b1b1; }
+      .location .mapWrap .btnTraffic li:hover a {
+        transform: scale(1.05); }
+      .location .mapWrap .btnTraffic li:nth-of-type(2) a i::after {
+        content: '';
+        display: block;
+        width: 3px;
+        height: 30px;
+        background: #444;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        transform: rotate(-45deg); }
+.location .inner .subway {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid #bbb; }
+  .location .inner .subway::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .location .inner .subway > .left {
+    width: 30%;
+    float: left;
+    padding-left: 30px;
+    font: 700 18px/1 'Noto Sans KR';
+    color: #333; }
+  .location .inner .subway > .right {
+    width: 70%;
+    float: left;
+    padding-right: 30px;
+    font: 400 16px/1 'Noto Sans KR';
+    color: #333; }
+    .location .inner .subway > .right span {
+      display: inline-block;
+      color: #fff;
+      padding: 3px 8px;
+      margin-bottom: 12px; }
+      .location .inner .subway > .right span:nth-of-type(1) {
+        background-color: green;
+        margin-right: 5px; }
+      .location .inner .subway > .right span:nth-of-type(2) {
+        background-color: #2d94d8;
+        margin-right: 5px; }
+      .location .inner .subway > .right span:nth-of-type(3) {
+        background-color: purple; }
+    .location .inner .subway > .right p {
       color: #333; }
-    .location .inner .subway > .right {
-      width: 70%;
-      float: left;
-      padding-right: 30px;
-      font: 400 16px/1 'Noto Sans KR';
-      color: #333; }
-      .location .inner .subway > .right span {
+.location .inner .bus {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid #bbb; }
+  .location .inner .bus::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .location .inner .bus > .left {
+    width: 30%;
+    float: left;
+    padding-left: 30px;
+    font: 700 18px/1 'Noto Sans KR';
+    color: #333; }
+  .location .inner .bus > .right {
+    width: 70%;
+    float: left;
+    padding-right: 30px;
+    font: 400 15px/1 'Noto Sans KR';
+    color: #222; }
+    .location .inner .bus > .right ul li {
+      margin-bottom: 6px; }
+      .location .inner .bus > .right ul li span {
         display: inline-block;
+        font: 400 16px/1 'Noto Sans KR';
         color: #fff;
         padding: 3px 8px;
-        margin-bottom: 12px; }
-        .location .inner .subway > .right span:nth-of-type(1) {
-          background-color: green;
-          margin-right: 5px; }
-        .location .inner .subway > .right span:nth-of-type(2) {
-          background-color: #2d94d8;
-          margin-right: 5px; }
-        .location .inner .subway > .right span:nth-of-type(3) {
-          background-color: purple; }
-      .location .inner .subway > .right p {
+        background: blue;
+        margin-right: 10px; }
+      .location .inner .bus > .right ul li:nth-of-type(2) span {
+        background: green; }
+      .location .inner .bus > .right ul li:nth-of-type(3) span {
+        background: yellow;
         color: #333; }
-  .location .inner .bus {
-    width: 100%;
-    padding: 50px 0;
-    border-bottom: 1px solid #bbb; }
-    .location .inner .bus::after {
-      content: '';
-      display: block;
-      clear: both; }
-    .location .inner .bus > .left {
-      width: 30%;
-      float: left;
-      padding-left: 30px;
-      font: 700 18px/1 'Noto Sans KR';
-      color: #333; }
-    .location .inner .bus > .right {
-      width: 70%;
-      float: left;
-      padding-right: 30px;
-      font: 400 15px/1 'Noto Sans KR';
-      color: #222; }
-      .location .inner .bus > .right ul li {
-        margin-bottom: 6px; }
-        .location .inner .bus > .right ul li span {
-          display: inline-block;
-          font: 400 16px/1 'Noto Sans KR';
-          color: #fff;
-          padding: 3px 8px;
-          background: blue;
-          margin-right: 10px; }
-        .location .inner .bus > .right ul li:nth-of-type(2) span {
-          background: green; }
-        .location .inner .bus > .right ul li:nth-of-type(3) span {
-          background: yellow;
-          color: #333; }
-  .location .inner .car {
-    width: 100%;
-    padding: 50px 0;
-    border-bottom: 1px solid #bbb; }
-    .location .inner .car::after {
-      content: '';
-      display: block;
-      clear: both; }
-    .location .inner .car > .left {
-      width: 30%;
-      float: left;
-      padding-left: 30px;
-      font: 700 18px/1 'Noto Sans KR';
-      color: #333; }
-    .location .inner .car > .right {
-      width: 70%;
-      float: left;
-      padding-right: 30px;
-      font: 400 15px/1.4 'Noto Sans KR';
-      color: #222; }
-      .location .inner .car > .right ul li {
-        margin-bottom: 50px; }
-        .location .inner .car > .right ul li span {
-          display: block;
-          font: 700 16px/1 'Noto Sans KR';
-          margin-bottom: 15px; }
-        .location .inner .car > .right ul li:last-of-type {
-          margin-bottom: 0; }
+.location .inner .car {
+  width: 100%;
+  padding: 50px 0;
+  border-bottom: 1px solid #bbb; }
+  .location .inner .car::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .location .inner .car > .left {
+    width: 30%;
+    float: left;
+    padding-left: 30px;
+    font: 700 18px/1 'Noto Sans KR';
+    color: #333; }
+  .location .inner .car > .right {
+    width: 70%;
+    float: left;
+    padding-right: 30px;
+    font: 400 15px/1.4 'Noto Sans KR';
+    color: #222; }
+    .location .inner .car > .right ul li {
+      margin-bottom: 50px; }
+      .location .inner .car > .right ul li span {
+        display: block;
+        font: 700 16px/1 'Noto Sans KR';
+        margin-bottom: 15px; }
+      .location .inner .car > .right ul li:last-of-type {
+        margin-bottom: 0; }
 
 .join .sub_visual img {
   object-position: bottom; }

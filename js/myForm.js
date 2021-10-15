@@ -24,7 +24,7 @@ function isTxt(name, len){
     } else {
         $("[name="+name+"]").parent().find("p").remove();
         $("[name="+name+"]").parent().append(
-            "<p>해당 입력 항목에는 "+len+"자리 이상 입력하실 수 있습니다..</p>"
+            "<p>해당 입력 항목에는 "+len+"자리 이상 입력하실 수 있습니다.</p>"
         );
         return false;
     }

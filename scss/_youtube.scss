@@ -1,54 +1,85 @@
 .youtube {
-    background: #efefef;
-
     .inner {
+
+        &::after {content: ''; display: block; clear: both;}
+
         article {
-            width: 100%; height: 300px;
+            width: calc((100% - 20px) / 2);
+            height: calc(18vw + 120px);
             position: relative;
-            background: #fff;
-            margin-bottom: 25px;
-            transition: 1s;
+            // background: #fff;
+            float: left;
+            margin: 60px 20px 0px 0px;
 
             a {
-                width: 100%; height: 100%;
+                width: 100%;
 
-                &::after { content: ''; display: block; clear: both;}
+                &:hover .thumnails { margin-top: -30px;}
 
                 .thumnails {
-                    width: 40%; height: 100%;
-                    float: left;
-                    overflow: hidden;
+                    width: 18vw; height: 18vw;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: 0; left: 50%; margin-left: -9vw;
+                    transition: 1s;
+                    background-position: 200%;
+                    background-repeat: no-repeat;
 
-                    img {
+                    //CD 가운데 구멍
+                    .dot {
+                        width: 3.5vw; height: 3.5vw;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 50%; left: 50%;
+                        margin-top: -1.75vw; margin-left: -1.75vw;
+                        background: #f7fbff;
+                        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+                        z-index: 1;
+                    }
+
+                    //before:그림자, after:본체
+                    &::before, &::after {
+                        content: ''; display: block;
                         width: 100%; height: 100%;
-                        object-fit: cover; object-position: center;
-                        float: left;
-                        transform: scale(1.15);
+                        border-radius: inherit;
+                        position: absolute;
+                        top: 0; left: 0;
+                        background-image: inherit;
+                        background-position: center;
+                        background-repeat: inherit;
+                        background-size: 180%;
+                        transform-origin: center center;
+                    }
+                    &::before {
+                        transform: translateY(10%);
+                        filter: blur(10px) brightness(1.6);
+                        opacity: 0.7;
                     }
                 }
 
                 .con {
-                    width: 60%; height: 100%;
-                    padding: 40px 20px;
-                    float: right;
-                    position: relative;
+                    width: 16vw; height: 120px;
+                    padding: 15px;
+                    position: absolute;
+                    top: 16vw; left: 50%; margin-left: -8vw;
+                    background: #333;
+                    text-align: center;
+                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: space-between;
+                    justify-content: center;
 
-                    h2 {
-                        font: 700 22px/1.2 'Noto Sans KR'; color: #333;
-                        margin-bottom: 20px;
-                    }
                     p {
-                        font: 300 16px/1.5 'Noto Sans KR'; color: #555;
+                        font: 400 16px/1.2 'Noto Sans KR'; color: #fff;
                     }
                     span {
-                        font: 300 16px/1 'Noto Sans KR'; color: steelblue;
-                        position: absolute;
-                        bottom: 25px; left: 20px;
+                        font: 300 13px/1 'Noto Sans KR'; color: #bbb;
                     }
                 }
             }
 
-            &:hover { box-shadow: 0px 0px 40px #5f4b8b4d;}
+            &:nth-of-type(2n) { margin: 60px 0px 0px 0px;}
         }
     }
 
@@ -94,5 +125,51 @@
             }
         }
     }
+}
 
+@media screen and (max-width:$tablet) {
+    .youtube {
+        .inner {
+            article {
+                height: calc(18vw + 130px);
+                a {
+                    .thumnails{ width: 22vw; height: 22vw; margin-left: -11vw}
+                    .con {
+                        width: 18vw; height: 130px; margin-left: -9vw;
+                        top: 19vw;
+    
+                        p { font: 400 14px/1.2 'Noto Sans KR';}
+                        span { font: 300 11px/1 'Noto Sans KR';}
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$mobile) {
+    .youtube {
+        .inner {
+            article {
+                width: 100%; height: calc(50vw + 130px);
+                margin: 80px 0px 0px;
+                a {
+                    .thumnails{
+                        width: 50vw; height: 50vw; margin-left: -25vw;
+                        .dot {
+                            width: 8vw; height: 8vw;
+                            margin-top: -4vw; margin-left: -4vw;
+                        }
+                    }
+                    .con {
+                        width: 46vw; height: 130px; margin-left: -23vw;
+                        top: 46vw;
+    
+                        p { font: 400 16px/1.2 'Noto Sans KR';}
+                        span { font: 300 14px/1 'Noto Sans KR';}
+                    }
+                }
+            }
+        }
+    }
 }

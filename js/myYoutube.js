@@ -57,13 +57,12 @@ $.ajax({
                         ),
                         $("<a>").attr({href: data.snippet.resourceId.videoId})
                                 .append(
-                                    $("<div class='thumnails'>").append(
-                                        $("<img>").attr({src: data.snippet.thumbnails.high.url})
-                                    ),
+                                    $("<div class='thumnails'>").css("background-image","url(" + data.snippet.thumbnails.high.url + ")")
+                                        .append("<div class='dot'></div>"),
                                     $("<div class='con'>")
                                         .append(
-                                            $("<h2>").text(ytTitle),
-                                            $("<p>").text(ytTxt),
+                                            $("<p>").text(ytTitle),
+                                            // $("<p>").text(ytTxt),
                                             $("<span>").text(ytDate)
                                         )
                                 )
