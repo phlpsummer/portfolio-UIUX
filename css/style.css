@@ -1835,7 +1835,7 @@ table {
         background: #b1b1b1; }
       .location .mapWrap .btnTraffic li:hover a {
         transform: scale(1.05); }
-      .location .mapWrap .btnTraffic li:nth-of-type(2) a i::after {
+      .location .mapWrap .btnTraffic li:nth-of-type(1) a i::after {
         content: '';
         display: block;
         width: 3px;
