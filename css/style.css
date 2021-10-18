@@ -1319,25 +1319,32 @@ table {
     width: 100%;
     margin: 0px 0px 20px; } }
 .community {
-  background: #efefef; }
+  background: #efefef;
+  padding: 0; }
+  .community .sub_visual {
+    margin-bottom: 0; }
   .community .inner .left {
-    width: 40%;
-    height: 100vh;
+    width: 42%;
+    height: 100%;
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    padding-right: 50px;
+    border-right: 1px solid #ccc; }
     .community .inner .left .wrap {
       width: 100%;
       position: sticky;
-      top: 180px; }
+      top: 180px;
+      margin: 80px 0 105px; }
       .community .inner .left .wrap .faq {
         width: 100%;
         margin-top: 80px; }
         .community .inner .left .wrap .faq article {
           width: 100%;
-          margin-bottom: 20px;
+          margin-bottom: 10px;
           background: #fff;
-          cursor: pointer; }
+          cursor: pointer;
+          transition: 1s; }
           .community .inner .left .wrap .faq article ul .ask {
             width: 100%;
             display: flex;
@@ -1346,25 +1353,26 @@ table {
             padding: 20px; }
             .community .inner .left .wrap .faq article ul .ask .icon {
               display: inline-block;
-              margin-right: 20px;
-              font: bold 22px/1 'Rajdhani';
+              margin-right: 18px;
+              font: normal 20px/1 'Rajdhani';
               color: #5f4b8b; }
             .community .inner .left .wrap .faq article ul .ask p {
               display: inline-block;
-              font: 700 15px/1 'Noto Sans KR';
+              font: 700 14px/1 'Noto Sans KR';
               color: #333; }
             .community .inner .left .wrap .faq article ul .ask .btnMore {
               display: inline-block;
-              width: 20px;
-              height: 20px;
+              width: 16px;
+              height: 16px;
               position: absolute;
-              right: 20px; }
+              right: 20px;
+              transition: 1s; }
               .community .inner .left .wrap .faq article ul .ask .btnMore::before {
                 content: '';
                 display: block;
                 width: 100%;
                 height: 1px;
-                background: #444;
+                background: #999;
                 position: absolute;
                 top: 50%;
                 left: 0;
@@ -1374,89 +1382,149 @@ table {
                 display: block;
                 width: 1px;
                 height: 100%;
-                background: #444;
+                background: #999;
                 position: absolute;
                 top: 0;
                 left: 50%;
                 transform: translateX(-50%); }
           .community .inner .left .wrap .faq article ul .answer {
             width: 100%;
-            display: flex;
+            display: none;
             align-items: center;
             padding: 20px 50px 20px 20px;
-            border-top: 1px solid #ddd; }
+            border-top: 1px solid #efefef;
+            transition: 1s; }
             .community .inner .left .wrap .faq article ul .answer .icon {
               display: inline-block;
-              margin-right: 20px;
-              font: bold 22px/1 'Rajdhani';
-              color: #ff7913; }
+              margin-right: 18px;
+              font: normal 20px/1 'Rajdhani';
+              color: #ffb025; }
             .community .inner .left .wrap .faq article ul .answer p {
               display: inline-block;
-              font: 400 13px/1.4 'Noto Sans KR';
+              font: 400 13px/1.5 'Noto Sans KR';
               color: #555; }
-  .community .inner table {
-    width: 100%;
-    margin-bottom: 50px; }
-    .community .inner table tr {
-      padding-bottom: 20px;
-      border-bottom: 1px solid #ccc;
-      transition: 0.3s; }
-      .community .inner table tr th {
-        padding: 10px 0 20px;
-        font: 700 14px/1 'Noto Sans KR';
-        color: #555;
-        border-bottom: 2px solid #666; }
-        .community .inner table tr th:nth-of-type(1) {
-          width: 3%; }
-        .community .inner table tr th:nth-of-type(2) {
-          width: 10%; }
-        .community .inner table tr th:nth-of-type(4) {
-          width: 6%; }
-        .community .inner table tr th:nth-of-type(5) {
-          width: 10%; }
-        .community .inner table tr th:nth-of-type(6) {
-          width: 6%; }
-      .community .inner table tr td {
-        padding: 20px 10px;
-        font: 400 14px/1 'Noto Sans KR';
-        color: #555;
+          .community .inner .left .wrap .faq article.on ul .ask .btnMore::after {
+            transform: rotate(90deg); }
+          .community .inner .left .wrap .faq article.on ul .answer {
+            display: flex; }
+  .community .inner::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .community .inner .right {
+    width: 58%;
+    position: relative;
+    float: right;
+    padding-left: 50px; }
+    .community .inner .right table {
+      width: 100%;
+      margin: 40px 0 30px; }
+      .community .inner .right table tr {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ccc; }
+        .community .inner .right table tr:nth-of-type(1) {
+          border-bottom: none; }
+        .community .inner .right table tr:nth-of-type(2) {
+          border-top: 1px solid #ccc; }
+        .community .inner .right table tr th {
+          display: none; }
+          .community .inner .right table tr th:nth-of-type(1) {
+            width: 5%; }
+          .community .inner .right table tr th:nth-of-type(2) {
+            width: 7%; }
+          .community .inner .right table tr th:nth-of-type(2) {
+            width: 78%; }
+          .community .inner .right table tr th:nth-of-type(3) {
+            width: 10%; }
+        .community .inner .right table tr td {
+          padding: 40px 20px;
+          font: 400 14px/1 'Noto Sans KR';
+          color: #555;
+          text-align: center; }
+          .community .inner .right table tr td:nth-of-type(1) {
+            font-weight: 300;
+            font-size: 12px; }
+          .community .inner .right table tr td:nth-of-type(2) {
+            font-weight: 400;
+            font-size: 14px; }
+          .community .inner .right table tr td:nth-of-type(3) {
+            text-align: left; }
+          .community .inner .right table tr td:nth-of-type(4) {
+            font-weight: 300;
+            font-size: 12px; }
+        .community .inner .right table tr:hover td:nth-of-type(3) {
+          text-decoration: underline;
+          color: #5f4b8b; }
+    .community .inner .right .pagination {
+      width: 100%;
+      margin-bottom: 60px; }
+      .community .inner .right .pagination ul {
+        font-size: 0;
         text-align: center; }
-        .community .inner table tr td:nth-of-type(1) {
-          font-weight: 300;
-          font-size: 12px; }
-        .community .inner table tr td:nth-of-type(2) {
+        .community .inner .right .pagination ul li {
+          display: inline-block;
+          margin: 0 12px; }
+          .community .inner .right .pagination ul li a {
+            font: 300 14px/1 'Noto Sans KR';
+            color: #555; }
+        .community .inner .right .pagination ul .prev {
           display: block;
-          width: 70px;
-          height: 28px;
-          border: 2px solid #333;
-          font: 700 14px/24px 'Noto Sans KR';
-          color: #333;
-          border-radius: 14px;
-          margin: 13px auto;
-          padding: 0; }
-        .community .inner table tr td:nth-of-type(3) {
-          text-align: left; }
-      .community .inner table tr:hover td:nth-of-type(3) {
-        text-decoration: underline;
-        color: #5f4b8b; }
-    .community .inner table .notice {
-      background: #eee; }
-      .community .inner table .notice td:nth-of-type(2) {
-        background: #333;
-        color: #fff; }
-      .community .inner table .notice td:nth-of-type(3) {
-        font-weight: 700; }
-  .community .inner .pagination {
-    width: 100%; }
-    .community .inner .pagination ul {
-      font-size: 0;
-      text-align: center; }
-      .community .inner .pagination ul li {
-        display: inline-block;
-        margin: 0 10px; }
-        .community .inner .pagination ul li a {
-          font: 500 16px/1 'Noto Sans KR';
-          color: #333; }
+          width: 10px;
+          height: 10px;
+          position: relative;
+          margin-bottom: -1px; }
+          .community .inner .right .pagination ul .prev::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #888;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform-origin: left center;
+            transform: rotate(45deg);
+            margin-top: -1px; }
+          .community .inner .right .pagination ul .prev::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #888;
+            position: absolute;
+            bottom: 50%;
+            left: 0;
+            transform-origin: left center;
+            transform: rotate(-45deg); }
+        .community .inner .right .pagination ul .next {
+          display: block;
+          width: 10px;
+          height: 10px;
+          position: relative;
+          margin-bottom: -1px; }
+          .community .inner .right .pagination ul .next::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #888;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform-origin: right center;
+            transform: rotate(45deg);
+            margin-top: -1px; }
+          .community .inner .right .pagination ul .next::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1px;
+            background: #888;
+            position: absolute;
+            bottom: 50%;
+            left: 0;
+            transform-origin: right center;
+            transform: rotate(-45deg); }
 
 #popup {
   width: 100%;
@@ -1699,15 +1767,15 @@ table {
   .youtube .inner article a {
     width: 100%; }
     .youtube .inner article a:hover .thumnails {
-      margin-top: -30px; }
+      margin-top: -24px; }
     .youtube .inner article a .thumnails {
-      width: 18vw;
-      height: 18vw;
+      width: 19vw;
+      height: 19vw;
       border-radius: 50%;
       position: absolute;
       top: 0;
       left: 50%;
-      margin-left: -9vw;
+      margin-left: -9.5vw;
       transition: 1s;
       background-position: 200%;
       background-repeat: no-repeat; }
@@ -1743,13 +1811,13 @@ table {
         opacity: 0.7; }
     .youtube .inner article a .con {
       width: 16vw;
-      height: 120px;
+      height: 110px;
       padding: 15px;
       position: absolute;
-      top: 16vw;
+      top: 17vw;
       left: 50%;
       margin-left: -8vw;
-      background: #333;
+      background: linear-gradient(45deg, #555, #222);
       text-align: center;
       box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
       display: flex;
@@ -1757,7 +1825,7 @@ table {
       align-content: space-between;
       justify-content: center; }
       .youtube .inner article a .con p {
-        font: 400 16px/1.2 'Noto Sans KR';
+        font: 400 15px/1.2 'Noto Sans KR';
         color: #fff; }
       .youtube .inner article a .con span {
         font: 300 13px/1 'Noto Sans KR';
@@ -1821,9 +1889,9 @@ table {
       height: 22vw;
       margin-left: -11vw; }
     .youtube .inner article a .con {
-      width: 18vw;
-      height: 130px;
-      margin-left: -9vw;
+      width: 19vw;
+      height: 125px;
+      margin-left: -9.5vw;
       top: 19vw; }
       .youtube .inner article a .con p {
         font: 400 14px/1.2 'Noto Sans KR'; }

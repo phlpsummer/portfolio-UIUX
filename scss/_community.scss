@@ -1,25 +1,31 @@
 .community {
     background: #efefef;
+    padding: 0;
+    .sub_visual { margin-bottom: 0;}
     .inner {
+
         .left {
-            width: 40%; height: 100vh;
+            width: 42%; height: 100%;
             position: absolute;
             top: 0; left: 0;
+            padding-right: 50px;
+            border-right: 1px solid #ccc;
 
             .wrap {
                 width: 100%;
                 position: sticky;
                 top: 180px;
-                // margin-bottom: 300px;
+                margin: 80px 0 105px;
 
                 .faq {
                     width: 100%;
                     margin-top: 80px;
                     article {
                         width: 100%;
-                        margin-bottom: 20px;
+                        margin-bottom: 10px;
                         background: #fff;
                         cursor: pointer;
+                        transition: 1s;
                         ul {
                             .ask {
                                 width: 100%;
@@ -30,30 +36,31 @@
 
                                 .icon {
                                     display: inline-block;
-                                    margin-right: 20px;
-                                    font: bold 22px/1 'Rajdhani'; color: #5f4b8b;
+                                    margin-right: 18px;
+                                    font: normal 20px/1 'Rajdhani'; color: #5f4b8b;
                                 }
                                 p {
                                     display: inline-block;
-                                    font: 700 15px/1 'Noto Sans KR'; color: #333;
+                                    font: 700 14px/1 'Noto Sans KR'; color: #333;
                                 }
                                 .btnMore {
                                     display: inline-block;
-                                    width: 20px; height: 20px;
+                                    width: 16px; height: 16px;
                                     position: absolute;
                                     right: 20px;
+                                    transition: 1s;
 
                                     &::before {
                                         content: ''; display: block;
                                         width: 100%; height: 1px;
-                                        background: #444;
+                                        background: #999;
                                         position: absolute;
                                         top: 50%; left: 0; transform: translateY(-50%);
                                     }
                                     &::after {
                                         content: ''; display: block;
                                         width: 1px; height: 100%;
-                                        background: #444;
+                                        background: #999;
                                         position: absolute;
                                         top: 0; left: 50%; transform: translateX(-50%);
                                     }
@@ -62,20 +69,149 @@
 
                             .answer {
                                 width: 100%;
-                                display: flex;
+                                display: none;
                                 align-items: center;
                                 padding: 20px 50px 20px 20px;
-                                border-top: 1px solid #ddd;
+                                border-top: 1px solid #efefef;
+                                transition: 1s;
                                 .icon {
                                     display: inline-block;
-                                    margin-right: 20px;
-                                    font: bold 22px/1 'Rajdhani'; color: #ff7913;
+                                    margin-right: 18px;
+                                    font: normal 20px/1 'Rajdhani'; color: #ffb025;
                                 }
                                 p {
                                     display: inline-block;
-                                    font: 400 13px/1.4 'Noto Sans KR'; color: #555;
+                                    font: 400 13px/1.5 'Noto Sans KR'; color: #555;
                                 }
                             }
+                        }
+
+                        &.on {
+                            ul {
+                                .ask {
+                                    .btnMore {
+                                        &::after {
+                                            transform: rotate(90deg);
+                                        }
+                                    }
+                                }
+                                .answer { display: flex;}
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+        &::after { content: ''; display: block; clear: both;}
+
+        .right {
+            width: 58%;
+            position: relative;
+            float: right;
+            padding-left: 50px;
+
+            table {
+                width: 100%;
+                margin: 40px 0 30px;
+    
+                tr {
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #ccc;
+                    &:nth-of-type(1) { border-bottom: none;}
+                    &:nth-of-type(2) { border-top: 1px solid #ccc;;}
+    
+                    th {
+                        display: none;
+    
+                        &:nth-of-type(1) { width: 5%;}
+                        &:nth-of-type(2) { width: 7%;}
+                        &:nth-of-type(2) { width: 78%;}
+                        &:nth-of-type(3) { width: 10%;}
+                    }
+    
+                    td {
+                        padding: 40px 20px;
+                        font: 400 14px/1 'Noto Sans KR'; color: #555;
+                        text-align: center;
+    
+                        &:nth-of-type(1) { font-weight: 300; font-size: 12px;}
+                        &:nth-of-type(2) { font-weight: 400; font-size: 14px;}
+                        &:nth-of-type(3) { text-align: left;}
+                        &:nth-of-type(4) { font-weight: 300; font-size: 12px;}
+                    }
+    
+                    &:hover {
+                        td:nth-of-type(3) { text-decoration: underline; color: #5f4b8b;}
+                    }
+                }
+            }
+    
+            .pagination {
+                width: 100%;
+                margin-bottom: 60px;
+                ul {
+                    font-size: 0;
+                    text-align: center;
+    
+                    li {
+                        display: inline-block;
+                        margin: 0 12px;
+    
+                        a{
+                            font: 300 14px/1 'Noto Sans KR'; color: #555;
+                        }
+                    }
+
+                    .prev {
+                        display: block;
+                        width: 10px; height: 10px;
+                        position: relative;
+                        margin-bottom: -1px;
+                        &::after {
+                            content: ''; display: block;
+                            width: 100%; height: 1px;
+                            background: #888;
+                            position: absolute;
+                            top: 50%; left: 0;
+                            transform-origin: left center;
+                            transform: rotate(45deg);
+                            margin-top: -1px;
+                        }
+                        &::before {
+                            content: ''; display: block;
+                            width: 100%; height: 1px;
+                            background: #888;
+                            position: absolute;
+                            bottom: 50%; left: 0;
+                            transform-origin: left center;
+                            transform: rotate(-45deg);
+                        }
+                    }
+                    .next {
+                        display: block;
+                        width: 10px; height: 10px;
+                        position: relative;
+                        margin-bottom: -1px;
+                        &::after {
+                            content: ''; display: block;
+                            width: 100%; height: 1px;
+                            background: #888;
+                            position: absolute;
+                            top: 50%; left: 0;
+                            transform-origin: right center;
+                            transform: rotate(45deg);
+                            margin-top: -1px;
+                        }
+                        &::before {
+                            content: ''; display: block;
+                            width: 100%; height: 1px;
+                            background: #888;
+                            position: absolute;
+                            bottom: 50%; left: 0;
+                            transform-origin: right center;
+                            transform: rotate(-45deg);
                         }
                     }
                 }
@@ -83,78 +219,7 @@
         }
 
 
-        table {
-            width: 100%;
-            // border-top: 2px solid #111;
-            margin-bottom: 50px;
 
-            tr {
-                padding-bottom: 20px;
-                border-bottom: 1px solid #ccc;
-                transition: 0.3s;
-
-                th {
-                    padding: 10px 0 20px;
-                    font: 700 14px/1 'Noto Sans KR'; color: #555;
-                    border-bottom: 2px solid #666;
-
-                    &:nth-of-type(1) { width: 3%;}
-                    &:nth-of-type(2) { width: 10%;}
-                    &:nth-of-type(4) { width: 6%;}
-                    &:nth-of-type(5) { width: 10%;}
-                    &:nth-of-type(6) { width: 6%;}
-                }
-
-                td {
-                    padding: 20px 10px;
-                    font: 400 14px/1 'Noto Sans KR'; color: #555;
-                    text-align: center;
-
-                    &:nth-of-type(1) { font-weight: 300; font-size: 12px;}
-
-                    &:nth-of-type(2) {
-                        display: block;
-                        width: 70px; height: 28px;
-                        border: 2px solid #333;
-                        font: 700 14px/24px 'Noto Sans KR'; color: #333;
-                        border-radius: 14px;
-                        margin: 13px auto; padding: 0;
-                    }
-                    &:nth-of-type(3) { text-align: left;}
-                }
-
-                &:hover {
-                    td:nth-of-type(3) { text-decoration: underline; color: #5f4b8b;}
-                }
-            }
-
-            .notice {
-                background: #eee;
-                
-                td:nth-of-type(2){
-                    background: #333;
-                    color: #fff;
-                }
-                td:nth-of-type(3){ font-weight: 700;}
-            }
-        }
-
-        .pagination {
-            width: 100%;
-            ul {
-                font-size: 0;
-                text-align: center;
-
-                li {
-                    display: inline-block;
-                    margin: 0 10px;
-
-                    a{
-                        font: 500 16px/1 'Noto Sans KR'; color: #333;
-                    }
-                }
-            }
-        }
     }
 }
 

@@ -14,13 +14,13 @@
             a {
                 width: 100%;
 
-                &:hover .thumnails { margin-top: -30px;}
+                &:hover .thumnails { margin-top: -24px;}
 
                 .thumnails {
-                    width: 18vw; height: 18vw;
+                    width: 19vw; height: 19vw;
                     border-radius: 50%;
                     position: absolute;
-                    top: 0; left: 50%; margin-left: -9vw;
+                    top: 0; left: 50%; margin-left: -9.5vw;
                     transition: 1s;
                     background-position: 200%;
                     background-repeat: no-repeat;
@@ -58,11 +58,11 @@
                 }
 
                 .con {
-                    width: 16vw; height: 120px;
+                    width: 16vw; height: 110px;
                     padding: 15px;
                     position: absolute;
-                    top: 16vw; left: 50%; margin-left: -8vw;
-                    background: #333;
+                    top: 17vw; left: 50%; margin-left: -8vw;
+                    background: linear-gradient(45deg,#555,#222);
                     text-align: center;
                     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
                     display: flex;
@@ -71,7 +71,7 @@
                     justify-content: center;
 
                     p {
-                        font: 400 16px/1.2 'Noto Sans KR'; color: #fff;
+                        font: 400 15px/1.2 'Noto Sans KR'; color: #fff;
                     }
                     span {
                         font: 300 13px/1 'Noto Sans KR'; color: #bbb;
@@ -135,7 +135,7 @@
                 a {
                     .thumnails{ width: 22vw; height: 22vw; margin-left: -11vw}
                     .con {
-                        width: 18vw; height: 130px; margin-left: -9vw;
+                        width: 19vw; height: 125px; margin-left: -9.5vw;
                         top: 19vw;
     
                         p { font: 400 14px/1.2 'Noto Sans KR';}
