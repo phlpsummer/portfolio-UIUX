@@ -1318,69 +1318,145 @@ table {
   .about .inner .department .divi_tree li ul li {
     width: 100%;
     margin: 0px 0px 20px; } }
-.community .inner table {
-  width: 100%;
-  margin-bottom: 50px; }
-  .community .inner table tr {
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ccc;
-    transition: 0.3s; }
-    .community .inner table tr th {
-      padding: 10px 0 20px;
-      font: 700 14px/1 'Noto Sans KR';
-      color: #555;
-      border-bottom: 2px solid #666; }
-      .community .inner table tr th:nth-of-type(1) {
-        width: 3%; }
-      .community .inner table tr th:nth-of-type(2) {
-        width: 10%; }
-      .community .inner table tr th:nth-of-type(4) {
-        width: 6%; }
-      .community .inner table tr th:nth-of-type(5) {
-        width: 10%; }
-      .community .inner table tr th:nth-of-type(6) {
-        width: 6%; }
-    .community .inner table tr td {
-      padding: 20px 10px;
-      font: 400 14px/1 'Noto Sans KR';
-      color: #555;
+.community {
+  background: #efefef; }
+  .community .inner .left {
+    width: 40%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .community .inner .left .wrap {
+      width: 100%;
+      position: sticky;
+      top: 180px; }
+      .community .inner .left .wrap .faq {
+        width: 100%;
+        margin-top: 80px; }
+        .community .inner .left .wrap .faq article {
+          width: 100%;
+          margin-bottom: 20px;
+          background: #fff;
+          cursor: pointer; }
+          .community .inner .left .wrap .faq article ul .ask {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding: 20px; }
+            .community .inner .left .wrap .faq article ul .ask .icon {
+              display: inline-block;
+              margin-right: 20px;
+              font: bold 22px/1 'Rajdhani';
+              color: #5f4b8b; }
+            .community .inner .left .wrap .faq article ul .ask p {
+              display: inline-block;
+              font: 700 15px/1 'Noto Sans KR';
+              color: #333; }
+            .community .inner .left .wrap .faq article ul .ask .btnMore {
+              display: inline-block;
+              width: 20px;
+              height: 20px;
+              position: absolute;
+              right: 20px; }
+              .community .inner .left .wrap .faq article ul .ask .btnMore::before {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #444;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%); }
+              .community .inner .left .wrap .faq article ul .ask .btnMore::after {
+                content: '';
+                display: block;
+                width: 1px;
+                height: 100%;
+                background: #444;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%); }
+          .community .inner .left .wrap .faq article ul .answer {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 20px 50px 20px 20px;
+            border-top: 1px solid #ddd; }
+            .community .inner .left .wrap .faq article ul .answer .icon {
+              display: inline-block;
+              margin-right: 20px;
+              font: bold 22px/1 'Rajdhani';
+              color: #ff7913; }
+            .community .inner .left .wrap .faq article ul .answer p {
+              display: inline-block;
+              font: 400 13px/1.4 'Noto Sans KR';
+              color: #555; }
+  .community .inner table {
+    width: 100%;
+    margin-bottom: 50px; }
+    .community .inner table tr {
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      transition: 0.3s; }
+      .community .inner table tr th {
+        padding: 10px 0 20px;
+        font: 700 14px/1 'Noto Sans KR';
+        color: #555;
+        border-bottom: 2px solid #666; }
+        .community .inner table tr th:nth-of-type(1) {
+          width: 3%; }
+        .community .inner table tr th:nth-of-type(2) {
+          width: 10%; }
+        .community .inner table tr th:nth-of-type(4) {
+          width: 6%; }
+        .community .inner table tr th:nth-of-type(5) {
+          width: 10%; }
+        .community .inner table tr th:nth-of-type(6) {
+          width: 6%; }
+      .community .inner table tr td {
+        padding: 20px 10px;
+        font: 400 14px/1 'Noto Sans KR';
+        color: #555;
+        text-align: center; }
+        .community .inner table tr td:nth-of-type(1) {
+          font-weight: 300;
+          font-size: 12px; }
+        .community .inner table tr td:nth-of-type(2) {
+          display: block;
+          width: 70px;
+          height: 28px;
+          border: 2px solid #333;
+          font: 700 14px/24px 'Noto Sans KR';
+          color: #333;
+          border-radius: 14px;
+          margin: 13px auto;
+          padding: 0; }
+        .community .inner table tr td:nth-of-type(3) {
+          text-align: left; }
+      .community .inner table tr:hover td:nth-of-type(3) {
+        text-decoration: underline;
+        color: #5f4b8b; }
+    .community .inner table .notice {
+      background: #eee; }
+      .community .inner table .notice td:nth-of-type(2) {
+        background: #333;
+        color: #fff; }
+      .community .inner table .notice td:nth-of-type(3) {
+        font-weight: 700; }
+  .community .inner .pagination {
+    width: 100%; }
+    .community .inner .pagination ul {
+      font-size: 0;
       text-align: center; }
-      .community .inner table tr td:nth-of-type(1) {
-        font-weight: 300;
-        font-size: 12px; }
-      .community .inner table tr td:nth-of-type(2) {
-        display: block;
-        width: 70px;
-        height: 28px;
-        border: 2px solid #333;
-        font: 700 14px/24px 'Noto Sans KR';
-        color: #333;
-        border-radius: 14px;
-        margin: 13px auto;
-        padding: 0; }
-      .community .inner table tr td:nth-of-type(3) {
-        text-align: left; }
-    .community .inner table tr:hover td:nth-of-type(3) {
-      text-decoration: underline;
-      color: #5f4b8b; }
-  .community .inner table .notice {
-    background: #eee; }
-    .community .inner table .notice td:nth-of-type(2) {
-      background: #333;
-      color: #fff; }
-    .community .inner table .notice td:nth-of-type(3) {
-      font-weight: 700; }
-.community .inner .pagination {
-  width: 100%; }
-  .community .inner .pagination ul {
-    font-size: 0;
-    text-align: center; }
-    .community .inner .pagination ul li {
-      display: inline-block;
-      margin: 0 10px; }
-      .community .inner .pagination ul li a {
-        font: 500 16px/1 'Noto Sans KR';
-        color: #333; }
+      .community .inner .pagination ul li {
+        display: inline-block;
+        margin: 0 10px; }
+        .community .inner .pagination ul li a {
+          font: 500 16px/1 'Noto Sans KR';
+          color: #333; }
 
 #popup {
   width: 100%;
