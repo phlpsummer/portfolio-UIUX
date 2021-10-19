@@ -558,117 +558,94 @@ table {
 
   /* footer ---------------------------------------------------------------------------------- */
   #footer {
-    padding: 80px 30px 0; }
+    padding: 40px 30px 0; }
     #footer .inner {
       width: 100%; }
-      #footer .inner #footer_menu::after {
-        content: '';
-        display: block;
-        clear: both; }
       #footer .inner #footer_menu ul {
-        float: left;
+        float: none;
+        display: block;
         margin-bottom: 25px; }
         #footer .inner #footer_menu ul li {
-          display: inline-block;
-          margin-right: 20px; }
+          margin-right: 18px; }
           #footer .inner #footer_menu ul li a {
-            font: bold 20px/1 'Rajdhani';
+            font: bold 16px/1 'Rajdhani';
             color: #ccc;
             letter-spacing: 1px; }
       #footer .inner #footer_menu .search {
-        float: right;
-        width: 22%;
+        float: none;
+        width: 28%;
         height: 30px;
-        position: relative; }
-        #footer .inner #footer_menu .search input[type="text"] {
-          width: 100%;
-          height: 100%;
-          border: none;
-          border-bottom: 1px solid #aaa;
-          background: none;
-          font: 500 16px/1 'Noto Sans KR';
-          color: #fff; }
-        #footer .inner #footer_menu .search i {
-          position: absolute;
-          top: 50%;
-          right: 1px;
-          transform: translateY(-50%);
-          font-size: 15px;
-          color: #777; }
+        margin-bottom: 30px; }
       #footer .inner #sns {
         margin-bottom: 25px; }
-        #footer .inner #sns::after {
-          content: '';
+        #footer .inner #sns li a {
           display: block;
-          clear: both; }
-        #footer .inner #sns li {
-          float: left;
-          margin-right: 20px; }
-          #footer .inner #sns li a {
-            font-size: 30px;
-            color: #555; }
-      #footer .inner .policy {
-        margin-bottom: 40px; }
-        #footer .inner .policy::after {
-          content: '';
-          display: block;
-          clear: both; }
-        #footer .inner .policy li {
-          float: left;
-          margin-right: 20px; }
-          #footer .inner .policy li a {
-            font: 400 14px/1 'Noto Sans KR';
-            color: #777; }
-      #footer .inner > p {
-        font: 300 14px/1 'Noto Sans KR';
-        color: #777;
-        position: relative;
-        padding-top: 10px;
-        padding-bottom: 60px; }
-        #footer .inner > p::before {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 1px;
-          background: #555;
-          position: absolute;
-          top: 0;
-          left: 0; }
-      #footer .inner .go_top {
-        width: 100%;
-        height: 40px;
-        background: none;
-        position: absolute;
-        bottom: 0;
-        left: 0; }
-        #footer .inner .go_top .arrow {
-          width: 1px;
+          width: 40px;
           height: 40px;
-          background: #777;
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%); }
-          #footer .inner .go_top .arrow::before {
-            content: '';
-            display: block;
-            width: 13px;
-            height: 1px;
-            background: #777;
-            position: absolute;
-            top: 5px;
-            left: -1px;
-            transform: rotate(45deg); }
-          #footer .inner .go_top .arrow::after {
-            content: '';
-            display: block;
-            width: 13px;
-            height: 1px;
-            background: #777;
-            position: absolute;
-            top: 5px;
-            left: -11px;
-            transform: rotate(-45deg); } }
+          background: #555;
+          border-radius: 50%;
+          text-align: center; }
+          #footer .inner #sns li a i {
+            line-height: 40px;
+            font-size: 22px;
+            color: #252628; }
+      #footer .inner .policy {
+        margin-bottom: 30px; }
+        #footer .inner .policy li a {
+          font: 400 14px/1 'Noto Sans KR';
+          color: #777; } }
+@media screen and (max-width: 539px) {
+  /* header ---------------------------------------------------------------------------------- */
+  #header {
+    padding: 0 30px;
+    background: #111;
+    border-bottom: 1px solid #888;
+    /* 모바일 버전 헤더 ========== */ }
+    #header .inner {
+      width: 100%; }
+      #header .inner #gnb {
+        display: none; }
+      #header .inner #util {
+        display: none; }
+    #header .btn_menu_mo {
+      display: block;
+      opacity: 1; }
+
+  /* footer ---------------------------------------------------------------------------------- */
+  #footer {
+    padding: 40px 30px 0; }
+    #footer .inner #footer_menu ul {
+      display: none;
+      margin-bottom: 25px; }
+      #footer .inner #footer_menu ul li {
+        margin-right: 18px; }
+        #footer .inner #footer_menu ul li a {
+          font: bold 16px/1 'Rajdhani';
+          color: #ccc;
+          letter-spacing: 1px; }
+    #footer .inner #footer_menu .search {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 30px; }
+    #footer .inner #sns li a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: #555;
+      border-radius: 50%;
+      text-align: center; }
+      #footer .inner #sns li a i {
+        line-height: 40px;
+        font-size: 22px;
+        color: #252628; }
+    #footer .inner .policy {
+      margin-bottom: 20px; }
+      #footer .inner .policy li {
+        float: none;
+        margin-bottom: 8px; }
+        #footer .inner .policy li a {
+          font: 400 13px/1 'Noto Sans KR';
+          color: #777; } }
 /* header ---------------------------------------------------------------------------------- */
 #header_sub {
   width: 100%;
@@ -1050,6 +1027,81 @@ table {
           left: -11px;
           transform: rotate(-45deg); }
 
+@media screen and (max-width: 1179px) {
+  /* footer ---------------------------------------------------------------------------------- */
+  #footer_sub {
+    padding: 40px 30px 0; }
+    #footer_sub .inner {
+      width: 100%; }
+      #footer_sub .inner #footer_menu ul {
+        float: none;
+        display: block;
+        margin-bottom: 25px; }
+        #footer_sub .inner #footer_menu ul li {
+          margin-right: 18px; }
+          #footer_sub .inner #footer_menu ul li a {
+            font: bold 16px/1 'Rajdhani';
+            color: #ccc;
+            letter-spacing: 1px; }
+      #footer_sub .inner #footer_menu .search {
+        float: none;
+        width: 28%;
+        height: 30px;
+        margin-bottom: 30px; }
+      #footer_sub .inner #sns {
+        margin-bottom: 25px; }
+        #footer_sub .inner #sns li a {
+          display: block;
+          width: 40px;
+          height: 40px;
+          background: #555;
+          border-radius: 50%;
+          text-align: center; }
+          #footer_sub .inner #sns li a i {
+            line-height: 40px;
+            font-size: 22px;
+            color: #252628; }
+      #footer_sub .inner .policy {
+        margin-bottom: 30px; }
+        #footer_sub .inner .policy li a {
+          font: 400 14px/1 'Noto Sans KR';
+          color: #777; } }
+@media screen and (max-width: 539px) {
+  /* footer ---------------------------------------------------------------------------------- */
+  #footer_sub {
+    padding: 40px 30px 0; }
+    #footer_sub .inner #footer_menu ul {
+      display: none;
+      margin-bottom: 25px; }
+      #footer_sub .inner #footer_menu ul li {
+        margin-right: 18px; }
+        #footer_sub .inner #footer_menu ul li a {
+          font: bold 16px/1 'Rajdhani';
+          color: #ccc;
+          letter-spacing: 1px; }
+    #footer_sub .inner #footer_menu .search {
+      width: 100%;
+      height: 30px;
+      margin-bottom: 30px; }
+    #footer_sub .inner #sns li a {
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: #555;
+      border-radius: 50%;
+      text-align: center; }
+      #footer_sub .inner #sns li a i {
+        line-height: 40px;
+        font-size: 22px;
+        color: #252628; }
+    #footer_sub .inner .policy {
+      margin-bottom: 20px; }
+      #footer_sub .inner .policy li {
+        float: none;
+        margin-bottom: 8px; }
+        #footer_sub .inner .policy li a {
+          font: 400 13px/1 'Noto Sans KR';
+          color: #777; } }
 @keyframes sub_visual_ani {
   0% {
     transform: scale(1); }
@@ -1358,7 +1410,7 @@ table {
               color: #5f4b8b; }
             .community .inner .left .wrap .faq article ul .ask p {
               display: inline-block;
-              font: 700 14px/1 'Noto Sans KR';
+              font: 500 14px/1 'Noto Sans KR';
               color: #333; }
             .community .inner .left .wrap .faq article ul .ask .btnMore {
               display: inline-block;
@@ -1437,7 +1489,7 @@ table {
           .community .inner .right table tr th:nth-of-type(3) {
             width: 10%; }
         .community .inner .right table tr td {
-          padding: 40px 20px;
+          padding: 36px 20px;
           font: 400 14px/1 'Noto Sans KR';
           color: #555;
           text-align: center; }
@@ -1776,7 +1828,7 @@ table {
       top: 0;
       left: 50%;
       margin-left: -9.5vw;
-      transition: 1s;
+      transition: margin 1s;
       background-position: 200%;
       background-repeat: no-repeat; }
       .youtube .inner article a .thumnails .dot {
