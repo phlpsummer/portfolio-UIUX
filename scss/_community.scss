@@ -231,14 +231,18 @@
         width: 300px;
         position: absolute;
         top: 50%; left: 50%; transform: translate(-50%,-50%);
-        background: #efefef;
+        // background: #efefef;
+        background: #cd5c5c;
         text-align: center;
         box-shadow: 5px 5px 20px rgba($color: #111, $alpha: 0.2);
+
+        &:hover i { color: #ffb025;}
 
         i {
             font-size: 60px;
             margin: 50px 0 40px;
-            color: #5f4b8b;
+            color: #fff;
+            transition: 0.5s;
         }
 
         .content {
@@ -247,11 +251,11 @@
             padding: 0px 34px;
             margin-bottom: 40px;
             >span {
-                font: 700 16px/1.2 'Noto Sans KR'; color: #444;
+                font: 700 16px/1.4 'Noto Sans KR'; color: #fff;
             }
             >p {
                 margin-top: 20px;
-                font: 400 14px/1.6 'Noto Sans KR'; color: #666;
+                font: 300 14px/1.7 'Noto Sans KR'; color: #fff;
                 // text-align: left;
             }
         }
