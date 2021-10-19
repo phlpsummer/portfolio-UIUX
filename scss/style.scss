@@ -15,6 +15,12 @@
 $tablet:1179px;
 $mobile:539px;
 
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 /* header ---------------------------------------------------------------------------------- */
 #header {
     width: 100%; height: 80px;
@@ -46,15 +52,42 @@ $mobile:539px;
             transform: translate(-50%,-50%);
             text-align: center;
 
-            li {
+            >li {
                 display: inline-block;
                 margin: 0 5px;
                 position: relative;
+                height: 80px;
 
-                a {
+                >a {
                     display: block;
-                    padding: 5px 15px;
-                    font: 700 14px/1 'Noto Sans KR'; color: #fff;
+                    padding: 0px 15px;
+                    font: 700 14px/80px 'Noto Sans KR'; color: #fff;
+                }
+
+                .subMenu {
+                    width: 1180px; height: 50px;
+                    background: #111;
+                    position: absolute;
+                    top: 81px; left: 15px;
+                    display: none;
+
+                    li {
+                        float: left;
+                        margin-right: 40px;
+
+                        a {
+                            display: block;
+                            width: 100%; height: 100%;
+                            font: 300 12px/50px 'Noto Sans KR'; color: #fff; letter-spacing: 1px;
+                        }
+                    }
+                    &::before {
+                        content: ''; display: block;
+                        width: 100%; height: 100%;
+                        background: inherit;
+                        position: absolute;
+                        top: 0; left: -100%;
+                    }
                 }
             }
         }
@@ -85,12 +118,12 @@ $mobile:539px;
         background: #111;
         border-bottom: 1px solid #888;
 
-        .inner #gnb li:hover::after {
+        .inner #gnb >li:hover::after {
             content: ''; display: block;
             width: 100%; height: 2px;
             background: #fff;
             position: absolute;
-            bottom: -28px; left: 0;
+            bottom: 0px; left: 0;
         }
     }
 
@@ -441,7 +474,7 @@ $mobile:539px;
 /* footer ---------------------------------------------------------------------------------- */
 #footer {
     width: 100%;
-    padding: 80px 0 0;
+    padding: 60px 0 0;
     background: rgb(37, 38, 40);
 
     .inner {

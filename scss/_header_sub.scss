@@ -1,6 +1,6 @@
 /* header ---------------------------------------------------------------------------------- */
 #header_sub {
-    width: 100%; height: 90px;
+    width: 100%; height: 80px;
     position: absolute;
     top: 0; left: 0;
     transition: 0.5s;
@@ -14,7 +14,7 @@
         .logo {
             position: absolute;
             top: 50%; left: 0;
-            transform: translateY(-50%);
+            margin-top: -24px;
             z-index: 10;
             a {
                 font: normal 28px/1 'Bangers'; color: #fff;
@@ -29,15 +29,42 @@
             transform: translate(-50%,-50%);
             text-align: center;
 
-            li {
+            >li {
                 display: inline-block;
                 margin: 0 5px;
                 position: relative;
+                height: 80px;
 
-                a {
+                >a {
                     display: block;
-                    padding: 5px 15px;
-                    font: 700 14px/1 'Noto Sans KR'; color: #fff;
+                    padding: 0px 15px;
+                    font: 700 14px/80px 'Noto Sans KR'; color: #fff;
+                }
+
+                .subMenu {
+                    width: 1180px; height: 50px;
+                    background: #111;
+                    position: absolute;
+                    top: 81px; left: 15px;
+                    display: none;
+
+                    li {
+                        float: left;
+                        margin-right: 40px;
+
+                        a {
+                            display: block;
+                            width: 100%; height: 100%;
+                            font: 300 12px/50px 'Noto Sans KR'; color: #fff; letter-spacing: 1px;
+                        }
+                    }
+                    &::before {
+                        content: ''; display: block;
+                        width: 100%; height: 100%;
+                        background: inherit;
+                        position: absolute;
+                        top: 0; left: -100%;
+                    }
                 }
             }
         }
@@ -68,19 +95,19 @@
         background: #111;
         border-bottom: 1px solid #888;
 
-        .inner #gnb li:hover::after {
+        .inner #gnb >li:hover::after {
             content: ''; display: block;
             width: 100%; height: 2px;
             background: #fff;
             position: absolute;
-            bottom: -33px; left: 0;
+            bottom: 0px; left: 0;
         }
     }
 
     /* 모바일 버전 헤더 ========== */
     .btn_menu_mo {
         display: none; opacity: 0;
-        width: 34px; height: 28px;
+        width: 30px; height: 22px;
         position: absolute;
         top: 50%; right: 30px;
         transform: translateY(-50%);
@@ -116,6 +143,10 @@
             transform-origin: left center;
         }
 
+        &:hover {
+            span { width: 100%;}
+        }
+
         &.on {
             span {left: -100%; opacity: 0;}
             &::before { transform: rotate(45deg);}
@@ -127,8 +158,8 @@
         position: fixed;
         top: -100vh; left: 0;
         width: 100%; height: 100vh;
-        padding: 100px 30px 0;
-        background: rgba($color: #111, $alpha: 0.95);
+        padding: 130px 30px 0;
+        background: rgba($color: #111, $alpha: 1);
         transition: 0.5s;
         opacity: 0;
         z-index: 5;
@@ -138,8 +169,8 @@
             a {
                 display: block;
                 width: 100%;
-                padding: 20px 0;
-                font: 900 40px/1 'Noto Sans KR'; color: #fff;
+                padding: 22px 0;
+                font: 700 36px/1 'Noto Sans KR'; color: #fff;
                 letter-spacing: 1px;
                 position: relative;
 
@@ -154,7 +185,7 @@
 
                     &::before {
                         content: ''; display: block;
-                        width: 100%; height: 2px;
+                        width: 100%; height: 1px;
                         background: #fff;
                         position: absolute;
                         top: 50%; left: 0;
@@ -164,7 +195,7 @@
                     }
                     &::after {
                         content: ''; display: block;
-                        width: 100%; height: 2px;
+                        width: 100%; height: 1px;
                         background: #fff;
                         position: absolute;
                         top: 50%; left: 0;
@@ -188,6 +219,7 @@
 @media screen and (max-width:$tablet) {
     /* header ---------------------------------------------------------------------------------- */
     #header_sub {
+        position: fixed;
         padding: 0 30px;
         background: #111;
         border-bottom: 1px solid #888;

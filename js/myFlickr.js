@@ -32,8 +32,12 @@ $.ajax({
     $(items).each(function(index,data){
 
         let txtTitle = data.title;
+        let titleLen = txtTitle.length;
         if(!txtTitle){
             txtTitle = "untitled";
+        }
+        if(titleLen>35){
+            txtTitle = txtTitle.substr(0,35) + "...";
         }
 
         $(".gallery .inner main").append(

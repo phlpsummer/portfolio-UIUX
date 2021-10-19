@@ -28,6 +28,10 @@ fieldset {
 table {
   border-collapse: collapse; }
 
+body {
+  width: 100%;
+  overflow-x: hidden; }
+
 /* header ---------------------------------------------------------------------------------- */
 #header {
   width: 100%;
@@ -61,15 +65,43 @@ table {
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center; }
-      #header .inner #gnb li {
+      #header .inner #gnb > li {
         display: inline-block;
         margin: 0 5px;
-        position: relative; }
-        #header .inner #gnb li a {
+        position: relative;
+        height: 80px; }
+        #header .inner #gnb > li > a {
           display: block;
-          padding: 5px 15px;
-          font: 700 14px/1 'Noto Sans KR';
+          padding: 0px 15px;
+          font: 700 14px/80px 'Noto Sans KR';
           color: #fff; }
+        #header .inner #gnb > li .subMenu {
+          width: 1180px;
+          height: 50px;
+          background: #111;
+          position: absolute;
+          top: 81px;
+          left: 15px;
+          display: none; }
+          #header .inner #gnb > li .subMenu li {
+            float: left;
+            margin-right: 40px; }
+            #header .inner #gnb > li .subMenu li a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              font: 300 12px/50px 'Noto Sans KR';
+              color: #fff;
+              letter-spacing: 1px; }
+          #header .inner #gnb > li .subMenu::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            position: absolute;
+            top: 0;
+            left: -100%; }
     #header .inner #util {
       position: absolute;
       top: 50%;
@@ -90,14 +122,14 @@ table {
   #header:hover {
     background: #111;
     border-bottom: 1px solid #888; }
-    #header:hover .inner #gnb li:hover::after {
+    #header:hover .inner #gnb > li:hover::after {
       content: '';
       display: block;
       width: 100%;
       height: 2px;
       background: #fff;
       position: absolute;
-      bottom: -28px;
+      bottom: 0px;
       left: 0; }
   #header .btn_menu_mo {
     display: none;
@@ -418,7 +450,7 @@ table {
 /* footer ---------------------------------------------------------------------------------- */
 #footer {
   width: 100%;
-  padding: 80px 0 0;
+  padding: 60px 0 0;
   background: #252628; }
   #footer .inner {
     width: 1180px;
@@ -652,7 +684,7 @@ table {
 /* header ---------------------------------------------------------------------------------- */
 #header_sub {
   width: 100%;
-  height: 90px;
+  height: 80px;
   position: absolute;
   top: 0;
   left: 0;
@@ -669,7 +701,7 @@ table {
       position: absolute;
       top: 50%;
       left: 0;
-      transform: translateY(-50%);
+      margin-top: -24px;
       z-index: 10; }
       #header_sub .inner .logo a {
         font: normal 28px/1 'Bangers';
@@ -682,15 +714,43 @@ table {
       left: 50%;
       transform: translate(-50%, -50%);
       text-align: center; }
-      #header_sub .inner #gnb li {
+      #header_sub .inner #gnb > li {
         display: inline-block;
         margin: 0 5px;
-        position: relative; }
-        #header_sub .inner #gnb li a {
+        position: relative;
+        height: 80px; }
+        #header_sub .inner #gnb > li > a {
           display: block;
-          padding: 5px 15px;
-          font: 700 14px/1 'Noto Sans KR';
+          padding: 0px 15px;
+          font: 700 14px/80px 'Noto Sans KR';
           color: #fff; }
+        #header_sub .inner #gnb > li .subMenu {
+          width: 1180px;
+          height: 50px;
+          background: #111;
+          position: absolute;
+          top: 81px;
+          left: 15px;
+          display: none; }
+          #header_sub .inner #gnb > li .subMenu li {
+            float: left;
+            margin-right: 40px; }
+            #header_sub .inner #gnb > li .subMenu li a {
+              display: block;
+              width: 100%;
+              height: 100%;
+              font: 300 12px/50px 'Noto Sans KR';
+              color: #fff;
+              letter-spacing: 1px; }
+          #header_sub .inner #gnb > li .subMenu::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            position: absolute;
+            top: 0;
+            left: -100%; }
     #header_sub .inner #util {
       position: absolute;
       top: 50%;
@@ -711,20 +771,20 @@ table {
   #header_sub:hover {
     background: #111;
     border-bottom: 1px solid #888; }
-    #header_sub:hover .inner #gnb li:hover::after {
+    #header_sub:hover .inner #gnb > li:hover::after {
       content: '';
       display: block;
       width: 100%;
       height: 2px;
       background: #fff;
       position: absolute;
-      bottom: -33px;
+      bottom: 0px;
       left: 0; }
   #header_sub .btn_menu_mo {
     display: none;
     opacity: 0;
-    width: 34px;
-    height: 28px;
+    width: 30px;
+    height: 22px;
     position: absolute;
     top: 50%;
     right: 30px;
@@ -763,6 +823,8 @@ table {
       background: #fff;
       transition: 0.5s 0.3s;
       transform-origin: left center; }
+    #header_sub .btn_menu_mo:hover span {
+      width: 100%; }
     #header_sub .btn_menu_mo.on span {
       left: -100%;
       opacity: 0; }
@@ -776,8 +838,8 @@ table {
     left: 0;
     width: 100%;
     height: 100vh;
-    padding: 100px 30px 0;
-    background: rgba(17, 17, 17, 0.95);
+    padding: 130px 30px 0;
+    background: #111111;
     transition: 0.5s;
     opacity: 0;
     z-index: 5; }
@@ -786,8 +848,8 @@ table {
       #header_sub #gnb_mo li a {
         display: block;
         width: 100%;
-        padding: 20px 0;
-        font: 900 40px/1 'Noto Sans KR';
+        padding: 22px 0;
+        font: 700 36px/1 'Noto Sans KR';
         color: #fff;
         letter-spacing: 1px;
         position: relative; }
@@ -805,7 +867,7 @@ table {
             content: '';
             display: block;
             width: 100%;
-            height: 2px;
+            height: 1px;
             background: #fff;
             position: absolute;
             top: 50%;
@@ -817,7 +879,7 @@ table {
             content: '';
             display: block;
             width: 100%;
-            height: 2px;
+            height: 1px;
             background: #fff;
             position: absolute;
             top: 50%;
@@ -832,6 +894,7 @@ table {
 @media screen and (max-width: 1179px) {
   /* header ---------------------------------------------------------------------------------- */
   #header_sub {
+    position: fixed;
     padding: 0 30px;
     background: #111;
     border-bottom: 1px solid #888;
@@ -907,7 +970,7 @@ table {
 /* footer ---------------------------------------------------------------------------------- */
 #footer_sub {
   width: 100%;
-  padding: 80px 0 0;
+  padding: 60px 0 0;
   background: #252628; }
   #footer_sub .inner {
     width: 1180px;
@@ -1220,7 +1283,7 @@ table {
           color: #ccc; }
         .about .inner .values .wrap article .txt h3 {
           padding-top: 30px;
-          font: normal 2vw/1.1 'Bangers';
+          font: bold 2vw/1.1 'Rajdhani';
           color: #222;
           letter-spacing: 1px;
           margin-bottom: 20px;
@@ -1602,7 +1665,7 @@ table {
       font-size: 90px;
       margin: -30px 0 25px;
       color: #cd5c5c;
-      text-shadow: 4px 4px 18px rgba(17, 17, 17, 0.4); }
+      text-shadow: 8px 6px 18px rgba(17, 17, 17, 0.4); }
     #popup > .inner .content {
       width: 100%;
       min-height: 150px;
@@ -1614,7 +1677,7 @@ table {
         color: #333; }
       #popup > .inner .content > p {
         margin-top: 26px;
-        font: 400 12px/1.7 'Noto Sans KR';
+        font: 300 13px/1.7 'Noto Sans KR';
         color: #333; }
     #popup > .inner::after {
       content: '';
