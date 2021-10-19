@@ -1587,34 +1587,55 @@ table {
   background: rgba(17, 17, 17, 0.6);
   z-index: 99; }
   #popup > .inner {
-    width: 400px;
+    width: 300px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #efefef;
-    padding: 50px 30px 20px; }
+    text-align: center;
+    box-shadow: 5px 5px 20px rgba(17, 17, 17, 0.2); }
+    #popup > .inner i {
+      font-size: 60px;
+      margin: 50px 0 40px;
+      color: #5f4b8b; }
     #popup > .inner .content {
       width: 100%;
       min-height: 150px;
-      font: 700 20px/1 'Noto Sans KR';
-      color: #333; }
+      text-align: center;
+      padding: 0px 34px;
+      margin-bottom: 40px; }
+      #popup > .inner .content > span {
+        font: 700 16px/1.2 'Noto Sans KR';
+        color: #444; }
+      #popup > .inner .content > p {
+        margin-top: 20px;
+        font: 400 14px/1.6 'Noto Sans KR';
+        color: #666; }
     #popup > .inner::after {
       content: '';
       display: block;
       clear: both; }
-    #popup > .inner .wrap {
-      float: left; }
-      #popup > .inner .wrap label {
-        font: 400 14px/1 'Noto Sans KR';
-        color: #333;
-        margin-left: 4px; }
-    #popup > .inner > .close {
-      float: right;
-      font: bold 14px/1 'Rajdhani';
-      color: #333;
-      margin-top: 4px;
-      cursor: pointer; }
+    #popup > .inner .tail {
+      width: 100%;
+      background: #444;
+      padding: 8px 25px; }
+      #popup > .inner .tail::after {
+        content: '';
+        display: block;
+        clear: both; }
+      #popup > .inner .tail .wrap {
+        float: left; }
+        #popup > .inner .tail .wrap label {
+          font: 300 12px/1 'Noto Sans KR';
+          color: #fff;
+          margin-left: 4px; }
+      #popup > .inner .tail > .close {
+        float: right;
+        font: 400 13px/1 'Noto Sans KR';
+        color: #fff;
+        margin-top: 4px;
+        cursor: pointer; }
 
 /* 태블릿 --------------------------------------------------------------------------*/
 @media screen and (max-width: 1179px) {
