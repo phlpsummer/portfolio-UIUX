@@ -31,7 +31,7 @@ table {
 /* header ---------------------------------------------------------------------------------- */
 #header {
   width: 100%;
-  height: 90px;
+  height: 80px;
   position: absolute;
   top: 0;
   left: 0;
@@ -48,7 +48,7 @@ table {
       position: absolute;
       top: 50%;
       left: 0;
-      transform: translateY(-50%);
+      margin-top: -24px;
       z-index: 10; }
       #header .inner .logo a {
         font: normal 28px/1 'Bangers';
@@ -97,13 +97,13 @@ table {
       height: 2px;
       background: #fff;
       position: absolute;
-      bottom: -33px;
+      bottom: -28px;
       left: 0; }
   #header .btn_menu_mo {
     display: none;
     opacity: 0;
-    width: 34px;
-    height: 28px;
+    width: 30px;
+    height: 22px;
     position: absolute;
     top: 50%;
     right: 30px;
@@ -142,6 +142,8 @@ table {
       background: #fff;
       transition: 0.5s 0.3s;
       transform-origin: left center; }
+    #header .btn_menu_mo:hover span {
+      width: 100%; }
     #header .btn_menu_mo.on span {
       left: -100%;
       opacity: 0; }
@@ -155,8 +157,8 @@ table {
     left: 0;
     width: 100%;
     height: 100vh;
-    padding: 100px 30px 0;
-    background: rgba(17, 17, 17, 0.95);
+    padding: 130px 30px 0;
+    background: #111111;
     transition: 0.5s;
     opacity: 0;
     z-index: 5; }
@@ -165,8 +167,8 @@ table {
       #header #gnb_mo li a {
         display: block;
         width: 100%;
-        padding: 20px 0;
-        font: 900 40px/1 'Noto Sans KR';
+        padding: 22px 0;
+        font: 700 36px/1 'Noto Sans KR';
         color: #fff;
         letter-spacing: 1px;
         position: relative; }
@@ -184,7 +186,7 @@ table {
             content: '';
             display: block;
             width: 100%;
-            height: 2px;
+            height: 1px;
             background: #fff;
             position: absolute;
             top: 50%;
@@ -196,7 +198,7 @@ table {
             content: '';
             display: block;
             width: 100%;
-            height: 2px;
+            height: 1px;
             background: #fff;
             position: absolute;
             top: 50%;
@@ -247,7 +249,7 @@ table {
           left: 0;
           transform: translateY(-50%); }
           #visual .slide li .inner .title h1 {
-            font: normal 5vw/1 'Rajdhani';
+            font: normal 6vw/1.1 'Rajdhani';
             color: #fff;
             letter-spacing: 1px;
             margin-bottom: 18px; }
@@ -542,6 +544,7 @@ table {
 @media screen and (max-width: 1179px) {
   /* header ---------------------------------------------------------------------------------- */
   #header {
+    position: fixed;
     padding: 0 30px;
     background: #111;
     border-bottom: 1px solid #888;
@@ -1402,7 +1405,7 @@ table {
             display: flex;
             align-items: center;
             position: relative;
-            padding: 20px; }
+            padding: 18px; }
             .community .inner .left .wrap .faq article ul .ask .icon {
               display: inline-block;
               margin-right: 18px;
@@ -1443,7 +1446,7 @@ table {
             width: 100%;
             display: none;
             align-items: center;
-            padding: 20px 50px 20px 20px;
+            padding: 18px 50px 18px 18px;
             border-top: 1px solid #efefef;
             transition: 1s; }
             .community .inner .left .wrap .faq article ul .answer .icon {
@@ -1587,34 +1590,32 @@ table {
   background: rgba(17, 17, 17, 0.6);
   z-index: 99; }
   #popup > .inner {
-    width: 300px;
+    width: 280px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #cd5c5c;
+    background: #efefef;
     text-align: center;
     box-shadow: 5px 5px 20px rgba(17, 17, 17, 0.2); }
-    #popup > .inner:hover i {
-      color: #ffb025; }
     #popup > .inner i {
-      font-size: 60px;
-      margin: 50px 0 40px;
-      color: #fff;
-      transition: 0.5s; }
+      font-size: 90px;
+      margin: -30px 0 25px;
+      color: #cd5c5c;
+      text-shadow: 4px 4px 18px rgba(17, 17, 17, 0.4); }
     #popup > .inner .content {
       width: 100%;
       min-height: 150px;
       text-align: center;
-      padding: 0px 34px;
-      margin-bottom: 40px; }
+      padding: 0px 45px 0px;
+      margin-bottom: 65px; }
       #popup > .inner .content > span {
         font: 700 16px/1.4 'Noto Sans KR';
-        color: #fff; }
+        color: #333; }
       #popup > .inner .content > p {
-        margin-top: 20px;
-        font: 300 14px/1.7 'Noto Sans KR';
-        color: #fff; }
+        margin-top: 26px;
+        font: 400 12px/1.7 'Noto Sans KR';
+        color: #333; }
     #popup > .inner::after {
       content: '';
       display: block;
@@ -1622,7 +1623,10 @@ table {
     #popup > .inner .tail {
       width: 100%;
       background: #444;
-      padding: 8px 25px; }
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: 5px 25px; }
       #popup > .inner .tail::after {
         content: '';
         display: block;
@@ -1630,9 +1634,9 @@ table {
       #popup > .inner .tail .wrap {
         float: left; }
         #popup > .inner .tail .wrap label {
-          font: 300 12px/1 'Noto Sans KR';
+          font: 300 11px/1 'Noto Sans KR';
           color: #fff;
-          margin-left: 4px; }
+          margin-left: 3px; }
       #popup > .inner .tail > .close {
         float: right;
         font: 400 13px/1 'Noto Sans KR';

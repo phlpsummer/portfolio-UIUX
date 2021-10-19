@@ -1,3 +1,18 @@
+/* header ---------------------------------------------- */
+const $btnMenuMo = $(".btn_menu_mo");
+
+$btnMenuMo.on("click",function(e){
+    e.preventDefault();
+
+    let isOn = $(this).hasClass("on");
+    if(isOn) {
+        $(this).removeClass("on");
+        $("#gnb_mo").removeClass("on");
+    } else {
+        $(this).addClass("on");
+        $("#gnb_mo").addClass("on");
+    }
+});
 
 /* index페이지-visual---------------------------------------------- */
 //@@ DOM 캐싱 @@
