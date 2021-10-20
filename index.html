@@ -5,11 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>울림의 공간, D-RECORD</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
     <script src="https://kit.fontawesome.com/38274d1a6b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script defer src="js/common.js"></script>
     <script defer src="js/main.js"></script>
+    <script defer src="js/mySwiper.js"></script>
 </head>
 <body>
     <header id="header">
@@ -64,8 +67,8 @@
     </header>
 
     <figure id="visual">
-        <ul class="slide">
-            <li data-index="1">
+        <div class="swiper-wrapper slide">
+            <div class="swiper-slide" data-index="1">
                 <video src="img/video.mp4" autoplay muted loop></video>
                 <div class="inner">
                     <div class="title">
@@ -74,8 +77,8 @@
                         <a href="#">더 알아보기 +</a>
                     </div>
                 </div>
-            </li>
-            <li data-index="2">
+            </div>
+            <div class="swiper-slide" data-index="2">
                 <video src="img/video2.mp4" autoplay muted loop></video>
                 <div class="inner">
                     <div class="title">
@@ -84,11 +87,20 @@
                         <a href="#">지금 예약하기 +</a>
                     </div>
                 </div>
-            </li>
-        </ul>
+            </div>
+        </div>
+
+        <!--페이징 버튼-->
+        <div class="swiper-pagination"></div>
+
         <ul class="btn_slide_menu">
             <li class="btn_slide1 on"><a href="#"><span>01</span><p>공간 소개</p><div class="progress_line"></div></a></li>
             <li class="btn_slide2"><a href="#"><span>02</span><p>예약 안내</p><div class="progress_line"></div></a></li>
+        </ul>
+
+        <ul class="testWrap">
+            <li class="test1 on"></li>
+            <li class="test2"></li>
         </ul>
     </figure>
 

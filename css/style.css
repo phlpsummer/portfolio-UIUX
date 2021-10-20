@@ -248,20 +248,20 @@ body {
   height: 100vh;
   position: relative;
   overflow: hidden; }
-  #visual .slide {
+  #visual .swiper-wrapper {
     width: calc(100% * 2);
     height: 100%;
     margin-left: 0%; }
-    #visual .slide::after {
+    #visual .swiper-wrapper::after {
       content: '';
       display: block;
       clear: both; }
-    #visual .slide li {
+    #visual .swiper-wrapper .swiper-slide {
       width: calc(100% / 2);
       height: 100%;
       float: left;
       position: relative; }
-      #visual .slide li video {
+      #visual .swiper-wrapper .swiper-slide video {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -269,42 +269,44 @@ body {
         top: 0;
         left: 0;
         filter: brightness(0.5); }
-      #visual .slide li .inner {
+      #visual .swiper-wrapper .swiper-slide .inner {
         width: 1180px;
         height: 100%;
         margin: 0 auto;
         position: relative; }
-        #visual .slide li .inner .title {
+        #visual .swiper-wrapper .swiper-slide .inner .title {
           width: 70%;
           position: absolute;
           top: 50%;
           left: 0;
           transform: translateY(-50%); }
-          #visual .slide li .inner .title h1 {
+          #visual .swiper-wrapper .swiper-slide .inner .title h1 {
             font: normal 6vw/1.1 'Rajdhani';
             color: #fff;
             letter-spacing: 1px;
             margin-bottom: 18px; }
-          #visual .slide li .inner .title p {
+          #visual .swiper-wrapper .swiper-slide .inner .title p {
             font: 300 17px/1.7 'Noto Sans KR';
             color: #ddd;
             margin-bottom: 56px; }
-          #visual .slide li .inner .title a {
+          #visual .swiper-wrapper .swiper-slide .inner .title a {
             display: inline-block;
             padding: 12px 32px;
             border: 1px solid #ddd;
             font: 400 16px/1 'Noto Sans KR';
             color: #ddd;
             transition: 0.5s; }
-            #visual .slide li .inner .title a:hover {
+            #visual .swiper-wrapper .swiper-slide .inner .title a:hover {
               background: rgba(255, 255, 255, 0.2); }
   #visual .btn_slide_menu {
     width: 300px;
     position: absolute;
     bottom: 50px;
-    right: 50px; }
+    right: 50px;
+    z-index: 5;
+    display: flex; }
     #visual .btn_slide_menu li.btn_slide1 {
-      width: 50px;
+      flex-grow: 1;
       float: left;
       margin-right: 10px;
       transition: 0.5s ease; }
@@ -327,11 +329,11 @@ body {
           background: #999;
           margin-top: 8px; }
       #visual .btn_slide_menu li.btn_slide1.on {
-        width: 240px; }
+        flex-grow: 4; }
         #visual .btn_slide_menu li.btn_slide1.on a p {
           display: inline-block; }
     #visual .btn_slide_menu li.btn_slide2 {
-      width: 50px;
+      flex-grow: 1;
       float: left;
       transition: 0.5s ease; }
       #visual .btn_slide_menu li.btn_slide2 a {
@@ -353,7 +355,7 @@ body {
           background: #999;
           margin-top: 8px; }
       #visual .btn_slide_menu li.btn_slide2.on {
-        width: 240px; }
+        flex-grow: 4; }
         #visual .btn_slide_menu li.btn_slide2.on a p {
           display: inline-block; }
 
