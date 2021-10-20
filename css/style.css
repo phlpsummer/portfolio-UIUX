@@ -1260,6 +1260,9 @@ body {
 .about .inner .values {
   width: 100%;
   margin-bottom: 50px; }
+  .about .inner .values.on .wrap article {
+    transform: translateY(0px);
+    opacity: 1; }
   .about .inner .values .wrap {
     width: 100%;
     height: 600px;
@@ -1271,7 +1274,9 @@ body {
       opacity: 0.6;
       transition: 1s;
       position: relative;
-      z-index: 1; }
+      z-index: 1;
+      transform: translateY(100px);
+      opacity: 0; }
       .about .inner .values .wrap article .txt {
         width: 100%;
         height: 100%;
@@ -1324,7 +1329,7 @@ body {
         background: #efefef65;
         z-index: -1;
         position: absolute;
-        top: -300px;
+        top: 200px;
         left: 0;
         opacity: 0;
         transition: 1s; }
@@ -1670,15 +1675,15 @@ body {
       width: 100%;
       min-height: 150px;
       text-align: center;
-      padding: 0px 45px 0px;
+      padding: 0px 40px 0px;
       margin-bottom: 65px; }
       #popup > .inner .content > span {
         font: 700 16px/1.4 'Noto Sans KR';
         color: #333; }
       #popup > .inner .content > p {
         margin-top: 26px;
-        font: 300 13px/1.7 'Noto Sans KR';
-        color: #333; }
+        font: 400 13px/1.7 'Noto Sans KR';
+        color: #666; }
     #popup > .inner::after {
       content: '';
       display: block;

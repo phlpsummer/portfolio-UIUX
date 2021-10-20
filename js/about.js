@@ -9,4 +9,10 @@ $(window).on("scroll",function(){
     $(".circle2").css({
         left: scroll - 300
     });
+
+    if(scroll > 1070){
+        $(".values").addClass("on");
+    }
+
 });
+
