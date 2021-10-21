@@ -28,8 +28,12 @@ fieldset {
 table {
   border-collapse: collapse; }
 
+html {
+  height: 100%; }
+
 body {
   width: 100%;
+  height: 100%;
   overflow-x: hidden; }
 
 /* header ---------------------------------------------------------------------------------- */
@@ -80,9 +84,10 @@ body {
           height: 50px;
           background: #111;
           position: absolute;
-          top: 81px;
+          top: 80px;
           left: 15px;
-          display: none; }
+          display: none;
+          opacity: 0; }
           #header .inner #gnb > li .subMenu li {
             float: left;
             margin-right: 40px; }
@@ -742,9 +747,10 @@ body {
           height: 50px;
           background: #111;
           position: absolute;
-          top: 81px;
+          top: 80px;
           left: 15px;
-          display: none; }
+          display: none;
+          opacity: 0; }
           #header_sub .inner #gnb > li .subMenu li {
             float: left;
             margin-right: 40px; }
@@ -855,51 +861,62 @@ body {
     background: #111111;
     transition: 0.5s;
     opacity: 0;
-    z-index: 5; }
-    #header_sub #gnb_mo li {
-      width: 100%; }
-      #header_sub #gnb_mo li a {
-        display: block;
-        width: 100%;
+    z-index: 9; }
+    #header_sub #gnb_mo > li {
+      width: 100%;
+      position: relative; }
+      #header_sub #gnb_mo > li > a {
+        display: inline-block;
+        width: 90%;
         padding: 22px 0;
         font: 700 36px/1 'Noto Sans KR';
         color: #fff;
         letter-spacing: 1px;
         position: relative; }
-        #header_sub #gnb_mo li a .plus {
-          width: 25px;
-          height: 25px;
-          display: inline-block;
+      #header_sub #gnb_mo > li .plus {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        position: absolute;
+        top: 40px;
+        right: 5px;
+        transform: translateY(-50%);
+        text-indent: -9999px;
+        transition: 0.5s;
+        cursor: pointer; }
+        #header_sub #gnb_mo > li .plus::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #fff;
           position: absolute;
           top: 50%;
-          right: 0;
-          transform: translateY(-50%);
-          text-indent: -9999px;
+          left: 0;
+          margin-top: -1px;
+          transform: rotate(90deg);
           transition: 0.5s; }
-          #header_sub #gnb_mo li a .plus::before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 1px;
-            background: #fff;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            margin-top: -1px;
-            transform: rotate(90deg);
-            transition: 0.5s; }
-          #header_sub #gnb_mo li a .plus::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 1px;
-            background: #fff;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            margin-top: -1px; }
-          #header_sub #gnb_mo li a .plus.on::before {
-            transform: rotate(0deg); }
+        #header_sub #gnb_mo > li .plus::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #fff;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -1px; }
+        #header_sub #gnb_mo > li .plus.on::before {
+          transform: rotate(0deg); }
+      #header_sub #gnb_mo > li .sub_mo {
+        display: none;
+        margin-bottom: 20px; }
+        #header_sub #gnb_mo > li .sub_mo > li > a {
+          width: 100%;
+          display: block;
+          padding: 18px 30px;
+          font: 500 16px/1 'Noto Sans KR';
+          color: #fff; }
     #header_sub #gnb_mo.on {
       top: 0;
       opacity: 1; }
@@ -1671,7 +1688,7 @@ body {
   background: rgba(17, 17, 17, 0.6);
   z-index: 99; }
   #popup > .inner {
-    width: 280px;
+    width: 260px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -1683,12 +1700,12 @@ body {
       font-size: 90px;
       margin: -30px 0 25px;
       color: #cd5c5c;
-      text-shadow: 8px 6px 18px rgba(17, 17, 17, 0.4); }
+      text-shadow: 8px 6px 20px rgba(17, 17, 17, 0.45); }
     #popup > .inner .content {
       width: 100%;
       min-height: 150px;
       text-align: center;
-      padding: 0px 40px 0px;
+      padding: 0px 35px 0px;
       margin-bottom: 65px; }
       #popup > .inner .content > span {
         font: 700 16px/1.4 'Noto Sans KR';
@@ -1915,132 +1932,134 @@ body {
 @media screen and (max-width: 539px) {
   .gallery .inner article {
     width: 100%; } }
-.youtube .inner::after {
-  content: '';
-  display: block;
-  clear: both; }
-.youtube .inner article {
-  width: calc((100% - 20px) / 2);
-  height: calc(18vw + 120px);
-  position: relative;
-  float: left;
-  margin: 60px 20px 0px 0px; }
-  .youtube .inner article a {
-    width: 100%; }
-    .youtube .inner article a:hover .thumnails {
-      margin-top: -24px; }
-    .youtube .inner article a .thumnails {
-      width: 19vw;
-      height: 19vw;
-      border-radius: 50%;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      margin-left: -9.5vw;
-      transition: margin 1s;
-      background-position: 200%;
-      background-repeat: no-repeat; }
-      .youtube .inner article a .thumnails .dot {
-        width: 3.5vw;
-        height: 3.5vw;
+.youtube {
+  background: #efefef; }
+  .youtube .inner::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .youtube .inner article {
+    width: calc((100% - 20px) / 2);
+    height: calc(18vw + 120px);
+    position: relative;
+    float: left;
+    margin: 60px 20px 0px 0px; }
+    .youtube .inner article a {
+      width: 100%; }
+      .youtube .inner article a:hover .thumnails {
+        margin-top: -28px; }
+      .youtube .inner article a .thumnails {
+        width: 19vw;
+        height: 19vw;
         border-radius: 50%;
         position: absolute;
-        top: 50%;
+        top: 0;
         left: 50%;
-        margin-top: -1.75vw;
-        margin-left: -1.75vw;
-        background: #f7fbff;
-        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
-        z-index: 1; }
-      .youtube .inner article a .thumnails::before, .youtube .inner article a .thumnails::after {
+        margin-left: -9.5vw;
+        transition: margin 1s;
+        background-position: 200%;
+        background-repeat: no-repeat; }
+        .youtube .inner article a .thumnails .dot {
+          width: 3.5vw;
+          height: 3.5vw;
+          border-radius: 50%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin-top: -1.75vw;
+          margin-left: -1.75vw;
+          background: #f7fbff;
+          box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+          z-index: 1; }
+        .youtube .inner article a .thumnails::before, .youtube .inner article a .thumnails::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: inherit;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background-image: inherit;
+          background-position: center;
+          background-repeat: inherit;
+          background-size: 180%;
+          transform-origin: center center; }
+        .youtube .inner article a .thumnails::before {
+          transform: translateY(10%) scale(1.02);
+          filter: blur(15px) brightness(1.6);
+          opacity: 0.7; }
+      .youtube .inner article a .con {
+        width: 16vw;
+        height: 110px;
+        padding: 15px;
+        position: absolute;
+        top: 17vw;
+        left: 50%;
+        margin-left: -8vw;
+        background: linear-gradient(45deg, #555, #222);
+        text-align: center;
+        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-between;
+        justify-content: center; }
+        .youtube .inner article a .con p {
+          font: 400 15px/1.2 'Noto Sans KR';
+          color: #fff; }
+        .youtube .inner article a .con span {
+          font: 300 13px/1 'Noto Sans KR';
+          color: #bbb; }
+    .youtube .inner article:nth-of-type(2n) {
+      margin: 60px 0px 0px 0px; }
+  .youtube .pop {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 99; }
+    .youtube .pop iframe {
+      width: 800px;
+      height: 450px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: -225px;
+      margin-left: -400px; }
+    .youtube .pop > span {
+      display: block;
+      width: 50px;
+      height: 50px;
+      text-indent: -999px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: 398px;
+      margin-top: -231px;
+      cursor: pointer;
+      font-size: 0; }
+      .youtube .pop > span::before {
         content: '';
         display: block;
         width: 100%;
-        height: 100%;
-        border-radius: inherit;
+        height: 1px;
+        background: #efefef;
         position: absolute;
-        top: 0;
+        top: 25px;
         left: 0;
-        background-image: inherit;
-        background-position: center;
-        background-repeat: inherit;
-        background-size: 180%;
-        transform-origin: center center; }
-      .youtube .inner article a .thumnails::before {
-        transform: translateY(10%);
-        filter: blur(10px) brightness(1.6);
-        opacity: 0.7; }
-    .youtube .inner article a .con {
-      width: 16vw;
-      height: 110px;
-      padding: 15px;
-      position: absolute;
-      top: 17vw;
-      left: 50%;
-      margin-left: -8vw;
-      background: linear-gradient(45deg, #555, #222);
-      text-align: center;
-      box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-      display: flex;
-      flex-wrap: wrap;
-      align-content: space-between;
-      justify-content: center; }
-      .youtube .inner article a .con p {
-        font: 400 15px/1.2 'Noto Sans KR';
-        color: #fff; }
-      .youtube .inner article a .con span {
-        font: 300 13px/1 'Noto Sans KR';
-        color: #bbb; }
-  .youtube .inner article:nth-of-type(2n) {
-    margin: 60px 0px 0px 0px; }
-.youtube .pop {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.8);
-  z-index: 99; }
-  .youtube .pop iframe {
-    width: 800px;
-    height: 450px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -225px;
-    margin-left: -400px; }
-  .youtube .pop > span {
-    display: block;
-    width: 50px;
-    height: 50px;
-    text-indent: -999px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-left: 398px;
-    margin-top: -231px;
-    cursor: pointer;
-    font-size: 0; }
-    .youtube .pop > span::before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 1px;
-      background: #efefef;
-      position: absolute;
-      top: 25px;
-      left: 0;
-      transform: rotate(45deg); }
-    .youtube .pop > span::after {
-      content: '';
-      display: block;
-      width: 100%;
-      height: 1px;
-      background: #efefef;
-      position: absolute;
-      top: 25px;
-      left: 0;
-      transform: rotate(-45deg); }
+        transform: rotate(45deg); }
+      .youtube .pop > span::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 1px;
+        background: #efefef;
+        position: absolute;
+        top: 25px;
+        left: 0;
+        transform: rotate(-45deg); }
 
 @media screen and (max-width: 1179px) {
   .youtube .inner article {

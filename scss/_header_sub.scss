@@ -45,8 +45,9 @@
                     width: 1180px; height: 50px;
                     background: #111;
                     position: absolute;
-                    top: 81px; left: 15px;
+                    top: 80px; left: 15px;
                     display: none;
+                    opacity: 0;
 
                     li {
                         float: left;
@@ -162,48 +163,62 @@
         background: rgba($color: #111, $alpha: 1);
         transition: 0.5s;
         opacity: 0;
-        z-index: 5;
+        z-index: 9;
 
-        li {
+        >li {
             width: 100%;
-            a {
-                display: block;
-                width: 100%;
+            position: relative;
+            >a {
+                display: inline-block;
+                width: 90%;
                 padding: 22px 0;
                 font: 700 36px/1 'Noto Sans KR'; color: #fff;
                 letter-spacing: 1px;
                 position: relative;
+            }
+            .plus {
+                width: 25px; height: 25px;
+                display: inline-block;
+                position: absolute;
+                top: 40px; right: 5px;
+                transform: translateY(-50%);
+                text-indent: -9999px;
+                transition: 0.5s;
+                cursor: pointer;
 
-                .plus {
-                    width: 25px; height: 25px;
-                    display: inline-block;
+                &::before {
+                    content: ''; display: block;
+                    width: 100%; height: 1px;
+                    background: #fff;
                     position: absolute;
-                    top: 50%; right: 0;
-                    transform: translateY(-50%);
-                    text-indent: -9999px;
+                    top: 50%; left: 0;
+                    margin-top: -1px;
+                    transform: rotate(90deg);
                     transition: 0.5s;
+                }
+                &::after {
+                    content: ''; display: block;
+                    width: 100%; height: 1px;
+                    background: #fff;
+                    position: absolute;
+                    top: 50%; left: 0;
+                    margin-top: -1px;
+                }
 
-                    &::before {
-                        content: ''; display: block;
-                        width: 100%; height: 1px;
-                        background: #fff;
-                        position: absolute;
-                        top: 50%; left: 0;
-                        margin-top: -1px;
-                        transform: rotate(90deg);
-                        transition: 0.5s;
-                    }
-                    &::after {
-                        content: ''; display: block;
-                        width: 100%; height: 1px;
-                        background: #fff;
-                        position: absolute;
-                        top: 50%; left: 0;
-                        margin-top: -1px;
-                    }
+                &.on {
+                    &::before { transform: rotate(0deg);}
+                }
+            }
 
-                    &.on {
-                        &::before { transform: rotate(0deg);}
+            .sub_mo{
+                display: none;
+                margin-bottom: 20px;
+                >li{
+                    >a{
+                        width: 100%;
+                        display: block;
+                        padding: 18px 30px;
+                        font: 500 16px/1 'Noto Sans KR'; color: #fff;
                     }
                 }
             }

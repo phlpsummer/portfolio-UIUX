@@ -15,9 +15,10 @@
 $tablet:1179px;
 $mobile:539px;
 
-
+html { height: 100%;}
 body {
     width: 100%;
+    height: 100%;
     overflow-x: hidden;
 }
 
@@ -68,8 +69,9 @@ body {
                     width: 1180px; height: 50px;
                     background: #111;
                     position: absolute;
-                    top: 81px; left: 15px;
+                    top: 80px; left: 15px;
                     display: none;
+                    opacity: 0;
 
                     li {
                         float: left;

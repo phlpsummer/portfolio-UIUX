@@ -1,7 +1,9 @@
 /* scroll bar */
 $("body").mCustomScrollbar({
-    theme: "rounded-dots-dark", 
-    scrollButtons : { enable : true}
+    theme: "minimal-dark",
+    mouseWheel:{
+        enable: true,
+    }
 });
 
 /* header ---------------------------------------------- */
@@ -9,20 +11,12 @@ const $btnMenuMo = $(".btn_menu_mo");
 let isDone = true;
 
 $("#gnb>li").on("mouseenter",function(){
-    if (isDone) {
-        isDone = false;
-        $(this).find(".subMenu").fadeIn(250,function(){
-            isDone = true;
-        });
-    }
+    $(this).find(".subMenu").show();
+    $(this).find(".subMenu").animate({opacity:1},250);
 });
 $("#gnb>li").on("mouseleave",function(){
-    if (isDone) {
-        isDone = false;
-        $(this).find(".subMenu").fadeOut(250,function(){
-            isDone = true;
-        });
-    }
+    $(this).find(".subMenu").hide();
+    $(this).find(".subMenu").animate({opacity:0},250);
 });
 
 //tab키 포커스 연결
