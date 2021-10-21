@@ -9,7 +9,8 @@ $("input[type=submit]").on("click",function(e){
     if(!isName(2)) { e.preventDefault();}
     if(!isTxt("userid",8)) { e.preventDefault();}
     if(!isPwd(8)) { e.preventDefault();}
-
+    if(!isChecked("terms_agree")) { e.preventDefault();}
+    if(!isChecked("privacy_agree")) { e.preventDefault();}
 });
 
 
@@ -61,5 +62,21 @@ function isPwd(len) {
         $("[name=userpwd]").parent().append(
             "<p>비밀번호는 영문,특수문자,숫자를 포함하여 "+len+"글자 이상 입력해주세요.</p>"
         );
+        return false;
+    }
+}
+
+function isChecked(id){
+    let isCheck = $("[id="+id+"]").is(".checked");
+
+    if(isCheck){
+        $("[id="+id+"]").parent().find("p").remove();
+        return true;
+    } else {
+        $("[id="+id+"]").parent().find("p").remove();
+        $("[id="+id+"]").parent().append(
+            "<p>필수 약관에 동의해주세요.</p>"
+        );
+        return false;
     }
 }
