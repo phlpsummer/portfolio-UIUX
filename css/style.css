@@ -193,51 +193,62 @@ body {
     background: #111111;
     transition: 0.5s;
     opacity: 0;
-    z-index: 5; }
-    #header #gnb_mo li {
-      width: 100%; }
-      #header #gnb_mo li a {
-        display: block;
-        width: 100%;
+    z-index: 9; }
+    #header #gnb_mo > li {
+      width: 100%;
+      position: relative; }
+      #header #gnb_mo > li > a {
+        display: inline-block;
+        width: 90%;
         padding: 22px 0;
         font: 700 36px/1 'Noto Sans KR';
         color: #fff;
         letter-spacing: 1px;
         position: relative; }
-        #header #gnb_mo li a .plus {
-          width: 25px;
-          height: 25px;
-          display: inline-block;
+      #header #gnb_mo > li .plus {
+        width: 25px;
+        height: 25px;
+        display: inline-block;
+        position: absolute;
+        top: 40px;
+        right: 5px;
+        transform: translateY(-50%);
+        text-indent: -9999px;
+        transition: 0.5s;
+        cursor: pointer; }
+        #header #gnb_mo > li .plus::before {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #fff;
           position: absolute;
           top: 50%;
-          right: 0;
-          transform: translateY(-50%);
-          text-indent: -9999px;
+          left: 0;
+          margin-top: -1px;
+          transform: rotate(90deg);
           transition: 0.5s; }
-          #header #gnb_mo li a .plus::before {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 1px;
-            background: #fff;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            margin-top: -1px;
-            transform: rotate(90deg);
-            transition: 0.5s; }
-          #header #gnb_mo li a .plus::after {
-            content: '';
-            display: block;
-            width: 100%;
-            height: 1px;
-            background: #fff;
-            position: absolute;
-            top: 50%;
-            left: 0;
-            margin-top: -1px; }
-          #header #gnb_mo li a .plus.on::before {
-            transform: rotate(0deg); }
+        #header #gnb_mo > li .plus::after {
+          content: '';
+          display: block;
+          width: 100%;
+          height: 1px;
+          background: #fff;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -1px; }
+        #header #gnb_mo > li .plus.on::before {
+          transform: rotate(0deg); }
+      #header #gnb_mo > li .sub_mo {
+        display: none;
+        margin-bottom: 20px; }
+        #header #gnb_mo > li .sub_mo > li > a {
+          width: 100%;
+          display: block;
+          padding: 18px 30px;
+          font: 500 16px/1 'Noto Sans KR';
+          color: #fff; }
     #header #gnb_mo.on {
       top: 0;
       opacity: 1; }

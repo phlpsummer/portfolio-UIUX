@@ -43,6 +43,17 @@ $btnMenuMo.on("click",function(e){
     }
 });
 
+$("#gnb_mo >li .plus").on("click",function(){
+    let isOn = $(this).hasClass("on");
+    if(isOn){
+        $(this).removeClass("on");
+        $(this).parent().find(".sub_mo").slideUp(500);
+    } else {
+        $(this).addClass("on");
+        $(this).parent().find(".sub_mo").slideDown(500);
+    }
+});
+
 /* footer---------------------------------------------- */
 const $btnTop = $(".go_top");
 
