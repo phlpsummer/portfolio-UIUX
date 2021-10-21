@@ -1,3 +1,9 @@
+/* scroll bar */
+$("body").mCustomScrollbar({
+    theme: "rounded-dots-dark", 
+    scrollButtons : { enable : true}
+});
+
 /* header ---------------------------------------------- */
 const $btnMenuMo = $(".btn_menu_mo");
 let isDone = true;

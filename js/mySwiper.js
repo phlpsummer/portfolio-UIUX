@@ -24,3 +24,6 @@ const swiper = new Swiper('#visual', {
     },
     effect: "fade",
 });
+
+// let isOnNum = $(".swiper-pagination span").hasClass("swiper-pagination-bullet-active").eq();
+// console.log(isOnNum);
