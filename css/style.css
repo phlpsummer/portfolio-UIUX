@@ -1581,26 +1581,29 @@ body {
         .community .inner .right .news .swiper-wrapper .swiper-slide {
           width: 300px;
           height: 100%;
-          border: 1px solid #bbb;
           opacity: 0.6;
           transition: 0.5s;
-          padding: 20px; }
+          padding: 20px;
+          position: relative; }
           .community .inner .right .news .swiper-wrapper .swiper-slide > .thumnail {
             width: 100%;
             height: 180px;
-            margin-bottom: 20px; }
+            margin-bottom: 14px; }
             .community .inner .right .news .swiper-wrapper .swiper-slide > .thumnail > img {
               width: 100%;
               height: 100%;
               object-fit: cover;
               object-position: center; }
           .community .inner .right .news .swiper-wrapper .swiper-slide > p {
-            font: 700 15px/1 'Noto Sans KR';
+            font: 700 15px/1.5 'Noto Sans KR';
             color: #333;
             margin-bottom: 10px; }
           .community .inner .right .news .swiper-wrapper .swiper-slide > span {
             font: 300 12px/1 'Noto Sans KR';
-            color: #333; }
+            color: #333;
+            position: absolute;
+            bottom: 15px;
+            left: 20px; }
           .community .inner .right .news .swiper-wrapper .swiper-slide-active {
             opacity: 1; }
     .community .inner .right table {
@@ -1857,13 +1860,13 @@ body {
           width: 100%;
           height: 240px;
           position: relative;
-          margin-bottom: 50px; }
+          margin-bottom: 30px; }
           .gallery .inner main article a > div p {
             position: absolute;
             top: 0px;
             right: 0;
             font: 400 14px/1.2 'Noto Sans KR';
-            color: #666;
+            color: #777;
             transform: rotate(90deg) translate(100%, 50%);
             transform-origin: right center; }
           .gallery .inner main article a > div span {
@@ -1871,8 +1874,10 @@ body {
             position: absolute;
             bottom: 0;
             left: 0;
-            font: 400 14px/1.2 'Noto Sans KR';
-            color: #666;
+            font: 300 14px/1.2 'Noto Sans KR';
+            color: #333;
+            font-style: italic;
+            letter-spacing: 1px;
             transform: rotate(270deg) translateY(50%);
             transform-origin: left center; }
         .gallery .inner main article a > img {
