@@ -1,14 +1,14 @@
 .gallery {
-    background: #efefef;
+    background: #2D2C4D;
 
     .inner {
-
+        h2 { font-weight: 700; color: #fff;}
         main {
             width: 100%;
 
             &::after { content: ''; display: block; clear: both;}
 
-            article {
+            .card {
                 width: 25%;
                 float: left;
                 padding: 15px;
@@ -17,7 +17,7 @@
                     display: block;
                     width: 100%;
                     background: #fff;
-                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+                    box-shadow: 10px 10px 16px rgba(0, 0, 0, 0.5);
                     padding: 15px;
     
                     >div {
@@ -41,7 +41,7 @@
                             transform-origin: left center;
                         }
                     }
-                    >img { width: 100%;}
+                    .thumb { width: 100%;}
                 }
             }
         }

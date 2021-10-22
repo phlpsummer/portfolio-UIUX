@@ -3,6 +3,14 @@ let eng = /[a-zA-Z]/;
 let spc = /[~!@#$%^&+]/;
 let kor = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힝]/;
 
+/* scroll bar */
+// $("textarea").mCustomScrollbar({
+//     theme: "minimal-dark",
+//     mouseWheel:{
+//         enable: true,
+//     }
+// });
+
 
 $("input[type=submit]").on("click",function(e){
 

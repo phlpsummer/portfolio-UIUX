@@ -1,5 +1,5 @@
 .community {
-    background: #efefef;
+    background: #eeeae3;
     padding: 0;
     .sub_visual { margin-bottom: 0;}
     .inner {
@@ -272,28 +272,28 @@
         width: 260px;
         position: absolute;
         top: 50%; left: 50%; transform: translate(-50%,-50%);
-        background: #efefef;
+        background: #403f5f;
         text-align: center;
         box-shadow: 5px 5px 20px rgba($color: #111, $alpha: 0.2);
 
         i {
-            font-size: 90px;
-            margin: -30px 0 25px;
-            color: #cd5c5c;
-            text-shadow: 8px 6px 20px rgba($color: #111, $alpha: 0.45);
+            font-size: 40px;
+            margin: -20px 0 25px;
+            color: #ffb025;
+            text-shadow: 8px 6px 20px rgba($color: #111, $alpha: 0.8);
         }
 
         .content {
             width: 100%; min-height: 150px;
-            text-align: center;
-            padding: 0px 35px 0px;
+            text-align: left;
+            padding: 0px 30px 0px;
             margin-bottom: 65px;
             >span {
-                font: 700 16px/1.4 'Noto Sans KR'; color: #333;
+                font: 700 16px/1.6 'Noto Sans KR'; color: #fff;
             }
             >p {
                 margin-top: 26px;
-                font: 400 13px/1.7 'Noto Sans KR'; color: #666;
+                font: 400 12px/1.8 'Noto Sans KR'; color: #ccc;
             }
         }
 

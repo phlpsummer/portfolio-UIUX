@@ -16,7 +16,7 @@ $.ajax({
     dataType: "json",
     data: {
         api_key: "48fa09238ff7a579f7c89acef3c946b7",
-        per_page: 30,
+        per_page: 40,
         format: "json",
         nojsoncallback: 1,
         privacy_filter: 1,
@@ -41,7 +41,7 @@ $.ajax({
         }
 
         $(".gallery .inner main").append(
-            $("<article>")
+            $("<article class='card'>")
                 .append(
                     $("<a>")
                         .append(
@@ -50,12 +50,30 @@ $.ajax({
                                     $("<p>").text(txtTitle),
                                     $("<span>").text(data.owner)
                                 ),
-                            $("<img>").attr({src:"https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"})
+                            $("<img class='thumb'>").attr({src:"https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"})
                         )
                         .attr({href:"https://live.staticflickr.com/"+data.server+"/"+data.id+"_"+data.secret+"_b.jpg"})
                 )
         )
     });
+
+    let imgNum = 0;
+
+    $(".gallery .thumb").each(function(index,data){
+        data.onload = function(){
+            imgNum++;
+
+            if(imgNum === 40){
+                new Isotope(".gallery main",{
+                    itemSelector: ".gallery main .card",
+                    columnWidth: ".gallery main .card",
+                    transitionDuration: "0.5s"
+                });
+            }
+        }
+
+    });
+
 })
 .error(function(err){
     console.error("데이터 호출 실패");

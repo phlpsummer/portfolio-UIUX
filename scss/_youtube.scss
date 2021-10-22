@@ -1,8 +1,8 @@
 .youtube {
-    background: #efefef;
+    background: #2D2C4D;
 
     .inner {
-
+        h2 { font-weight: 700; color: #fff;}
         &::after {content: ''; display: block; clear: both;}
 
         article {
@@ -34,8 +34,8 @@
                         position: absolute;
                         top: 50%; left: 50%;
                         margin-top: -1.75vw; margin-left: -1.75vw;
-                        background: #f7fbff;
-                        box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1);
+                        background: #2D2C4D;
+                        box-shadow: inset 5px 5px 10px rgba(255, 255, 255, 0.1);
                         z-index: 1;
                     }
 

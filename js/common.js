@@ -1,11 +1,3 @@
-/* scroll bar */
-$("body").mCustomScrollbar({
-    theme: "minimal-dark",
-    mouseWheel:{
-        enable: true,
-    }
-});
-
 /* header ---------------------------------------------- */
 const $btnMenuMo = $(".btn_menu_mo");
 let isDone = true;
