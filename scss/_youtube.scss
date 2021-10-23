@@ -16,13 +16,19 @@
             a {
                 width: 100%;
 
-                &:hover .thumnails { margin-top: -28px;}
+                &:hover{
+                    .thumnails {
+                        margin-top: 0px;
+                        &::before { transform: translateY(-12%) rotate(30deg);}
+                        &::after { transform: rotate(30deg);}
+                    }
+                }
 
                 .thumnails {
-                    width: 19vw; height: 19vw;
+                    width: 17vw; height: 17vw;
                     border-radius: 50%;
                     position: absolute;
-                    top: 0; left: 50%; margin-left: -9.5vw;
+                    top: 0; left: 50%; margin-left: -8.5vw; margin-top: 50px;
                     transition: margin 1s;
                     background-position: 200%;
                     background-repeat: no-repeat;
@@ -35,7 +41,7 @@
                         top: 50%; left: 50%;
                         margin-top: -1.75vw; margin-left: -1.75vw;
                         background: #2D2C4D;
-                        box-shadow: inset 5px 5px 10px rgba(255, 255, 255, 0.1);
+                        box-shadow: inset 0px 8px 10px rgba(255, 255, 255, 0.08);
                         z-index: 1;
                     }
 
@@ -51,32 +57,52 @@
                         background-repeat: inherit;
                         background-size: 180%;
                         transform-origin: center center;
+                        transform: rotate(-30deg);
+                        transition: 1s;
                     }
                     &::before {
-                        transform: translateY(8%) scale(1.01);
-                        filter: blur(15px) brightness(1.6);
-                        opacity: 0.7;
+                        transform: translateY(-12%) rotate(-30deg);
+                        filter: blur(18px) brightness(1);
+                        opacity: 0.25;
                     }
                 }
 
                 .con {
-                    width: 16vw; height: 110px;
-                    padding: 15px;
+                    width: 18vw; height: 120px;
+                    padding: 25px 20px 20px 10px;
                     position: absolute;
-                    top: 17vw; left: 50%; margin-left: -8vw;
-                    background: linear-gradient(45deg,#555,#222);
+                    top: 17vw; left: 50%; margin-left: -9vw;
+                    background: #2D2C4D;
                     text-align: center;
-                    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+                    box-shadow: 0px -15px 20px rgba(0, 0, 0, 0.35);
                     display: flex;
                     flex-wrap: wrap;
                     align-content: space-between;
                     justify-content: center;
 
                     p {
-                        font: 400 15px/1.2 'Noto Sans KR'; color: #fff;
+                        font: 400 16px/1.2 'Noto Sans KR'; color: #fff;
                     }
                     span {
+                        position: absolute;
+                        bottom: 0; left: 50%; transform: translateX(-50%);
                         font: 300 13px/1 'Noto Sans KR'; color: #bbb;
+                    }
+
+                    //boxshadow top만 만들기 위한 가리개
+                    &::before {
+                        content: ''; display: block;
+                        width: 50%; height: 100%;
+                        position: absolute;
+                        left: -9vw; top: 0;
+                        background: inherit;
+                    }
+                    &::after {
+                        content: ''; display: block;
+                        width: 50%; height: 100%;
+                        position: absolute;
+                        right: -9vw; top: 0;
+                        background: inherit;
                     }
                 }
             }

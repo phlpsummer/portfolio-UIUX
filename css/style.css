@@ -1988,15 +1988,20 @@ body {
     .youtube .inner article a {
       width: 100%; }
       .youtube .inner article a:hover .thumnails {
-        margin-top: -28px; }
+        margin-top: 0px; }
+        .youtube .inner article a:hover .thumnails::before {
+          transform: translateY(-12%) rotate(30deg); }
+        .youtube .inner article a:hover .thumnails::after {
+          transform: rotate(30deg); }
       .youtube .inner article a .thumnails {
-        width: 19vw;
-        height: 19vw;
+        width: 17vw;
+        height: 17vw;
         border-radius: 50%;
         position: absolute;
         top: 0;
         left: 50%;
-        margin-left: -9.5vw;
+        margin-left: -8.5vw;
+        margin-top: 50px;
         transition: margin 1s;
         background-position: 200%;
         background-repeat: no-repeat; }
@@ -2010,7 +2015,7 @@ body {
           margin-top: -1.75vw;
           margin-left: -1.75vw;
           background: #2D2C4D;
-          box-shadow: inset 5px 5px 10px rgba(255, 255, 255, 0.1);
+          box-shadow: inset 0px 8px 10px rgba(255, 255, 255, 0.08);
           z-index: 1; }
         .youtube .inner article a .thumnails::before, .youtube .inner article a .thumnails::after {
           content: '';
@@ -2025,32 +2030,56 @@ body {
           background-position: center;
           background-repeat: inherit;
           background-size: 180%;
-          transform-origin: center center; }
+          transform-origin: center center;
+          transform: rotate(-30deg);
+          transition: 1s; }
         .youtube .inner article a .thumnails::before {
-          transform: translateY(8%) scale(1.01);
-          filter: blur(15px) brightness(1.6);
-          opacity: 0.7; }
+          transform: translateY(-12%) rotate(-30deg);
+          filter: blur(18px) brightness(1);
+          opacity: 0.25; }
       .youtube .inner article a .con {
-        width: 16vw;
-        height: 110px;
-        padding: 15px;
+        width: 18vw;
+        height: 120px;
+        padding: 25px 20px 20px 10px;
         position: absolute;
         top: 17vw;
         left: 50%;
-        margin-left: -8vw;
-        background: linear-gradient(45deg, #555, #222);
+        margin-left: -9vw;
+        background: #2D2C4D;
         text-align: center;
-        box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+        box-shadow: 0px -15px 20px rgba(0, 0, 0, 0.35);
         display: flex;
         flex-wrap: wrap;
         align-content: space-between;
         justify-content: center; }
         .youtube .inner article a .con p {
-          font: 400 15px/1.2 'Noto Sans KR';
+          font: 400 16px/1.2 'Noto Sans KR';
           color: #fff; }
         .youtube .inner article a .con span {
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
           font: 300 13px/1 'Noto Sans KR';
           color: #bbb; }
+        .youtube .inner article a .con::before {
+          content: '';
+          display: block;
+          width: 50%;
+          height: 100%;
+          position: absolute;
+          left: -9vw;
+          top: 0;
+          background: inherit; }
+        .youtube .inner article a .con::after {
+          content: '';
+          display: block;
+          width: 50%;
+          height: 100%;
+          position: absolute;
+          right: -9vw;
+          top: 0;
+          background: inherit; }
     .youtube .inner article:nth-of-type(2n) {
       margin: 60px 0px 0px 0px; }
   .youtube .pop {
