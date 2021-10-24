@@ -395,17 +395,202 @@ body {
     }
 }
 
-/* content ---------------------------------------------------------------------------------- */
+/* content -----------------------------*/
 #content {
     width: 100%;
-    padding: 100px 0;
+    padding: 100px 0 100px;
 
     .inner {
-        width: 1180px; min-height: 500px;
+        width: 1180px;
         margin: 0 auto;
         position: relative;
 
+        .wrap {
+            width: 100%;
+
+            .col1 {
+                width: 400px; height: 680px; float: left;
+            }
+            .col2 {
+                width: 340px; height: 680px; float: left;
+
+                &::after { content: ''; display: block; clear: both;}
+
+                >article {
+                    width: 100%; height: 340px;
+                    float: left;
+
+                    &:nth-of-type(2) {
+                        background: #111;
+                        position: relative;
+                        
+                        svg {
+                            position: absolute;
+                            top: 50%; left: 50%;
+                            transform: translate(-50%,-50%);
+                            fill: #fff;
+                        }
+                    }
+                }
+            }
+            .col3 {
+                width: 400px; height: 680px; float: left;
+
+                &::after { content: ''; display: block; clear: both;}
+
+                >article {
+                    width: 50%;
+                    float: left;
+
+                    &:nth-of-type(1) {
+                        height: 68px;
+                        border: 1px solid #333;
+                        text-align: center;
+
+                        a {
+                            display: block; width: 100%; height: 100%;
+                            font: 900 12px/68px 'Noto Sans KR'; color: #111;
+
+                            &:hover { text-decoration: underline;}
+                        }
+                    }
+                    &:nth-of-type(2) {
+                        height: 68px;
+                        border: 1px solid #333;
+                        text-align: center;
+
+                        a {
+                            display: block; width: 100%; height: 100%;
+                            font: 900 12px/68px 'Noto Sans KR'; color: #111;
+
+                            &:hover { text-decoration: underline;}
+                        }
+                    }
+                }
+            }
+        }
     }
+}
+
+/* category -------------------------*/
+#photo {
+    width: 100%;
+    padding: 50px 0 0;
+    background: linear-gradient(45deg,#5f4b8b,#4e4b51);
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        content: ''; display: block;
+        width: 100%; height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        background: url(../img/category_kpop2.jpg) no-repeat center center/cover;
+        background-attachment: fixed;
+        opacity: 0.2;
+        filter: hue-rotate(220deg) brightness(0.8);
+    }
+    &::before {
+        content: ''; display: block;
+        width: 100%; height: 100%;
+        position: absolute;
+        top: 0; left: 0;
+        background: #000;
+        opacity: 0.3;
+    }
+
+    .inner {
+        width: 1180px; height: 450px;
+        margin: 0 auto;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        h1 {
+            display: inline-block;
+            font: normal 34px/1 'Bangers'; color: #fff; letter-spacing: 1px;
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .auto {
+            display: inline-block;
+            margin-left: 20px;
+
+            &::after { content: ''; display: block; clear: both;}
+
+            li {
+                float: left;
+                margin-right: 7px;
+                color: #aaa;
+                font-size: 17px;
+                opacity: 0.7;
+                cursor: pointer;
+            }
+        }
+
+        .swiper-wrapper {
+            width: 100%; height: 400px;
+
+            .swiper-slide {
+                width: 220px; height: 220px;
+                position: relative;
+                top: 50%; margin-top: -170px;
+                opacity: 0.2;
+
+                img {
+                    width: 100%; height: 100%;
+                    object-fit: cover; object-position: center;}
+
+                &::after {
+                    content: ''; display: block;
+                    width: 100%; height: 100%;
+                    position: absolute;
+                    top: 0; left: 0;
+                    background: #b76ca4;
+                    filter: blur(10px);
+                    opacity: 0;
+                    z-index: -1;
+                }
+                &::before {
+                    content: ''; display: block;
+                    width: 100%; height: 100%;
+                    position: absolute;
+                    top: 0; left: 0;
+                    background: #5f4b8b;
+                    opacity: 0;
+                }
+
+                &-active {
+                    opacity: 1;
+                    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.3);
+
+                    &::after { opacity: 0.4;}
+                    &::before { animation: glow 1s ease 1;}
+                }
+
+                &-next, &-prev { opacity: 0.5;}
+            }
+        }
+
+        .btnMore {
+            display: inline-block;
+            position: absolute;
+            bottom: 60px; left: 50%; transform: translateX(-50%);
+            padding: 12px 32px;
+            border: 1px solid #ddd;
+            font: 400 16px/1 'Noto Sans KR'; color: #ddd;
+            transition: 0.5s;
+
+            &:hover { background: rgba(255, 255, 255, 0.2);}
+        }
+    }
+}
+
+@keyframes glow {
+    0% { opacity: 0; transform: scale(1);}
+    1% { opacity: 0.6;}
+    100% { opacity: 0; transform: scale(1.5);}
 }
 
 /* comment----------------------------*/
@@ -420,32 +605,12 @@ body {
 
         h1 {
             display: inline-block;
-            font-size: 26px;
-            font-weight: 900;
-            line-height: 1;
-            font-family: 'Noto Sans KR';
-            color: #333;
-            margin-bottom: 14px;
+            font: normal 34px/1 'Bangers'; color: #333; letter-spacing: 1px;
             position: relative;
-            
-            &::after {
-                content: ''; display: block;
-                width: 60px; height: 2px;
-                position: absolute;
-                top: 50%; right: 0;
-                transform: translateX(80px);
-                background: #b76ca4;
-            }
-        }
-        h2 {
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 1;
-            font-family: 'Noto Sans KR';
-            color: #333;
-            text-align: left;
             margin-bottom: 70px;
+        
         }
+
 
         ul {
             li {
@@ -500,7 +665,7 @@ body {
 /* footer ---------------------------------------------------------------------------------- */
 #footer {
     width: 100%;
-    padding: 60px 0 0;
+    padding: 50px 0 0;
     background: rgb(37, 38, 40);
 
     .inner {
@@ -519,7 +684,7 @@ body {
                 li {
                     display: inline-block;
                     margin-right: 20px;
-                    a { font: bold 20px/1 'Rajdhani'; color: #ccc; letter-spacing: 1px;}
+                    a { font: bold 16px/1 'arial'; color: #ccc; letter-spacing: 1px;}
                 }
             }
             
@@ -667,7 +832,7 @@ body {
     
                     li {
                         margin-right: 18px;
-                        a { font: bold 16px/1 'Rajdhani'; color: #ccc; letter-spacing: 1px;}
+                        a { font: bold 16px/1 'arial'; color: #ccc; letter-spacing: 1px;}
                     }
                 }
                 
@@ -742,7 +907,7 @@ body {
     
                     li {
                         margin-right: 18px;
-                        a { font: bold 16px/1 'Rajdhani'; color: #ccc; letter-spacing: 1px;}
+                        a { font: bold 16px/1 'arial'; color: #ccc; letter-spacing: 1px;}
                     }
                 }
                 
