@@ -93,7 +93,20 @@ body {
               height: 100%;
               font: 300 12px/50px 'Noto Sans KR';
               color: #fff;
-              letter-spacing: 1px; }
+              letter-spacing: 1px;
+              position: relative; }
+              #header .inner #gnb > li .subMenu li a::after {
+                content: '';
+                display: block;
+                width: 110%;
+                height: 1px;
+                background: rgba(255, 255, 255, 0.9);
+                position: absolute;
+                top: 52%;
+                left: -5%;
+                opacity: 0; }
+              #header .inner #gnb > li .subMenu li a:hover::after {
+                opacity: 1; }
           #header .inner #gnb > li .subMenu::before {
             content: '';
             display: block;
@@ -381,13 +394,107 @@ body {
     position: relative; }
     #content .inner .wrap {
       width: 100%; }
+      #content .inner .wrap::after {
+        content: '';
+        display: block;
+        clear: both; }
       #content .inner .wrap .col1 {
-        width: 400px;
-        height: 680px;
+        width: 300px;
+        height: 640px;
         float: left; }
+        #content .inner .wrap .col1::after {
+          content: '';
+          display: block;
+          clear: both; }
+        #content .inner .wrap .col1 article {
+          width: 100%;
+          padding: 0 20px;
+          float: left; }
+          #content .inner .wrap .col1 article:nth-of-type(1) {
+            height: 40px;
+            background: #111; }
+            #content .inner .wrap .col1 article:nth-of-type(1) h1 {
+              font: bold 22px/40px 'Rajdhani';
+              color: #fff;
+              letter-spacing: 1px; }
+          #content .inner .wrap .col1 article:nth-of-type(2) {
+            height: 400px;
+            border-left: 1px solid #bbb;
+            position: relative;
+            padding: 0; }
+            #content .inner .wrap .col1 article:nth-of-type(2) > img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              filter: saturate(80%) brightness(0.7); }
+            #content .inner .wrap .col1 article:nth-of-type(2) > .txt {
+              width: 100%;
+              padding: 0 20px 40px 20px;
+              position: absolute;
+              bottom: 0;
+              left: 0; }
+              #content .inner .wrap .col1 article:nth-of-type(2) > .txt p {
+                font: normal 22px/1.4 'Rajdhani';
+                color: #efefef;
+                margin-bottom: 15px; }
+              #content .inner .wrap .col1 article:nth-of-type(2) > .txt a {
+                font: 300 12px/1 'Noto Sans KR';
+                color: #efefef;
+                position: relative; }
+                #content .inner .wrap .col1 article:nth-of-type(2) > .txt a::after {
+                  content: '';
+                  display: block;
+                  width: 100%;
+                  height: 1px;
+                  background: #efefef;
+                  position: absolute;
+                  bottom: -2px;
+                  left: 0; }
+          #content .inner .wrap .col1 article:nth-of-type(3) {
+            width: 100%;
+            height: 200px;
+            border-left: 1px solid #bbb;
+            border-bottom: 1px solid #bbb;
+            border-right: 1px solid #bbb;
+            position: relative; }
+            #content .inner .wrap .col1 article:nth-of-type(3) h2 {
+              display: inline-block;
+              font: 400 15px/1 'Noto Sans KR';
+              color: #333;
+              letter-spacing: -1px;
+              position: relative;
+              margin-top: 25px;
+              margin-bottom: 25px;
+              cursor: pointer; }
+              #content .inner .wrap .col1 article:nth-of-type(3) h2::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #333;
+                position: absolute;
+                bottom: -4px;
+                left: 0; }
+            #content .inner .wrap .col1 article:nth-of-type(3) > .wrap {
+              width: 90%;
+              margin: 0 auto; }
+              #content .inner .wrap .col1 article:nth-of-type(3) > .wrap::after {
+                content: '';
+                display: block;
+                clear: both; }
+              #content .inner .wrap .col1 article:nth-of-type(3) > .wrap a {
+                display: block;
+                float: left;
+                width: 50%;
+                height: 34px;
+                text-align: center;
+                font: 400 11px/33px 'Noto Sans KR';
+                color: #333;
+                background: #efefef;
+                border: 1px solid #fff; }
       #content .inner .wrap .col2 {
         width: 340px;
-        height: 680px;
+        height: 640px;
         float: left; }
         #content .inner .wrap .col2::after {
           content: '';
@@ -395,58 +502,237 @@ body {
           clear: both; }
         #content .inner .wrap .col2 > article {
           width: 100%;
-          height: 340px;
+          height: 320px;
           float: left; }
-          #content .inner .wrap .col2 > article:nth-of-type(2) {
-            background: #111;
-            position: relative; }
-            #content .inner .wrap .col2 > article:nth-of-type(2) svg {
+          #content .inner .wrap .col2 > article:nth-of-type(1) {
+            padding-left: 20px;
+            padding-right: 20px;
+            border-left: 1px solid #bbb;
+            border-top: 1px solid #bbb;
+            position: relative;
+            overflow: hidden; }
+            #content .inner .wrap .col2 > article:nth-of-type(1) h2 {
+              display: inline-block;
+              font: 400 15px/1 'Noto Sans KR';
+              color: #333;
+              letter-spacing: -1px;
+              position: relative;
+              top: 25px;
+              cursor: pointer; }
+              #content .inner .wrap .col2 > article:nth-of-type(1) h2::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #333;
+                position: absolute;
+                bottom: -4px;
+                left: 0; }
+            #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-wrapper {
+              width: 100%; }
+              #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-wrapper > .swiper-slide {
+                width: 100%;
+                height: 200px;
+                position: relative;
+                top: 50%;
+                margin-top: -100px;
+                background: #fff;
+                cursor: pointer; }
+                #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-wrapper > .swiper-slide > img {
+                  width: 100%;
+                  height: 170px;
+                  object-fit: cover;
+                  object-position: center;
+                  margin-bottom: 5px; }
+                #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-wrapper > .swiper-slide > p {
+                  font: 400 13px/1.2 'Noto Sans KR';
+                  color: #555;
+                  text-align: center; }
+            #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-pagination {
               position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              fill: #fff; }
+              bottom: 10px; }
+              #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-pagination > span {
+                background: none;
+                border: 1px solid #888;
+                opacity: 1; }
+                #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-pagination > span.swiper-pagination-bullet-active {
+                  background: #888; }
+          #content .inner .wrap .col2 > article:nth-of-type(2) {
+            position: relative;
+            border-bottom: 1px solid #aaa;
+            border-top: 1px solid #aaa; }
+            #content .inner .wrap .col2 > article:nth-of-type(2) > .wrap {
+              width: 80%;
+              margin: 100px auto; }
+              #content .inner .wrap .col2 > article:nth-of-type(2) > .wrap::after {
+                content: '';
+                display: block;
+                clear: both; }
+              #content .inner .wrap .col2 > article:nth-of-type(2) > .wrap a {
+                display: block;
+                float: left;
+                width: 100%;
+                height: 40px;
+                text-align: center;
+                font: 400 12px/39px 'Noto Sans KR';
+                color: #333;
+                border: 1px solid #999;
+                margin-bottom: 5px;
+                transition: 0.5s; }
+                #content .inner .wrap .col2 > article:nth-of-type(2) > .wrap a:hover {
+                  background: rgba(0, 0, 0, 0.05); }
       #content .inner .wrap .col3 {
-        width: 400px;
-        height: 680px;
-        float: left; }
+        width: 500px;
+        height: 640px;
+        float: left;
+        border-right: 1px solid #bbb;
+        border-top: 1px solid #bbb; }
         #content .inner .wrap .col3::after {
           content: '';
           display: block;
           clear: both; }
         #content .inner .wrap .col3 > article {
-          width: 50%;
+          width: 100%;
+          padding: 0 20px;
           float: left; }
           #content .inner .wrap .col3 > article:nth-of-type(1) {
-            height: 68px;
-            border: 1px solid #333;
+            width: calc(100%/3);
+            height: 40px;
+            border-left: 1px solid #bbb;
             text-align: center; }
-            #content .inner .wrap .col3 > article:nth-of-type(1) a {
-              display: block;
-              width: 100%;
-              height: 100%;
-              font: 900 12px/68px 'Noto Sans KR';
-              color: #111; }
-              #content .inner .wrap .col3 > article:nth-of-type(1) a:hover {
-                text-decoration: underline; }
+            #content .inner .wrap .col3 > article:nth-of-type(1) a i {
+              font-size: 14px;
+              color: #555;
+              line-height: 40px; }
           #content .inner .wrap .col3 > article:nth-of-type(2) {
-            height: 68px;
-            border: 1px solid #333;
+            width: calc(100%/3);
+            height: 40px;
+            border-left: 1px solid #bbb;
+            border-right: 1px solid #bbb;
             text-align: center; }
-            #content .inner .wrap .col3 > article:nth-of-type(2) a {
-              display: block;
+            #content .inner .wrap .col3 > article:nth-of-type(2) a i {
+              font-size: 14px;
+              color: #555;
+              line-height: 40px; }
+          #content .inner .wrap .col3 > article:nth-of-type(3) {
+            width: calc(100%/3);
+            height: 40px;
+            text-align: center; }
+            #content .inner .wrap .col3 > article:nth-of-type(3) a i {
+              font-size: 16px;
+              color: #555;
+              line-height: 40px; }
+          #content .inner .wrap .col3 > article:nth-of-type(4) {
+            height: 350px;
+            position: relative;
+            overflow: hidden;
+            border-top: 1px solid #bbb;
+            border-left: 1px solid #bbb; }
+            #content .inner .wrap .col3 > article:nth-of-type(4) h2 {
+              display: inline-block;
+              font: 400 15px/1 'Noto Sans KR';
+              color: #333;
+              letter-spacing: -1px;
+              position: relative;
+              top: 25px;
+              cursor: pointer; }
+              #content .inner .wrap .col3 > article:nth-of-type(4) h2::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #333;
+                position: absolute;
+                bottom: -4px;
+                left: 0; }
+            #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-wrapper {
               width: 100%;
               height: 100%;
-              font: 900 12px/68px 'Noto Sans KR';
-              color: #111; }
-              #content .inner .wrap .col3 > article:nth-of-type(2) a:hover {
-                text-decoration: underline; }
+              margin-left: 10px; }
+              #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-wrapper > .swiper-slide {
+                height: 200px;
+                width: 150px;
+                position: relative;
+                top: 50%;
+                margin-top: -120px;
+                cursor: pointer; }
+                #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-wrapper > .swiper-slide > .inner {
+                  width: 100%;
+                  height: 100%;
+                  transition: 1s;
+                  position: relative; }
+                  #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-wrapper > .swiper-slide > .inner > img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: center;
+                    margin-bottom: 3px; }
+                  #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-wrapper > .swiper-slide > .inner > p {
+                    font: 400 12px/1.2 'Noto Sans KR';
+                    color: #555;
+                    text-align: center; }
+            #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-pagination {
+              position: absolute;
+              bottom: 30px; }
+              #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-pagination > span {
+                background: none;
+                border: 1px solid #888;
+                opacity: 1; }
+                #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-pagination > span.swiper-pagination-bullet-active {
+                  background: #888; }
+            #content .inner .wrap .col3 > article:nth-of-type(4) > .btnAuto {
+              display: inline-block;
+              position: absolute;
+              bottom: 15px;
+              left: 50%;
+              transform: translateX(-38%); }
+              #content .inner .wrap .col3 > article:nth-of-type(4) > .btnAuto::after {
+                content: '';
+                display: block;
+                clear: both; }
+              #content .inner .wrap .col3 > article:nth-of-type(4) > .btnAuto li {
+                float: left;
+                margin-right: 8px;
+                color: #666;
+                font-size: 10px;
+                opacity: 0.7;
+                cursor: pointer; }
+                #content .inner .wrap .col3 > article:nth-of-type(4) > .btnAuto li:hover {
+                  opacity: 1; }
+                #content .inner .wrap .col3 > article:nth-of-type(4) > .btnAuto li.on {
+                  opacity: 1; }
+          #content .inner .wrap .col3 > article:nth-of-type(5) {
+            width: 50%;
+            height: 250px;
+            background: #111;
+            position: relative; }
+            #content .inner .wrap .col3 > article:nth-of-type(5) svg {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              fill: #fff; }
+          #content .inner .wrap .col3 > article:nth-of-type(6) {
+            width: 50%;
+            height: 250px;
+            background: #111;
+            position: relative;
+            padding: 0; }
+            #content .inner .wrap .col3 > article:nth-of-type(6) video {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              object-position: 30% center;
+              filter: saturate(30%);
+              transition: 0.5s; }
+            #content .inner .wrap .col3 > article:nth-of-type(6):hover video {
+              filter: saturate(110%); }
 
 /* category -------------------------*/
 #photo {
   width: 100%;
   padding: 50px 0 0;
-  background: linear-gradient(45deg, #5f4b8b, #4e4b51);
+  background: #4e4b51;
   position: relative;
   overflow: hidden; }
   #photo::after {
@@ -460,7 +746,7 @@ body {
     background: url(../img/category_kpop2.jpg) no-repeat center center/cover;
     background-attachment: fixed;
     opacity: 0.2;
-    filter: hue-rotate(220deg) brightness(0.8); }
+    filter: hue-rotate(220deg) brightness(0.6); }
   #photo::before {
     content: '';
     display: block;
@@ -480,9 +766,8 @@ body {
     z-index: 1; }
     #photo .inner h1 {
       display: inline-block;
-      font: normal 34px/1 'Bangers';
+      font: normal 30px/1 'Rajdhani';
       color: #fff;
-      letter-spacing: 1px;
       margin-bottom: 20px;
       position: relative; }
     #photo .inner .auto {
@@ -508,7 +793,7 @@ body {
         position: relative;
         top: 50%;
         margin-top: -170px;
-        opacity: 0.2; }
+        opacity: 0.1; }
         #photo .inner .swiper-wrapper .swiper-slide img {
           width: 100%;
           height: 100%;
@@ -538,9 +823,9 @@ body {
           opacity: 0; }
         #photo .inner .swiper-wrapper .swiper-slide-active {
           opacity: 1;
-          box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.3); }
+          box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.1); }
           #photo .inner .swiper-wrapper .swiper-slide-active::after {
-            opacity: 0.4; }
+            opacity: 0.1; }
           #photo .inner .swiper-wrapper .swiper-slide-active::before {
             animation: glow 1s ease 1; }
         #photo .inner .swiper-wrapper .swiper-slide-next, #photo .inner .swiper-wrapper .swiper-slide-prev {
@@ -548,10 +833,10 @@ body {
     #photo .inner .btnMore {
       display: inline-block;
       position: absolute;
-      bottom: 60px;
+      bottom: 50px;
       left: 50%;
       transform: translateX(-50%);
-      padding: 12px 32px;
+      padding: 12px 40px;
       border: 1px solid #ddd;
       font: 400 16px/1 'Noto Sans KR';
       color: #ddd;
@@ -578,7 +863,7 @@ body {
     position: relative; }
     #comment .inner h1 {
       display: inline-block;
-      font: normal 34px/1 'Bangers';
+      font: bold 30px/1 'Rajdhani';
       color: #333;
       letter-spacing: 1px;
       position: relative;
@@ -923,7 +1208,20 @@ body {
               height: 100%;
               font: 300 12px/50px 'Noto Sans KR';
               color: #fff;
-              letter-spacing: 1px; }
+              letter-spacing: 1px;
+              position: relative; }
+              #header_sub .inner #gnb > li .subMenu li a::after {
+                content: '';
+                display: block;
+                width: 110%;
+                height: 1px;
+                background: rgba(255, 255, 255, 0.9);
+                position: absolute;
+                top: 52%;
+                left: -5%;
+                opacity: 0; }
+              #header_sub .inner #gnb > li .subMenu li a:hover::after {
+                opacity: 1; }
           #header_sub .inner #gnb > li .subMenu::before {
             content: '';
             display: block;
@@ -2378,7 +2676,7 @@ body {
         position: absolute;
         bottom: 0px;
         left: 0px;
-        background: #fff;
+        background: #eeeae3;
         z-index: 1;
         padding: 10px; }
         .location .inner .mapWrap .btnTraffic li {
@@ -2388,7 +2686,7 @@ body {
             display: block;
             width: 60px;
             height: 40px;
-            background: rgba(255, 255, 255, 0.9);
+            background: #eeeae3;
             text-align: center; }
             .location .inner .mapWrap .btnTraffic li a i {
               font-size: 18px;
@@ -2396,8 +2694,8 @@ body {
               color: #333;
               position: relative; }
           .location .inner .mapWrap .btnTraffic li.on a {
-            border: 1px solid #efefef;
-            background: rgba(250, 250, 250, 0.9); }
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.3); }
           .location .inner .mapWrap .btnTraffic li:hover a i {
             font-size: 20px; }
           .location .inner .mapWrap .btnTraffic li:nth-of-type(1) a i::after {
