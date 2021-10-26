@@ -2,7 +2,7 @@
 $(window).on("scroll",function(){
     let scroll = $(this).scrollTop();
 
-    if(scroll > 260){
+    if(scroll > 200){
         $(".location .add").addClass("on");
     }
 });

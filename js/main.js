@@ -19,10 +19,10 @@ let timer;
 
 timer = setInterval(rolling,20);
 
-$(".slider").on("mouseenter",function(){
+$(".slider li").on("mouseenter",function(){
     clearInterval(timer);
 });
-$(".slider").on("mouseleave",function(){
+$(".slider li").on("mouseleave",function(){
     timer = setInterval(rolling,20);
 });
 
@@ -36,3 +36,9 @@ function rolling(){
     $(".slider").css({left:mg});
 }
 
+$("#photo .auto .btnStart").on("click",function(){
+    timer = setInterval(rolling,20);
+});
+$("#photo .auto .btnStop").on("click",function(){
+    clearInterval(timer);
+});

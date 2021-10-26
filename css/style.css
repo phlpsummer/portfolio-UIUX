@@ -769,7 +769,8 @@ body {
       position: relative; }
     #photo .inner .auto {
       display: inline-block;
-      margin-left: 20px; }
+      margin-left: 15px;
+      transform: rotateY(5px); }
       #photo .inner .auto::after {
         content: '';
         display: block;
@@ -795,15 +796,23 @@ body {
       position: relative;
       top: 50%;
       margin-top: -170px;
-      padding: 30px; }
+      padding: 30px;
+      cursor: pointer;
+      filter: saturate(50%);
+      transition: 0.5s; }
       #photo .slider li img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
-        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.07); }
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.07);
+        transition: 0.5s; }
       #photo .slider li[data-index="2"], #photo .slider li[data-index="4"], #photo .slider li[data-index="6"], #photo .slider li[data-index="8"] {
         padding: 0px 30px 60px; }
+      #photo .slider li:hover {
+        filter: saturate(110%); }
+        #photo .slider li:hover img {
+          box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2); }
   #photo .btnMore {
     display: inline-block;
     position: absolute;
@@ -833,39 +842,55 @@ body {
       color: #333;
       letter-spacing: 1px;
       position: relative;
-      margin-bottom: 70px; }
-    #comment .inner ul li {
+      margin-bottom: 50px; }
+    #comment .inner .board {
+      width: 100%;
+      height: 50px;
+      background: #f0f0f0;
+      padding-left: 30px;
+      position: relative; }
+      #comment .inner .board > span {
+        font: 700 15px/50px 'Noto Sans KR';
+        color: #777; }
+      #comment .inner .board > ul {
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        transform: translateY(-50%); }
+        #comment .inner .board > ul > li {
+          font: 400 15px/1 'Noto Sans KR';
+          color: #777; }
+    #comment .inner .notice li {
       width: 100%;
       border-bottom: 1px solid #999; }
-      #comment .inner ul li:nth-of-type(1) {
-        border-top: 1px solid #111; }
-      #comment .inner ul li a .wrap {
+      #comment .inner .notice li a .wrap {
         width: 100%;
         height: 220px;
         padding: 40px 0px 10px; }
-        #comment .inner ul li a .wrap .cmt_category {
+        #comment .inner .notice li a .wrap .cmt_category {
           float: left;
           width: 20%;
           height: 100%;
-          font: 16px/1 'Noto Sans KR';
+          padding-left: 30px;
+          font: 300 15px/1 'Noto Sans KR';
           color: #b76ca4; }
-        #comment .inner ul li a .wrap .cmt_txt {
+        #comment .inner .notice li a .wrap .cmt_txt {
           float: left;
           width: 70%;
           height: 100%; }
-          #comment .inner ul li a .wrap .cmt_txt h3 {
+          #comment .inner .notice li a .wrap .cmt_txt h3 {
             font: 700 24px/1.3 'Noto Sans KR';
             color: #111;
             margin-bottom: 25px; }
-          #comment .inner ul li a .wrap .cmt_txt span {
+          #comment .inner .notice li a .wrap .cmt_txt span {
             font: 500 14px/1 'Noto Sans KR';
             color: #333; }
-          #comment .inner ul li a .wrap .cmt_txt p {
+          #comment .inner .notice li a .wrap .cmt_txt p {
             font: 300 14px/1.2 'Noto Sans KR';
             color: #333;
             letter-spacing: 1px;
             margin-top: 50px; }
-        #comment .inner ul li a .wrap .cmt_date {
+        #comment .inner .notice li a .wrap .cmt_date {
           float: right;
           width: 10%;
           height: 100%;
@@ -873,10 +898,10 @@ body {
           text-align: center;
           font: bold 16px/1.2 'Noto Sans KR';
           color: #bbb; }
-          #comment .inner ul li a .wrap .cmt_date strong {
+          #comment .inner .notice li a .wrap .cmt_date strong {
             display: block;
             font-size: 50px; }
-      #comment .inner ul li:hover a .wrap .cmt_txt h3 {
+      #comment .inner .notice li:hover a .wrap .cmt_txt h3 {
         text-decoration: underline; }
 
 /* footer ---------------------------------------------------------------------------------- */
@@ -2056,7 +2081,7 @@ body {
             font-size: 12px; }
         .community .inner .right table tr:hover {
           background: rgba(255, 255, 255, 0.7);
-          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); }
+          box-shadow: 0px 0px 25px rgba(95, 75, 139, 0.2); }
           .community .inner .right table tr:hover td:nth-of-type(3) {
             text-decoration: underline;
             color: #5f4b8b; }
