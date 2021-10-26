@@ -731,6 +731,7 @@ body {
 /* category -------------------------*/
 #photo {
   width: 100%;
+  height: 550px;
   padding: 50px 0 0;
   background: #4e4b51;
   position: relative;
@@ -746,7 +747,7 @@ body {
     background: url(../img/category_kpop2.jpg) no-repeat center center/cover;
     background-attachment: fixed;
     opacity: 0.2;
-    filter: hue-rotate(220deg) brightness(0.6); }
+    filter: hue-rotate(220deg) brightness(0.5); }
   #photo::before {
     content: '';
     display: block;
@@ -759,9 +760,7 @@ body {
     opacity: 0.3; }
   #photo .inner {
     width: 1180px;
-    height: 450px;
     margin: 0 auto;
-    overflow: hidden;
     position: relative;
     z-index: 1; }
     #photo .inner h1 {
@@ -784,65 +783,43 @@ body {
         font-size: 17px;
         opacity: 0.7;
         cursor: pointer; }
-    #photo .inner .swiper-wrapper {
-      width: 100%;
-      height: 400px; }
-      #photo .inner .swiper-wrapper .swiper-slide {
-        width: 220px;
-        height: 220px;
-        position: relative;
-        top: 50%;
-        margin-top: -170px;
-        opacity: 0.1; }
-        #photo .inner .swiper-wrapper .swiper-slide img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          object-position: center; }
-        #photo .inner .swiper-wrapper .swiper-slide::after {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background: #b76ca4;
-          filter: blur(10px);
-          opacity: 0;
-          z-index: -1; }
-        #photo .inner .swiper-wrapper .swiper-slide::before {
-          content: '';
-          display: block;
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          top: 0;
-          left: 0;
-          background: #5f4b8b;
-          opacity: 0; }
-        #photo .inner .swiper-wrapper .swiper-slide-active {
-          opacity: 1;
-          box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.1); }
-          #photo .inner .swiper-wrapper .swiper-slide-active::after {
-            opacity: 0.1; }
-          #photo .inner .swiper-wrapper .swiper-slide-active::before {
-            animation: glow 1s ease 1; }
-        #photo .inner .swiper-wrapper .swiper-slide-next, #photo .inner .swiper-wrapper .swiper-slide-prev {
-          opacity: 0.5; }
-    #photo .inner .btnMore {
-      display: inline-block;
-      position: absolute;
-      bottom: 50px;
-      left: 50%;
-      transform: translateX(-50%);
-      padding: 12px 40px;
-      border: 1px solid #ddd;
-      font: 400 16px/1 'Noto Sans KR';
-      color: #ddd;
-      transition: 0.5s; }
-      #photo .inner .btnMore:hover {
-        background: rgba(255, 255, 255, 0.2); }
+  #photo .slider {
+    width: 2400px;
+    height: 400px;
+    position: absolute;
+    top: 110px;
+    left: 0;
+    z-index: 1; }
+    #photo .slider li {
+      float: left;
+      width: 300px;
+      height: 300px;
+      position: relative;
+      top: 50%;
+      margin-top: -170px;
+      padding: 30px; }
+      #photo .slider li img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1); }
+      #photo .slider li[data-index="2"], #photo .slider li[data-index="4"], #photo .slider li[data-index="6"], #photo .slider li[data-index="8"] {
+        padding: 0px 30px 60px; }
+  #photo .btnMore {
+    display: inline-block;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 12px 40px;
+    border: 1px solid #ddd;
+    font: 400 16px/1 'Noto Sans KR';
+    color: #ddd;
+    transition: 0.5s;
+    z-index: 1; }
+    #photo .btnMore:hover {
+      background: rgba(255, 255, 255, 0.2); }
 
 @keyframes glow {
   0% {
