@@ -19,7 +19,7 @@ var swiper = new Swiper(".mySwiper", {
     // },
 
     direction: "horizontal", //방향
-    slidesPerView: 2,
+    slidesPerView: "auto",
     spaceBetween: 30,
     centeredSlides: true,
     grabCursor: true,
