@@ -1,3 +1,14 @@
+//**스크롤
+$(window).on("scroll",function(){
+    let scroll = $(this).scrollTop();
+
+    if(scroll > 260){
+        $(".location .add").addClass("on");
+    }
+});
+
+
+//**카카오맵
 let mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = { 
         center: new kakao.maps.LatLng(37.5667055,127.0095195), // 지도의 중심좌표
@@ -52,6 +63,7 @@ trafficOff.addEventListener("click",function(e){
     map.removeOverlayMapTypeId(kakao.maps.MapTypeId.TRAFFIC);
     trafficOff.classList.add("on");
     trafficOn.classList.remove("on");
+
 });
 
 trafficOn.addEventListener("click",function(e){
@@ -61,7 +73,6 @@ trafficOn.addEventListener("click",function(e){
     trafficOn.classList.add("on");
     trafficOff.classList.remove("on");
 });
-
 
 //@@ 함수설정 ----------------------------------------------------------
 

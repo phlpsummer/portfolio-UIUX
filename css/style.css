@@ -822,7 +822,7 @@ body {
 /* comment----------------------------*/
 #comment {
   width: 100%;
-  padding: 100px 0 50px; }
+  padding: 100px 0 100px; }
   #comment .inner {
     width: 1180px;
     margin: 0 auto;
@@ -2022,7 +2022,8 @@ body {
       margin-bottom: 30px; }
       .community .inner .right table tr {
         padding-bottom: 20px;
-        border-bottom: 1px solid #ccc; }
+        border-bottom: 1px solid #ccc;
+        transition: 0.5s; }
         .community .inner .right table tr:nth-of-type(1) {
           border-bottom: none; }
         .community .inner .right table tr:nth-of-type(2) {
@@ -2038,7 +2039,7 @@ body {
           .community .inner .right table tr th:nth-of-type(3) {
             width: 10%; }
         .community .inner .right table tr td {
-          padding: 36px 20px;
+          padding: 32px 20px;
           font: 400 14px/1.4 'Noto Sans KR';
           color: #555;
           text-align: center; }
@@ -2053,9 +2054,12 @@ body {
           .community .inner .right table tr td:nth-of-type(4) {
             font-weight: 300;
             font-size: 12px; }
-        .community .inner .right table tr:hover td:nth-of-type(3) {
-          text-decoration: underline;
-          color: #5f4b8b; }
+        .community .inner .right table tr:hover {
+          background: rgba(255, 255, 255, 0.7);
+          box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); }
+          .community .inner .right table tr:hover td:nth-of-type(3) {
+            text-decoration: underline;
+            color: #5f4b8b; }
     .community .inner .right .pagination {
       width: 100%;
       margin-bottom: 60px; }
@@ -2227,7 +2231,7 @@ body {
       .community .inner .right table tr th:nth-of-type(4) {
         width: 10%; }
       .community .inner .right table tr td {
-        padding: 36px 8px; }
+        padding: 32px 8px; }
         .community .inner .right table tr td:nth-of-type(1) {
           display: none; }
         .community .inner .right table tr td:nth-of-type(2) {
@@ -2340,7 +2344,7 @@ body {
   .community .inner .right table tr th:nth-of-type(4) {
     width: 20%; }
   .community .inner .right table tr td {
-    padding: 36px 8px; }
+    padding: 32px 8px; }
     .community .inner .right table tr td:nth-of-type(1) {
       display: none; }
     .community .inner .right table tr td:nth-of-type(2) {
@@ -2429,8 +2433,8 @@ body {
       font-weight: 700;
       color: #fff; }
     .gallery .inner .loading {
-      width: 200px;
-      height: 200px;
+      width: 70px;
+      height: 70px;
       position: absolute;
       top: 100px;
       left: 50%;
@@ -2779,44 +2783,43 @@ body {
 .location .sub_visual img {
   object-position: top;
   filter: brightness(0.9); }
-.location .inner .wrap {
+.location .inner h2 {
+  text-align: center; }
+.location .inner .info {
   width: 100%;
-  height: 300px;
+  margin: 40px 0 30px;
   position: relative;
-  margin-bottom: 20px; }
-  .location .inner .wrap::after {
-    content: '';
-    display: block;
-    clear: both; }
-  .location .inner .wrap .info {
-    width: 50%;
-    float: left;
-    margin-top: 20px;
-    position: relative;
-    padding-left: 80px; }
-    .location .inner .wrap .info i {
+  text-align: center; }
+  .location .inner .info i {
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px; }
+  .location .inner .info .add {
+    font: 300 28px/1 'Noto Sans KR';
+    color: #444;
+    font-style: italic;
+    margin-bottom: 24px;
+    position: relative; }
+    .location .inner .info .add::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: #fff;
       position: absolute;
       top: 0;
-      left: 20px;
-      font-size: 46px;
-      color: #333; }
-    .location .inner .wrap .info .add {
-      font: 700 20px/1.4 'Noto Sans KR';
-      color: #444;
-      margin-bottom: 12px; }
-    .location .inner .wrap .info .tel {
-      font: 300 16px/1 'Noto Sans KR';
-      letter-spacing: 1px; }
-      .location .inner .wrap .info .tel > span {
-        font-weight: 500;
-        margin-right: 7px;
-        letter-spacing: 0; }
-  .location .inner .wrap > img {
-    float: right;
-    width: 50%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 35%; }
+      right: 0;
+      transition: 2.5s; }
+    .location .inner .info .add.on::after {
+      width: 0%; }
+  .location .inner .info > p {
+    font: 400 16px/1.5 'Noto Sans KR';
+    color: #777; }
+.location .inner > img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center 32%; }
 .location .inner .subway {
   width: 100%;
   padding: 50px 0;
@@ -2829,7 +2832,7 @@ body {
     width: 20%;
     float: left;
     padding-left: 20px;
-    font: 700 18px/1 'Noto Sans KR';
+    font: 400 18px/1 'Noto Sans KR';
     color: #333; }
   .location .inner .subway > .right {
     width: 80%;
@@ -2841,14 +2844,14 @@ body {
       display: inline-block;
       color: #fff;
       padding: 3px 8px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       background: #333; }
       .location .inner .subway > .right span:nth-of-type(1) {
         margin-right: 5px; }
       .location .inner .subway > .right span:nth-of-type(2) {
         margin-right: 5px; }
     .location .inner .subway > .right p {
-      color: #333; }
+      color: #111; }
 .location .inner .bus {
   width: 100%;
   padding: 50px 0;
@@ -2861,14 +2864,14 @@ body {
     width: 20%;
     float: left;
     padding-left: 20px;
-    font: 700 18px/1 'Noto Sans KR';
+    font: 400 18px/1 'Noto Sans KR';
     color: #333; }
   .location .inner .bus > .right {
     width: 80%;
     float: left;
     padding-right: 30px;
     font: 400 15px/1 'Noto Sans KR';
-    color: #222; }
+    color: #333; }
     .location .inner .bus > .right ul li {
       margin-bottom: 6px; }
       .location .inner .bus > .right ul li span {
@@ -2889,20 +2892,20 @@ body {
     width: 20%;
     float: left;
     padding-left: 20px;
-    font: 700 18px/1 'Noto Sans KR';
+    font: 400 18px/1 'Noto Sans KR';
     color: #333; }
   .location .inner .car > .right {
     width: 80%;
     float: left;
     padding-right: 30px;
-    font: 400 15px/1.4 'Noto Sans KR';
+    font: 300 15px/1.4 'Noto Sans KR';
     color: #222; }
     .location .inner .car > .right ul li {
       margin-bottom: 40px; }
       .location .inner .car > .right ul li span {
         display: block;
-        font: 700 16px/1 'Noto Sans KR';
-        margin-bottom: 15px; }
+        font: 500 16px/1 'Noto Sans KR';
+        margin-bottom: 10px; }
       .location .inner .car > .right ul li:last-of-type {
         margin-bottom: 20px; }
 .location .inner .mapWrap {
@@ -2913,44 +2916,46 @@ body {
     width: 100%;
     height: 25vw; }
   .location .inner .mapWrap .btnTraffic {
-    display: none;
-    width: 160px;
+    width: 125px;
     height: 60px;
     position: absolute;
     bottom: 0px;
     left: 0px;
-    background: #eeeae3;
+    background: #fff;
     z-index: 1;
-    padding: 10px; }
+    padding: 10px 10px 10px 10px; }
     .location .inner .mapWrap .btnTraffic li {
       float: left;
-      margin-left: 8px; }
+      margin-left: 10px; }
       .location .inner .mapWrap .btnTraffic li a {
         display: block;
-        width: 60px;
+        width: 40px;
         height: 40px;
-        background: #eeeae3;
-        text-align: center; }
+        background: #fff;
+        border-radius: 50%;
+        text-align: center;
+        transition: 0.5s; }
         .location .inner .mapWrap .btnTraffic li a i {
           font-size: 18px;
           line-height: 40px;
-          color: #333;
-          position: relative; }
-      .location .inner .mapWrap .btnTraffic li.on a {
-        border: 1px solid rgba(255, 255, 255, 0.7);
-        background: rgba(255, 255, 255, 0.3); }
-      .location .inner .mapWrap .btnTraffic li:hover a i {
-        font-size: 20px; }
+          color: #555;
+          position: relative;
+          opacity: 0.7;
+          transition: 0.5s; }
       .location .inner .mapWrap .btnTraffic li:nth-of-type(1) a i::after {
         content: '';
         display: block;
         width: 2px;
-        height: 28px;
-        background: #111;
+        height: 26px;
+        background: #555;
         position: absolute;
-        top: 5px;
+        top: 6px;
         left: 6px;
         transform: rotate(-45deg); }
+      .location .inner .mapWrap .btnTraffic li.on a {
+        background: #eeeae3; }
+        .location .inner .mapWrap .btnTraffic li.on a i {
+          opacity: 1; }
 
 .join .sub_visual img {
   object-position: bottom; }
