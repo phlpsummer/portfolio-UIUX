@@ -2,33 +2,140 @@
     .sub_visual img { object-position: top; filter: brightness(0.9);}
 
     .inner {
-        min-height: 0;
-        .info {
-            width: 100%;
-            margin: 60px 0 40px;
+        
+        .wrap {
+            width: 100%; height: 300px;
             position: relative;
-            padding-left: 60px;
+            margin-bottom: 20px;
 
-            i {
-                position: absolute;
-                top: 0; left: 0;
-                font-size: 50px;
-                color: #333;
-            }
-            .add {
-                font: 700 20px/1 'Noto Sans KR'; color: #444;
-                margin-bottom: 12px;
-            }
-            .tel {
-                font: 300 16px/1 'Noto Sans KR'; letter-spacing: 1px;
+            &::after { content: ''; display: block; clear: both;}
 
-                >span { font-weight: 500; margin-right: 7px; letter-spacing: 0;}
+            .info {
+                width: 50%;
+                float: left;
+                margin-top: 20px;
+                position: relative;
+                padding-left: 80px;
+    
+                i {
+                    position: absolute;
+                    top: 0; left: 20px;
+                    font-size: 46px;
+                    color: #333;
+                }
+                .add {
+                    font: 700 20px/1.4 'Noto Sans KR'; color: #444;
+                    margin-bottom: 12px;
+                }
+                .tel {
+                    font: 300 16px/1 'Noto Sans KR'; letter-spacing: 1px;
+    
+                    >span { font-weight: 500; margin-right: 7px; letter-spacing: 0;}
+                }
+            }
+            
+            >img {
+                float: right;
+                width: 50%; height: 100%; object-fit: cover; object-position: center 35%;
+            }
+        }
+        
+        .subway {
+            width: 100%;
+            padding: 50px 0;
+            border-bottom: 1px solid #bbb;
+
+            &::after { content: ''; display: block; clear: both;}
+
+            >.left {
+                width: 20%;
+                float: left;
+                padding-left: 20px;
+                font: 700 18px/1 'Noto Sans KR'; color: #333;
+            }
+            >.right {
+                width: 80%;
+                float: left;
+                padding-right: 30px;
+                font: 400 14px/1 'Noto Sans KR'; color: #333;
+                span {
+                    display: inline-block;
+                    color: #fff; padding: 3px 8px; margin-bottom: 12px;
+                    background: #333;
+                    &:nth-of-type(1) { margin-right: 5px;}
+                    &:nth-of-type(2) { margin-right: 5px;}
+                }
+                p { color: #333;}
+            }
+        }
+        .bus {
+            width: 100%;
+            padding: 50px 0;
+            border-bottom: 1px solid #bbb;
+
+            &::after { content: ''; display: block; clear: both;}
+
+            >.left {
+                width: 20%;
+                float: left;
+                padding-left: 20px;
+                font: 700 18px/1 'Noto Sans KR'; color: #333;
+            }
+            >.right {
+                width: 80%;
+                float: left;
+                padding-right: 30px;
+                font: 400 15px/1 'Noto Sans KR'; color: #222;
+                ul li {
+                    margin-bottom: 6px;
+                    span {
+                        display: inline-block;
+                        font: 400 14px/1 'Noto Sans KR';
+                        color: #fff; padding: 3px 8px;
+                        background: #333;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+        .car {
+            width: 100%;
+            padding: 50px 0;
+            
+
+            &::after { content: ''; display: block; clear: both;}
+
+            >.left {
+                width: 20%;
+                float: left;
+                padding-left: 20px;
+                font: 700 18px/1 'Noto Sans KR'; color: #333;
+            }
+            >.right {
+                width: 80%;
+                float: left;
+                padding-right: 30px;
+                font: 400 15px/1.4 'Noto Sans KR'; color: #222;
+                ul{
+                    li {
+                        margin-bottom: 40px;
+
+                        span {
+                            display: block;
+                            font: 700 16px/1 'Noto Sans KR';
+                            margin-bottom: 15px;
+                        }
+                        &:last-of-type { margin-bottom: 20px;}
+                    }
+                }
             }
         }
 
         .mapWrap {
             width: 100%;
             position: relative;
+            margin-bottom: 50px;
+            
             #map {
                 width: 100%; height: 25vw;
             }
@@ -79,100 +186,6 @@
                             top: 5px; left: 6px;
                             transform: rotate(-45deg);
                         }
-                    }
-                }
-            }
-        }
-
-        .subway {
-            width: 100%;
-            padding: 50px 0;
-            border-bottom: 1px solid #bbb;
-
-            &::after { content: ''; display: block; clear: both;}
-
-            >.left {
-                width: 30%;
-                float: left;
-                padding-left: 30px;
-                font: 700 18px/1 'Noto Sans KR'; color: #333;
-            }
-            >.right {
-                width: 70%;
-                float: left;
-                padding-right: 30px;
-                font: 400 16px/1 'Noto Sans KR'; color: #333;
-                span {
-                    display: inline-block;
-                    color: #fff; padding: 3px 8px; margin-bottom: 12px;
-                    &:nth-of-type(1) { background-color: green; margin-right: 5px;}
-                    &:nth-of-type(2) { background-color: rgb(45, 148, 216); margin-right: 5px;}
-                    &:nth-of-type(3) { background-color: purple;}
-                }
-                p { color: #333;}
-            }
-        }
-        .bus {
-            width: 100%;
-            padding: 50px 0;
-            border-bottom: 1px solid #bbb;
-
-            &::after { content: ''; display: block; clear: both;}
-
-            >.left {
-                width: 30%;
-                float: left;
-                padding-left: 30px;
-                font: 700 18px/1 'Noto Sans KR'; color: #333;
-            }
-            >.right {
-                width: 70%;
-                float: left;
-                padding-right: 30px;
-                font: 400 15px/1 'Noto Sans KR'; color: #222;
-                ul li {
-                    margin-bottom: 6px;
-                    span {
-                        display: inline-block;
-                        font: 400 16px/1 'Noto Sans KR';
-                        color: #fff; padding: 3px 8px;
-                        background: blue;
-                        margin-right: 10px;
-                    }
-
-                    &:nth-of-type(2) span { background: green;}
-                    &:nth-of-type(3) span { background: yellow; color: #333;}
-                }
-            }
-        }
-        .car {
-            width: 100%;
-            padding: 50px 0;
-            border-bottom: 1px solid #bbb;
-
-            &::after { content: ''; display: block; clear: both;}
-
-            >.left {
-                width: 30%;
-                float: left;
-                padding-left: 30px;
-                font: 700 18px/1 'Noto Sans KR'; color: #333;
-            }
-            >.right {
-                width: 70%;
-                float: left;
-                padding-right: 30px;
-                font: 400 15px/1.4 'Noto Sans KR'; color: #222;
-                ul{
-                    li {
-                        margin-bottom: 50px;
-
-                        span {
-                            display: block;
-                            font: 700 16px/1 'Noto Sans KR';
-                            margin-bottom: 15px;
-                        }
-                        &:last-of-type { margin-bottom: 0;}
                     }
                 }
             }

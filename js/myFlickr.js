@@ -57,18 +57,28 @@ $.ajax({
         )
     });
 
+    const count = $("main .card").length;
     let imgNum = 0;
 
     $(".gallery .thumb").each(function(index,data){
+
+        data.onerror = function(){
+            $(data).attr("src","img/default.jpg");
+        }
+
         data.onload = function(){
             imgNum++;
 
-            if(imgNum === 40){
+            if(imgNum === count){
+                $(".loading").addClass("off");
+
                 new Isotope(".gallery main",{
                     itemSelector: ".gallery main .card",
                     columnWidth: ".gallery main .card",
                     transitionDuration: "0.5s"
                 });
+
+                $("main").addClass("on");
             }
         }
 
