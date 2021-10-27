@@ -2927,7 +2927,7 @@ body {
   text-align: center; }
 .location .inner .info {
   width: 100%;
-  margin: 40px 0 30px;
+  margin: 40px 0;
   position: relative;
   text-align: center; }
   .location .inner .info i {
@@ -2938,7 +2938,7 @@ body {
     font: 300 28px/1 'Noto Sans KR';
     color: #444;
     font-style: italic;
-    margin-bottom: 24px;
+    margin-bottom: 26px;
     position: relative; }
     .location .inner .info .add::after {
       content: '';
@@ -2953,16 +2953,17 @@ body {
     .location .inner .info .add.on::after {
       width: 0%; }
   .location .inner .info > p {
-    font: 400 16px/1.5 'Noto Sans KR';
+    font: 400 16px/1.7 'Noto Sans KR';
     color: #777; }
 .location .inner > img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  object-position: center 32%; }
+  object-position: center 32%;
+  margin-bottom: 20px; }
 .location .inner .subway {
   width: 100%;
-  padding: 50px 0;
+  padding: 40px 0 50px;
   border-bottom: 1px solid #bbb; }
   .location .inner .subway::after {
     content: '';
@@ -2972,7 +2973,7 @@ body {
     width: 20%;
     float: left;
     padding-left: 20px;
-    font: 400 18px/1 'Noto Sans KR';
+    font: 500 16px/1 'Noto Sans KR';
     color: #333; }
   .location .inner .subway > .right {
     width: 80%;
@@ -2994,7 +2995,7 @@ body {
       color: #111; }
 .location .inner .bus {
   width: 100%;
-  padding: 50px 0;
+  padding: 40px 0 50px;
   border-bottom: 1px solid #bbb; }
   .location .inner .bus::after {
     content: '';
@@ -3004,7 +3005,7 @@ body {
     width: 20%;
     float: left;
     padding-left: 20px;
-    font: 400 18px/1 'Noto Sans KR';
+    font: 500 16px/1 'Noto Sans KR';
     color: #333; }
   .location .inner .bus > .right {
     width: 80%;
@@ -3023,7 +3024,7 @@ body {
         margin-right: 10px; }
 .location .inner .car {
   width: 100%;
-  padding: 50px 0; }
+  padding: 40px 0 50px; }
   .location .inner .car::after {
     content: '';
     display: block;
@@ -3032,7 +3033,7 @@ body {
     width: 20%;
     float: left;
     padding-left: 20px;
-    font: 400 18px/1 'Noto Sans KR';
+    font: 500 16px/1 'Noto Sans KR';
     color: #333; }
   .location .inner .car > .right {
     width: 80%;
@@ -3051,7 +3052,7 @@ body {
 .location .inner .mapWrap {
   width: 100%;
   position: relative;
-  margin-bottom: 50px; }
+  margin-bottom: 80px; }
   .location .inner .mapWrap #map {
     width: 100%;
     height: 25vw; }
@@ -3099,6 +3100,63 @@ body {
           color: #fff; }
           .location .inner .mapWrap .btnTraffic li.on a i::after {
             background: #fff; }
+.location .inner .lower {
+  width: 100%;
+  padding-top: 40px;
+  border-top: 1px solid #bbb;
+  margin-bottom: 50px; }
+  .location .inner .lower::after {
+    content: '';
+    display: block;
+    clear: both; }
+  .location .inner .lower .hour {
+    float: left;
+    width: 50%; }
+    .location .inner .lower .hour::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .location .inner .lower .hour > .left {
+      width: 25%;
+      float: left;
+      padding-left: 20px;
+      font: 500 16px/1 'Noto Sans KR';
+      color: #333; }
+    .location .inner .lower .hour > .right {
+      width: 75%;
+      float: left;
+      padding-right: 30px;
+      font: 300 15px/1.4 'Noto Sans KR';
+      color: #222; }
+      .location .inner .lower .hour > .right ul li {
+        margin-bottom: 20px; }
+        .location .inner .lower .hour > .right ul li strong {
+          font-weight: 400;
+          margin-right: 10px; }
+  .location .inner .lower .contact {
+    float: left;
+    width: 50%; }
+    .location .inner .lower .contact::after {
+      content: '';
+      display: block;
+      clear: both; }
+    .location .inner .lower .contact > .left {
+      width: 25%;
+      float: left;
+      padding-left: 20px;
+      font: 500 15px/1 'Noto Sans KR';
+      color: #333; }
+    .location .inner .lower .contact > .right {
+      width: 75%;
+      float: left;
+      padding-right: 30px;
+      font: 300 15px/1.4 'Noto Sans KR';
+      color: #222; }
+      .location .inner .lower .contact > .right ul li {
+        margin-bottom: 20px; }
+        .location .inner .lower .contact > .right ul li strong {
+          font-weight: 400;
+          margin-right: 10px; }
 
 .join .sub_visual img {
   object-position: bottom; }
