@@ -182,8 +182,10 @@
 
                     &.on {
                         a {
-                            background: #eeeae3;
-                            i { opacity: 1;}
+                            background: #238cfa;
+                            i { opacity: 1; color: #fff;
+                            &::after { background: #fff;}
+                            }
                         }
                     }
                 }

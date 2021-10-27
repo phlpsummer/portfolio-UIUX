@@ -3008,9 +3008,12 @@ body {
         left: 6px;
         transform: rotate(-45deg); }
       .location .inner .mapWrap .btnTraffic li.on a {
-        background: #eeeae3; }
+        background: #238cfa; }
         .location .inner .mapWrap .btnTraffic li.on a i {
-          opacity: 1; }
+          opacity: 1;
+          color: #fff; }
+          .location .inner .mapWrap .btnTraffic li.on a i::after {
+            background: #fff; }
 
 .join .sub_visual img {
   object-position: bottom; }
