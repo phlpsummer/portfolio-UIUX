@@ -42,3 +42,18 @@ $("#photo .auto .btnStart").on("click",function(){
 $("#photo .auto .btnStop").on("click",function(){
     clearInterval(timer);
 });
+
+/* 메인페이지-comments---------------------------------------------- */
+$("#comment .btnNotice").on("click",function(){
+    $(this).parent().find("li").removeClass("on");
+    $(this).addClass("on");
+    $("#comment .board ul").hide();
+    $("#comment .board .notice").show();
+});
+
+$("#comment .btnPress").on("click",function(){
+    $(this).parent().find("li").removeClass("on");
+    $(this).addClass("on");
+    $("#comment .board ul").hide();
+    $("#comment .board .press").show();
+});

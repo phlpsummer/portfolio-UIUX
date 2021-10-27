@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Rajdhani&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Francois+One&display=swap&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Rajdhani&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -763,7 +763,7 @@ body {
     z-index: 1; }
     #photo .inner h1 {
       display: inline-block;
-      font: 700 24px/1 'Noto Sans KR';
+      font: 30px/1 'Francois One';
       color: #fff;
       margin-bottom: 20px;
       position: relative; }
@@ -872,9 +872,8 @@ body {
       top: 0;
       left: 0; }
       #comment .inner > .left > h1 {
-        font: 900 26px/1 'Noto Sans KR';
+        font: 34px/1 'Francois One';
         color: #333;
-        letter-spacing: -1px;
         margin-top: 100px;
         margin-bottom: 30px; }
       #comment .inner > .left > p {
@@ -882,7 +881,7 @@ body {
         color: #333;
         margin-bottom: 60px; }
       #comment .inner > .left > a {
-        font: 400 15px/1 'Noto Sans KR';
+        font: 500 15px/1 'Noto Sans KR';
         color: #333; }
         #comment .inner > .left > a > span {
           display: inline-block;
@@ -914,15 +913,36 @@ body {
         #comment .inner > .right > ul li {
           display: inline-block;
           padding: 18px 0;
-          font: 700 18px/1 'Noto Sans KR';
+          font: 900 18px/1 'Noto Sans KR';
           color: #999;
           cursor: pointer;
-          margin-right: 60px; }
+          margin-right: 50px; }
           #comment .inner > .right > ul li.on {
             color: #333; }
       #comment .inner > .right .board ul li {
-        padding: 30px 20px 30px 0;
-        cursor: pointer; }
+        height: 160px;
+        padding: 30px 30px 30px 0;
+        cursor: pointer;
+        border-bottom: 1px solid #ddd;
+        position: relative; }
+        #comment .inner > .right .board ul li img {
+          position: absolute;
+          top: 30px;
+          left: 0;
+          width: 150px;
+          height: 100px;
+          object-fit: cover; }
+        #comment .inner > .right .board ul li .txt {
+          margin-left: 175px; }
+          #comment .inner > .right .board ul li .txt > span {
+            font: 500 13px/1 'Noto Sans KR';
+            color: #555; }
+          #comment .inner > .right .board ul li .txt > p {
+            font: 700 17px/1 'Noto Sans KR';
+            color: #444;
+            margin-top: 10px; }
+      #comment .inner > .right .board ul.press {
+        display: none; }
 
 /* footer ---------------------------------------------------------------------------------- */
 #footer {
@@ -944,7 +964,7 @@ body {
         display: inline-block;
         margin-right: 20px; }
         #footer .inner #footer_menu ul li a {
-          font: bold 14px/1 'arial';
+          font: 18px/1 'Francois One';
           color: #ccc; }
     #footer .inner #footer_menu .search {
       float: right;
@@ -957,7 +977,7 @@ body {
         border: none;
         border-bottom: 1px solid #aaa;
         background: none;
-        font: 500 16px/1 'Noto Sans KR';
+        font: 18px/1 'Francois One';
         color: #fff; }
       #footer .inner #footer_menu .search i {
         position: absolute;
@@ -1079,7 +1099,7 @@ body {
         #footer .inner #footer_menu ul li {
           margin-right: 18px; }
           #footer .inner #footer_menu ul li a {
-            font: bold 14px/1 'arial';
+            font: 18px/1 'Francois One';
             color: #ccc; }
       #footer .inner #footer_menu .search {
         float: none;
@@ -1481,7 +1501,7 @@ body {
         display: inline-block;
         margin-right: 20px; }
         #footer_sub .inner #footer_menu ul li a {
-          font: bold 14px/1 'arial';
+          font: 18px/1 'Francois One';
           color: #ccc; }
     #footer_sub .inner #footer_menu .search {
       float: right;
@@ -1494,7 +1514,7 @@ body {
         border: none;
         border-bottom: 1px solid #aaa;
         background: none;
-        font: 500 16px/1 'Noto Sans KR';
+        font: 18px/1 'Francois One';
         color: #fff; }
       #footer_sub .inner #footer_menu .search i {
         position: absolute;
@@ -1599,7 +1619,7 @@ body {
         #footer_sub .inner #footer_menu ul li {
           margin-right: 18px; }
           #footer_sub .inner #footer_menu ul li a {
-            font: bold 14px/1 'arial';
+            font: 18px/1 'Francois One';
             color: #ccc; }
       #footer_sub .inner #footer_menu .search {
         float: none;
