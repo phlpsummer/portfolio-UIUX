@@ -1,11 +1,4 @@
 const swiper1 = new Swiper('#visual', {
-
-    // navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    // },
-
-    // If we need pagination
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -25,12 +18,8 @@ const swiper1 = new Swiper('#visual', {
     effect: "fade",
 });
 
-// let isOnNum = $(".swiper-pagination span").hasClass("swiper-pagination-bullet-active").eq();
-// console.log(isOnNum);
-
 const swiperPoster = new Swiper('.program', {
-
-    // If we need pagination
+    
     pagination: {
         el: '.swiper-pagination',
         clickable: 'true'
@@ -48,20 +37,19 @@ const swiperPoster = new Swiper('.program', {
     },
 });
 
-var btnStart = document.querySelector(".btnAuto .btnStart");
-var btnStop = document.querySelector(".btnAuto .btnStop");
+// var btnStart = document.querySelector(".btnAuto .btnStart");
+// var btnStop = document.querySelector(".btnAuto .btnStop");
 
-
-btnStart.onclick = function(){
-    swiperPoster.autoplay.start();
-    btnStart.classList.add("on");
-    btnStop.classList.remove("on");
-}
-btnStop.onclick = function(){
-    swiperPoster.autoplay.stop();
-    btnStop.classList.add("on");
-    btnStart.classList.remove("on");
-}
+// btnStart.onclick = function(){
+//     swiperPoster.autoplay.start();
+//     btnStart.classList.add("on");
+//     btnStop.classList.remove("on");
+// }
+// btnStop.onclick = function(){
+//     swiperPoster.autoplay.stop();
+//     btnStop.classList.add("on");
+//     btnStart.classList.remove("on");
+// }
 
 const swiperEvent = new Swiper('.event', {
 

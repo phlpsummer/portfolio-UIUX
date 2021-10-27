@@ -763,24 +763,10 @@ body {
     z-index: 1; }
     #photo .inner h1 {
       display: inline-block;
-      font: 700 20px/1 'Noto Sans KR';
+      font: 700 24px/1 'Noto Sans KR';
       color: #fff;
       margin-bottom: 20px;
       position: relative; }
-    #photo .inner .auto {
-      display: inline-block;
-      margin-left: 15px; }
-      #photo .inner .auto::after {
-        content: '';
-        display: block;
-        clear: both; }
-      #photo .inner .auto li {
-        float: left;
-        margin-right: 7px;
-        color: #aaa;
-        font-size: 17px;
-        opacity: 0.7;
-        cursor: pointer; }
   #photo .slider {
     width: 2400px;
     height: 400px;
@@ -874,109 +860,69 @@ body {
 /* comment----------------------------*/
 #comment {
   width: 100%;
-  padding: 100px 0 100px; }
+  padding: 100px 0 100px;
+  min-height: 500px; }
   #comment .inner {
     width: 1180px;
     margin: 0 auto;
     position: relative; }
-    #comment .inner h1 {
-      display: inline-block;
-      font: 700 20px/1 'Noto Sans KR';
-      color: #333;
-      position: relative;
-      margin-bottom: 50px; }
-    #comment .inner .board {
-      width: 100%;
-      height: 50px;
-      background: #f0f0f0;
-      position: relative;
-      overflow: hidden; }
-      #comment .inner .board > span {
-        position: absolute;
-        left: 30px;
-        top: 50%;
-        transform: translateY(-50%);
-        font: 500 14px/1 'Noto Sans KR';
+    #comment .inner > .left {
+      width: 32%;
+      position: absolute;
+      top: 0;
+      left: 0; }
+      #comment .inner > .left > h1 {
+        font: 900 26px/1 'Noto Sans KR';
+        color: #333;
+        letter-spacing: -1px;
+        margin-top: 100px;
+        margin-bottom: 30px; }
+      #comment .inner > .left > p {
+        font: 300 20px/1.5 'Noto Sans KR';
+        color: #333;
+        margin-bottom: 60px; }
+      #comment .inner > .left > a {
+        font: 400 15px/1 'Noto Sans KR';
         color: #333; }
-      #comment .inner .board > ul {
-        width: 80%;
-        height: 250px;
-        margin-left: 20%; }
-        #comment .inner .board > ul > li {
-          width: 100%;
-          height: 50px; }
-          #comment .inner .board > ul > li a {
+        #comment .inner > .left > a > span {
+          display: inline-block;
+          margin-left: 8px;
+          width: 25px;
+          height: 1px;
+          background: #333;
+          transition: 0.5s;
+          position: relative;
+          transform: translateY(-3px); }
+          #comment .inner > .left > a > span::after {
+            content: '';
             display: block;
-            font: 400 14px/50px 'Noto Sans KR';
-            color: #333; }
-      #comment .inner .board .swiper-pagination-fraction {
-        bottom: auto;
-        left: auto;
-        display: inline-block;
-        width: auto;
-        position: absolute;
-        right: 50px;
-        top: 50%;
-        transform: translateY(-50%);
-        font: 300 12px/1 'Noto Sans KR';
-        color: #333; }
-      #comment .inner .board .swiper-button-prev {
-        left: auto;
-        right: 75px;
-        top: 50%;
-        transform: translateY(-50%);
-        filter: grayscale(100%) brightness(1);
-        transform: scale(0.4); }
-      #comment .inner .board .swiper-button-next {
-        left: auto;
-        right: 25px;
-        top: 50%;
-        transform: translateY(-50%);
-        filter: grayscale(100%) brightness(1);
-        transform: scale(0.4); }
-    #comment .inner .notice li {
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 10px;
+            height: 1px;
+            background: #333;
+            transform: rotate(45deg);
+            transform-origin: right center; }
+        #comment .inner > .left > a:hover > span {
+          margin-left: 18px; }
+    #comment .inner > .right {
       width: 100%;
-      border-bottom: 1px solid #999; }
-      #comment .inner .notice li a .wrap {
-        width: 100%;
-        height: 220px;
-        padding: 40px 0px 10px; }
-        #comment .inner .notice li a .wrap .cmt_category {
-          float: left;
-          width: 20%;
-          height: 100%;
-          padding-left: 30px;
-          font: 300 15px/1 'Noto Sans KR';
-          color: #b76ca4; }
-        #comment .inner .notice li a .wrap .cmt_txt {
-          float: left;
-          width: 70%;
-          height: 100%; }
-          #comment .inner .notice li a .wrap .cmt_txt h3 {
-            font: 700 24px/1.3 'Noto Sans KR';
-            color: #111;
-            margin-bottom: 25px; }
-          #comment .inner .notice li a .wrap .cmt_txt span {
-            font: 500 14px/1 'Noto Sans KR';
+      padding-left: 32%; }
+      #comment .inner > .right > ul {
+        border-bottom: 3px solid #333; }
+        #comment .inner > .right > ul li {
+          display: inline-block;
+          padding: 18px 0;
+          font: 700 18px/1 'Noto Sans KR';
+          color: #999;
+          cursor: pointer;
+          margin-right: 60px; }
+          #comment .inner > .right > ul li.on {
             color: #333; }
-          #comment .inner .notice li a .wrap .cmt_txt p {
-            font: 300 14px/1.2 'Noto Sans KR';
-            color: #333;
-            letter-spacing: 1px;
-            margin-top: 50px; }
-        #comment .inner .notice li a .wrap .cmt_date {
-          float: right;
-          width: 10%;
-          height: 100%;
-          padding-left: 10px;
-          text-align: center;
-          font: bold 16px/1.2 'Noto Sans KR';
-          color: #bbb; }
-          #comment .inner .notice li a .wrap .cmt_date strong {
-            display: block;
-            font-size: 50px; }
-      #comment .inner .notice li:hover a .wrap .cmt_txt h3 {
-        text-decoration: underline; }
+      #comment .inner > .right .board ul li {
+        padding: 30px 20px 30px 0;
+        cursor: pointer; }
 
 /* footer ---------------------------------------------------------------------------------- */
 #footer {
@@ -2103,7 +2049,8 @@ body {
               width: 100%;
               height: 100%;
               object-fit: cover;
-              object-position: center; }
+              object-position: center;
+              cursor: pointer; }
           .community .inner .right .news .swiper-wrapper .swiper-slide > p {
             font: 700 15px/1.5 'Noto Sans KR';
             color: #333;
