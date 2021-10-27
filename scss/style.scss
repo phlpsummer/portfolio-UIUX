@@ -784,7 +784,7 @@ body {
 
         h1 {
             display: inline-block;
-            font: normal 30px/1 'Rajdhani'; color: #fff;
+            font: 700 20px/1 'Noto Sans KR'; color: #fff;
             margin-bottom: 20px;
             position: relative;
         }
@@ -792,7 +792,6 @@ body {
         .auto {
             display: inline-block;
             margin-left: 15px;
-            transform: rotateY(5px);
     
             &::after { content: ''; display: block; clear: both;}
     
@@ -813,7 +812,7 @@ body {
         top: 110px; left: 0;
         z-index: 1;
 
-        li {
+        >li {
             float: left;
             width: 300px; height: 300px;
             position: relative;
@@ -866,7 +865,8 @@ body {
 
         h1 {
             display: inline-block;
-            font: bold 30px/1 'Rajdhani'; color: #333; letter-spacing: 1px;
+            // font: bold 30px/1 'Rajdhani'; color: #333; letter-spacing: 1px;
+            font: 700 20px/1 'Noto Sans KR'; color: #333;
             position: relative;
             margin-bottom: 50px;
         
@@ -875,19 +875,47 @@ body {
         .board {
             width: 100%; height: 50px;
             background: #f0f0f0;
-            padding-left: 30px;
             position: relative;
+            overflow: hidden;
 
             >span {
-                font: 700 15px/50px 'Noto Sans KR'; color: #777;
+                position: absolute;
+                left: 30px; top: 50%; transform: translateY(-50%);
+                font: 500 15px/1 'Noto Sans KR'; color: #333;
             }
             >ul {
-                position: absolute;
-                top: 50%; left: 20%; transform: translateY(-50%);
+                width: 80%; height: 250px;
+                margin-left: 20%;
 
                 >li {
-                    font: 400 15px/1 'Noto Sans KR'; color: #777;
+                    width: 100%; height: 50px;
+                    a {
+                        display: block;
+                        font: 400 15px/50px 'Noto Sans KR'; color: #333;
+                    }
                 }
+            }
+
+            .swiper-pagination-fraction {
+                bottom: auto; left: auto;
+                display: inline-block;
+                width: auto;
+                position: absolute;
+                right: 50px; top: 50%; transform: translateY(-50%);
+                font: 300 12px/1 'Noto Sans KR'; color: #333;
+            }
+
+            .swiper-button-prev {
+                left: auto; right: 75px;
+                top: 50%; transform: translateY(-50%);
+                filter: grayscale(100%) brightness(0.5);
+                transform: scale(0.4);
+            }
+            .swiper-button-next {
+                left: auto; right: 25px;
+                top: 50%; transform: translateY(-50%);
+                filter: grayscale(100%) brightness(0.5);
+                transform: scale(0.4);
             }
         }
 
