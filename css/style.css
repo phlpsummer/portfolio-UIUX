@@ -797,21 +797,32 @@ body {
       margin-top: -170px;
       padding: 30px;
       cursor: pointer;
-      filter: saturate(50%);
       transition: 0.5s; }
       #photo .slider > li img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         object-position: center;
-        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.07);
+        box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.08);
         transition: 0.5s; }
       #photo .slider > li[data-index="2"], #photo .slider > li[data-index="4"], #photo .slider > li[data-index="6"], #photo .slider > li[data-index="8"] {
         padding: 0px 30px 60px; }
+        #photo .slider > li[data-index="2"] .back, #photo .slider > li[data-index="4"] .back, #photo .slider > li[data-index="6"] .back, #photo .slider > li[data-index="8"] .back {
+          top: 0px; }
+      #photo .slider > li .back {
+        width: 240px;
+        height: 240px;
+        background: rgba(255, 255, 255, 0.7);
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        display: block;
+        transition: 0.5s; }
+        #photo .slider > li .back > span {
+          font: 300 18px/1 'Noto Sans KR';
+          color: #333; }
       #photo .slider > li:hover {
-        filter: saturate(110%); }
-        #photo .slider > li:hover img {
-          box-shadow: 0px 0px 40px rgba(255, 255, 255, 0.2); }
+        filter: saturate(20%) grayscale(1) brightness(1); }
   #photo .btnMore {
     display: inline-block;
     position: absolute;
@@ -852,7 +863,7 @@ body {
         left: 30px;
         top: 50%;
         transform: translateY(-50%);
-        font: 500 15px/1 'Noto Sans KR';
+        font: 500 14px/1 'Noto Sans KR';
         color: #333; }
       #comment .inner .board > ul {
         width: 80%;
@@ -863,7 +874,7 @@ body {
           height: 50px; }
           #comment .inner .board > ul > li a {
             display: block;
-            font: 400 15px/50px 'Noto Sans KR';
+            font: 400 14px/50px 'Noto Sans KR';
             color: #333; }
       #comment .inner .board .swiper-pagination-fraction {
         bottom: auto;
@@ -881,14 +892,14 @@ body {
         right: 75px;
         top: 50%;
         transform: translateY(-50%);
-        filter: grayscale(100%) brightness(0.5);
+        filter: grayscale(100%) brightness(1);
         transform: scale(0.4); }
       #comment .inner .board .swiper-button-next {
         left: auto;
         right: 25px;
         top: 50%;
         transform: translateY(-50%);
-        filter: grayscale(100%) brightness(0.5);
+        filter: grayscale(100%) brightness(1);
         transform: scale(0.4); }
     #comment .inner .notice li {
       width: 100%;
@@ -2486,12 +2497,53 @@ body {
     min-height: 500px; }
     .gallery .inner h2 {
       font-weight: 700;
-      color: #fff; }
+      color: #fff;
+      margin-bottom: 40px; }
+    .gallery .inner #searchBox {
+      width: 100%;
+      height: 140px;
+      background: #5f4b8b;
+      position: relative;
+      margin-bottom: 30px; }
+      .gallery .inner #searchBox .inputBox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1; }
+        .gallery .inner #searchBox .inputBox input {
+          width: 280px;
+          height: 40px;
+          background: none;
+          border: none;
+          border-bottom: 2px solid #fff;
+          font: 700 17px/40px 'Noto Sans KR';
+          color: #fff; }
+        .gallery .inner #searchBox .inputBox button {
+          height: 40px;
+          width: 80px;
+          font: 300 15px/40px 'Noto Sans KR';
+          color: #fff;
+          background: none;
+          border: 1px solid #fff;
+          cursor: pointer;
+          margin-left: 5px; }
+      .gallery .inner #searchBox::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url(../img/searchbox-bg.jpg) no-repeat center/cover;
+        filter: grayscale(1) brightness(1.2);
+        opacity: 0.8; }
     .gallery .inner .loading {
-      width: 70px;
-      height: 70px;
+      width: 50px;
+      height: 50px;
       position: absolute;
-      top: 100px;
+      top: 280px;
       left: 50%;
       transform: translateX(-50%);
       filter: brightness(1.5);
