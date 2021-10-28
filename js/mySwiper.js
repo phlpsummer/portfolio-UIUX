@@ -27,7 +27,7 @@ const swiperContent = new Swiper('#content .mySwiper', {
     slidesPerView: "auto",
     // centeredSlides: false,
     direction: "horizontal", //방향
-    spaceBetween: 30,
+    spaceBetween: 10,
     grabCursor: true, //마우스 커서 손바닥모양 변경
 });
 

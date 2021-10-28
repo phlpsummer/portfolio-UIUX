@@ -16,7 +16,7 @@
                 margin-bottom: 20px;
             }
             .add {
-                font: 300 28px/1 'Noto Sans KR'; color: #444; font-style: italic;
+                font: 300 28px/1.4 'Noto Sans KR'; color: #444; font-style: italic;
                 margin-bottom: 26px;
                 position: relative;
 
@@ -247,6 +247,268 @@
                         li {
                             margin-bottom: 20px;
                             strong { font-weight: 400; margin-right: 10px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$tablet) {
+    .location {
+        .inner {
+            .info {
+                i { font-size: 40px;}
+                .add {
+                    font: 300 28px/1.4 'Noto Sans KR';
+                    margin-bottom: 26px;
+                }
+                >p { font: 400 16px/1.7 'Noto Sans KR';}
+            }
+    
+            >img { height: 200px; margin-bottom: 20px;}
+    
+            .subway {
+                padding: 40px 0 50px;
+
+                >.left {
+                    width: 20%;
+                    padding-left: 10px;
+                    font: 700 14px/1 'Noto Sans KR';
+                }
+                >.right {
+                    width: 80%;
+                    padding-right: 10px;
+                    font: 400 13px/1 'Noto Sans KR';
+                }
+            }
+            .bus {
+                padding: 40px 0 50px;
+    
+                >.left {
+                    width: 20%;
+                    padding-left: 10px;
+                    font: 700 14px/1 'Noto Sans KR';
+                }
+                >.right {
+                    width: 80%;
+                    padding-right: 10px;
+                    font: 400 13px/1.7 'Noto Sans KR';
+                    ul li { margin-bottom: 10px;}
+                }
+            }
+            .car {
+                padding: 40px 0 50px;
+    
+                >.left {
+                    width: 20%;
+                    padding-left: 10px;
+                    font: 700 14px/1 'Noto Sans KR';
+                }
+                >.right {
+                    width: 80%;
+                    padding-right: 10px;
+                    font: 300 13px/1.4 'Noto Sans KR';
+                    ul{
+                        li {
+                            margin-bottom: 30px;
+                            span {
+                                font: 500 14px/1.4 'Noto Sans KR';
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .mapWrap {
+                margin-bottom: 60px;
+                #map { height: 40vw;}
+
+                .btnTraffic {
+                    width: 125px; height: 60px;
+                    padding: 10px 10px 10px 10px;
+        
+                    li {
+                        margin-left: 10px;
+    
+                        a {
+                            width: 40px; height: 40px;
+    
+                            i {
+                                font-size: 18px;
+                                line-height: 40px;
+                            }
+                        }
+                        &:nth-of-type(1){
+                            a i::after {
+                                width: 2px; height: 26px;
+                                top: 6px; left: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .lower {
+                margin-bottom: 0px;
+    
+                .hour {
+                    float: none;
+                    width: 100%;
+                    margin-bottom: 30px;
+        
+                    >.left {
+                        width: 20%;
+                        padding-left: 10px;
+                        font: 700 14px/1.2 'Noto Sans KR';
+                    }
+                    >.right {
+                        width: 80%;
+                        padding-right: 10px;
+                        font: 400 13px/1.4 'Noto Sans KR';
+                        ul{
+                            li { margin-bottom: 20px;}
+                        }
+                    }
+                }
+    
+                .contact {
+                    float: none;
+                    width: 100%;
+        
+                    >.left {
+                        width: 20%;
+                        padding-left: 10px;
+                        font: 700 14px/1.2 'Noto Sans KR';
+                    }
+                    >.right {
+                        width: 80%;
+                        padding-right: 10px;
+                        font: 400 13px/1.4 'Noto Sans KR';
+                        ul{
+                            li { margin-bottom: 20px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:$mobile) {
+    .location {
+        .inner {
+    
+            >img { height: 150px; margin-bottom: 10px;}
+    
+            .subway {
+                padding: 30px 0 40px;
+
+                >.left {
+                    width: 25%;
+                    font: 700 13px/1 'Noto Sans KR';
+                }
+                >.right {
+                    width: 75%;
+                    font: 400 12px/1 'Noto Sans KR';
+                }
+            }
+            .bus {
+                padding: 30px 0 40px;
+
+                >.left {
+                    width: 25%;
+                    font: 700 13px/1 'Noto Sans KR';
+                }
+                >.right {
+                    width: 75%;
+                    font: 400 12px/1.7 'Noto Sans KR';
+                    ul li { margin-bottom: 10px;}
+                }
+            }
+            .car {
+                padding: 30px 0 40px;
+    
+                >.left {
+                    width: 25%;
+                    font: 700 13px/1 'Noto Sans KR';
+                }
+                >.right {
+                    width: 75%;
+                    font: 400 12px/1.7 'Noto Sans KR';
+                    ul{
+                        li {
+                            margin-bottom: 40px;
+                            span {
+                                font: 500 13px/1.4 'Noto Sans KR';
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .mapWrap {
+                margin-bottom: 60px;
+                #map { height: 80vw;}
+
+                .btnTraffic {
+                    width: 125px; height: 60px;
+                    padding: 10px 10px 10px 10px;
+        
+                    li {
+                        margin-left: 10px;
+    
+                        a {
+                            width: 40px; height: 40px;
+    
+                            i {
+                                font-size: 18px;
+                                line-height: 40px;
+                            }
+                        }
+                        &:nth-of-type(1){
+                            a i::after {
+                                width: 2px; height: 26px;
+                                top: 6px; left: 6px;
+                            }
+                        }
+                    }
+                }
+            }
+    
+            .lower {
+                margin-bottom: 0px;
+    
+                .hour {
+                    margin-bottom: 30px;
+        
+                    >.left {
+                        width: 25%;
+                        font: 700 13px/1 'Noto Sans KR';
+                    }
+                    >.right {
+                        width: 75%;
+                        font: 400 12px/1.4 'Noto Sans KR';
+                        ul{
+                            li { margin-bottom: 20px;}
+                        }
+                    }
+                }
+    
+                .contact {
+        
+                    >.left {
+                        width: 25%;
+                        font: 700 13px/1 'Noto Sans KR';
+                    }
+                    >.right {
+                        width: 75%;
+                        font: 400 12px/1.4 'Noto Sans KR';
+                        ul{
+                            li { margin-bottom: 20px;}
                         }
                     }
                 }

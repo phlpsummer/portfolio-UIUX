@@ -416,66 +416,249 @@ body {
 #content {
     width: 100%;
     padding: 100px 0 100px;
+    background: #efefef;
 
     .inner {
         width: 1180px;
         margin: 0 auto;
         position: relative;
 
+        h1 { font: 30px/1 'Francois One'; color: #555; margin-bottom: 40px;}
+
         >.swiper {
-            width: 100%; height: 600px;
+            width: 100%; height: 480px;
             
             .swiper-slide {
 
-                >.txt {
-                    margin-top: 10px; padding-left: 7px;
-                    p {
-                        font: 500 15px/1 'Noto Sans KR'; color: #333; margin-bottom: 3px;
+                &.show {
+                    width: 680px; height: 420px;
+                    padding: 40px;
+                    position: relative;
+                    background: #fff;
+                    border: 3px solid #ddd;
+
+                    .left {
+                        width: 54px;
+                        position: absolute;
+                        top: 40px; left: 40px;
+
+                        .btnPoster {
+                            width: 100%; height: 81px;
+                            margin-bottom: 20px;
+                            background: #333;
+                            cursor: pointer;
+                            transition: 0.5s;
+                            opacity: 0.7;
+
+                            &[data-index="1"] { background: url(../img/poster/poster1.jpg) no-repeat center/cover;}
+                            &[data-index="2"] { background: url(../img/poster/poster2.png) no-repeat center/cover;}
+                            &[data-index="3"] { background: url(../img/poster/poster3.jpg) no-repeat center/cover;}
+
+                            &:hover { opacity: 1; filter: saturate(110%);}
+                        }
                     }
+
+                    .right {
+                        width: 100%;
+                        padding-left: 90px;
+
+                        .mainPoster {
+                            width: 100%;
+                            position: relative;
+
+                            .imgPoster {
+                                width: 200px; height: 300px;
+                                position: absolute;
+                                top: 0; left: 0;
+                                img { width: 100%; height: 100%; object-fit: cover;}
+                            }
+                            >.txt {
+                                margin-left: 230px; padding-top: 10px;
+                                span {
+                                    font: 17px/1 'Francois One'; color: #555;
+                                }
+                                .title {
+                                    margin-top: 8px; margin-bottom: 20px;
+                                    font: 700 26px/1.4 'Noto Sans KR'; color: #333;
+                                }
+                                p {
+                                    font: 400 12px/1.4 'Noto Sans KR'; color: #777;
+                                    margin-bottom: 40px;
+                                }
+                                a {
+                                    padding: 8px 30px;
+                                    font: 500 12px/1.4 'Noto Sans KR'; color: #333;
+                                    border: 1px solid #555;
+                                    transition: 0.5s;
+
+                                    &:hover { background: #333; color: #fff;}
+                                }
+                            }
+                        }
+
+
+
+
+                    }
+
+                }
+                &.membership {
+                    width: 250px; height: 350px;
+                    padding: 30px;
+                    position: relative;
+                    background: #fff;
+                    border: 3px solid #ddd;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    >.title {
+                        margin-bottom: 15px;
+                        font: 30px/1.2 'Francois One'; color: #333; letter-spacing: 1;
+                    }
+                    >p {
+                        font: 400 13px/1.4 'Noto Sans KR'; color: #777;
+                    }
+                    >img {
+                        position: absolute;
+                        bottom: -217px; left: 50%;
+                        transform: translateX(-50%) scale(0.25);
+                        filter: grayscale(0.8) hue-rotate(-32deg);
+                    }
+
+                }
+                &.post {
+                    width: 250px; height: 200px;
+                    padding: 30px;
+                    position: relative;
+                    background: #fff;
+                    border: 3px solid #ddd;
+                    overflow: hidden;
+                    cursor: pointer;
+
                     span {
-                        font: 400 14px/1 'Noto Sans KR'; color: #444;
+                        font: 16px/1 'Francois One'; color: #555;
+                    }
+                    p {
+                        margin-top: 20px;
+                        font: 700 18px/1.4 'Noto Sans KR'; color: #333;
                     }
                 }
-
                 &.event {
-                    width: 500px;
-                    img {
-                        width: 100%; height: 500px; object-fit: cover;
-                    }
-                }
+                    width: 680px; height: 420px;
+                    padding: 40px;
+                    position: relative;
+                    background: #fff;
+                    border: 3px solid #ddd;
 
-                &.poster {
-                    width: 200px;
-                    img {
-                        width: 100%; height: 300px; object-fit: cover;
-                    }
-                }
+                    .left {
+                        width: 54px;
+                        position: absolute;
+                        top: 40px; left: 40px;
 
-                &:nth-of-type(3) {
-                    width: 300px;
-                    img {
-                        width: 100%; height: 200px; object-fit: cover;
+                        .btnPoster {
+                            width: 100%; height: 81px;
+                            margin-bottom: 20px;
+                            background: #333;
+                            cursor: pointer;
+                            transition: 0.5s;
+                            opacity: 0.7;
+
+                            &[data-index="1"] { background: url(../img/poster/poster1.jpg) no-repeat center/cover;}
+                            &[data-index="2"] { background: url(../img/poster/poster2.png) no-repeat center/cover;}
+                            &[data-index="3"] { background: url(../img/poster/poster3.jpg) no-repeat center/cover;}
+
+                            &:hover { opacity: 1; filter: saturate(110%);}
+                        }
                     }
-                }
-                &:nth-of-type(4) {
-                    width: 250px;
-                    img {
-                        width: 100%; height: 250px; object-fit: cover;
+
+                    .right {
+                        width: 100%;
+                        padding-left: 90px;
+
+                        .mainPoster {
+                            width: 100%;
+                            position: relative;
+
+                            .imgPoster {
+                                width: 200px; height: 300px;
+                                position: absolute;
+                                top: 0; left: 0;
+                                img { width: 100%; height: 100%; object-fit: cover;}
+                            }
+                            >.txt {
+                                margin-left: 230px; padding-top: 10px;
+                                span {
+                                    font: 17px/1 'Francois One'; color: #555;
+                                }
+                                .title {
+                                    margin-top: 8px; margin-bottom: 20px;
+                                    font: 700 26px/1.4 'Noto Sans KR'; color: #333;
+                                }
+                                p {
+                                    font: 400 12px/1.4 'Noto Sans KR'; color: #777;
+                                    margin-bottom: 40px;
+                                }
+                                a {
+                                    padding: 8px 30px;
+                                    font: 500 12px/1.4 'Noto Sans KR'; color: #333;
+                                    border: 1px solid #555;
+                                    transition: 0.5s;
+
+                                    &:hover { background: #333; color: #fff;}
+                                }
+                            }
+                        }
+
+
+
+
                     }
+
                 }
-                &:nth-of-type(5) {
-                    width: 200px;
-                    img {
-                        width: 100%; height: 400px; object-fit: cover;
+                &.media {
+                    width: 200px; height: 150px;
+                    position: relative;
+                    background: #fff;
+                    border: 3px solid #ddd;
+                    display: flex;
+                    justify-content: center; align-items: center;
+
+                    p {
+                        text-align: center;
+                        font: 50px/1.3 'Francois One'; color: #a39f99;
                     }
                 }
                 &.story {
-                    width: 200px;
-                    img {
-                        width: 100%; height: 300px; object-fit: cover;
+                    width: 150px; height: 350px;
+                    position: relative;
+                    background: #111;
+                    display: flex;
+                    justify-content: center; align-items: center;
+
+                    p {
+                        white-space: nowrap;
+                        font: 50px/1.3 'Francois One'; color: #111;
+                        transform: rotate(90deg);
+                        text-shadow: -1px 0 #efefef, 0 1px #efefef, 1px 0 #efefef, 0 -1px #efefef;
                     }
                 }
-                &:nth-of-type(7) { width: 400px; height: 400px; background: #333; color: #fff; line-height: 400px; text-align: center;}
+                &.service {
+                    width: 300px; height: 300px;
+                    padding: 30px;
+                    position: relative;
+                    background: #fff;
+                    border: 3px solid #ddd;
+                    overflow: hidden;
+                    cursor: pointer;
+
+                    span {
+                        font: 16px/1 'Francois One'; color: #555;
+                    }
+                    p {
+                        margin-top: 20px;
+                        font: 700 18px/1.4 'Noto Sans KR'; color: #333;
+                    }
+                }
             }
         }
     }
@@ -516,7 +699,7 @@ body {
 
         h1 {
             display: inline-block;
-            font: 30px/1 'Francois One'; color: #fff;
+            font: 28px/1 'Francois One'; color: #fff;
             margin-bottom: 20px;
             position: relative;
         }
@@ -642,8 +825,8 @@ body {
             top: 0; left: 0;
 
             >h1 {
-                font: 34px/1 'Francois One'; color: #333;
-                margin-top: 100px; margin-bottom: 30px;
+                font: 30px/1 'Francois One'; color: #555;
+                margin-top: 100px; margin-bottom: 25px; letter-spacing: 1px;
             }
             >p {
                 font: 300 20px/1.5 'Noto Sans KR'; color: #333;

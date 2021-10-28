@@ -19,17 +19,17 @@ let timer;
 
 timer = setInterval(rolling,20);
 
-$(".slider li").on("mouseenter",function(){
+$("#photo .slider >li").on("mouseenter",function(){
     clearInterval(timer);
 });
-$(".slider li").on("mouseleave",function(){
+$("#photo .slider >li").on("mouseleave",function(){
     timer = setInterval(rolling,20);
 });
 
 function rolling(){
     if(mg < -300){
         mg = 0;
-        $(".slider").children("li").eq(0).appendTo(".slider");
+        $("#photo .slider").children("li").eq(0).appendTo("#photo .slider");
     }
 
     mg-=2;
