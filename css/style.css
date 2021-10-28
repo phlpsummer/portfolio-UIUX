@@ -400,6 +400,35 @@ body {
     #content .inner > .swiper {
       width: 100%;
       height: 480px; }
+      #content .inner > .swiper .swiper-slide .arrow {
+        position: absolute;
+        right: 30px;
+        top: 35px;
+        width: 15px;
+        height: 1px;
+        background: #888; }
+        #content .inner > .swiper .swiper-slide .arrow::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: -3px;
+          width: 18px;
+          height: 1px;
+          background: #888;
+          transform: rotate(-45deg);
+          transform-origin: right center; }
+        #content .inner > .swiper .swiper-slide .arrow::after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 15px;
+          height: 1px;
+          background: #888;
+          transform: rotate(-90deg);
+          transform-origin: right center; }
       #content .inner > .swiper .swiper-slide.show {
         width: 680px;
         height: 420px;
@@ -480,7 +509,7 @@ body {
         cursor: pointer; }
         #content .inner > .swiper .swiper-slide.membership > .title {
           margin-bottom: 15px;
-          font: 30px/1.2 'Francois One';
+          font: 30px/1.1 'Francois One';
           color: #333;
           letter-spacing: 1; }
         #content .inner > .swiper .swiper-slide.membership > p {
@@ -488,10 +517,47 @@ body {
           color: #777; }
         #content .inner > .swiper .swiper-slide.membership > img {
           position: absolute;
-          bottom: -217px;
+          bottom: -200px;
           left: 50%;
           transform: translateX(-50%) scale(0.25);
-          filter: grayscale(0.8) hue-rotate(-32deg); }
+          opacity: 0.8; }
+      #content .inner > .swiper .swiper-slide.service {
+        width: 250px;
+        height: 250px;
+        padding: 30px;
+        position: relative;
+        background: #fff;
+        border: 3px solid #ddd;
+        overflow: hidden; }
+        #content .inner > .swiper .swiper-slide.service span {
+          font: 16px/1 'Francois One';
+          color: #555; }
+        #content .inner > .swiper .swiper-slide.service .number {
+          margin-top: 8px;
+          font: 28px/1.4 'Francois One';
+          color: #fff;
+          text-shadow: -1px 0 #222, 0 1px #222, 1px 0 #222, 0 -1px #222; }
+        #content .inner > .swiper .swiper-slide.service ul {
+          position: absolute;
+          bottom: 15px;
+          left: 50%;
+          transform: translateX(-55%); }
+          #content .inner > .swiper .swiper-slide.service ul li {
+            margin-bottom: 10px; }
+            #content .inner > .swiper .swiper-slide.service ul li .icon {
+              display: inline-block;
+              width: 25px;
+              height: 25px;
+              text-align: center;
+              background: #555;
+              margin-right: 3px; }
+              #content .inner > .swiper .swiper-slide.service ul li .icon i {
+                font-size: 10px;
+                color: #fff;
+                line-height: 25px; }
+            #content .inner > .swiper .swiper-slide.service ul li span {
+              font: 500 13px/1 'Noto Sans KR';
+              color: #666; }
       #content .inner > .swiper .swiper-slide.post {
         width: 250px;
         height: 200px;
@@ -577,19 +643,6 @@ body {
                 #content .inner > .swiper .swiper-slide.event .right .mainPoster > .txt a:hover {
                   background: #333;
                   color: #fff; }
-      #content .inner > .swiper .swiper-slide.media {
-        width: 200px;
-        height: 150px;
-        position: relative;
-        background: #fff;
-        border: 3px solid #ddd;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
-        #content .inner > .swiper .swiper-slide.media p {
-          text-align: center;
-          font: 50px/1.3 'Francois One';
-          color: #a39f99; }
       #content .inner > .swiper .swiper-slide.story {
         width: 150px;
         height: 350px;
@@ -604,22 +657,37 @@ body {
           color: #111;
           transform: rotate(90deg);
           text-shadow: -1px 0 #efefef, 0 1px #efefef, 1px 0 #efefef, 0 -1px #efefef; }
-      #content .inner > .swiper .swiper-slide.service {
-        width: 300px;
-        height: 300px;
-        padding: 30px;
+        #content .inner > .swiper .swiper-slide.story .arrow {
+          right: 20px;
+          top: 20px;
+          background: #efefef;
+          opacity: 0.8; }
+          #content .inner > .swiper .swiper-slide.story .arrow::before {
+            background: #efefef; }
+          #content .inner > .swiper .swiper-slide.story .arrow::after {
+            background: #efefef; }
+      #content .inner > .swiper .swiper-slide.vid {
+        width: 200px;
+        height: 150px;
         position: relative;
         background: #fff;
-        border: 3px solid #ddd;
-        overflow: hidden;
-        cursor: pointer; }
-        #content .inner > .swiper .swiper-slide.service span {
-          font: 16px/1 'Francois One';
-          color: #555; }
-        #content .inner > .swiper .swiper-slide.service p {
-          margin-top: 20px;
-          font: 700 18px/1.4 'Noto Sans KR';
-          color: #333; }
+        border: 3px solid #ddd; }
+        #content .inner > .swiper .swiper-slide.vid video {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: 40% center;
+          filter: saturate(30%); }
+        #content .inner > .swiper .swiper-slide.vid > img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%) scale(0.1);
+          opacity: 0.3; }
+        #content .inner > .swiper .swiper-slide.vid:hover video {
+          filter: saturate(110%); }
+        #content .inner > .swiper .swiper-slide.vid:hover img {
+          opacity: 0; }
 
 /* photo -------------------------*/
 #photo {

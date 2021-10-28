@@ -1,15 +1,15 @@
 /* 메인페이지-content---------------------------------------------- */
 
 //움직이는 비디오
-// const contentVid = document.querySelector("#content .col2 .vid");
+const contentVid = document.querySelector("#content .vid");
 
-// contentVid.addEventListener("mouseenter",(e)=>{
-//     e.currentTarget.querySelector("video").play();
-// });
+contentVid.addEventListener("mouseenter",(e)=>{
+    e.currentTarget.querySelector("video").play();
+});
 
-// contentVid.addEventListener("mouseleave",(e)=>{
-//     e.currentTarget.querySelector("video").pause();
-// });
+contentVid.addEventListener("mouseleave",(e)=>{
+    e.currentTarget.querySelector("video").pause();
+});
 
 
 /* 메인페이지-photo---------------------------------------------- */
