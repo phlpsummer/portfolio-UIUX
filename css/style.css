@@ -392,339 +392,62 @@ body {
     width: 1180px;
     margin: 0 auto;
     position: relative; }
-    #content .inner .wrap {
-      width: 100%; }
-      #content .inner .wrap::after {
-        content: '';
-        display: block;
-        clear: both; }
-      #content .inner .wrap .col1 {
-        width: 300px;
-        height: 640px;
-        float: left; }
-        #content .inner .wrap .col1::after {
-          content: '';
-          display: block;
-          clear: both; }
-        #content .inner .wrap .col1 article {
+    #content .inner > .swiper {
+      width: 100%;
+      height: 600px; }
+      #content .inner > .swiper .swiper-slide > .txt {
+        margin-top: 10px;
+        padding-left: 7px; }
+        #content .inner > .swiper .swiper-slide > .txt p {
+          font: 500 15px/1 'Noto Sans KR';
+          color: #333;
+          margin-bottom: 3px; }
+        #content .inner > .swiper .swiper-slide > .txt span {
+          font: 400 14px/1 'Noto Sans KR';
+          color: #444; }
+      #content .inner > .swiper .swiper-slide.event {
+        width: 500px; }
+        #content .inner > .swiper .swiper-slide.event img {
           width: 100%;
-          padding: 0 20px;
-          float: left; }
-          #content .inner .wrap .col1 article:nth-of-type(1) {
-            height: 40px;
-            background: #111; }
-            #content .inner .wrap .col1 article:nth-of-type(1) h1 {
-              font: bold 22px/40px 'Rajdhani';
-              color: #fff;
-              letter-spacing: 1px; }
-          #content .inner .wrap .col1 article:nth-of-type(2) {
-            height: 400px;
-            border-left: 1px solid #bbb;
-            position: relative;
-            padding: 0; }
-            #content .inner .wrap .col1 article:nth-of-type(2) > img {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              filter: saturate(80%) brightness(0.7); }
-            #content .inner .wrap .col1 article:nth-of-type(2) > .txt {
-              width: 100%;
-              padding: 0 20px 40px 20px;
-              position: absolute;
-              bottom: 0;
-              left: 0; }
-              #content .inner .wrap .col1 article:nth-of-type(2) > .txt p {
-                font: normal 22px/1.4 'Rajdhani';
-                color: #efefef;
-                margin-bottom: 15px; }
-              #content .inner .wrap .col1 article:nth-of-type(2) > .txt a {
-                font: 300 12px/1 'Noto Sans KR';
-                color: #efefef;
-                position: relative; }
-                #content .inner .wrap .col1 article:nth-of-type(2) > .txt a::after {
-                  content: '';
-                  display: block;
-                  width: 100%;
-                  height: 1px;
-                  background: #efefef;
-                  position: absolute;
-                  bottom: -2px;
-                  left: 0; }
-          #content .inner .wrap .col1 article:nth-of-type(3) {
-            width: 100%;
-            height: 200px;
-            border-left: 1px solid #bbb;
-            border-bottom: 1px solid #bbb;
-            border-right: 1px solid #bbb;
-            position: relative; }
-            #content .inner .wrap .col1 article:nth-of-type(3) h2 {
-              display: inline-block;
-              font: 400 15px/1 'Noto Sans KR';
-              color: #333;
-              letter-spacing: -1px;
-              position: relative;
-              margin-top: 25px;
-              margin-bottom: 25px;
-              cursor: pointer; }
-              #content .inner .wrap .col1 article:nth-of-type(3) h2::after {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 1px;
-                background: #333;
-                position: absolute;
-                bottom: -4px;
-                left: 0; }
-            #content .inner .wrap .col1 article:nth-of-type(3) > .wrap {
-              width: 90%;
-              margin: 0 auto; }
-              #content .inner .wrap .col1 article:nth-of-type(3) > .wrap::after {
-                content: '';
-                display: block;
-                clear: both; }
-              #content .inner .wrap .col1 article:nth-of-type(3) > .wrap a {
-                display: block;
-                float: left;
-                width: 50%;
-                height: 34px;
-                text-align: center;
-                font: 400 11px/33px 'Noto Sans KR';
-                color: #333;
-                background: #efefef;
-                border: 1px solid #fff; }
-      #content .inner .wrap .col2 {
-        width: 340px;
-        height: 640px;
-        float: left; }
-        #content .inner .wrap .col2::after {
-          content: '';
-          display: block;
-          clear: both; }
-        #content .inner .wrap .col2 > article {
+          height: 500px;
+          object-fit: cover; }
+      #content .inner > .swiper .swiper-slide.poster {
+        width: 200px; }
+        #content .inner > .swiper .swiper-slide.poster img {
           width: 100%;
-          height: 320px;
-          float: left; }
-          #content .inner .wrap .col2 > article:nth-of-type(1) {
-            padding-left: 20px;
-            padding-right: 20px;
-            border-left: 1px solid #bbb;
-            border-top: 1px solid #bbb;
-            position: relative;
-            overflow: hidden; }
-            #content .inner .wrap .col2 > article:nth-of-type(1) h2 {
-              display: inline-block;
-              font: 400 15px/1 'Noto Sans KR';
-              color: #333;
-              letter-spacing: -1px;
-              position: relative;
-              top: 25px;
-              cursor: pointer; }
-              #content .inner .wrap .col2 > article:nth-of-type(1) h2::after {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 1px;
-                background: #333;
-                position: absolute;
-                bottom: -4px;
-                left: 0; }
-            #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-wrapper {
-              width: 100%; }
-              #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-wrapper > .swiper-slide {
-                width: 100%;
-                height: 200px;
-                position: relative;
-                top: 50%;
-                margin-top: -100px;
-                background: #fff;
-                cursor: pointer; }
-                #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-wrapper > .swiper-slide > img {
-                  width: 100%;
-                  height: 170px;
-                  object-fit: cover;
-                  object-position: center;
-                  margin-bottom: 5px; }
-                #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-wrapper > .swiper-slide > p {
-                  font: 400 13px/1.2 'Noto Sans KR';
-                  color: #555;
-                  text-align: center; }
-            #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-pagination {
-              position: absolute;
-              bottom: 10px; }
-              #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-pagination > span {
-                background: none;
-                border: 1px solid #888;
-                opacity: 1; }
-                #content .inner .wrap .col2 > article:nth-of-type(1) > .swiper-pagination > span.swiper-pagination-bullet-active {
-                  background: #888; }
-          #content .inner .wrap .col2 > article:nth-of-type(2) {
-            position: relative;
-            padding: 0; }
-            #content .inner .wrap .col2 > article:nth-of-type(2) video {
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              object-position: 30% center;
-              filter: saturate(30%);
-              transition: 0.5s; }
-            #content .inner .wrap .col2 > article:nth-of-type(2):hover video {
-              filter: saturate(110%); }
-      #content .inner .wrap .col3 {
-        width: 500px;
-        height: 640px;
-        float: left;
-        border-right: 1px solid #bbb;
-        border-top: 1px solid #bbb; }
-        #content .inner .wrap .col3::after {
-          content: '';
-          display: block;
-          clear: both; }
-        #content .inner .wrap .col3 > article {
+          height: 300px;
+          object-fit: cover; }
+      #content .inner > .swiper .swiper-slide:nth-of-type(3) {
+        width: 300px; }
+        #content .inner > .swiper .swiper-slide:nth-of-type(3) img {
           width: 100%;
-          padding: 0 20px;
-          float: left; }
-          #content .inner .wrap .col3 > article:nth-of-type(1) {
-            width: calc(100%/3);
-            height: 40px;
-            border-left: 1px solid #bbb;
-            text-align: center; }
-            #content .inner .wrap .col3 > article:nth-of-type(1) a i {
-              font-size: 14px;
-              color: #555;
-              line-height: 40px; }
-          #content .inner .wrap .col3 > article:nth-of-type(2) {
-            width: calc(100%/3);
-            height: 40px;
-            border-left: 1px solid #bbb;
-            border-right: 1px solid #bbb;
-            text-align: center; }
-            #content .inner .wrap .col3 > article:nth-of-type(2) a i {
-              font-size: 14px;
-              color: #555;
-              line-height: 40px; }
-          #content .inner .wrap .col3 > article:nth-of-type(3) {
-            width: calc(100%/3);
-            height: 40px;
-            text-align: center; }
-            #content .inner .wrap .col3 > article:nth-of-type(3) a i {
-              font-size: 16px;
-              color: #555;
-              line-height: 40px; }
-          #content .inner .wrap .col3 > article:nth-of-type(4) {
-            height: 350px;
-            position: relative;
-            overflow: hidden;
-            border-top: 1px solid #bbb;
-            border-left: 1px solid #bbb; }
-            #content .inner .wrap .col3 > article:nth-of-type(4) h2 {
-              display: inline-block;
-              font: 400 15px/1 'Noto Sans KR';
-              color: #333;
-              letter-spacing: -1px;
-              position: relative;
-              top: 25px;
-              cursor: pointer; }
-              #content .inner .wrap .col3 > article:nth-of-type(4) h2::after {
-                content: '';
-                display: block;
-                width: 100%;
-                height: 1px;
-                background: #333;
-                position: absolute;
-                bottom: -4px;
-                left: 0; }
-            #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-wrapper {
-              width: 100%;
-              height: 100%;
-              margin-left: 10px; }
-              #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-wrapper > .swiper-slide {
-                height: 200px;
-                width: 150px;
-                position: relative;
-                top: 50%;
-                margin-top: -120px;
-                cursor: pointer; }
-                #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-wrapper > .swiper-slide > .inner {
-                  width: 100%;
-                  height: 100%;
-                  transition: 1s;
-                  position: relative; }
-                  #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-wrapper > .swiper-slide > .inner > img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    object-position: center;
-                    margin-bottom: 3px; }
-                  #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-wrapper > .swiper-slide > .inner > p {
-                    font: 400 12px/1.2 'Noto Sans KR';
-                    color: #555;
-                    text-align: center; }
-            #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-pagination {
-              position: absolute;
-              bottom: 30px; }
-              #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-pagination > span {
-                background: none;
-                border: 1px solid #888;
-                opacity: 1; }
-                #content .inner .wrap .col3 > article:nth-of-type(4) > .swiper-pagination > span.swiper-pagination-bullet-active {
-                  background: #888; }
-            #content .inner .wrap .col3 > article:nth-of-type(4) > .btnAuto {
-              display: inline-block;
-              position: absolute;
-              bottom: 15px;
-              left: 50%;
-              transform: translateX(-38%); }
-              #content .inner .wrap .col3 > article:nth-of-type(4) > .btnAuto::after {
-                content: '';
-                display: block;
-                clear: both; }
-              #content .inner .wrap .col3 > article:nth-of-type(4) > .btnAuto li {
-                float: left;
-                margin-right: 8px;
-                color: #666;
-                font-size: 10px;
-                opacity: 0.7;
-                cursor: pointer; }
-                #content .inner .wrap .col3 > article:nth-of-type(4) > .btnAuto li:hover {
-                  opacity: 1; }
-                #content .inner .wrap .col3 > article:nth-of-type(4) > .btnAuto li.on {
-                  opacity: 1; }
-          #content .inner .wrap .col3 > article:nth-of-type(5) {
-            width: 50%;
-            height: 250px;
-            border-top: 1px solid #bbb;
-            border-bottom: 1px solid #bbb; }
-            #content .inner .wrap .col3 > article:nth-of-type(5) > .wrap {
-              width: 80%;
-              margin: 60px auto; }
-              #content .inner .wrap .col3 > article:nth-of-type(5) > .wrap::after {
-                content: '';
-                display: block;
-                clear: both; }
-              #content .inner .wrap .col3 > article:nth-of-type(5) > .wrap a {
-                display: block;
-                float: left;
-                width: 100%;
-                height: 40px;
-                text-align: center;
-                font: 400 12px/39px 'Noto Sans KR';
-                color: #333;
-                border: 1px solid #999;
-                margin-bottom: 5px;
-                transition: 0.5s; }
-                #content .inner .wrap .col3 > article:nth-of-type(5) > .wrap a:hover {
-                  background: rgba(0, 0, 0, 0.05); }
-          #content .inner .wrap .col3 > article:nth-of-type(6) {
-            width: 50%;
-            height: 250px;
-            position: relative;
-            background: #111; }
-            #content .inner .wrap .col3 > article:nth-of-type(6) svg {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              fill: #fff; }
+          height: 200px;
+          object-fit: cover; }
+      #content .inner > .swiper .swiper-slide:nth-of-type(4) {
+        width: 250px; }
+        #content .inner > .swiper .swiper-slide:nth-of-type(4) img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover; }
+      #content .inner > .swiper .swiper-slide:nth-of-type(5) {
+        width: 200px; }
+        #content .inner > .swiper .swiper-slide:nth-of-type(5) img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover; }
+      #content .inner > .swiper .swiper-slide.story {
+        width: 200px; }
+        #content .inner > .swiper .swiper-slide.story img {
+          width: 100%;
+          height: 300px;
+          object-fit: cover; }
+      #content .inner > .swiper .swiper-slide:nth-of-type(7) {
+        width: 400px;
+        height: 400px;
+        background: #333;
+        color: #fff;
+        line-height: 400px;
+        text-align: center; }
 
 /* photo -------------------------*/
 #photo {
@@ -941,6 +664,44 @@ body {
             font: 700 17px/1 'Noto Sans KR';
             color: #444;
             margin-top: 10px; }
+        #comment .inner > .right .board ul li > .back {
+          width: 150px;
+          height: 100px;
+          background: rgba(255, 255, 255, 0.8);
+          position: absolute;
+          top: 30px;
+          left: 0px;
+          transition: 0.5s;
+          opacity: 0; }
+          #comment .inner > .right .board ul li > .back > .plus {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 1px solid #333;
+            margin: 28px auto;
+            position: relative; }
+            #comment .inner > .right .board ul li > .back > .plus::before {
+              content: '';
+              display: block;
+              height: 60%;
+              width: 1px;
+              background: #333;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%); }
+            #comment .inner > .right .board ul li > .back > .plus::after {
+              content: '';
+              display: block;
+              width: 60%;
+              height: 1px;
+              background: #333;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%); }
+        #comment .inner > .right .board ul li:hover .back {
+          opacity: 1; }
       #comment .inner > .right .board ul.press {
         display: none; }
 
@@ -1948,7 +1709,7 @@ body {
     width: 100%;
     margin: 0px 0px 20px; } }
 .community {
-  background: #eeeae3;
+  background: #efefef;
   padding: 0; }
   .community .sub_visual {
     margin-bottom: 0; }

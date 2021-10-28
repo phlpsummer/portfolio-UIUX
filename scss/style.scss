@@ -422,329 +422,60 @@ body {
         margin: 0 auto;
         position: relative;
 
-        .wrap {
-            width: 100%;
+        >.swiper {
+            width: 100%; height: 600px;
+            
+            .swiper-slide {
 
-            &::after { content: ''; display: block; clear: both;}
-
-            .col1 {
-                width: 300px; height: 640px; float: left;
-
-                &::after { content: ''; display: block; clear: both;}
-
-                article {
-                    width: 100%;
-                    padding: 0 20px;
-                    float: left;
-
-                    &:nth-of-type(1) {
-                        height: 40px;
-                        background: #111;
-                        h1 { font: bold 22px/40px 'Rajdhani'; color: #fff; letter-spacing: 1px;}
+                >.txt {
+                    margin-top: 10px; padding-left: 7px;
+                    p {
+                        font: 500 15px/1 'Noto Sans KR'; color: #333; margin-bottom: 3px;
                     }
-                    &:nth-of-type(2) {
-                        height: 400px;
-                        border-left: 1px solid #bbb;
-                        position: relative;
-                        padding: 0;
-                        
-                        >img {
-                            width: 100%; height: 100%; object-fit: cover;
-                            filter: saturate(80%) brightness(0.7);
-                        }
-
-                        >.txt {
-                            width: 100%;
-                            padding: 0 20px 40px 20px;
-                            position: absolute;
-                            bottom: 0; left: 0;
-
-                            p {
-                                font: normal 22px/1.4 'Rajdhani'; color: #efefef;
-                                margin-bottom: 15px;
-                            }
-                            a {
-                                font: 300 12px/1 'Noto Sans KR'; color: #efefef;
-                                position: relative;
-                                &::after {
-                                    content: ''; display: block;
-                                    width: 100%; height: 1px;
-                                    background: #efefef;
-                                    position: absolute;
-                                    bottom: -2px; left: 0;
-                                }
-                            }
-                        }
-                    }
-                    &:nth-of-type(3) {
-                        width: 100%; height: 200px;
-                        border-left: 1px solid #bbb; border-bottom: 1px solid #bbb; border-right: 1px solid #bbb;
-                        position: relative;
-
-                        h2 {
-                            display: inline-block;
-                            font: 400 15px/1 'Noto Sans KR'; color: #333; letter-spacing: -1px;
-                            position: relative;
-                            margin-top: 25px; margin-bottom: 25px;
-                            cursor: pointer;
-                            &::after {
-                                content: ''; display: block;
-                                width: 100%; height: 1px;
-                                background: #333;
-                                position: absolute;
-                                bottom: -4px; left: 0;
-                            }
-                        }
-
-                        >.wrap {
-                            width: 90%;
-                            margin: 0 auto;
-                            
-                            &::after { content: ''; display: block; clear: both;}
-                            a {
-                                display: block;
-                                float: left;
-                                width: 50%; height: 34px;
-                                text-align: center;
-                                font: 400 11px/33px 'Noto Sans KR'; color: #333;
-                                background: #efefef;
-                                border: 1px solid #fff;
-                            }
-                        }
+                    span {
+                        font: 400 14px/1 'Noto Sans KR'; color: #444;
                     }
                 }
-            }
-            .col2 {
-                width: 340px; height: 640px; float: left;
 
-                &::after { content: ''; display: block; clear: both;}
-
-                >article {
-                    width: 100%; height: 320px;
-                    float: left;
-
-                    &:nth-of-type(1) {
-                        padding-left: 20px; padding-right: 20px;
-                        border-left: 1px solid #bbb; border-top: 1px solid #bbb;
-                        position: relative;
-                        overflow: hidden;
-
-                        h2 {
-                            display: inline-block;
-                            font: 400 15px/1 'Noto Sans KR'; color: #333; letter-spacing: -1px;
-                            position: relative; top: 25px;
-                            cursor: pointer;
-                            &::after {
-                                content: ''; display: block;
-                                width: 100%; height: 1px;
-                                background: #333;
-                                position: absolute;
-                                bottom: -4px; left: 0;
-                            }
-                        }
-                        
-                        
-                        >.swiper-wrapper {
-                            width: 100%;
-                    
-                            >.swiper-slide {
-                                width: 100%; height: 200px;
-                                position: relative;
-                                top: 50%; margin-top: -100px;
-                                background: #fff;
-                                cursor: pointer;
-                    
-                                >img {
-                                    width: 100%; height: 170px; object-fit: cover; object-position: center;
-                                    margin-bottom: 5px;
-                                }
-                                >p {
-                                    font: 400 13px/1.2 'Noto Sans KR'; color: #555; text-align: center;
-                                }
-                            }
-                        }
-
-                        >.swiper-pagination {
-                            position: absolute;
-                            bottom: 10px;
-
-                            >span {
-                                background: none; border: 1px solid #888;
-                                opacity: 1;
-                                &.swiper-pagination-bullet-active { background: #888;}
-                            }
-                        }
-
-                    }
-
-                    &:nth-of-type(2) {
-                        position: relative;
-                        padding: 0;
-                        
-                        video {
-                            width: 100%; height: 100%;
-                            object-fit: cover; object-position: 30% center;
-                            filter: saturate(30%);
-                            transition: 0.5s;
-                        }
-
-                        &:hover {
-                            video { filter: saturate(110%);}
-                        }
+                &.event {
+                    width: 500px;
+                    img {
+                        width: 100%; height: 500px; object-fit: cover;
                     }
                 }
-            }
-            .col3 {
-                width: 500px; height: 640px; float: left;
-                border-right: 1px solid #bbb; border-top: 1px solid #bbb;
 
-                &::after { content: ''; display: block; clear: both;}
-
-                >article {
-                    width: 100%;
-                    padding: 0 20px;
-                    float: left;
-
-                    &:nth-of-type(1) {
-                        width: calc(100%/3); height: 40px;
-                        border-left: 1px solid #bbb;
-                        text-align: center;
-                        a {
-                            i { font-size: 14px; color: #555; line-height: 40px;}
-                        }
-                    }
-                    &:nth-of-type(2) {
-                        width: calc(100%/3); height: 40px;
-                        border-left: 1px solid #bbb; border-right: 1px solid #bbb;
-                        text-align: center;
-                        a {
-                            i { font-size: 14px; color: #555; line-height: 40px;}
-                        }
-                    }
-                    &:nth-of-type(3) {
-                        width: calc(100%/3); height: 40px;
-                        text-align: center;
-                        a {
-                            i { font-size: 16px; color: #555; line-height: 40px;}
-                        }
-                    }
-                    &:nth-of-type(4) {
-                        height: 350px;
-                        position: relative;
-                        overflow: hidden;
-                        border-top: 1px solid #bbb; border-left: 1px solid #bbb;
-
-                        h2 {
-                            display: inline-block;
-                            font: 400 15px/1 'Noto Sans KR'; color: #333; letter-spacing: -1px;
-                            position: relative; top: 25px;
-                            cursor: pointer;
-                            &::after {
-                                content: ''; display: block;
-                                width: 100%; height: 1px;
-                                background: #333;
-                                position: absolute;
-                                bottom: -4px; left: 0;
-                            }
-                        }
-
-                        >.swiper-wrapper {
-                            width: 100%; height: 100%;
-                            margin-left: 10px;
-                    
-                            >.swiper-slide {
-                                height: 200px; width: 150px;
-                                position: relative;
-                                top: 50%; margin-top: -120px;
-                                cursor: pointer;
-                    
-                                >.inner {
-                                    width: 100%; height: 100%;
-                                    transition: 1s;
-                                    position: relative;
-                    
-                                    >img {
-                                        width: 100%; height: 100%; object-fit: cover; object-position: center;
-                                        margin-bottom: 3px;
-                                    }
-                                    >p { font: 400 12px/1.2 'Noto Sans KR'; color: #555; text-align: center;}
-                                }
-
-                            }
-                        }
-
-                        >.swiper-pagination {
-                            position: absolute;
-                            bottom: 30px;
-
-                            >span {
-                                background: none; border: 1px solid #888;
-                                opacity: 1;
-                                &.swiper-pagination-bullet-active { background: #888;}
-                            }
-                        }
-
-
-                        >.btnAuto {
-                            display: inline-block;
-                            position: absolute;
-                            bottom: 15px; left: 50%; transform: translateX(-38%);
-                
-                            &::after { content: ''; display: block; clear: both;}
-                
-                            li {
-                                float: left;
-                                margin-right: 8px;
-                                color: #666;
-                                font-size: 10px;
-                                opacity: 0.7;
-                                cursor: pointer;
-
-                                &:hover { opacity: 1;}
-                                &.on { opacity: 1;}
-                            }
-                        }
-                    }
-                    &:nth-of-type(5) {
-                        width: 50%; height: 250px;
-                        border-top: 1px solid #bbb; border-bottom: 1px solid #bbb;
-
-                        >.wrap {
-                            width: 80%;
-                            margin: 60px auto;
-                            
-                            &::after { content: ''; display: block; clear: both;}
-                            a {
-                                display: block;
-                                float: left;
-                                width: 100%; height: 40px;
-                                text-align: center;
-                                font: 400 12px/39px 'Noto Sans KR'; color: #333;
-                                border: 1px solid #999;
-                                margin-bottom: 5px;
-                                transition: 0.5s;
-
-                                &:hover {
-                                    background: rgba(0, 0, 0, 0.05);
-                                }
-                            }
-                        }
-
-
-                    }
-                    &:nth-of-type(6) {
-                        width: 50%; height: 250px;
-                        position: relative;
-                        background: #111;
-                            
-                        svg {
-                            position: absolute;
-                            top: 50%; left: 50%;
-                            transform: translate(-50%,-50%);
-                            fill: #fff;
-                        }
+                &.poster {
+                    width: 200px;
+                    img {
+                        width: 100%; height: 300px; object-fit: cover;
                     }
                 }
+
+                &:nth-of-type(3) {
+                    width: 300px;
+                    img {
+                        width: 100%; height: 200px; object-fit: cover;
+                    }
+                }
+                &:nth-of-type(4) {
+                    width: 250px;
+                    img {
+                        width: 100%; height: 250px; object-fit: cover;
+                    }
+                }
+                &:nth-of-type(5) {
+                    width: 200px;
+                    img {
+                        width: 100%; height: 400px; object-fit: cover;
+                    }
+                }
+                &.story {
+                    width: 200px;
+                    img {
+                        width: 100%; height: 300px; object-fit: cover;
+                    }
+                }
+                &:nth-of-type(7) { width: 400px; height: 400px; background: #333; color: #fff; line-height: 400px; text-align: center;}
             }
         }
     }
@@ -992,6 +723,41 @@ body {
                                 font: 700 17px/1 'Noto Sans KR'; color: #444;
                                 margin-top: 10px;
                             }
+                        }
+
+                        >.back {
+                            width: 150px; height: 100px;
+                            background: rgba(255, 255, 255, 0.8);
+                            position: absolute;
+                            top: 30px; left: 0px;
+                            transition: 0.5s;
+                            opacity: 0;
+                            >.plus {
+                                width: 50px; height: 50px;
+                                border-radius: 50%;
+                                border: 1px solid #333;
+                                margin: 28px auto;
+                                position: relative;
+            
+                                &::before {
+                                    content: ''; display: block;
+                                    height: 60%; width: 1px;
+                                    background: #333;
+                                    position: absolute;
+                                    top: 50%; left: 50%; transform: translate(-50%,-50%);
+                                }
+                                &::after {
+                                    content: ''; display: block;
+                                    width: 60%; height: 1px;
+                                    background: #333;
+                                    position: absolute;
+                                    top: 50%; left: 50%; transform: translate(-50%,-50%);
+                                }
+                            }
+                        }
+
+                        &:hover {
+                            .back { opacity: 1;}
                         }
                     }
                     &.press { display: none;}
