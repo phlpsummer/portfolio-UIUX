@@ -1,12 +1,42 @@
-//**스크롤
+//**스크롤 슬라이딩 텍스트
+let isOn = false;
+
 $(window).on("scroll",function(){
     let scroll = $(this).scrollTop();
 
     if(scroll > 200){
-        $(".location .add").addClass("on");
+        if(!isOn){
+            slidingTxt(".add",800);
+            isOn = true;
+        }
     }
 });
 
+function slidingTxt(frame,speed){
+    var bgColor = $(frame).children("span").css("color");
+
+    //마스크
+    $(frame).append(
+        $("<em class='mask'>")
+            .css({
+                display: "block",
+                width: "100%",
+                height: "100%",
+                backgroundColor: bgColor,
+                position: "absolute",
+                top: 0,
+                left: "-100%"
+            })
+    );
+    
+    //마스크 동작
+    $(frame).find(".mask").stop().animate({left:0},speed,"easeInExpo",function(){
+        $(this).prev("span").css({opacity:1});
+        $(this).stop().animate({left:"100%"},speed,"easeInExpo",function(){
+            $(this).remove();
+        });
+    });
+}
 
 //**카카오맵
 let mapContainer = document.getElementById('map'), // 지도를 표시할 div 

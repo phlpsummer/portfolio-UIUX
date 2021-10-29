@@ -11,26 +11,19 @@
             text-align: center;
 
             i {
+                width: 100%;
                 font-size: 36px;
                 color: #333;
                 margin-bottom: 20px;
             }
             .add {
-                font: 300 28px/1.4 'Noto Sans KR'; color: #444; font-style: italic;
-                margin-bottom: 26px;
+                display: inline-block;
                 position: relative;
-
-                &::after {
-                    content: ''; display: block;
-                    width: 100%; height: 100%;
-                    background: #fff;
-                    position: absolute;
-                    top: 0; right: 0;
-                    transition: 2.5s;
-                }
-
-                &.on {
-                    &::after { width: 0%;}
+                overflow: hidden;
+                margin-bottom: 26px;
+                >span {
+                    font: 300 28px/1.4 'Noto Sans KR'; color: #222; font-style: italic;
+                    opacity: 0;
                 }
             }
             >p {
