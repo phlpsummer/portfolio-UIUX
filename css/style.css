@@ -574,75 +574,39 @@ body {
           margin-top: 20px;
           font: 700 18px/1.4 'Noto Sans KR';
           color: #333; }
+          #content .inner > .swiper .swiper-slide.post p strong {
+            font-weight: 700;
+            color: #5f4b8b; }
       #content .inner > .swiper .swiper-slide.event {
-        width: 680px;
-        height: 420px;
-        padding: 40px;
+        width: 300px;
+        height: 300px;
+        padding: 30px;
         position: relative;
         background: #fff;
         border: 3px solid #ddd; }
-        #content .inner > .swiper .swiper-slide.event .left {
-          width: 54px;
-          position: absolute;
-          top: 40px;
-          left: 40px; }
-          #content .inner > .swiper .swiper-slide.event .left .btnPoster {
+        #content .inner > .swiper .swiper-slide.event > span {
+          font: 17px/1 'Francois One';
+          color: #555; }
+        #content .inner > .swiper .swiper-slide.event .eventSlider {
+          margin-top: 15px;
+          cursor: pointer; }
+          #content .inner > .swiper .swiper-slide.event .eventSlider .banner {
             width: 100%;
-            height: 81px;
-            margin-bottom: 20px;
-            background: #333;
-            cursor: pointer;
-            transition: 0.5s;
-            opacity: 0.7; }
-            #content .inner > .swiper .swiper-slide.event .left .btnPoster[data-index="1"] {
-              background: url(../img/poster/poster1.jpg) no-repeat center/cover; }
-            #content .inner > .swiper .swiper-slide.event .left .btnPoster[data-index="2"] {
-              background: url(../img/poster/poster2.png) no-repeat center/cover; }
-            #content .inner > .swiper .swiper-slide.event .left .btnPoster[data-index="3"] {
-              background: url(../img/poster/poster3.jpg) no-repeat center/cover; }
-            #content .inner > .swiper .swiper-slide.event .left .btnPoster:hover {
-              opacity: 1;
-              filter: saturate(110%); }
-        #content .inner > .swiper .swiper-slide.event .right {
-          width: 100%;
-          padding-left: 90px; }
-          #content .inner > .swiper .swiper-slide.event .right .mainPoster {
-            width: 100%;
-            position: relative; }
-            #content .inner > .swiper .swiper-slide.event .right .mainPoster .imgPoster {
-              width: 200px;
-              height: 300px;
-              position: absolute;
-              top: 0;
-              left: 0; }
-              #content .inner > .swiper .swiper-slide.event .right .mainPoster .imgPoster img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover; }
-            #content .inner > .swiper .swiper-slide.event .right .mainPoster > .txt {
-              margin-left: 230px;
-              padding-top: 10px; }
-              #content .inner > .swiper .swiper-slide.event .right .mainPoster > .txt span {
-                font: 17px/1 'Francois One';
-                color: #555; }
-              #content .inner > .swiper .swiper-slide.event .right .mainPoster > .txt .title {
-                margin-top: 8px;
-                margin-bottom: 20px;
-                font: 700 26px/1.4 'Noto Sans KR';
-                color: #333; }
-              #content .inner > .swiper .swiper-slide.event .right .mainPoster > .txt p {
-                font: 400 12px/1.4 'Noto Sans KR';
-                color: #777;
-                margin-bottom: 40px; }
-              #content .inner > .swiper .swiper-slide.event .right .mainPoster > .txt a {
-                padding: 8px 30px;
-                font: 500 12px/1.4 'Noto Sans KR';
-                color: #333;
-                border: 1px solid #555;
-                transition: 0.5s; }
-                #content .inner > .swiper .swiper-slide.event .right .mainPoster > .txt a:hover {
-                  background: #333;
-                  color: #fff; }
+            height: 120px;
+            overflow: hidden; }
+            #content .inner > .swiper .swiper-slide.event .eventSlider .banner img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              transition: 0.5s; }
+          #content .inner > .swiper .swiper-slide.event .eventSlider .title {
+            margin-top: 12px;
+            font: 700 14px/1.4 'Noto Sans KR';
+            color: #555;
+            text-align: center; }
+          #content .inner > .swiper .swiper-slide.event .eventSlider:hover .banner img {
+            transform: scale(1.1);
+            filter: saturate(110%); }
       #content .inner > .swiper .swiper-slide.story {
         width: 150px;
         height: 350px;

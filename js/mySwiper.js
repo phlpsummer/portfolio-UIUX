@@ -29,6 +29,7 @@ const swiperContent = new Swiper('#content .mySwiper', {
     direction: "horizontal", //방향
     spaceBetween: 10,
     grabCursor: true, //마우스 커서 손바닥모양 변경
+    mousewheel: true,
 });
 
 // var btnStart = document.querySelector(".btnAuto .btnStart");
