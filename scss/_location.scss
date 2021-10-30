@@ -156,9 +156,9 @@
                         i {
                             font-size: 18px;
                             line-height: 40px;
-                            color: #555;
+                            color: #444;
                             position: relative;
-                            opacity: 0.7;
+                            opacity: 0.6;
                             transition: 0.5s;
                         }
                     }
@@ -166,10 +166,11 @@
                         a i::after {
                             content: ''; display: block;
                             width: 2px; height: 26px;
-                            background: #555;
+                            background: #444;
                             position: absolute;
                             top: 6px; left: 6px;
                             transform: rotate(-45deg);
+                            transition: 0.5s;
                         }
                     }
 
@@ -179,6 +180,12 @@
                             i { opacity: 1; color: #fff;
                             &::after { background: #fff;}
                             }
+                        }
+                    }
+
+                    &:hover {
+                        a i {
+                            opacity: 1;
                         }
                     }
                 }
