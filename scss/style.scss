@@ -423,7 +423,7 @@ body {
         margin: 0 auto;
         position: relative;
 
-        h1 { font: 24px/1 'Francois One'; color: #555; margin-bottom: 40px;}
+        h1 { font: 26px/1 'Francois One'; color: #555; margin-bottom: 40px;}
 
         >.swiper {
             width: 100%; height: 480px;
@@ -464,33 +464,38 @@ body {
                     border: 3px solid #ddd;
 
                     .left {
-                        width: 54px;
+                        width: 50px;
                         position: absolute;
                         top: 40px; left: 40px;
 
                         .btnPoster {
-                            width: 100%; height: 81px;
-                            margin-bottom: 20px;
-                            background: #333;
-                            cursor: pointer;
-                            transition: 0.5s;
-                            opacity: 0.7;
+                            li {
+                                width: 100%; height: 75px;
+                                margin-bottom: 12px;
+                                background: #333;
+                                cursor: pointer;
+                                transition: 0.5s;
+                                opacity: 0.6;
 
-                            &[data-index="1"] { background: url(../img/poster/poster1.jpg) no-repeat center/cover;}
-                            &[data-index="2"] { background: url(../img/poster/poster2.jfif) no-repeat center/cover;}
-                            &[data-index="3"] { background: url(../img/poster/poster3.jpg) no-repeat center/cover;}
-
-                            &:hover { opacity: 1; filter: saturate(110%);}
+                                &[data-index="1"] {background: url(../img/poster/poster1.jpg) no-repeat center/cover;}
+                                &[data-index="2"] {background: url(../img/poster/poster2.jpg) no-repeat center/cover;}
+                                &[data-index="3"] {background: url(../img/poster/poster3.jpg) no-repeat center/cover;}
+                                &[data-index="4"] {background: url(../img/poster/poster4.jpg) no-repeat center/cover;}
+                                &:hover,&.on { opacity: 1; filter: saturate(110%);}
+                            }
                         }
                     }
 
                     .right {
                         width: 100%;
-                        padding-left: 90px;
+                        padding-left: 80px;
 
                         .mainPoster {
                             width: 100%;
                             position: relative;
+                            display: none;
+                            opacity: 0;
+                            transition: 0.5s;
 
                             .imgPoster {
                                 width: 200px; height: 300px;
@@ -520,6 +525,8 @@ body {
                                     &:hover { background: #333; color: #fff;}
                                 }
                             }
+
+                            &.on { display: block; opacity: 1;}
                         }
 
 
@@ -542,7 +549,7 @@ body {
                         font: 30px/1.1 'Francois One'; color: #333; letter-spacing: 1;
                     }
                     >p {
-                        font: 400 13px/1.4 'Noto Sans KR'; color: #777;
+                        font: 400 13px/1.5 'Noto Sans KR'; color: #777;
                     }
                     >img {
                         position: absolute;
@@ -757,7 +764,7 @@ body {
                         content: "Today";
                         display: block;
                         position: absolute;
-                        top: -20px; left: 0;
+                        top: -20px; left: 5px;
                         font: 13px/1 'Francois One'; color: #666;
                     }
                 }
@@ -843,7 +850,7 @@ body {
 
         h1 {
             display: inline-block;
-            font: 24px/1 'Francois One'; color: #fff;
+            font: 26px/1 'Francois One'; color: #fff;
             margin-bottom: 20px;
             position: relative;
         }

@@ -20,9 +20,11 @@
                 display: inline-block;
                 position: relative;
                 overflow: hidden;
-                margin-bottom: 26px;
+                margin-bottom: 20px;
                 >span {
-                    font: 300 28px/1.4 'Noto Sans KR'; color: #222; font-style: italic;
+                    display: inline-block;
+                    font: 300 30px/1.4 'Noto Sans KR'; color: #333; font-style: italic;
+                    padding-right: 1px;
                     opacity: 0;
                 }
             }

@@ -1,4 +1,20 @@
 /* 메인페이지-content---------------------------------------------- */
+//poster
+const $btnsPoster = $("#content .btnPoster li");
+const $poster = $("#content .mainPoster");
+
+$btnsPoster.on("click",function(){
+    $btnsPoster.removeClass("on");
+    $(this).addClass("on");
+
+    let num = $(this).attr("data-index");
+    $poster.removeClass("on");
+    $poster.eq(num-1).addClass("on");
+});
+
+
+
+
 
 //움직이는 비디오
 const contentVid = document.querySelector("#content .vid");

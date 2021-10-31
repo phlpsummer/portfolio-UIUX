@@ -394,7 +394,7 @@ body {
     margin: 0 auto;
     position: relative; }
     #content .inner h1 {
-      font: 24px/1 'Francois One';
+      font: 26px/1 'Francois One';
       color: #555;
       margin-bottom: 40px; }
     #content .inner > .swiper {
@@ -437,33 +437,38 @@ body {
         background: #fff;
         border: 3px solid #ddd; }
         #content .inner > .swiper .swiper-slide.show .left {
-          width: 54px;
+          width: 50px;
           position: absolute;
           top: 40px;
           left: 40px; }
-          #content .inner > .swiper .swiper-slide.show .left .btnPoster {
+          #content .inner > .swiper .swiper-slide.show .left .btnPoster li {
             width: 100%;
-            height: 81px;
-            margin-bottom: 20px;
+            height: 75px;
+            margin-bottom: 12px;
             background: #333;
             cursor: pointer;
             transition: 0.5s;
-            opacity: 0.7; }
-            #content .inner > .swiper .swiper-slide.show .left .btnPoster[data-index="1"] {
+            opacity: 0.6; }
+            #content .inner > .swiper .swiper-slide.show .left .btnPoster li[data-index="1"] {
               background: url(../img/poster/poster1.jpg) no-repeat center/cover; }
-            #content .inner > .swiper .swiper-slide.show .left .btnPoster[data-index="2"] {
-              background: url(../img/poster/poster2.jfif) no-repeat center/cover; }
-            #content .inner > .swiper .swiper-slide.show .left .btnPoster[data-index="3"] {
+            #content .inner > .swiper .swiper-slide.show .left .btnPoster li[data-index="2"] {
+              background: url(../img/poster/poster2.jpg) no-repeat center/cover; }
+            #content .inner > .swiper .swiper-slide.show .left .btnPoster li[data-index="3"] {
               background: url(../img/poster/poster3.jpg) no-repeat center/cover; }
-            #content .inner > .swiper .swiper-slide.show .left .btnPoster:hover {
+            #content .inner > .swiper .swiper-slide.show .left .btnPoster li[data-index="4"] {
+              background: url(../img/poster/poster4.jpg) no-repeat center/cover; }
+            #content .inner > .swiper .swiper-slide.show .left .btnPoster li:hover, #content .inner > .swiper .swiper-slide.show .left .btnPoster li.on {
               opacity: 1;
               filter: saturate(110%); }
         #content .inner > .swiper .swiper-slide.show .right {
           width: 100%;
-          padding-left: 90px; }
+          padding-left: 80px; }
           #content .inner > .swiper .swiper-slide.show .right .mainPoster {
             width: 100%;
-            position: relative; }
+            position: relative;
+            display: none;
+            opacity: 0;
+            transition: 0.5s; }
             #content .inner > .swiper .swiper-slide.show .right .mainPoster .imgPoster {
               width: 200px;
               height: 300px;
@@ -498,6 +503,9 @@ body {
                 #content .inner > .swiper .swiper-slide.show .right .mainPoster > .txt a:hover {
                   background: #333;
                   color: #fff; }
+            #content .inner > .swiper .swiper-slide.show .right .mainPoster.on {
+              display: block;
+              opacity: 1; }
       #content .inner > .swiper .swiper-slide.membership {
         width: 250px;
         height: 350px;
@@ -513,7 +521,7 @@ body {
           color: #333;
           letter-spacing: 1; }
         #content .inner > .swiper .swiper-slide.membership > p {
-          font: 400 13px/1.4 'Noto Sans KR';
+          font: 400 13px/1.5 'Noto Sans KR';
           color: #777; }
         #content .inner > .swiper .swiper-slide.membership > img {
           position: absolute;
@@ -713,7 +721,7 @@ body {
             display: block;
             position: absolute;
             top: -20px;
-            left: 0;
+            left: 5px;
             font: 13px/1 'Francois One';
             color: #666; }
     #content .inner .count {
@@ -796,7 +804,7 @@ body {
     z-index: 1; }
     #photo .inner h1 {
       display: inline-block;
-      font: 24px/1 'Francois One';
+      font: 26px/1 'Francois One';
       color: #fff;
       margin-bottom: 20px;
       position: relative; }
@@ -2977,11 +2985,13 @@ body {
     display: inline-block;
     position: relative;
     overflow: hidden;
-    margin-bottom: 26px; }
+    margin-bottom: 20px; }
     .location .inner .info .add > span {
-      font: 300 28px/1.4 'Noto Sans KR';
-      color: #222;
+      display: inline-block;
+      font: 300 30px/1.4 'Noto Sans KR';
+      color: #333;
       font-style: italic;
+      padding-right: 1px;
       opacity: 0; }
   .location .inner .info > p {
     font: 400 16px/1.7 'Noto Sans KR';
