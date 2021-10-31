@@ -394,7 +394,7 @@ body {
     margin: 0 auto;
     position: relative; }
     #content .inner h1 {
-      font: 30px/1 'Francois One';
+      font: 24px/1 'Francois One';
       color: #555;
       margin-bottom: 40px; }
     #content .inner > .swiper {
@@ -521,43 +521,6 @@ body {
           left: 50%;
           transform: translateX(-50%) scale(0.25);
           opacity: 0.8; }
-      #content .inner > .swiper .swiper-slide.service {
-        width: 250px;
-        height: 250px;
-        padding: 30px;
-        position: relative;
-        background: #fff;
-        border: 3px solid #ddd;
-        overflow: hidden; }
-        #content .inner > .swiper .swiper-slide.service span {
-          font: 16px/1 'Francois One';
-          color: #555; }
-        #content .inner > .swiper .swiper-slide.service .number {
-          margin-top: 8px;
-          font: 28px/1.4 'Francois One';
-          color: #fff;
-          text-shadow: -1px 0 #222, 0 1px #222, 1px 0 #222, 0 -1px #222; }
-        #content .inner > .swiper .swiper-slide.service ul {
-          position: absolute;
-          bottom: 15px;
-          left: 50%;
-          transform: translateX(-55%); }
-          #content .inner > .swiper .swiper-slide.service ul li {
-            margin-bottom: 10px; }
-            #content .inner > .swiper .swiper-slide.service ul li .icon {
-              display: inline-block;
-              width: 25px;
-              height: 25px;
-              text-align: center;
-              background: #555;
-              margin-right: 3px; }
-              #content .inner > .swiper .swiper-slide.service ul li .icon i {
-                font-size: 10px;
-                color: #fff;
-                line-height: 25px; }
-            #content .inner > .swiper .swiper-slide.service ul li span {
-              font: 500 13px/1 'Noto Sans KR';
-              color: #666; }
       #content .inner > .swiper .swiper-slide.post {
         width: 250px;
         height: 200px;
@@ -572,7 +535,7 @@ body {
           color: #555; }
         #content .inner > .swiper .swiper-slide.post p {
           margin-top: 20px;
-          font: 700 18px/1.4 'Noto Sans KR';
+          font: 700 17px/1.6 'Noto Sans KR';
           color: #333; }
           #content .inner > .swiper .swiper-slide.post p strong {
             font-weight: 700;
@@ -616,8 +579,8 @@ body {
                   object-fit: cover;
                   transition: 0.5s; }
               #content .inner > .swiper .swiper-slide.event .eventSlider .sliderList li .title {
-                margin-top: 12px;
-                font: 700 14px/1.4 'Noto Sans KR';
+                margin-top: 8px;
+                font: 700 13px/1.3 'Noto Sans KR';
                 color: #555;
                 text-align: center; }
           #content .inner > .swiper .swiper-slide.event .eventSlider:hover .sliderList li .banner img {
@@ -637,16 +600,16 @@ body {
             width: 9px;
             height: 9px;
             border-radius: 50%;
-            border: 2px solid #999;
+            border: 2px solid #777;
             transition: 0.5s;
-            margin: 0 2px;
+            margin: 0 3px;
             cursor: pointer;
             opacity: 0.5; }
             #content .inner > .swiper .swiper-slide.event .btnNavi li:hover {
               opacity: 1; }
             #content .inner > .swiper .swiper-slide.event .btnNavi li.on {
-              border: 2px solid #888;
-              background: #888;
+              border: 2px solid #666;
+              background: #666;
               opacity: 1; }
       #content .inner > .swiper .swiper-slide.story {
         width: 150px;
@@ -696,6 +659,105 @@ body {
           filter: saturate(110%); }
         #content .inner > .swiper .swiper-slide.vid:hover img {
           opacity: 0; }
+      #content .inner > .swiper .swiper-slide.service {
+        width: 250px;
+        height: 190px;
+        padding: 30px;
+        position: relative;
+        background: #fff;
+        border: 3px solid #ddd;
+        overflow: hidden; }
+        #content .inner > .swiper .swiper-slide.service span {
+          font: 16px/1 'Francois One';
+          color: #555; }
+        #content .inner > .swiper .swiper-slide.service .number {
+          margin-top: 8px;
+          font: 28px/1.4 'Francois One';
+          color: #fff;
+          text-shadow: -1px 0 #222, 0 1px #222, 1px 0 #222, 0 -1px #222; }
+        #content .inner > .swiper .swiper-slide.service > .sns {
+          position: absolute;
+          bottom: 30px;
+          left: 50%;
+          transform: translateX(-55%); }
+          #content .inner > .swiper .swiper-slide.service > .sns::after {
+            content: '';
+            display: block;
+            clear: both; }
+          #content .inner > .swiper .swiper-slide.service > .sns li {
+            float: left;
+            margin-right: 8px; }
+            #content .inner > .swiper .swiper-slide.service > .sns li:last-of-type {
+              margin-right: 0; }
+            #content .inner > .swiper .swiper-slide.service > .sns li a {
+              display: block;
+              width: 34px;
+              height: 34px;
+              background: #aaa;
+              border-radius: 50%;
+              text-align: center; }
+              #content .inner > .swiper .swiper-slide.service > .sns li a i {
+                line-height: 34px;
+                font-size: 19px;
+                color: #fff; }
+      #content .inner > .swiper .swiper-scrollbar {
+        left: 10%;
+        width: 100%;
+        border-radius: 5px; }
+        #content .inner > .swiper .swiper-scrollbar .swiper-scrollbar-drag {
+          border-radius: 5px;
+          background: rgba(0, 0, 0, 0.6);
+          position: relative; }
+          #content .inner > .swiper .swiper-scrollbar .swiper-scrollbar-drag::after {
+            content: "Today";
+            display: block;
+            position: absolute;
+            top: -20px;
+            left: 0;
+            font: 13px/1 'Francois One';
+            color: #666; }
+    #content .inner .count {
+      position: absolute;
+      bottom: -17px;
+      left: 0; }
+      #content .inner .count p {
+        font: 13px/1 'Francois One';
+        color: #666;
+        margin-bottom: 4px; }
+      #content .inner .count span {
+        font: bold 28px/1 'Rajdhani';
+        color: #666;
+        letter-spacing: 1px; }
+    #content .inner .scroll {
+      position: absolute;
+      bottom: 16px;
+      right: 0;
+      display: flex;
+      align-items: center; }
+      #content .inner .scroll p {
+        display: inline-block;
+        font: 13px/1 'Francois One';
+        color: #666;
+        margin-right: 5px; }
+      #content .inner .scroll span {
+        display: inline-block;
+        text-indent: -9999px;
+        font-size: 0;
+        width: 20px;
+        height: 1px;
+        background: #666;
+        position: relative; }
+        #content .inner .scroll span::after {
+          content: '';
+          display: block;
+          width: 8px;
+          height: 1px;
+          background: #666;
+          position: absolute;
+          top: 0;
+          right: 0;
+          transform-origin: right center;
+          transform: rotate(30deg); }
 
 /* photo -------------------------*/
 #photo {
@@ -734,7 +796,7 @@ body {
     z-index: 1; }
     #photo .inner h1 {
       display: inline-block;
-      font: 28px/1 'Francois One';
+      font: 24px/1 'Francois One';
       color: #fff;
       margin-bottom: 20px;
       position: relative; }
@@ -843,13 +905,12 @@ body {
       top: 0;
       left: 0; }
       #comment .inner > .left > h1 {
-        font: 30px/1 'Francois One';
+        font: 36px/1 'Francois One';
         color: #555;
         margin-top: 100px;
-        margin-bottom: 25px;
-        letter-spacing: 1px; }
+        margin-bottom: 25px; }
       #comment .inner > .left > p {
-        font: 300 20px/1.5 'Noto Sans KR';
+        font: 300 18px/1.7 'Noto Sans KR';
         color: #333;
         margin-bottom: 60px; }
       #comment .inner > .left > a {
