@@ -611,26 +611,67 @@ body {
                     border: 3px solid #ddd;
 
                     >span {
+                        display: inline-block;
                         font: 17px/1 'Francois One'; color: #555;
+                        margin-bottom: 15px;
                     }
 
                     .eventSlider{
-                        margin-top: 15px;
+                        width: 240px; height: 200px;
                         cursor: pointer;
-                        .banner {
-                            width: 100%; height: 120px;
-                            overflow: hidden;
-                            img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s;}
-                        }
-                        .title {
-                            margin-top: 12px;
-                            font: 700 14px/1.4 'Noto Sans KR'; color: #555;
-                            text-align: center;
+                        position: relative;
+                        overflow: hidden;
+
+                        .sliderList {
+                            width: 1200px; height: 100%;
+
+                            &::after { content: ''; display: block; clear: both;}
+
+                            li {
+                                width: 240px; height: 100%;
+                                float: left;
+    
+                                .banner {
+                                    width: 100%; height: 120px;
+                                    overflow: hidden;
+                                    img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s;}
+                                }
+                                .title {
+                                    margin-top: 12px;
+                                    font: 700 14px/1.4 'Noto Sans KR'; color: #555;
+                                    text-align: center;
+                                }
+                            }
                         }
 
                         &:hover {
-                            .banner {
+                            .sliderList li .banner {
                                 img { transform: scale(1.1); filter: saturate(110%);}
+                            }
+                        }
+                    }
+
+                    .btnNavi {
+                        position: absolute;
+                        bottom: 30px; left: 50%; transform: translateX(-50%);
+
+                        &::after { content: ''; display: block; clear: both;}
+
+                        li {
+                            float: left;
+                            width: 9px; height: 9px;
+                            border-radius: 50%;
+                            border: 2px solid #999;
+                            transition: 0.5s;
+                            margin: 0 2px;
+                            cursor: pointer;
+                            opacity: 0.5;
+
+                            &:hover { opacity: 1;}
+                            &.on {
+                                border: 2px solid #888;
+                                background: #888;
+                                opacity: 1;
                             }
                         }
                     }

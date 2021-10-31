@@ -13,13 +13,13 @@ contentVid.addEventListener("mouseleave",(e)=>{
 
 
 //lettering
-let frame = $(".story p");
-let txt = frame.text();
+const $frame = $(".story p");
+let txt = $frame.text();
 let num = 0;
-$(frame).empty();
+$frame.empty();
 
 for(let el of txt){
-    frame.append(
+    $frame.append(
         $("<span>")
             .text(el)
             .css({
@@ -30,37 +30,33 @@ for(let el of txt){
     num++;
 }
 
+//event slider
+const $list = $(".sliderList");
+const $btns = $(".btnNavi li");
+let enableClick = true;
 
-/* 메인페이지-photo---------------------------------------------- */
-//롤링 배너
-let mg = 0;
-let timer;
+$btns.on("click",function(){
+    let isOn = $(this).hasClass("on");
+    if(isOn) return;
 
-timer = setInterval(rolling,20);
+    let i = $(this).index();
 
-$("#photo .slider >li").on("mouseenter",function(){
-    clearInterval(timer);
-});
-$("#photo .slider >li").on("mouseleave",function(){
-    timer = setInterval(rolling,20);
-});
+    if(enableClick) {
+        enableClick = false;
+        
+        moveSlide(i);
 
-function rolling(){
-    if(mg < -300){
-        mg = 0;
-        $("#photo .slider").children("li").eq(0).appendTo("#photo .slider");
+        $btns.removeClass("on");
+        $(this).addClass("on");
     }
+});
 
-    mg-=2;
-    $(".slider").css({left:mg});
+function moveSlide(index){
+    $list.animate({marginLeft: (-100 * index)+"%"},500,function(){
+        enableClick = true;
+    });
 }
 
-$("#photo .auto .btnStart").on("click",function(){
-    timer = setInterval(rolling,20);
-});
-$("#photo .auto .btnStop").on("click",function(){
-    clearInterval(timer);
-});
 
 /* 메인페이지-comments---------------------------------------------- */
 $("#comment .btnNotice").on("click",function(){

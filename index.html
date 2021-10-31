@@ -14,6 +14,7 @@
     <script defer src="js/common.js"></script>
     <script defer src="js/main.js"></script>
     <script defer src="js/mySwiper.js"></script>
+    <script defer src="js/rollingbanner.js"></script>
 </head>
 <body>
     <header id="header">
@@ -149,9 +150,32 @@
                     <div class="swiper-slide event">
                         <span>This month's event</span>
                         <div class="eventSlider">
-                            <div class="banner"><img src="img/event/event1.jpg"></div>
-                            <div class="title">할로윈 콘서트 초청권 추첨 이벤트</div>
+                            <ul class="sliderList">
+                                <li data-index="1">
+                                    <div class="banner"><img src="img/event/event1.jpg"></div>
+                                    <div class="title">할로윈 콘서트 초청권 추첨 이벤트</div>
+                                </li>
+                                <li data-index="2">
+                                    <div class="banner"><img src="img/event/event2.jpg"></div>
+                                    <div class="title">마스터카드 결제 선착순 할인 혜택</div>
+                                </li>
+                                <li data-index="3">
+                                    <div class="banner"><img src="img/event/event3.jpg"></div>
+                                    <div class="title">SNS 후기를 남기면 당신도 행운의 주인공</div>
+                                </li>
+                                <li data-index="4">
+                                    <div class="banner"><img src="img/event/event4.jpg"></div>
+                                    <div class="title">유니버셜 스튜디오 입장권 추첨 이벤트</div>
+                                </li>
+                            </ul>
                         </div>
+                        
+                        <ul class="btnNavi">
+                            <li class="on"></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
                     </div>
                     <div class="swiper-slide story">
                         <a href="about.html">
