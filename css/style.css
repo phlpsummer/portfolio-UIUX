@@ -404,7 +404,7 @@ body {
         position: absolute;
         right: 30px;
         top: 35px;
-        width: 15px;
+        width: 14px;
         height: 1px;
         background: #888; }
         #content .inner > .swiper .swiper-slide .arrow::before {
@@ -412,7 +412,7 @@ body {
           display: block;
           position: absolute;
           top: 0;
-          left: -3px;
+          left: -4px;
           width: 18px;
           height: 1px;
           background: #888;
@@ -424,7 +424,7 @@ body {
           position: absolute;
           top: 0;
           left: 0;
-          width: 15px;
+          width: 14px;
           height: 1px;
           background: #888;
           transform: rotate(-90deg);
@@ -630,6 +630,9 @@ body {
             background: #efefef; }
           #content .inner > .swiper .swiper-slide.story .arrow::after {
             background: #efefef; }
+        #content .inner > .swiper .swiper-slide.story:hover p span {
+          color: #fff;
+          text-shadow: none; }
       #content .inner > .swiper .swiper-slide.vid {
         width: 200px;
         height: 150px;

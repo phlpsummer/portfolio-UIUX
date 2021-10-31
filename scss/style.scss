@@ -433,13 +433,13 @@ body {
                 .arrow {
                     position: absolute;
                     right: 30px; top: 35px;
-                    width: 15px; height: 1px;
+                    width: 14px; height: 1px;
                     background: #888;
 
                     &::before {
                         content: ''; display: block;
                         position: absolute;
-                        top: 0; left: -3px;
+                        top: 0; left: -4px;
                         width: 18px; height: 1px;
                         background: #888;
                         transform: rotate(-45deg);
@@ -449,7 +449,7 @@ body {
                         content: ''; display: block;
                         position: absolute;
                         top: 0; left: 0;
-                        width: 15px; height: 1px;
+                        width: 14px; height: 1px;
                         background: #888;
                         transform: rotate(-90deg);
                         transform-origin: right center;
@@ -657,6 +657,12 @@ body {
     
                         &::before { background: #efefef;}
                         &::after { background: #efefef;}
+                    }
+
+                    &:hover {
+                        p {
+                            span{ color: #fff; text-shadow: none;}
+                        }
                     }
                 }
                 &.vid {

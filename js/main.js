@@ -12,6 +12,25 @@ contentVid.addEventListener("mouseleave",(e)=>{
 });
 
 
+//lettering
+let frame = $(".story p");
+let txt = frame.text();
+let num = 0;
+$(frame).empty();
+
+for(let el of txt){
+    frame.append(
+        $("<span>")
+            .text(el)
+            .css({
+                transitionDelay: 0.1*num+"s",
+                display: "inline-block"
+            })
+    )
+    num++;
+}
+
+
 /* 메인페이지-photo---------------------------------------------- */
 //롤링 배너
 let mg = 0;
