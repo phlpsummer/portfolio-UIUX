@@ -2579,46 +2579,30 @@ body {
       font-weight: 700;
       color: #fff;
       margin-bottom: 40px; }
-    .gallery .inner #searchBox {
-      width: 100%;
-      height: 140px;
-      background: #5f4b8b;
-      position: relative;
-      margin-bottom: 30px; }
-      .gallery .inner #searchBox .inputBox {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1; }
-        .gallery .inner #searchBox .inputBox input {
-          width: 280px;
-          height: 40px;
-          background: none;
-          border: none;
-          border-bottom: 2px solid #fff;
-          font: 700 17px/40px 'Noto Sans KR';
-          color: #fff; }
-        .gallery .inner #searchBox .inputBox button {
-          height: 40px;
-          width: 80px;
-          font: 300 15px/40px 'Noto Sans KR';
-          color: #fff;
-          background: none;
-          border: 1px solid #fff;
-          cursor: pointer;
-          margin-left: 5px; }
-      .gallery .inner #searchBox::after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url(../img/searchbox-bg.jpg) no-repeat center/cover;
-        filter: grayscale(1) brightness(1.2);
-        opacity: 0.8; }
+    .gallery .inner .inputBox {
+      position: absolute;
+      top: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1; }
+      .gallery .inner .inputBox input {
+        width: 280px;
+        height: 40px;
+        background: none;
+        border: none;
+        border-bottom: 2px solid #fff;
+        font: 700 17px/40px 'Noto Sans KR';
+        color: #fff;
+        padding-left: 8px; }
+      .gallery .inner .inputBox button {
+        height: 40px;
+        width: 90px;
+        font: 300 15px/40px 'Noto Sans KR';
+        color: #fff;
+        background: none;
+        border: 1px solid #fff;
+        cursor: pointer;
+        margin-left: 5px; }
     .gallery .inner .loading {
       width: 50px;
       height: 50px;
@@ -2631,6 +2615,7 @@ body {
       .gallery .inner .loading.off {
         opacity: 0; }
     .gallery .inner main {
+      margin-top: 150px;
       width: 100%;
       opacity: 0;
       transform: translateY(100px);
