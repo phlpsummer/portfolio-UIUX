@@ -494,8 +494,9 @@ body {
                             width: 100%;
                             position: relative;
                             display: none;
-                            opacity: 0;
-                            transition: 0.5s;
+                            // transition: 0.5s;
+
+                            &[data-index="4"] { display: block;}
 
                             .imgPoster {
                                 width: 200px; height: 300px;
@@ -525,8 +526,6 @@ body {
                                     &:hover { background: #333; color: #fff;}
                                 }
                             }
-
-                            &.on { display: block; opacity: 1;}
                         }
 
 
@@ -765,7 +764,7 @@ body {
                         display: block;
                         position: absolute;
                         top: -20px; left: 5px;
-                        font: 13px/1 'Francois One'; color: #666;
+                        font: bold 13px/1 'Rajdhani'; color: #666;
                     }
                 }
             }
@@ -775,7 +774,7 @@ body {
             bottom: -17px; left: 0;
 
             p {
-                font: 13px/1 'Francois One'; color: #666;
+                font: bold 13px/1 'Rajdhani'; color: #666;
                 margin-bottom: 4px;
             }
             span {
@@ -790,7 +789,7 @@ body {
 
             p {
                 display: inline-block;
-                font: 13px/1 'Francois One'; color: #666;
+                font: bold 13px/1 'Rajdhani'; color: #666;
                 margin-right: 5px;
             }
             span {

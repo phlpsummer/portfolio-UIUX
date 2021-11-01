@@ -8,8 +8,8 @@ $btnsPoster.on("click",function(){
     $(this).addClass("on");
 
     let num = $(this).attr("data-index");
-    $poster.removeClass("on");
-    $poster.eq(num-1).addClass("on");
+    $poster.hide();
+    $poster.eq(num-1).fadeIn();
 });
 
 
@@ -46,7 +46,7 @@ for(let el of txt){
     num++;
 }
 
-//event slider
+//이벤트배너 slider
 const $list = $(".sliderList");
 const $btns = $(".btnNavi li");
 let enableClick = true;

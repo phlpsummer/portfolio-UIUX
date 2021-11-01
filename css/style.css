@@ -466,9 +466,9 @@ body {
           #content .inner > .swiper .swiper-slide.show .right .mainPoster {
             width: 100%;
             position: relative;
-            display: none;
-            opacity: 0;
-            transition: 0.5s; }
+            display: none; }
+            #content .inner > .swiper .swiper-slide.show .right .mainPoster[data-index="4"] {
+              display: block; }
             #content .inner > .swiper .swiper-slide.show .right .mainPoster .imgPoster {
               width: 200px;
               height: 300px;
@@ -503,9 +503,6 @@ body {
                 #content .inner > .swiper .swiper-slide.show .right .mainPoster > .txt a:hover {
                   background: #333;
                   color: #fff; }
-            #content .inner > .swiper .swiper-slide.show .right .mainPoster.on {
-              display: block;
-              opacity: 1; }
       #content .inner > .swiper .swiper-slide.membership {
         width: 250px;
         height: 350px;
@@ -722,14 +719,14 @@ body {
             position: absolute;
             top: -20px;
             left: 5px;
-            font: 13px/1 'Francois One';
+            font: bold 13px/1 'Rajdhani';
             color: #666; }
     #content .inner .count {
       position: absolute;
       bottom: -17px;
       left: 0; }
       #content .inner .count p {
-        font: 13px/1 'Francois One';
+        font: bold 13px/1 'Rajdhani';
         color: #666;
         margin-bottom: 4px; }
       #content .inner .count span {
@@ -744,7 +741,7 @@ body {
       align-items: center; }
       #content .inner .scroll p {
         display: inline-block;
-        font: 13px/1 'Francois One';
+        font: bold 13px/1 'Rajdhani';
         color: #666;
         margin-right: 5px; }
       #content .inner .scroll span {
