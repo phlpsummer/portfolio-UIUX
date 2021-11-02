@@ -479,6 +479,7 @@ body {
                         padding-left: 12px;
                         margin-left: 15px;
                         position: relative;
+                        opacity: 0.8;
                         &::before {
                             content: ''; display: block;
                             height: 16px; width: 1px;
