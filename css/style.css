@@ -1163,6 +1163,143 @@ body {
       display: block;
       opacity: 1; }
 
+  #content .inner {
+    width: 100%;
+    padding: 0 30px; }
+    #content .inner .swiper-scrollbar {
+      left: 15%; }
+    #content .inner .count {
+      left: 30px;
+      bottom: -10px; }
+      #content .inner .count p {
+        font-size: 12px; }
+      #content .inner .count span {
+        font-size: 22px; }
+    #content .inner .scroll {
+      right: 30px; }
+      #content .inner .scroll p {
+        font-size: 12px; }
+
+  #comment {
+    padding: 100px 0 100px; }
+    #comment .inner {
+      width: 100%; }
+      #comment .inner > .left {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0; }
+        #comment .inner > .left > h1 {
+          font: 36px/1 'Francois One';
+          color: #555;
+          margin-top: 100px;
+          margin-bottom: 25px; }
+        #comment .inner > .left > p {
+          font: 300 18px/1.7 'Noto Sans KR';
+          color: #333;
+          margin-bottom: 60px; }
+        #comment .inner > .left > a {
+          font: 500 15px/1 'Noto Sans KR';
+          color: #333; }
+          #comment .inner > .left > a > span {
+            display: inline-block;
+            margin-left: 8px;
+            width: 25px;
+            height: 1px;
+            background: #333;
+            transition: 0.5s;
+            position: relative;
+            transform: translateY(-3px); }
+            #comment .inner > .left > a > span::after {
+              content: '';
+              display: block;
+              position: absolute;
+              right: 0;
+              top: 0;
+              width: 10px;
+              height: 1px;
+              background: #333;
+              transform: rotate(45deg);
+              transform-origin: right center; }
+          #comment .inner > .left > a:hover > span {
+            margin-left: 18px; }
+      #comment .inner > .right {
+        width: 100%;
+        padding-left: 32%; }
+        #comment .inner > .right > ul {
+          border-bottom: 3px solid #333; }
+          #comment .inner > .right > ul li {
+            display: inline-block;
+            padding: 18px 0;
+            font: 900 18px/1 'Noto Sans KR';
+            color: #999;
+            cursor: pointer;
+            margin-right: 50px; }
+            #comment .inner > .right > ul li.on {
+              color: #333; }
+        #comment .inner > .right .board ul li {
+          height: 160px;
+          padding: 30px 30px 30px 0;
+          cursor: pointer;
+          border-bottom: 1px solid #ddd;
+          position: relative; }
+          #comment .inner > .right .board ul li img {
+            position: absolute;
+            top: 30px;
+            left: 0;
+            width: 150px;
+            height: 100px;
+            object-fit: cover; }
+          #comment .inner > .right .board ul li .txt {
+            margin-left: 175px; }
+            #comment .inner > .right .board ul li .txt > span {
+              font: 500 13px/1 'Noto Sans KR';
+              color: #555; }
+            #comment .inner > .right .board ul li .txt > p {
+              font: 700 17px/1 'Noto Sans KR';
+              color: #444;
+              margin-top: 10px; }
+          #comment .inner > .right .board ul li > .back {
+            width: 150px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            top: 30px;
+            left: 0px;
+            transition: 0.5s;
+            opacity: 0; }
+            #comment .inner > .right .board ul li > .back > .plus {
+              width: 50px;
+              height: 50px;
+              border-radius: 50%;
+              border: 1px solid #333;
+              margin: 28px auto;
+              position: relative; }
+              #comment .inner > .right .board ul li > .back > .plus::before {
+                content: '';
+                display: block;
+                height: 60%;
+                width: 1px;
+                background: #333;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); }
+              #comment .inner > .right .board ul li > .back > .plus::after {
+                content: '';
+                display: block;
+                width: 60%;
+                height: 1px;
+                background: #333;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); }
+          #comment .inner > .right .board ul li:hover .back {
+            opacity: 1; }
+        #comment .inner > .right .board ul.press {
+          display: none; }
+
   /* footer ---------------------------------------------------------------------------------- */
   #footer {
     padding: 40px 30px 0; }
@@ -2744,13 +2881,40 @@ body {
             color: #777; }
 
 @media screen and (max-width: 1179px) {
-  .gallery .inner article {
+  .gallery .inner .inputBox {
+    top: 70px;
+    left: 30px;
+    transform: translateX(0); }
+  .gallery .inner .card {
     width: calc(100% / 3); } }
 @media screen and (max-width: 899px) {
-  .gallery .inner article {
+  .gallery .inner .card {
     width: calc(100% / 2); } }
 @media screen and (max-width: 539px) {
-  .gallery .inner article {
+  .gallery .inner .inputBox {
+    position: absolute;
+    top: 70px;
+    left: 30px;
+    transform: translateX(0); }
+    .gallery .inner .inputBox input {
+      width: 190px;
+      height: 40px;
+      background: none;
+      border: none;
+      border-bottom: 2px solid #fff;
+      font: 500 14px/40px 'Noto Sans KR';
+      color: #fff;
+      padding-left: 5px; }
+    .gallery .inner .inputBox button {
+      height: 40px;
+      width: 80px;
+      font: 300 14px/40px 'Noto Sans KR';
+      color: #fff;
+      background: none;
+      border: 1px solid #fff;
+      cursor: pointer;
+      margin-left: 5px; }
+  .gallery .inner .card {
     width: 100%; } }
 .youtube {
   background: #2D2C4D; }
@@ -3287,6 +3451,23 @@ body {
         .location .inner .lower .contact > .right ul li {
           margin-bottom: 20px; } }
 @media screen and (max-width: 539px) {
+  .location .inner .info {
+    margin: 40px 0; }
+    .location .inner .info i {
+      width: 100%;
+      font-size: 32px;
+      margin-bottom: 20px; }
+    .location .inner .info .add {
+      margin-bottom: 20px; }
+      .location .inner .info .add > span {
+        display: inline-block;
+        font: 300 24px/1.4 'Noto Sans KR';
+        font-style: italic;
+        padding-right: 1px;
+        opacity: 0; }
+    .location .inner .info > p {
+      font: 400 14px/1.7 'Noto Sans KR';
+      color: #777; }
   .location .inner > img {
     height: 150px;
     margin-bottom: 10px; }

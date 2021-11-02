@@ -402,6 +402,28 @@
 @media screen and (max-width:$mobile) {
     .location {
         .inner {
+
+            .info {
+                margin: 40px 0;
+    
+                i {
+                    width: 100%;
+                    font-size: 32px;
+                    margin-bottom: 20px;
+                }
+                .add {
+                    margin-bottom: 20px;
+                    >span {
+                        display: inline-block;
+                        font: 300 24px/1.4 'Noto Sans KR'; font-style: italic;
+                        padding-right: 1px;
+                        opacity: 0;
+                    }
+                }
+                >p {
+                    font: 400 14px/1.7 'Noto Sans KR'; color: #777;
+                }
+            }
     
             >img { height: 150px; margin-bottom: 10px;}
     

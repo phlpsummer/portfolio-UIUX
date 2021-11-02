@@ -177,7 +177,11 @@
 @media screen and (max-width:$tablet) {
     .gallery {
         .inner {
-            article {
+            .inputBox {
+                top: 70px; left: 30px; transform: translateX(0);
+            }
+
+            .card {
                 width: calc(100% / 3);
             }
         }
@@ -187,7 +191,7 @@
 @media screen and (max-width:899px) {
     .gallery {
         .inner {
-            article {
+            .card {
                 width: calc(100% / 2);
             }
         }
@@ -197,7 +201,29 @@
 @media screen and (max-width:$mobile) {
     .gallery {
         .inner {
-            article {
+            .inputBox {
+                position: absolute;
+                top: 70px; left: 30px; transform: translateX(0);
+
+                input {
+                    width: 190px; height: 40px;
+                    background: none;
+                    border: none;
+                    border-bottom: 2px solid #fff;
+                    font: 500 14px/40px 'Noto Sans KR'; color: #fff;
+                    padding-left: 5px;
+                }
+                button {
+                    height: 40px; width: 80px;
+                    font: 300 14px/40px 'Noto Sans KR'; color: #fff;
+                    background: none;
+                    border: 1px solid #fff;
+                    cursor: pointer;
+                    margin-left: 5px;
+                }
+            }
+
+            .card {
                 width: 100%;
             }
         }
