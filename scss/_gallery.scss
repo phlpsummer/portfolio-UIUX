@@ -181,8 +181,10 @@
                 top: 70px; left: 30px; transform: translateX(0);
             }
 
-            .card {
-                width: calc(100% / 3);
+            main {
+                .card {
+                    width: calc(100% / 3);
+                }
             }
         }
     }
@@ -191,8 +193,10 @@
 @media screen and (max-width:899px) {
     .gallery {
         .inner {
-            .card {
-                width: calc(100% / 2);
+            main {
+                .card {
+                    width: calc(100% / 2);
+                }
             }
         }
     }
@@ -223,8 +227,10 @@
                 }
             }
 
-            .card {
-                width: 100%;
+            main {
+                .card {
+                    width: 100%;
+                }
             }
         }
     }
