@@ -2851,9 +2851,24 @@ body {
       position: absolute;
       top: 280px;
       left: 50%;
-      transform: translateX(-50%);
-      filter: brightness(1.5);
-      transition: 0.5s; }
+      transform: translateX(-150%);
+      transition: 0.5s;
+      border-radius: 50%;
+      margin: 3em;
+      vertical-align: middle; }
+      .gallery .inner .loading::before, .gallery .inner .loading::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        transform: scale(0);
+        animation: loader 1.5s infinite ease-in-out; }
+      .gallery .inner .loading::after {
+        animation-delay: 0.75s; }
       .gallery .inner .loading.off {
         opacity: 0; }
     .gallery .inner main {
@@ -2985,6 +3000,13 @@ body {
             font: 300 14px/1.2 'Noto Sans KR';
             color: #777; }
 
+@keyframes loader {
+  0% {
+    transform: translateX(-100%) scale(0); }
+  50% {
+    transform: translateX(0%) scale(1); }
+  100% {
+    transform: translateX(100%) scale(0); } }
 @media screen and (max-width: 1179px) {
   .gallery .inner .inputBox {
     top: 70px;
