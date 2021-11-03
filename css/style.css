@@ -396,7 +396,7 @@ body {
     #content .inner h1 {
       font: 28px/1 'Francois One';
       color: #555;
-      margin-bottom: 30px; }
+      margin-bottom: 20px; }
     #content .inner .scroll {
       position: absolute;
       top: 7px;
@@ -432,7 +432,7 @@ body {
       height: 45px;
       background: #111;
       position: relative;
-      margin-bottom: 8px; }
+      margin-bottom: 10px; }
       #content .inner .board h2 {
         font: 400 14px/1 'Noto Sans KR';
         color: #fff;
