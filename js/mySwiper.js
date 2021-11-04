@@ -33,7 +33,7 @@ const swiperBoard = new Swiper('#content .board .notice', {
   direction: "vertical", //방향
   spaceBetween: 0,
   autoplay: {
-    delay: 4000,
+    delay: 3000,
     disableOnInteraction: false //true: 롤링중 스와이프되면 멈춤, false: 롤링중 스와이프되어도 진행.
   },
 });
