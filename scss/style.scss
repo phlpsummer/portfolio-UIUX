@@ -468,10 +468,12 @@ body {
             .notice {
                 width: 100%; height: 135px;
                 padding-left: 138px;
+
                 .swiper-slide {
                     p {
                         display: inline-block;
                         font: 300 13px/45px 'Noto Sans KR'; color: #efefef;
+                        cursor: pointer;
                     }
                     span {
                         display: inline-block;

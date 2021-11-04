@@ -447,7 +447,8 @@ body {
         #content .inner .board .notice .swiper-slide p {
           display: inline-block;
           font: 300 13px/45px 'Noto Sans KR';
-          color: #efefef; }
+          color: #efefef;
+          cursor: pointer; }
         #content .inner .board .notice .swiper-slide span {
           display: inline-block;
           font: 15px/45px 'Rajdhani';
