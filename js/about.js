@@ -20,9 +20,7 @@ $(window).on("scroll",function(){
     }
 
     if(scroll >= pos[0]-500 && scroll < pos[1]){
-        $(".spotlight text").animate({strokeDashoffset:0},1500,function(){
-            $(this).addClass("on");
-        });
+        $(".spotlight text").animate({strokeDashoffset:0},1500);
     }
 
     if(scroll >= pos[1]-400){
