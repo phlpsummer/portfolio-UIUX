@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Rajdhani&family=Montserrat:wght@200;500;600;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bangers&family=Noto+Sans+KR:wght@300;400;500;700;900&family=Rajdhani&family=Montserrat:wght@300;500;600;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -452,7 +452,7 @@ body {
           cursor: pointer; }
         #content .inner .board .notice .swiper-slide span {
           display: inline-block;
-          font: 200 14px/45px 'Montserrat';
+          font: 300 14px/45px 'Montserrat';
           color: #efefef;
           padding-left: 12px;
           margin-left: 15px;
@@ -1762,7 +1762,7 @@ body {
       transform: translateX(-50%);
       z-index: 1; }
       .content .sub_visual .sub_title > h1 {
-        font: 700 50px/1 'Noto Sans KR';
+        font: 800 46px/1 'Montserrat';
         color: #fff;
         letter-spacing: 1px;
         position: absolute;
@@ -3124,7 +3124,7 @@ body {
         align-content: space-between;
         justify-content: center; }
         .youtube .inner article a .con p {
-          font: normal 18px/1.2 'Rajdhani';
+          font: 300 15px/1.2 'Montserrat';
           color: #fff; }
         .youtube .inner article a .con span {
           position: absolute;
