@@ -306,10 +306,10 @@ body {
           left: 0;
           transform: translateY(-50%); }
           #visual .swiper-wrapper .swiper-slide .inner .title h1 {
-            font: 800 5vw/1.1 'Montserrat';
+            font: 800 4vw/1.1 'Montserrat';
             color: #fff;
             letter-spacing: 1px;
-            margin-bottom: 18px; }
+            margin-bottom: 25px; }
           #visual .swiper-wrapper .swiper-slide .inner .title p {
             font: 300 17px/1.7 'Noto Sans KR';
             color: #ddd;
