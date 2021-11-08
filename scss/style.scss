@@ -71,7 +71,7 @@ body {
                 }
 
                 .subMenu {
-                    width: 1180px; height: 50px;
+                    width: 1180px; height: 46px;
                     background: #111;
                     position: absolute;
                     top: 80px; left: 15px;
@@ -85,7 +85,7 @@ body {
                         a {
                             display: block;
                             width: 100%; height: 100%;
-                            font: 300 12px/50px 'Noto Sans KR'; color: #fff; letter-spacing: 1px;
+                            font: 300 12px/46px 'Noto Sans KR'; color: #fff; letter-spacing: 1px;
                             position: relative;
 
                             &::after {
@@ -108,6 +108,13 @@ body {
                         background: inherit;
                         position: absolute;
                         top: 0; left: -100%;
+                    }
+                    &::after {
+                        content: ''; display: block;
+                        width: 100%; height: 100%;
+                        background: inherit;
+                        position: absolute;
+                        top: 0; left: 100%;
                     }
                 }
             }

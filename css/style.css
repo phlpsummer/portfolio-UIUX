@@ -77,7 +77,7 @@ body {
           color: #fff; }
         #header .inner #gnb > li .subMenu {
           width: 1180px;
-          height: 50px;
+          height: 46px;
           background: #111;
           position: absolute;
           top: 80px;
@@ -91,7 +91,7 @@ body {
               display: block;
               width: 100%;
               height: 100%;
-              font: 300 12px/50px 'Noto Sans KR';
+              font: 300 12px/46px 'Noto Sans KR';
               color: #fff;
               letter-spacing: 1px;
               position: relative; }
@@ -116,6 +116,15 @@ body {
             position: absolute;
             top: 0;
             left: -100%; }
+          #header .inner #gnb > li .subMenu::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            position: absolute;
+            top: 0;
+            left: 100%; }
     #header .inner #util {
       position: absolute;
       top: 50%;
@@ -1536,7 +1545,7 @@ body {
           color: #fff; }
         #header_sub .inner #gnb > li .subMenu {
           width: 1180px;
-          height: 50px;
+          height: 46px;
           background: #111;
           position: absolute;
           top: 80px;
@@ -1550,7 +1559,7 @@ body {
               display: block;
               width: 100%;
               height: 100%;
-              font: 300 12px/50px 'Noto Sans KR';
+              font: 300 12px/46px 'Noto Sans KR';
               color: #fff;
               letter-spacing: 1px;
               position: relative; }
@@ -1575,6 +1584,15 @@ body {
             position: absolute;
             top: 0;
             left: -100%; }
+          #header_sub .inner #gnb > li .subMenu::after {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            position: absolute;
+            top: 0;
+            left: 100%; }
     #header_sub .inner #util {
       position: absolute;
       top: 50%;
@@ -1749,7 +1767,7 @@ body {
   padding: 0 0 100px; }
   .content .sub_visual {
     width: 100%;
-    height: 600px;
+    height: 580px;
     overflow: hidden;
     position: relative;
     background: #111;
@@ -1763,7 +1781,7 @@ body {
       transform: translateX(-50%);
       z-index: 1; }
       .content .sub_visual .sub_title > h1 {
-        font: 800 46px/1 'Montserrat';
+        font: 800 48px/1 'Montserrat';
         color: #fff;
         letter-spacing: 1px;
         position: absolute;
