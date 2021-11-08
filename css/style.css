@@ -452,7 +452,7 @@ body {
           cursor: pointer; }
         #content .inner .board .notice .swiper-slide span {
           display: inline-block;
-          font: 300 14px/45px 'Montserrat';
+          font: 300 13px/45px 'Montserrat';
           color: #efefef;
           padding-left: 12px;
           margin-left: 15px;
@@ -830,7 +830,8 @@ body {
         height: 150px;
         position: relative;
         background: #fff;
-        border: 3px solid #ddd; }
+        border: 3px solid #ddd;
+        cursor: pointer; }
         #content .inner > .mySwiper .swiper-slide.vid video {
           width: 100%;
           height: 100%;
