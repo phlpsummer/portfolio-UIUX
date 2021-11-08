@@ -15,7 +15,7 @@ $(window).on("scroll",function(){
         let currentScroll = scroll - pos[0] +700;
         $(".circle2").animate({opacity:0.4},1000);
         $(".circle2").css({
-            left: currentScroll*1.5
+            left: currentScroll
         });
     }
 
