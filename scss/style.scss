@@ -297,7 +297,7 @@ body {
     }
 
     .bgBlur{
-        width: 68%; height: 100%;
+        width: 65%; height: 100%;
         position: absolute;
         top: 0; left: 0;
         background: rgba(0,0,0,.2);
@@ -310,28 +310,57 @@ body {
         margin: 0 auto;
         position: relative;
 
-        .txt {
-            position: absolute;
-            left: 0; top: 50%;
-            z-index: 2;
-
-            h1 {
-                font: 800 4.5vw/1.2 'Montserrat'; color: #fff;
-                margin-bottom: 80px;
+        article {
+            display: none;
+            .title {
+                position: absolute;
+                left: 0; top: 50%; transform: translateY(-50%);
+                z-index: 2;
+                li {
+                    font: 800 4.5vw/1.2 'Montserrat'; color: #fff;
+                    margin-bottom: 2px;
+                }
             }
 
-            span {
-                display: block;
-                width: 150px; height: 40px;
-                font: 300 15px/40px 'Noto Sans KR'; color: #fff; text-align: center;
-                border: 1px solid #fff;
-                cursor: pointer;
-                transition: 0.5s;
-                &:hover { background: rgba(255, 255, 255, 0.2);}
+            p {
+                position: absolute;
+                width: 30%;
+                left: 8%; top: 64%;
+                font: 300 13px/2 'Noto Sans KR'; color: #ddd;
+                z-index: 2;
             }
+
+            &:nth-of-type(2) {
+                >p {
+                    left: 50%; top: 40%;
+                }
+            }
+
+            &.on { display: block;}
         }
+    }
 
+    .btn {
+        position: absolute;
+        top: 50%; right: 35%; margin-top: -40px;
+        z-index: 2;
 
+        li {
+            width: 70px; height: 70px;
+            opacity: 0.6;
+            background: rgba(0,0,0,.5);
+            text-align: center;
+            margin: 2px 0;
+            cursor: pointer;
+            transition: 0.5s;
+            i {
+                font-size: 15px;
+                line-height: 70px;
+                color: #ddd;
+            }
+
+            &:hover { opacity: 1;}
+        }
     }
 }
 

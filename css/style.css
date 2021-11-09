@@ -292,7 +292,7 @@ body {
     object-fit: cover;
     filter: grayscale(0.6) brightness(0.8); }
   #visual .bgBlur {
-    width: 68%;
+    width: 65%;
     height: 100%;
     position: absolute;
     top: 0;
@@ -305,27 +305,52 @@ body {
     height: 100%;
     margin: 0 auto;
     position: relative; }
-    #visual .inner .txt {
-      position: absolute;
-      left: 0;
-      top: 50%;
-      z-index: 2; }
-      #visual .inner .txt h1 {
-        font: 800 4.5vw/1.2 'Montserrat';
-        color: #fff;
-        margin-bottom: 80px; }
-      #visual .inner .txt span {
-        display: block;
-        width: 150px;
-        height: 40px;
-        font: 300 15px/40px 'Noto Sans KR';
-        color: #fff;
-        text-align: center;
-        border: 1px solid #fff;
-        cursor: pointer;
-        transition: 0.5s; }
-        #visual .inner .txt span:hover {
-          background: rgba(255, 255, 255, 0.2); }
+    #visual .inner article {
+      display: none; }
+      #visual .inner article .title {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2; }
+        #visual .inner article .title li {
+          font: 800 4.5vw/1.2 'Montserrat';
+          color: #fff;
+          margin-bottom: 2px; }
+      #visual .inner article p {
+        position: absolute;
+        width: 30%;
+        left: 8%;
+        top: 64%;
+        font: 300 13px/2 'Noto Sans KR';
+        color: #ddd;
+        z-index: 2; }
+      #visual .inner article:nth-of-type(2) > p {
+        left: 50%;
+        top: 40%; }
+      #visual .inner article.on {
+        display: block; }
+  #visual .btn {
+    position: absolute;
+    top: 50%;
+    right: 35%;
+    margin-top: -40px;
+    z-index: 2; }
+    #visual .btn li {
+      width: 70px;
+      height: 70px;
+      opacity: 0.6;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      margin: 2px 0;
+      cursor: pointer;
+      transition: 0.5s; }
+      #visual .btn li i {
+        font-size: 15px;
+        line-height: 70px;
+        color: #ddd; }
+      #visual .btn li:hover {
+        opacity: 1; }
 
 /* content -----------------------------*/
 #content {
