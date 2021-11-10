@@ -314,7 +314,7 @@ body {
         transform: translateY(-50%);
         z-index: 2; }
         #visual .inner article .title li {
-          font: 800 4.5vw/1.2 'Montserrat';
+          font: 800 82px/1.2 'Montserrat';
           color: #fff;
           margin-bottom: 2px; }
       #visual .inner article p {
@@ -363,6 +363,27 @@ body {
       width: 100%;
       object-fit: cover;
       object-position: center center; }
+  #visual aside {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background: #111; }
+    #visual aside .inner {
+      width: 1180px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative; }
+      #visual aside .inner svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%); }
+        #visual aside .inner svg text {
+          font: 800 82px/1.2 'Montserrat';
+          stroke: #fff; }
 
 /* content -----------------------------*/
 #content {

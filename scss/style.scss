@@ -317,7 +317,7 @@ body {
                 left: 0; top: 50%; transform: translateY(-50%);
                 z-index: 2;
                 li {
-                    font: 800 4.5vw/1.2 'Montserrat'; color: #fff;
+                    font: 800 82px/1.2 'Montserrat'; color: #fff;
                     margin-bottom: 2px;
                 }
             }
@@ -372,6 +372,31 @@ body {
             object-fit: cover;
             object-position: center center;
         }
+    }
+
+    aside {
+        // display: none;
+        width: 100%; height: 100%;
+        position: fixed;
+        top: 0; left: 0;
+        z-index: 99;
+        background: #111;
+
+        .inner {
+            width: 1180px; height: 100%;
+            margin: 0 auto;
+            position: relative;
+
+            svg {
+                position: absolute;
+                top: 50%; left: 0; transform: translateY(-50%);
+                text {
+                    font: 800 82px/1.2 'Montserrat';
+                    stroke:#fff;
+                }
+            }
+        }
+
     }
 }
 
