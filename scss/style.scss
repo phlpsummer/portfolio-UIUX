@@ -33,7 +33,7 @@ body {
     position: absolute;
     top: 0; left: 0;
     transition: 0.5s;
-    z-index: 3;
+    z-index: 4;
 
     .inner {
         width: 1180px; height: 100%;
@@ -379,7 +379,7 @@ body {
         width: 100%; height: 100%;
         position: fixed;
         top: 0; left: 0;
-        z-index: 99;
+        z-index: 3;
         background: #111;
 
         .inner {
@@ -393,6 +393,19 @@ body {
                 text {
                     font: 800 82px/1.2 'Montserrat';
                     stroke:#fff;
+                    stroke-width: 1;
+                    fill: transparent;
+
+                    &:nth-of-type(1) {
+                        //373
+                        stroke-dasharray: 378px;
+                        stroke-dashoffset: 378px;
+                    }
+                    &:nth-of-type(2) {
+                        //315
+                        stroke-dasharray: 320px;
+                        stroke-dashoffset: 320px;
+                    }
                 }
             }
         }
