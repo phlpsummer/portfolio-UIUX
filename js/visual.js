@@ -1,4 +1,5 @@
 const $vidBox = $("#visual .rightVid");
+const $bgImgs = $("#visual .bg");
 const $btnNext = $("#visual .btn .btnNext");
 const $btnPrev = $("#visual .btn .btnPrev");
 let visualIsDone = true;
@@ -7,6 +8,7 @@ $btnNext.on("click",function(){
     if(visualIsDone){
         visualIsDone = false;
 
+        bgNext();
         vidNext();
     }
 });
@@ -15,9 +17,21 @@ $btnPrev.on("click",function(){
     if(visualIsDone){
         visualIsDone = false;
 
+        bgPrev();
         vidPrev();
     }
 });
+
+function bgNext(){
+    $bgImgs.children("li").fadeOut(750);
+    $bgImgs.children("li").first().delay(750).appendTo($bgImgs);
+    $bgImgs.children("li").eq(1).delay(750).fadeIn(750);
+}
+function bgPrev(){
+    $bgImgs.children("li").fadeOut(750);
+    $bgImgs.children("li").last().delay(750).prependTo($bgImgs);
+    $bgImgs.children("li").eq(1).delay(750).fadeIn(750);
+}
 
 function vidNext(){
     $vidBox.children("li").eq(1).animate({top:"-20%"},1500,"easeOutExpo");
