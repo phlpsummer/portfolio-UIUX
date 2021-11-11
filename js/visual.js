@@ -5,7 +5,7 @@ const $btnPrev = $("#visual .btn .btnPrev");
 const $inner = $("#visual .inner");
 const $txtBoxs = $inner.children(".txt");
 let visualIsDone = true;
-
+let visualNum = 1;
 
 $btnNext.on("click",function(){
     if(visualIsDone){
@@ -14,12 +14,19 @@ $btnNext.on("click",function(){
         bgNext();
         vidNext();
 
-        $inner.find(".first").animate({top: "-100%"},300,function(){
-            $(this).css({top: "100%", opacity:0});
-        });
-        $inner.find(".second").delay(200).animate({top: "-100%"},300,function(){
-            $(this).css({top: "100%", opacity:0});
-        });
+        $inner.children(".on").addClass("upper");
+
+        setTimeout(function(){
+            $inner.children(".txt").removeClass("on");
+            $inner.children(".txt").removeClass("upper");
+            if(visualNum<2){
+                $inner.children(".txt").eq(visualNum+1).addClass("on");
+                visualNum++;
+            } else {
+                visualNum=0;
+                $inner.children(".txt").eq(visualNum).addClass("on");
+            }
+        },1000);
     }
 });
 
@@ -29,6 +36,20 @@ $btnPrev.on("click",function(){
 
         bgPrev();
         vidPrev();
+
+        $inner.children(".on").addClass("upper");
+
+        setTimeout(function(){
+            $inner.children(".txt").removeClass("on");
+            $inner.children(".txt").removeClass("upper");
+            if(visualNum>0){
+                $inner.children(".txt").eq(visualNum-1).addClass("on");
+                visualNum--;
+            } else {
+                visualNum=2;
+                $inner.children(".txt").eq(visualNum).addClass("on");
+            }
+        },1000);
     }
 });
 
