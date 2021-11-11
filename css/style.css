@@ -323,7 +323,11 @@ body {
     margin: 0 auto;
     position: relative; }
     #visual .inner article {
-      display: none; }
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0; }
       #visual .inner article .title {
         position: absolute;
         left: 0;
@@ -331,14 +335,19 @@ body {
         transform: translateY(-50%);
         z-index: 2; }
         #visual .inner article .title li {
+          width: 100%;
+          height: 82px;
           margin-bottom: 15px;
           overflow: hidden;
-          transform: translateY(-2px); }
+          transform: translateY(-2px);
+          position: relative; }
           #visual .inner article .title li span {
-            display: inline-block;
             font: 800 82px/1 'Montserrat';
             color: #fff;
-            transform: translateY(0px); }
+            opacity: 0;
+            position: relative;
+            top: 0;
+            transition: 0.5s; }
           #visual .inner article .title li:nth-of-type(2) {
             margin-bottom: 0; }
       #visual .inner article p {
@@ -348,19 +357,24 @@ body {
         top: 65%;
         font: 300 13px/2 'Noto Sans KR';
         color: #bbb;
-        z-index: 2; }
-      #visual .inner article:nth-of-type(2) .title li span {
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(0px);
+        transition: 0.5s; }
+      #visual .inner article:nth-of-type(3) .title li span {
         font-size: 80px;
         letter-spacing: -1px; }
-      #visual .inner article:nth-of-type(2) > p {
+      #visual .inner article:nth-of-type(3) > p {
         left: 20%;
         top: 22%;
         width: 25%; }
-      #visual .inner article:nth-of-type(3) > p {
+      #visual .inner article:nth-of-type(1) > p {
         left: 25%;
         top: 70%; }
-      #visual .inner article.on {
-        display: block; }
+      #visual .inner article:nth-of-type(2) .title li span {
+        opacity: 1; }
+      #visual .inner article:nth-of-type(2) p {
+        opacity: 1; }
   #visual .btn {
     position: absolute;
     top: 50%;
