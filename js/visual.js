@@ -32,6 +32,7 @@ $btnPrev.on("click",function(){
     }
 });
 
+
 function bgNext(){
     $bgImgs.children("li").fadeOut(750);
     $bgImgs.children("li").first().delay(750).appendTo($bgImgs);
