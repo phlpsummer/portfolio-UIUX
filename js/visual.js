@@ -3,6 +3,7 @@ const $bgImgs = $("#visual .bg");
 const $btnNext = $("#visual .btn .btnNext");
 const $btnPrev = $("#visual .btn .btnPrev");
 let visualIsDone = true;
+let visualNum = 0;
 
 $btnNext.on("click",function(){
     if(visualIsDone){
