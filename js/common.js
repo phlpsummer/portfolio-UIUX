@@ -1,3 +1,12 @@
+/* skip navi ------------------------------------------- */
+const $skipBtns = $("#skip a");
+$skipBtns.on("focusin",function(){
+    $(this).addClass("on");
+});
+$skipBtns.on("focusout",function(){
+    $(this).removeClass("on");
+});
+
 /* header ---------------------------------------------- */
 const $btnMenuMo = $(".btn_menu_mo");
 let isDone = true;
@@ -12,14 +21,24 @@ $("#gnb>li").on("mouseleave",function(){
 });
 
 //tab키 포커스 연결
-$("#gnb>li").each(function(index){
-    $("#gnb>li").eq(index).find("a").on("focusIn",function(){
-        $("#gnb>li").eq(index).find(".subMenu").show();
-    });
-    $("#gnb>li").eq(index).find("a").on("focusOut",function(){
-        $("#gnb>li").eq(index).find(".subMenu").hide();
-    });
+$("#gnb>li").on("focusin",function(){
+    $(this).find(".subMenu").show();
+    $(this).find(".subMenu").css("opacity",1);
+    $("#header").css({
+        background: "#111",
+        borderBottom: "1px solid #888"
+    })
 });
+$("#gnb>li .subMenu>li:last-child").on("focusout",function(){
+    $(this).closest(".subMenu").hide();
+    $(this).closest(".subMenu").css("opacity",0);
+})
+$("#gnb>li").on("focusout",function(){
+    $("#header").css({
+        background: "",
+        borderBottom: "none"
+    })
+})
 
 //모바일버전 menu햄버거 버튼
 $btnMenuMo.on("click",function(e){
