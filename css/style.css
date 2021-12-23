@@ -68,9 +68,35 @@ body {
       margin-top: -24px;
       z-index: 10; }
       #header .inner .logo a {
-        font: normal 28px/1 'Bangers';
-        color: #fff;
-        letter-spacing: 1px; }
+        display: inline-block;
+        width: 110px;
+        height: 30px;
+        position: relative; }
+        #header .inner .logo a .first {
+          width: 90px;
+          height: 30px;
+          background: #fff;
+          position: absolute;
+          top: 0;
+          left: 0;
+          font: 800 16px/30px 'Montserrat';
+          color: #111;
+          text-align: center; }
+          #header .inner .logo a .first::after {
+            content: '';
+            display: block;
+            width: 14px;
+            height: 3px;
+            position: absolute;
+            bottom: 0;
+            left: 97px;
+            background: #fff; }
+        #header .inner .logo a .second {
+          position: absolute;
+          top: 0;
+          right: 0;
+          font: 600 22px/1 'Montserrat';
+          color: #fff; }
     #header .inner #gnb {
       width: 100%;
       position: absolute;
@@ -93,7 +119,7 @@ body {
           height: 46px;
           background: #111;
           position: absolute;
-          top: 80px;
+          top: 81px;
           left: 15px;
           display: none;
           opacity: 0; }
@@ -157,7 +183,8 @@ body {
           color: #bbb; }
   #header:hover {
     background: #111;
-    border-bottom: 1px solid #888; }
+    border-bottom: 1px solid #888;
+    box-sizing: content-box; }
     #header:hover .inner #gnb > li:hover::after {
       content: '';
       display: block;
