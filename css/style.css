@@ -80,7 +80,7 @@ body {
           top: 0;
           left: 0;
           font: 800 16px/30px 'Montserrat';
-          color: #5f4b8b;
+          color: #111;
           text-align: center; }
           #header .inner .logo a .first::after {
             content: '';
