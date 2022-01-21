@@ -498,8 +498,8 @@ body {
           stroke-width: 1;
           fill: transparent; }
           #visual aside .inner svg text:nth-of-type(1) {
-            stroke-dasharray: 378px;
-            stroke-dashoffset: 378px; }
+            stroke-dasharray: 420px;
+            stroke-dashoffset: 420px; }
           #visual aside .inner svg text:nth-of-type(2) {
             stroke-dasharray: 320px;
             stroke-dashoffset: 320px; }
@@ -1646,7 +1646,7 @@ body {
           top: 0;
           left: 0;
           font: 800 16px/30px 'Montserrat';
-          color: #5f4b8b;
+          color: #111;
           text-align: center; }
           #header_sub .inner .logo a .first::after {
             content: '';
@@ -2240,8 +2240,8 @@ body {
       fill: transparent;
       stroke: #444;
       stroke-width: 1;
-      stroke-dasharray: 300;
-      stroke-dashoffset: 300;
+      stroke-dasharray: 350;
+      stroke-dashoffset: 350;
       z-index: 1;
       opacity: 1;
       transition: fill 0.5s;
