@@ -1456,23 +1456,23 @@ body {
 
 @media screen and (max-width:$tablet) {
     /* header ---------------------------------------------------------------------------------- */
-    #header {
-        position: fixed;
-        padding: 0 30px;
-        background: #111;
-        border-bottom: 1px solid #888;
+    // #header {
+    //     position: fixed;
+    //     padding: 0 30px;
+    //     background: #111;
+    //     border-bottom: 1px solid #888;
 
-        .inner {
-            width: 100%;
+    //     .inner {
+    //         width: 100%;
     
-            #gnb { display: none;}
-            #util { display: none;}
-        }
+    //         #gnb { display: none;}
+    //         #util { display: none;}
+    //     }
 
     
-        /* 모바일 버전 헤더 ========== */
-        .btn_menu_mo { display: block; opacity: 1;}
-    }
+    //     /* 모바일 버전 헤더 ========== */
+    //     .btn_menu_mo { display: block; opacity: 1;}
+    // }
     
     #content {
         .inner {
@@ -1488,143 +1488,143 @@ body {
         }
     }
 
-    #comment {
-        padding: 100px 0 100px;
+    // #comment {
+    //     padding: 100px 0 100px;
     
-        .inner {
-            width: 100%;
+    //     .inner {
+    //         width: 100%;
     
-            >.left {
-                width: 100%;
-                position: absolute;
-                top: 0; left: 0;
+    //         >.left {
+    //             width: 100%;
+    //             position: absolute;
+    //             top: 0; left: 0;
     
-                >h1 {
-                    font-size: 36px;
-                    margin-top: 100px; margin-bottom: 25px;
-                }
-                >p {
-                    font: 300 18px/1.7 'Noto Sans KR'; color: #333;
-                    margin-bottom: 60px;
-                }
-                >a {
-                    font: 500 15px/1 'Noto Sans KR'; color: #333;
+    //             >h1 {
+    //                 font-size: 36px;
+    //                 margin-top: 100px; margin-bottom: 25px;
+    //             }
+    //             >p {
+    //                 font: 300 18px/1.7 'Noto Sans KR'; color: #333;
+    //                 margin-bottom: 60px;
+    //             }
+    //             >a {
+    //                 font: 500 15px/1 'Noto Sans KR'; color: #333;
     
-                    >span {
-                        display: inline-block;
-                        margin-left: 8px;
-                        width: 25px; height: 1px;
-                        background: #333;
-                        transition: 0.5s;
-                        position: relative;
-                        transform: translateY(-3px);
+    //                 >span {
+    //                     display: inline-block;
+    //                     margin-left: 8px;
+    //                     width: 25px; height: 1px;
+    //                     background: #333;
+    //                     transition: 0.5s;
+    //                     position: relative;
+    //                     transform: translateY(-3px);
     
-                        &::after {
-                            content: ''; display: block;
-                            position: absolute;
-                            right: 0; top: 0;
-                            width: 10px; height: 1px;
-                            background: #333;
-                            transform: rotate(45deg);
-                            transform-origin: right center;
-                        }
-                    }
+    //                     &::after {
+    //                         content: ''; display: block;
+    //                         position: absolute;
+    //                         right: 0; top: 0;
+    //                         width: 10px; height: 1px;
+    //                         background: #333;
+    //                         transform: rotate(45deg);
+    //                         transform-origin: right center;
+    //                     }
+    //                 }
     
-                    &:hover {
-                        >span { margin-left: 18px;}
-                    }
-                }
+    //                 &:hover {
+    //                     >span { margin-left: 18px;}
+    //                 }
+    //             }
     
-            }
+    //         }
     
-            >.right {
-                width: 100%;
-                padding-left: 32%;
+    //         >.right {
+    //             width: 100%;
+    //             padding-left: 32%;
     
-                >ul {
-                    // border-top: 2px solid #333;
-                    border-bottom: 3px solid #333;
-                    li {
-                        display: inline-block;
-                        padding: 18px 0;
-                        font: 900 18px/1 'Noto Sans KR'; color: #999;
-                        cursor: pointer;
-                        margin-right: 50px;
+    //             >ul {
+    //                 // border-top: 2px solid #333;
+    //                 border-bottom: 3px solid #333;
+    //                 li {
+    //                     display: inline-block;
+    //                     padding: 18px 0;
+    //                     font: 900 18px/1 'Noto Sans KR'; color: #999;
+    //                     cursor: pointer;
+    //                     margin-right: 50px;
     
-                        &.on {
-                            color: #333;
-                        }
-                    }
-                }
+    //                     &.on {
+    //                         color: #333;
+    //                     }
+    //                 }
+    //             }
     
-                .board {
-                    ul {
-                        li {
-                            height: 160px;
-                            padding: 30px 30px 30px 0;
-                            cursor: pointer;
-                            border-bottom: 1px solid #ddd;
-                            position: relative;
+    //             .board {
+    //                 ul {
+    //                     li {
+    //                         height: 160px;
+    //                         padding: 30px 30px 30px 0;
+    //                         cursor: pointer;
+    //                         border-bottom: 1px solid #ddd;
+    //                         position: relative;
     
-                            img {
-                                position: absolute;
-                                top: 30px; left: 0;
-                                width: 150px; height: 100px; object-fit: cover;
-                            }
-                            .txt {
-                                margin-left: 175px;
+    //                         img {
+    //                             position: absolute;
+    //                             top: 30px; left: 0;
+    //                             width: 150px; height: 100px; object-fit: cover;
+    //                         }
+    //                         .txt {
+    //                             margin-left: 175px;
     
-                                >span {
-                                    font: 500 13px/1 'Noto Sans KR'; color: #555;
-                                }
-                                >p {
-                                    font: 700 17px/1 'Noto Sans KR'; color: #444;
-                                    margin-top: 10px;
-                                }
-                            }
+    //                             >span {
+    //                                 font: 500 13px/1 'Noto Sans KR'; color: #555;
+    //                             }
+    //                             >p {
+    //                                 font: 700 17px/1 'Noto Sans KR'; color: #444;
+    //                                 margin-top: 10px;
+    //                             }
+    //                         }
     
-                            >.back {
-                                width: 150px; height: 100px;
-                                background: rgba(255, 255, 255, 0.8);
-                                position: absolute;
-                                top: 30px; left: 0px;
-                                transition: 0.5s;
-                                opacity: 0;
-                                >.plus {
-                                    width: 50px; height: 50px;
-                                    border-radius: 50%;
-                                    border: 1px solid #333;
-                                    margin: 28px auto;
-                                    position: relative;
+    //                         >.back {
+    //                             width: 150px; height: 100px;
+    //                             background: rgba(255, 255, 255, 0.8);
+    //                             position: absolute;
+    //                             top: 30px; left: 0px;
+    //                             transition: 0.5s;
+    //                             opacity: 0;
+    //                             >.plus {
+    //                                 width: 50px; height: 50px;
+    //                                 border-radius: 50%;
+    //                                 border: 1px solid #333;
+    //                                 margin: 28px auto;
+    //                                 position: relative;
                 
-                                    &::before {
-                                        content: ''; display: block;
-                                        height: 60%; width: 1px;
-                                        background: #333;
-                                        position: absolute;
-                                        top: 50%; left: 50%; transform: translate(-50%,-50%);
-                                    }
-                                    &::after {
-                                        content: ''; display: block;
-                                        width: 60%; height: 1px;
-                                        background: #333;
-                                        position: absolute;
-                                        top: 50%; left: 50%; transform: translate(-50%,-50%);
-                                    }
-                                }
-                            }
+    //                                 &::before {
+    //                                     content: ''; display: block;
+    //                                     height: 60%; width: 1px;
+    //                                     background: #333;
+    //                                     position: absolute;
+    //                                     top: 50%; left: 50%; transform: translate(-50%,-50%);
+    //                                 }
+    //                                 &::after {
+    //                                     content: ''; display: block;
+    //                                     width: 60%; height: 1px;
+    //                                     background: #333;
+    //                                     position: absolute;
+    //                                     top: 50%; left: 50%; transform: translate(-50%,-50%);
+    //                                 }
+    //                             }
+    //                         }
     
-                            &:hover {
-                                .back { opacity: 1;}
-                            }
-                        }
-                        &.press { display: none;}
-                    }
-                }
-            }
+    //                         &:hover {
+    //                             .back { opacity: 1;}
+    //                         }
+    //                     }
+    //                     &.press { display: none;}
+    //                 }
+    //             }
+    //         }
     
-        }
-    }
+    //     }
+    // }
 
     /* footer ---------------------------------------------------------------------------------- */
     #footer {
@@ -1687,22 +1687,11 @@ body {
 
 @media screen and (max-width:$mobile) {
     /* header ---------------------------------------------------------------------------------- */
-    #header {
-        padding: 0 30px;
-        background: #111;
-        border-bottom: 1px solid #888;
-
-        .inner {
-            width: 100%;
-    
-            #gnb { display: none;}
-            #util { display: none;}
-        }
-
-    
-        /* 모바일 버전 헤더 ========== */
-        .btn_menu_mo { display: block; opacity: 1;}
-    }
+    // #header {
+    //     padding: 0 30px;
+    //     background: #111;
+    //     border-bottom: 1px solid #888;
+    // }
 
     /* footer ---------------------------------------------------------------------------------- */
     #footer {

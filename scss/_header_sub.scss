@@ -272,23 +272,23 @@
     }
 }
 
-@media screen and (max-width:$tablet) {
-    /* header ---------------------------------------------------------------------------------- */
-    #header_sub {
-        position: fixed;
-        padding: 0 30px;
-        background: #111;
-        border-bottom: 1px solid #888;
+// @media screen and (max-width:$tablet) {
+//     /* header ---------------------------------------------------------------------------------- */
+//     #header_sub {
+//         position: fixed;
+//         padding: 0 30px;
+//         background: #111;
+//         border-bottom: 1px solid #888;
 
-        .inner {
-            width: 100%;
+//         .inner {
+//             width: 100%;
     
-            #gnb { display: none;}
-            #util { display: none;}
-        }
+//             #gnb { display: none;}
+//             #util { display: none;}
+//         }
 
     
-        /* 모바일 버전 헤더 ========== */
-        .btn_menu_mo { display: block; opacity: 1;}
-    }
-}
+//         /* 모바일 버전 헤더 ========== */
+//         .btn_menu_mo { display: block; opacity: 1;}
+//     }
+// }
