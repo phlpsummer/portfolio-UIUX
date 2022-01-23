@@ -1481,7 +1481,6 @@ body {
 
     /* visual ---------------------------------------------------------------------------------- */
     #visual {
-
         .bg {
             width: 100%;
         }
@@ -1500,7 +1499,7 @@ body {
                 .title {
                     li {
                         height: 62px;
-                        margin-bottom: 12px;
+                        margin-bottom: 40px;
                         transform: translateY(-2px); //위치조정
                         span {
                             font-size: 62px;
@@ -1510,8 +1509,8 @@ body {
                 }
 
                 p {
-                    width: 35%;
-                    left: 7%; top: 63%;
+                    width: 40%;
+                    left: 7%; top: 66%;
                     font-size: 12px;
                     
                 }
@@ -1519,8 +1518,9 @@ body {
                 //타이틀 보정
                 &:nth-of-type(3) {
                     .title {
-                        li span { font-size: 58px;}
+                        li span { font-size: 57px;}
                     }
+                    >p { width: 30%;}
                 }
             }
         }
@@ -1543,41 +1543,27 @@ body {
         }
 
         aside {
-            // display: none;
-            width: 100%; height: 100%;
-            position: fixed;
-            top: 0; left: 0;
-            z-index: 3;
-            background: #111;
-
             .inner {
-                width: 1180px; height: 100%;
-                margin: 0 auto;
-                position: relative;
+                width: 100%;
+                padding: 0 30px;
 
                 svg {
-                    position: absolute;
-                    top: 50%; left: 0; transform: translateY(-50%);
+                    left: 30px;
+                    transform: translateY(-55%);
                     text {
-                        font: 800 82px/1 'Montserrat';
-                        stroke:#fff;
-                        stroke-width: 1;
-                        fill: transparent;
+                        font-size: 62px;
 
                         &:nth-of-type(1) {
-                            //373
-                            stroke-dasharray: 420px;
-                            stroke-dashoffset: 420px;
+                            stroke-dasharray: 320px;
+                            stroke-dashoffset: 320px;
                         }
                         &:nth-of-type(2) {
-                            //315
                             stroke-dasharray: 320px;
                             stroke-dashoffset: 320px;
                         }
                     }
                 }
             }
-
         }
     }
     
@@ -1764,6 +1750,66 @@ body {
 }
 
 @media screen and (max-width:$mobile) {
+
+    /* visual ---------------------------------------------------------------------------------- */
+    #visual {
+
+        .bgBlur{
+            width: 88%;
+        }
+
+        .inner {
+            .txt {
+                .title {
+                    li {
+                        margin-bottom: 75px;
+                        height: 38px;
+                        transform: translateY(-2px); //위치조정
+                        span {
+                            font-size: 38px;
+                        }
+                    }
+                }
+
+                p {
+                    width: 40%;
+                    font-size: 11px;
+                }
+
+                //타이틀 보정
+                &:nth-of-type(3) {
+                    .title {
+                        li span { font-size: 32px;}
+                    }
+                    >p { width: 35%;}
+                }
+            }
+        }
+
+        .btn {
+            top: auto; bottom: 0%; right: 12%; margin-top: 0px;
+        }
+
+        aside {
+            .inner {
+                svg {
+                    transform: translateY(-60%);
+                    text {
+                        font-size: 38px;
+
+                        &:nth-of-type(1) {
+                            stroke-dasharray: 220px;
+                            stroke-dashoffset: 220px;
+                        }
+                        &:nth-of-type(2) {
+                            stroke-dasharray: 220px;
+                            stroke-dashoffset: 220px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 
     #content {
         .inner {
