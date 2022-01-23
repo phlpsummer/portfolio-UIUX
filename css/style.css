@@ -54,6 +54,7 @@ body {
   left: 0;
   transition: 0.5s;
   z-index: 4;
+  background: transparent;
   /* header hover ========== */
   /* 모바일 버전 헤더 ========== */ }
   #header .inner {
@@ -1131,8 +1132,7 @@ body {
 /* comment----------------------------*/
 #comment {
   width: 100%;
-  padding: 100px 0 100px;
-  min-height: 500px; }
+  padding: 100px 0 100px; }
   #comment .inner {
     width: 1180px;
     margin: 0 auto;
@@ -1380,18 +1380,184 @@ body {
 
 @media screen and (max-width: 1179px) {
   /* header ---------------------------------------------------------------------------------- */
+  #header {
+    position: fixed;
+    padding: 0 30px;
+    background: #111;
+    border-bottom: 1px solid #555;
+    /* 모바일 버전 헤더 ========== */ }
+    #header .inner {
+      width: 100%; }
+      #header .inner #gnb {
+        display: none; }
+      #header .inner #util {
+        display: none; }
+    #header .btn_menu_mo {
+      display: block;
+      opacity: 1; }
+    #header:hover {
+      background: #111;
+      box-sizing: border-box; }
+
+  /* visual ---------------------------------------------------------------------------------- */
+  #visual .bg {
+    width: 100%; }
+  #visual .bgBlur {
+    width: 88%; }
+  #visual .inner {
+    width: 100%;
+    padding: 0 30px; }
+    #visual .inner .txt {
+      left: 30px; }
+      #visual .inner .txt .title li {
+        height: 62px;
+        margin-bottom: 12px;
+        transform: translateY(-2px); }
+        #visual .inner .txt .title li span {
+          font-size: 62px;
+          top: 100%; }
+      #visual .inner .txt p {
+        width: 35%;
+        left: 7%;
+        top: 63%;
+        font-size: 12px; }
+      #visual .inner .txt:nth-of-type(3) .title li span {
+        font-size: 58px; }
+  #visual .btn {
+    right: 12%;
+    margin-top: -40px; }
+    #visual .btn li {
+      width: 60px;
+      height: 60px; }
+      #visual .btn li i {
+        font-size: 15px;
+        line-height: 60px; }
+  #visual .rightVid {
+    display: none; }
+  #visual aside {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background: #111; }
+    #visual aside .inner {
+      width: 1180px;
+      height: 100%;
+      margin: 0 auto;
+      position: relative; }
+      #visual aside .inner svg {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%); }
+        #visual aside .inner svg text {
+          font: 800 82px/1 'Montserrat';
+          stroke: #fff;
+          stroke-width: 1;
+          fill: transparent; }
+          #visual aside .inner svg text:nth-of-type(1) {
+            stroke-dasharray: 420px;
+            stroke-dashoffset: 420px; }
+          #visual aside .inner svg text:nth-of-type(2) {
+            stroke-dasharray: 320px;
+            stroke-dashoffset: 320px; }
+
   #content .inner {
     width: 100%;
     padding: 0 30px; }
-    #content .inner .swiper-scrollbar {
-      left: 15%; }
-    #content .inner .count {
-      left: 30px;
-      bottom: -10px; }
-      #content .inner .count p {
+    #content .inner .scroll {
+      left: 220px; }
+    #content .inner .board h2 {
+      font-size: 12px; }
+    #content .inner .board .notice {
+      padding-left: 125px; }
+      #content .inner .board .notice .swiper-slide p {
         font-size: 12px; }
-      #content .inner .count span {
-        font-size: 22px; }
+      #content .inner .board .notice .swiper-slide span {
+        display: none; }
+
+  #photo {
+    height: 550px;
+    padding: 50px 0 0; }
+    #photo .inner {
+      width: 100%;
+      padding: 0 30px; }
+    #photo .slider {
+      width: 2400px;
+      height: 400px;
+      top: 110px;
+      left: 0; }
+      #photo .slider > li {
+        width: 300px;
+        height: 300px;
+        top: 50%;
+        margin-top: -170px;
+        padding: 30px; }
+        #photo .slider > li[data-index="2"], #photo .slider > li[data-index="4"], #photo .slider > li[data-index="6"], #photo .slider > li[data-index="8"] {
+          padding: 0px 30px 60px; }
+          #photo .slider > li[data-index="2"] .back, #photo .slider > li[data-index="4"] .back, #photo .slider > li[data-index="6"] .back, #photo .slider > li[data-index="8"] .back {
+            top: 0px; }
+        #photo .slider > li .back {
+          width: 240px;
+          height: 240px;
+          top: 30px;
+          left: 30px; }
+          #photo .slider > li .back > .plus {
+            width: 60px;
+            height: 60px;
+            margin: 15px auto; }
+    #photo .btnMore {
+      padding: 12px 40px;
+      font: 400 16px/1 'Noto Sans KR';
+      color: #ddd; }
+
+  #comment {
+    padding: 80px 0 80px; }
+    #comment .inner {
+      width: 100%;
+      padding: 0 30px;
+      position: relative; }
+      #comment .inner > .left {
+        width: 100%;
+        position: relative;
+        top: 0;
+        left: 0; }
+        #comment .inner > .left > h1 {
+          font: 800 36px/1 'Montserrat';
+          margin-top: 50px;
+          margin-bottom: 20px; }
+        #comment .inner > .left > p {
+          font: 300 17px/1.6 'Noto Sans KR';
+          margin-bottom: 20px; }
+        #comment .inner > .left > a {
+          display: inline-block;
+          font: 500 15px/1 'Noto Sans KR';
+          margin-bottom: 40px; }
+          #comment .inner > .left > a > span {
+            display: inline-block;
+            margin-left: 8px;
+            width: 25px;
+            height: 1px;
+            background: #333;
+            transition: 0.5s;
+            position: relative;
+            transform: translateY(-3px); }
+            #comment .inner > .left > a > span::after {
+              content: '';
+              display: block;
+              position: absolute;
+              right: 0;
+              top: 0;
+              width: 10px;
+              height: 1px;
+              background: #333;
+              transform: rotate(45deg);
+              transform-origin: right center; }
+      #comment .inner > .right {
+        width: 100%;
+        padding-left: 0%; }
 
   /* footer ---------------------------------------------------------------------------------- */
   #footer {
@@ -1431,7 +1597,69 @@ body {
           font: 400 14px/1 'Noto Sans KR';
           color: #777; } }
 @media screen and (max-width: 539px) {
-  /* header ---------------------------------------------------------------------------------- */
+  #content .inner .scroll {
+    left: 200px; }
+  #content .inner .board {
+    display: none; }
+  #content .inner .count {
+    display: none; }
+
+  #photo {
+    height: 400px; }
+    #photo .slider {
+      width: 1600px;
+      height: 300px;
+      top: 110px;
+      left: 0; }
+      #photo .slider > li {
+        width: 200px;
+        height: 200px;
+        top: 50%;
+        margin-top: -170px;
+        padding: 20px; }
+        #photo .slider > li[data-index="2"], #photo .slider > li[data-index="4"], #photo .slider > li[data-index="6"], #photo .slider > li[data-index="8"] {
+          padding: 0px 20px 40px; }
+          #photo .slider > li[data-index="2"] .back, #photo .slider > li[data-index="4"] .back, #photo .slider > li[data-index="6"] .back, #photo .slider > li[data-index="8"] .back {
+            top: 0px; }
+        #photo .slider > li .back {
+          width: 160px;
+          height: 160px;
+          top: 20px;
+          left: 20px; }
+          #photo .slider > li .back > .plus {
+            display: none; }
+    #photo .btnMore {
+      padding: 12px 40px;
+      font: 400 16px/1 'Noto Sans KR';
+      color: #ddd; }
+
+  #comment {
+    padding: 40px 0 60px; }
+    #comment .inner > .left > h1 {
+      font: 800 36px/1 'Montserrat';
+      margin-bottom: 20px; }
+    #comment .inner > .left > p {
+      display: none;
+      margin-bottom: 0px; }
+    #comment .inner > .right .board ul li {
+      height: 160px;
+      padding: 30px 30px 30px 0;
+      cursor: pointer;
+      border-bottom: 1px solid #ddd;
+      position: relative; }
+      #comment .inner > .right .board ul li img {
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 150px;
+        height: 100px;
+        object-fit: cover; }
+      #comment .inner > .right .board ul li .txt > span {
+        font: 400 11px/1 'Noto Sans KR'; }
+      #comment .inner > .right .board ul li .txt > p {
+        font: 500 14px/1.3 'Noto Sans KR';
+        margin-top: 8px; }
+
   /* footer ---------------------------------------------------------------------------------- */
   #footer {
     padding: 40px 30px 0; }

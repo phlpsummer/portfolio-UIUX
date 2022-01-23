@@ -13,7 +13,7 @@ $("#photo .slider >li").on("mouseleave",function(){
 });
 
 function rolling(){
-    if(mg < -300){
+    if(mg < -200){
         mg = 0;
         $("#photo .slider").children("li").eq(0).appendTo("#photo .slider");
     }
