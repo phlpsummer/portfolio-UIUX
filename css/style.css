@@ -3950,7 +3950,7 @@ body {
   width: 100%; }
   .join .inner .wrap .left_intro {
     width: 25%;
-    height: 570px;
+    height: 700px;
     background: #fbfbfb;
     float: left;
     position: relative; }
@@ -3990,93 +3990,110 @@ body {
             position: absolute;
             bottom: 0;
             left: 0; }
-  .join .inner .wrap .right_essential {
+  .join .inner .wrap .right {
     width: 75%;
     float: left;
     padding: 0px 50px; }
-    .join .inner .wrap .right_essential table {
+    .join .inner .wrap .right table {
       width: 100%; }
-      .join .inner .wrap .right_essential table tr th {
+      .join .inner .wrap .right table tr th {
         width: 18%;
         text-align: left;
         padding: 0px 0px 50px;
-        font: bold 15px/1 'arial';
-        color: #666; }
-        .join .inner .wrap .right_essential table tr th::after {
+        font: 500 15px/1.3 'Montserrat';
+        color: #111; }
+        .join .inner .wrap .right table tr th::after {
           content: '*';
           display: inline-block;
           margin-left: 5px;
           transform: translateY(3px);
           font-weight: bold;
           color: inherit; }
-      .join .inner .wrap .right_essential table tr td {
+      .join .inner .wrap .right table tr td {
         width: 82%;
         padding: 0px 20px 50px; }
-        .join .inner .wrap .right_essential table tr td ul li {
+        .join .inner .wrap .right table tr td ul li {
           font: 300 14px/1 'Noto Sans KR';
-          color: #999;
+          color: #111;
           margin-top: 10px; }
-        .join .inner .wrap .right_essential table tr td input[type="text"], .join .inner .wrap .right_essential table tr td input[type="password"] {
+        .join .inner .wrap .right table tr td input[type="text"], .join .inner .wrap .right table tr td input[type="password"] {
           width: 100%;
           height: 40px;
           border: none;
-          border-bottom: 1px solid #ccc;
-          transition: 0.5s; }
-          .join .inner .wrap .right_essential table tr td input[type="text"]::placeholder, .join .inner .wrap .right_essential table tr td input[type="password"]::placeholder {
+          border-bottom: 1px solid #111;
+          transition: 0.5s;
+          background: transparent;
+          padding-left: 10px; }
+          .join .inner .wrap .right table tr td input[type="text"]::placeholder, .join .inner .wrap .right table tr td input[type="password"]::placeholder {
             font: 400 16px/1 'Noto Sans KR';
-            color: #ccc; }
-          .join .inner .wrap .right_essential table tr td input[type="text"]:focus, .join .inner .wrap .right_essential table tr td input[type="password"]:focus {
-            border-bottom: 2px solid #888;
-            background: rgba(0, 0, 0, 0.02); }
-        .join .inner .wrap .right_essential table tr td select {
-          width: calc( 100% - 160px );
+            color: #555; }
+          .join .inner .wrap .right table tr td input[type="text"]:focus, .join .inner .wrap .right table tr td input[type="password"]:focus {
+            border-bottom: 2px solid #b76ca4;
+            outline: none; }
+        .join .inner .wrap .right table tr td select {
+          width: 400px;
           height: 40px;
           border: none;
-          border-bottom: 1px solid #777;
-          margin-top: 10px;
-          font: 400 16px/1 'Noto Sans KR';
-          color: #777;
-          transition: 0.5s; }
-          .join .inner .wrap .right_essential table tr td select::placeholder {
+          border: 1px solid #333;
+          font: 300 16px/1 'Noto Sans KR';
+          color: #111;
+          transition: 0.5s;
+          background: transparent;
+          padding-left: 10px; }
+          .join .inner .wrap .right table tr td select::placeholder {
             font: 400 16px/1 'Noto Sans KR';
-            color: #ccc; }
-          .join .inner .wrap .right_essential table tr td select:focus {
-            border-bottom: 2px solid #888;
-            background: rgba(0, 0, 0, 0.02); }
-      .join .inner .wrap .right_essential table tr .btnEmailConfirm {
+            color: #555; }
+          .join .inner .wrap .right table tr td select:focus {
+            outline: none;
+            background: #ffb025; }
+        .join .inner .wrap .right table tr td input[type="radio"] {
+          margin-right: 8px; }
+        .join .inner .wrap .right table tr td > label {
+          font: 400 16px/1 'Noto Sans KR';
+          color: #111;
+          margin-right: 20px; }
+        .join .inner .wrap .right table tr td p {
+          font: 300 12px/1 'Noto Sans KR';
+          color: #ff7913;
+          margin-top: 5px; }
+      .join .inner .wrap .right table tr #email {
+        width: calc( 100% - 160px ); }
+      .join .inner .wrap .right table tr .btnMailCk {
         display: inline-block;
         width: 140px;
         height: 40px;
-        font: 400 15px/38px 'Noto Sans KR';
-        color: #333;
-        border: 1px solid #555;
+        font: 300 15px/38px 'Noto Sans KR';
+        color: #111;
+        border: 1px solid #111;
         text-align: center;
         margin-top: 10px;
         margin-bottom: 10px;
         margin-left: 5px; }
-      .join .inner .wrap .right_essential table tr #confirm {
+      .join .inner .wrap .right table tr #confirm {
         width: calc( 100% - 160px ); }
-      .join .inner .wrap .right_essential table tr:nth-of-type(3) th, .join .inner .wrap .right_essential table tr:nth-of-type(3) td {
+      .join .inner .wrap .right table tr:nth-of-type(3) th, .join .inner .wrap .right table tr:nth-of-type(3) td {
         padding-bottom: 20px; }
-  .join .inner .wrap .btn_submit {
+  .join .inner .wrap .btns {
     float: left;
     width: 100%;
-    text-align: center; }
-    .join .inner .wrap .btn_submit input[type="reset"] {
+    text-align: center;
+    margin-bottom: 150px;
+    margin-top: 50px; }
+    .join .inner .wrap .btns input[type="reset"] {
       width: 150px;
       height: 40px;
-      font: 400 15px/38px 'Noto Sans KR';
-      color: #333;
-      border: 1px solid #555;
-      background: #fff;
+      font: 300 16px/38px 'Noto Sans KR';
+      color: #111;
+      background: transparent;
+      border: 2px solid #333;
       margin-right: 10px;
       cursor: pointer; }
-    .join .inner .wrap .btn_submit input[type="submit"] {
+    .join .inner .wrap .btns input[type="submit"] {
       width: 150px;
       height: 40px;
-      font: 300 15px/38px 'Noto Sans KR';
+      font: 300 16px/38px 'Noto Sans KR';
       color: #fff;
-      background: #333;
+      background: #111;
       border: none;
       cursor: pointer; }
 
@@ -4093,39 +4110,39 @@ body {
     width: 0%;
     float: none;
     display: none; }
-  .join .inner .wrap .right_essential {
+  .join .inner .wrap .right {
     width: 100%;
     float: none;
     padding: 0 0 60px; }
-    .join .inner .wrap .right_essential table tr th {
+    .join .inner .wrap .right table tr th {
       width: 30%;
       font: 500 16px/1 'Noto Sans KR'; }
-    .join .inner .wrap .right_essential table tr td {
+    .join .inner .wrap .right table tr td {
       width: 70%;
       padding: 20px 0px 20px 20px; }
-      .join .inner .wrap .right_essential table tr td p {
+      .join .inner .wrap .right table tr td p {
         font: 300 14px/1 'Noto Sans KR'; }
-      .join .inner .wrap .right_essential table tr td select {
+      .join .inner .wrap .right table tr td select {
         width: calc( 100% - 160px ); }
-    .join .inner .wrap .right_essential table tr .btn_send {
+    .join .inner .wrap .right table tr .btn_send {
       width: 140px;
       height: 40px;
       font: 500 14px/40px 'Noto Sans KR';
       margin-top: 10px;
       margin-bottom: 10px; }
-    .join .inner .wrap .right_essential table tr .btn_confirm {
+    .join .inner .wrap .right table tr .btn_confirm {
       width: 140px;
       height: 40px;
       font: 500 14px/40px 'Noto Sans KR'; }
-    .join .inner .wrap .right_essential table tr #confirm {
+    .join .inner .wrap .right table tr #confirm {
       width: calc( 100% - 160px ); }
-  .join .inner .wrap .btn_submit {
+  .join .inner .wrap .btns {
     float: none; }
-    .join .inner .wrap .btn_submit input[type="reset"] {
+    .join .inner .wrap .btns input[type="reset"] {
       width: 150px;
       height: 40px;
       font: 500 16px/40px 'Noto Sans KR'; }
-    .join .inner .wrap .btn_submit input[type="submit"] {
+    .join .inner .wrap .btns input[type="submit"] {
       width: 150px;
       height: 40px;
       font: 500 16px/40px 'Noto Sans KR'; } }
@@ -4146,36 +4163,36 @@ body {
   .join .inner .agree_box p {
     font: 700 11px/1.4 'Noto Sans KR';
     margin-bottom: 80px; }
-  .join .inner .wrap .right_essential {
+  .join .inner .wrap .right {
     padding: 0 0 30px; }
-    .join .inner .wrap .right_essential table tr th {
+    .join .inner .wrap .right table tr th {
       width: 34%;
       font: 500 14px/1 'Noto Sans KR'; }
-    .join .inner .wrap .right_essential table tr td {
+    .join .inner .wrap .right table tr td {
       width: 66%;
       padding: 20px 0px 20px 10px; }
-      .join .inner .wrap .right_essential table tr td p {
+      .join .inner .wrap .right table tr td p {
         font: 300 12px/1 'Noto Sans KR'; }
-      .join .inner .wrap .right_essential table tr td select {
+      .join .inner .wrap .right table tr td select {
         width: 100%;
         margin-top: 5px; }
-    .join .inner .wrap .right_essential table tr .btn_send {
+    .join .inner .wrap .right table tr .btn_send {
       width: 100%;
       font: 500 14px/40px 'Noto Sans KR';
       margin: 5px 0px 15px; }
-    .join .inner .wrap .right_essential table tr .btn_confirm {
+    .join .inner .wrap .right table tr .btn_confirm {
       width: 100%;
       font: 500 14px/40px 'Noto Sans KR';
       margin: 5px 0px 0px; }
-    .join .inner .wrap .right_essential table tr #confirm {
+    .join .inner .wrap .right table tr #confirm {
       width: 100%; }
-  .join .inner .wrap .btn_submit {
+  .join .inner .wrap .btns {
     float: none; }
-    .join .inner .wrap .btn_submit input[type="reset"] {
+    .join .inner .wrap .btns input[type="reset"] {
       width: 100%;
       font: 500 16px/40px 'Noto Sans KR';
       margin: 0 0 5px; }
-    .join .inner .wrap .btn_submit input[type="submit"] {
+    .join .inner .wrap .btns input[type="submit"] {
       width: 100%;
       font: 500 16px/40px 'Noto Sans KR';
       margin: 0; } }
